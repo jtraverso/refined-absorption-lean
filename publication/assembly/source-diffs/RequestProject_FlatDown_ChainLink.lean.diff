@@ -1,0 +1,11 @@
+--- original/RequestProject/FlatDown/ChainLink.lean
++++ current/RefinedAbsorption/FlatDown/ChainLink.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.RefinerOne.Chain
+-public import RequestProject.MultiRefiner.Basic
++public import RefinedAbsorption.RefinerOne.Chain
++public import RefinedAbsorption.MultiRefiner.Basic
+ 
+ /-!
+ # Spread chain refiners for `1`-uniform links

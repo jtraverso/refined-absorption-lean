@@ -1,0 +1,9 @@
+--- original/RequestProject/FaithfulSurvey2025/Embedding.lean
++++ current/RefinedAbsorption/FaithfulSurvey2025/Embedding.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.GeneralEmbedding.Main
++public import RefinedAbsorption.GeneralEmbedding.Main
+ 
+ /-!
+ # Survey arXiv:2510.19978v1, Definition 3.7 and Lemma 3.8: the notions of embedding

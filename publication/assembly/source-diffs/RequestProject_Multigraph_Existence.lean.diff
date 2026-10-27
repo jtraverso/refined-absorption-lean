@@ -1,0 +1,15 @@
+--- original/RequestProject/Multigraph/Existence.lean
++++ current/RefinedAbsorption/Multigraph/Existence.lean
+@@ -1,8 +1,8 @@
+ module
+-public import RequestProject.Multigraph.NibbleMulti
+-public import RequestProject.Multigraph.StrongReserves
+-public import RequestProject.Boost
+-public import RequestProject.Final
++public import RefinedAbsorption.Multigraph.NibbleMulti
++public import RefinedAbsorption.Multigraph.StrongReserves
++public import RefinedAbsorption.Boost
++public import RefinedAbsorption.Final
+ 
+ /-!
+ # The Existence Conjecture for all `λ`

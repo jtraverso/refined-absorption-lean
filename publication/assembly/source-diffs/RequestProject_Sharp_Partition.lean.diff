@@ -1,0 +1,11 @@
+--- original/RequestProject/Sharp/Partition.lean
++++ current/RefinedAbsorption/Sharp/Partition.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Nibble.FiniteProb
+-public import RequestProject.Sharp.SparsCount
++public import RefinedAbsorption.Nibble.FiniteProb
++public import RefinedAbsorption.Sharp.SparsCount
+ 
+ /-!
+ # Quasi-random partitions (Proposition 3.17)

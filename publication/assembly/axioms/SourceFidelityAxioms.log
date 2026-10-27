@@ -1,0 +1,1 @@
+checks/SourceFidelityAxioms.lean:5:0: 'RefinedAbsorption.Faithful2024.theorem_6_2_ambient' depends on axioms: [propext, Classical.choice, Quot.sound]

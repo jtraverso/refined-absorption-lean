@@ -1,0 +1,9 @@
+--- original/RequestProject/Window/Descent.lean
++++ current/RefinedAbsorption/Window/Descent.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Dense.Native
++public import RefinedAbsorption.Dense.Native
+ 
+ /-!
+ # Descent through windows: the exact budget from one halving stage

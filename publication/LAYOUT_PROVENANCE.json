@@ -4,7 +4,7 @@
   "source_path": "scripts/series_template.tex",
   "source_sha256": "e9deeb8ccbfddf9a26be47898932465a4976c873d7f734eb787f198a5068e38f",
   "target": "scripts/series_template.tex",
-  "target_sha256": "e9deeb8ccbfddf9a26be47898932465a4976c873d7f734eb787f198a5068e38f",
+  "target_sha256": "d376b27679a07cc1e551c5b46e239a055eab33e923b0aeecf63db0fc656a48a3",
   "role": "Layout authority only. Manuscript Markdown remains semantic authority.",
-  "adaptation": "Exact template copy at preparation; later formatting changes, if any, must be recorded."
+  "adaptation": "Copied the Nash-Williams template exactly, then increased subsection Needspace from 4 to 11 baselines to prevent a parent heading being stranded before a child heading. Fonts, margins, title/author block and bibliography style are unchanged. The body converter keeps each named theorem statement together using the built-in samepage environment."
 }

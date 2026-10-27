@@ -1,0 +1,11 @@
+--- original/RequestProject/FlatDown/Closure.lean
++++ current/RefinedAbsorption/FlatDown/Closure.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.FlatDown.FlatProof
+-public import RequestProject.FlatDown.Small
++public import RefinedAbsorption.FlatDown.FlatProof
++public import RefinedAbsorption.FlatDown.Small
+ 
+ /-!
+ # Closing the residue: multi-refiners with empty residue

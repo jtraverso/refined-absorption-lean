@@ -1,0 +1,15 @@
+--- original/RequestProject/Original2024/RelReserves.lean
++++ current/RefinedAbsorption/Original2024/RelReserves.lean
+@@ -1,8 +1,8 @@
+ module
+-public import RequestProject.Original2024.Defs
+-public import RequestProject.Boost
+-public import RequestProject.ExistenceProof
+-public import RequestProject.Nibble.FiniteProb
++public import RefinedAbsorption.Original2024.Defs
++public import RefinedAbsorption.Boost
++public import RefinedAbsorption.ExistenceProof
++public import RefinedAbsorption.Nibble.FiniteProb
+ 
+ /-!
+ # Reserves inside a dense host graph

@@ -1,0 +1,15 @@
+--- original/RequestProject/Faithful2024/MultiGadget.lean
++++ current/RefinedAbsorption/Faithful2024/MultiGadget.lean
+@@ -1,8 +1,8 @@
+ module
+-public import RequestProject.Faithful2024.Defs
+-public import RequestProject.Placement.MultiEmbed
+-public import RequestProject.Placement.Absorbers
+-public import RequestProject.FlatDown.AntiEdge
++public import RefinedAbsorption.Faithful2024.Defs
++public import RefinedAbsorption.Placement.MultiEmbed
++public import RefinedAbsorption.Placement.Absorbers
++public import RefinedAbsorption.FlatDown.AntiEdge
+ 
+ /-!
+ # Absorber gadgets for divisible *multi*-hypergraphs

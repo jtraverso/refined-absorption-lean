@@ -3,15 +3,15 @@
   "phases": [
     {
       "phase": "assembly_and_clean_lake_freeze",
-      "status": "IN_PROGRESS"
+      "status": "PASS"
     },
     {
       "phase": "note_and_companion_en_es",
-      "status": "PENDING"
+      "status": "PASS_CURRENT_DRAFT"
     },
     {
       "phase": "internal_audit_pass",
-      "status": "PENDING"
+      "status": "PASS_CURRENT_DRAFT"
     },
     {
       "phase": "zenodo_doi_reservation",
@@ -37,8 +37,39 @@
     "survey_published_edition": "ICM 2026, Volume 6, pages 212-231"
   },
   "external_pending": {
-    "zenodo": "Chrome automation reported an open extension UI; a request to close it is pending with the user. No reservation has been made.",
+    "zenodo": "Known Zenodo Chrome tab checked again after full local document QA: browser automation still blocked by another extension UI. Existing close-panel/sign-in handoff unanswered. No reservation or DOI created.",
     "github": "Authenticated gh is available outside the network sandbox. No public repository has been created.",
     "palomar": "Three scoped interfaces prepared. Syntax is checked locally; Comparator, official preflight, submission and registration remain pending."
+  },
+  "formal_freeze": {
+    "status": "PASS",
+    "source_commit": "5428ee9b772e67dd7ec6da443199b36a003b72d4",
+    "archive": "publication/formal-freeze/formal-v1.0-5428ee9b772e.tar.gz",
+    "sha256": "e9bb21b17a110a392a7751afefb9a2e9d6bf218c7e6dac788006234f3af09c05",
+    "validation_sha256": "45321434a170482d8473182ecc8c1fd60b66a84bb9480ef7f6c26f9f2b130157",
+    "local_lean_modules": 316,
+    "axiom_queries": 360,
+    "scope": "Immutable formal-source and local-build-evidence freeze, before manuscript drafting. Not a Palomar certificate or a document release archive."
+  },
+  "internal_audit": {
+    "status": "PASS_CURRENT_DRAFT",
+    "documents": 4,
+    "rendered_pages_reviewed": 35,
+    "review_summary": "preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md",
+    "mechanical_result": "preprints/RESEARCH_NOTE/02_validation/AUDIT_RESULT.json",
+    "visual_result": "preprints/RESEARCH_NOTE/02_validation/VISUAL_REVIEW.json",
+    "overall_editorial_verdict": "EDITORIAL_DRAFT_WITH_OPEN_GATES",
+    "reason": "No actual Zenodo DOI reservation yet; DOI insertion requires downstream regeneration and audit."
+  },
+  "document_review_bundle": {
+    "status": "PASS_CURRENT_DRAFT_DOCUMENT_INTEGRITY",
+    "archive": "publication/document-draft/research-note-v1.0-doi-pending-review.zip",
+    "sha256": "f6274501312775da7eb22b9544b586458a2808b06045bf68de50a069dc765a8d",
+    "files": 57,
+    "manifest": "preprints/RESEARCH_NOTE/04_integrity/DOCUMENT_MANIFEST.json",
+    "manifest_sha256": "9e5bcc208a8b0f0d81c54e68925e0f93078ccaf3b3ef909dd1fcbe01d347038d",
+    "scope": "DOI-pending local document review bundle, not a public release or Palomar receipt. Excludes manifest/checksum self-hashes and ignored reproducible render images. Relative links require the complete repository.",
+    "editorial_verdict": "EDITORIAL_DRAFT_WITH_OPEN_GATES",
+    "created_after_rendered_review": true
   }
 }

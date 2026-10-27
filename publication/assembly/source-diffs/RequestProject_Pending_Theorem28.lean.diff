@@ -1,0 +1,9 @@
+--- original/RequestProject/Pending/Theorem28.lean
++++ current/RefinedAbsorption/Pending/Theorem28.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Pending.Core28
++public import RefinedAbsorption.Pending.Core28
+ 
+ /-!
+ # Theorem 2.8 of arXiv:2402.17855v1 (Nibble with Reserves): proof

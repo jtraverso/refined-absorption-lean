@@ -1,0 +1,9 @@
+--- original/RequestProject/Faithful2024/FlatLabelled.lean
++++ current/RefinedAbsorption/Faithful2024/FlatLabelled.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Original2024.FlatOne
++public import RefinedAbsorption.Original2024.FlatOne
+ 
+ /-!
+ # The flat multi-refiner for a labelled multigraph input (sparse regime)

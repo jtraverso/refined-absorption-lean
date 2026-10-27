@@ -1,0 +1,9 @@
+--- original/RequestProject/Placement/MultiEmbed.lean
++++ current/RefinedAbsorption/Placement/MultiEmbed.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Placement.ReserveLemma52
++public import RefinedAbsorption.Placement.ReserveLemma52
+ 
+ /-!
+ # Placing gadgets inside a reserve when parallel edges are allowed

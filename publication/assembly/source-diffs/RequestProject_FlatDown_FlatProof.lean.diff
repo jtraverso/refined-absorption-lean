@@ -1,0 +1,13 @@
+--- original/RequestProject/FlatDown/FlatProof.lean
++++ current/RefinedAbsorption/FlatDown/FlatProof.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.FlatDown.FlatStep
+-public import RequestProject.FlatDown.AntiEdge
+-public import RequestProject.MultiRefiner.PieceDeg
++public import RefinedAbsorption.FlatDown.FlatStep
++public import RefinedAbsorption.FlatDown.AntiEdge
++public import RefinedAbsorption.MultiRefiner.PieceDeg
+ 
+ /-!
+ # Proof of the flat step

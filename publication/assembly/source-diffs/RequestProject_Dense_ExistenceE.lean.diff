@@ -1,0 +1,11 @@
+--- original/RequestProject/Dense/ExistenceE.lean
++++ current/RefinedAbsorption/Dense/ExistenceE.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Dense.NativeE
+-public import RequestProject.Dense.Existence
++public import RefinedAbsorption.Dense.NativeE
++public import RefinedAbsorption.Dense.Existence
+ 
+ /-!
+ # Steiner systems from link levels in `ε`-form

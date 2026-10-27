@@ -1,0 +1,11 @@
+--- original/RequestProject/HyperPlan/Native.lean
++++ current/RefinedAbsorption/HyperPlan/Native.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.HyperPlan.Strong
+-public import RequestProject.OddGrid.Native
++public import RefinedAbsorption.HyperPlan.Strong
++public import RefinedAbsorption.OddGrid.Native
+ 
+ /-!
+ # `NativeStrongMultiRefiners q r` from `r`-uniform plans

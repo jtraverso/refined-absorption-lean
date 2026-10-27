@@ -1,0 +1,9 @@
+--- original/RequestProject/Absorber17/Maps.lean
++++ current/RefinedAbsorption/Absorber17/Maps.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.OmniFromRefiner
++public import RefinedAbsorption.OmniFromRefiner
+ 
+ /-!
+ # Transporting hypergraphs and decompositions along injective maps

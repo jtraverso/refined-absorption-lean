@@ -1,0 +1,11 @@
+{
+  "status": "PASS_CURRENT_DRAFT_DOCUMENT_INTEGRITY",
+  "archive": "publication/document-draft/research-note-v1.0-doi-pending-review.zip",
+  "sha256": "f6274501312775da7eb22b9544b586458a2808b06045bf68de50a069dc765a8d",
+  "files": 57,
+  "manifest": "preprints/RESEARCH_NOTE/04_integrity/DOCUMENT_MANIFEST.json",
+  "manifest_sha256": "9e5bcc208a8b0f0d81c54e68925e0f93078ccaf3b3ef909dd1fcbe01d347038d",
+  "scope": "DOI-pending local document review bundle, not a public release or Palomar receipt. Excludes manifest/checksum self-hashes and ignored reproducible render images. Relative links require the complete repository.",
+  "editorial_verdict": "EDITORIAL_DRAFT_WITH_OPEN_GATES",
+  "created_after_rendered_review": true
+}

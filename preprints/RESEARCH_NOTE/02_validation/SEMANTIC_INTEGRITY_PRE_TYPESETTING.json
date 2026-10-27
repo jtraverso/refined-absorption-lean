@@ -1,0 +1,70 @@
+{
+  "status": "PASS_TEXT_REVIEW",
+  "stage": "Before typesetting; final TeX/PDF/render/hash gates remain open.",
+  "formal_source_commit": "5428ee9b772e67dd7ec6da443199b36a003b72d4",
+  "documents": [
+    {
+      "source": "preprints/RESEARCH_NOTE/01_manuscript/RESEARCH_NOTE_preprint_v1.0_en.md",
+      "input_sha256": "25c33dce7bc5fcb031fdd2b9db2bf44e19b9efbf92a8d5b59538d431c45431e6",
+      "output_sha256": "25ebdb97a2ecba7c1db2c02a68d9b62fc20907141d6056ecb1979479ec650175",
+      "named_statements_unchanged": 5,
+      "displayed_equations_unchanged": 25,
+      "inline_math_span_count_delta": 3,
+      "explanation": "Only source-backed local-test bounds added in the note; triangle-divisibility definition moved; index-admissibility prose and reference formatting clarified. No frozen formal declaration changed."
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/01_manuscript/RESEARCH_NOTE_preprint_v1.0_es.md",
+      "input_sha256": "4f276ef4fb54bc5968bfa9572d4a43cfbb6d1055d09787bd2685ca38c69224d8",
+      "output_sha256": "eb4aeb18fdaf9c9f7ea745a88642ef029e58a60c101cf071d9be06eea28faddc",
+      "named_statements_unchanged": 5,
+      "displayed_equations_unchanged": 25,
+      "inline_math_span_count_delta": 3,
+      "explanation": "Only source-backed local-test bounds added in the note; triangle-divisibility definition moved; index-admissibility prose and reference formatting clarified. No frozen formal declaration changed."
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_en.md",
+      "input_sha256": "d134cf7dfc50665203f643ff2f22e3295ce232cec644b24b6f6b0f212f985f79",
+      "output_sha256": "1f9c329cf3c584cee666a9fe43478f6ad7fcb80d462c00210320297322a38d3a",
+      "named_statements_unchanged": 0,
+      "displayed_equations_unchanged": 4,
+      "inline_math_span_count_delta": 0,
+      "explanation": "Only source-backed local-test bounds added in the note; triangle-divisibility definition moved; index-admissibility prose and reference formatting clarified. No frozen formal declaration changed."
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_es.md",
+      "input_sha256": "8e31f779c25170ee1bded75a3fd418f74226df046b3bc295687534e900da6b7c",
+      "output_sha256": "50d3aaee2d39e872a8ffe2b1ca4c306d5fa3bcfcf019f250be403fd238f077bb",
+      "named_statements_unchanged": 0,
+      "displayed_equations_unchanged": 4,
+      "inline_math_span_count_delta": 0,
+      "explanation": "Only source-backed local-test bounds added in the note; triangle-divisibility definition moved; index-admissibility prose and reference formatting clarified. No frozen formal declaration changed."
+    }
+  ],
+  "bilingual_pairs": [
+    {
+      "english": "preprints/RESEARCH_NOTE/01_manuscript/RESEARCH_NOTE_preprint_v1.0_en.md",
+      "spanish": "preprints/RESEARCH_NOTE/01_manuscript/RESEARCH_NOTE_preprint_v1.0_es.md",
+      "english_sha256": "25ebdb97a2ecba7c1db2c02a68d9b62fc20907141d6056ecb1979479ec650175",
+      "spanish_sha256": "eb4aeb18fdaf9c9f7ea745a88642ef029e58a60c101cf071d9be06eea28faddc",
+      "math_spans_each": 320,
+      "displays_each": 25,
+      "code_spans_each": 4,
+      "result": "PASS_PRE_TYPESETTING_PARITY"
+    },
+    {
+      "english": "preprints/RESEARCH_NOTE/05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_en.md",
+      "spanish": "preprints/RESEARCH_NOTE/05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_es.md",
+      "english_sha256": "1f9c329cf3c584cee666a9fe43478f6ad7fcb80d462c00210320297322a38d3a",
+      "spanish_sha256": "50d3aaee2d39e872a8ffe2b1ca4c306d5fa3bcfcf019f250be403fd238f077bb",
+      "math_spans_each": 19,
+      "displays_each": 4,
+      "code_spans_each": 71,
+      "result": "PASS_PRE_TYPESETTING_PARITY"
+    }
+  ],
+  "frozen_mathematical_declarations_changed": 0,
+  "quantifier_or_constant_changes_to_named_statements": 0,
+  "unresolved_content_queries": [],
+  "review_kind": "Internal Codex self-assessment under author direction; mechanical parity is not independent mathematical review.",
+  "editorial_verdict": "EDITORIAL_DRAFT_WITH_OPEN_GATES"
+}

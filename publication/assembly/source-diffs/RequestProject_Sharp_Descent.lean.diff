@@ -1,0 +1,9 @@
+--- original/RequestProject/Sharp/Descent.lean
++++ current/RefinedAbsorption/Sharp/Descent.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Window.Native
++public import RefinedAbsorption.Window.Native
+ 
+ /-!
+ # Descent through windows with a geometric potential

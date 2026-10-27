@@ -1,0 +1,14 @@
+--- original/checks/PendingEndpoints.lean
++++ current/checks/PendingEndpoints.lean
+@@ -1,6 +1,8 @@
+-import RequestProject.Pending.Theorem28
+-import RequestProject.Pending.Theorem63Final
+-import RequestProject.Pending.Theorem62
++module
++
++public import RefinedAbsorption.Pending.Theorem28
++public import RefinedAbsorption.Pending.Theorem63Final
++public import RefinedAbsorption.Pending.Theorem62
+ 
+ /-! Endpoint check for the three formerly pending results of arXiv:2402.17855v1. -/
+ 

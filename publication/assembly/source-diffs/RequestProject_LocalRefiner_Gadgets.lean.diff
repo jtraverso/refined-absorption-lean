@@ -1,0 +1,9 @@
+--- original/RequestProject/LocalRefiner/Gadgets.lean
++++ current/RefinedAbsorption/LocalRefiner/Gadgets.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.LocalRefiner.Segments
++public import RefinedAbsorption.LocalRefiner.Segments
+ 
+ /-!
+ # The gadgets of the local refiner (`r = 2`, `q = 2k + 4` even)

@@ -1,0 +1,15 @@
+--- original/RequestProject/OddGrid/Native.lean
++++ current/RefinedAbsorption/OddGrid/Native.lean
+@@ -1,8 +1,8 @@
+ module
+-public import RequestProject.OddGrid.Base
+-public import RequestProject.OddGrid.PlanStrong
+-public import RequestProject.LocalRefiner.Native
+-public import RequestProject.RefinerOne.Existence
++public import RefinedAbsorption.OddGrid.Base
++public import RefinedAbsorption.OddGrid.PlanStrong
++public import RefinedAbsorption.LocalRefiner.Native
++public import RefinedAbsorption.RefinerOne.Existence
+ 
+ /-!
+ # Strong multi-refiners with the exact budget for `r = 2` and every `q ≥ 3`

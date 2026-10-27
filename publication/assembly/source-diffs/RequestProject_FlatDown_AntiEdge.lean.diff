@@ -1,0 +1,13 @@
+--- original/RequestProject/FlatDown/AntiEdge.lean
++++ current/RefinedAbsorption/FlatDown/AntiEdge.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.FlatDown.Basic
+-public import RequestProject.Counting
+-public import RequestProject.MultiRefiner.FakeEdge
++public import RefinedAbsorption.FlatDown.Basic
++public import RefinedAbsorption.Counting
++public import RefinedAbsorption.MultiRefiner.FakeEdge
+ 
+ /-!
+ # The anti-edge step into a reserve

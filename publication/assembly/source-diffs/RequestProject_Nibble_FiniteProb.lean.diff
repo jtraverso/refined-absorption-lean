@@ -1,0 +1,18 @@
+--- original/RequestProject/Nibble/FiniteProb.lean
++++ current/RefinedAbsorption/Nibble/FiniteProb.lean
+@@ -1,5 +1,5 @@
+ module
+-public import Mathlib
++public import RefinedAbsorption.MathlibImports
+ 
+ /-!
+ # Finite product probability for random subsets
+@@ -164,7 +164,7 @@
+   · rw [if_pos h]
+     obtain ⟨i, hi, hPi⟩ := h
+     refine le_trans ?_ (single_le_sum (f := fun j => if P j S then (1 : ℝ) else 0)
+-      (fun j _ => by dsimp only; split_ifs <;> norm_num) hi)
++      (fun j _ => by split_ifs <;> norm_num) hi)
+     simp [hPi]
+   · rw [if_neg h]
+     exact sum_nonneg fun j _ => by split_ifs <;> norm_num

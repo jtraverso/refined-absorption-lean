@@ -1,0 +1,11 @@
+--- original/RequestProject/Nibble/LocalIterate.lean
++++ current/RefinedAbsorption/Nibble/LocalIterate.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Nibble.LocalRound
+-public import RequestProject.Nibble.Iterate
++public import RefinedAbsorption.Nibble.LocalRound
++public import RefinedAbsorption.Nibble.Iterate
+ 
+ /-!
+ # Iterating the nibble via the Local Lemma

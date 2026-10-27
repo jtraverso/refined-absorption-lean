@@ -1,0 +1,11 @@
+--- original/RequestProject/FlatDown/Completion.lean
++++ current/RefinedAbsorption/FlatDown/Completion.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.FlatDown.AntiEdge
+-public import RequestProject.GJW.Main
++public import RefinedAbsorption.FlatDown.AntiEdge
++public import RefinedAbsorption.GJW.Main
+ 
+ /-!
+ # Local integral decompositions and completions

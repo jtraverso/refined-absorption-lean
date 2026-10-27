@@ -1,0 +1,9 @@
+--- original/RequestProject/Extensions/Embedding.lean
++++ current/RefinedAbsorption/Extensions/Embedding.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Extensions.Completion
++public import RefinedAbsorption.Extensions.Completion
+ 
+ /-!
+ # Finite embedding theorem for partial Steiner systems

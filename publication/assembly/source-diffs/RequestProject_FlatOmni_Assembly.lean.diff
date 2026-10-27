@@ -1,0 +1,13 @@
+--- original/RequestProject/FlatOmni/Assembly.lean
++++ current/RefinedAbsorption/FlatOmni/Assembly.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.FlatOmni.Attach
+-public import RequestProject.FlatOmni.SharpBounds
+-public import RequestProject.Local.CliqueOmni
++public import RefinedAbsorption.FlatOmni.Attach
++public import RefinedAbsorption.FlatOmni.SharpBounds
++public import RefinedAbsorption.Local.CliqueOmni
+ 
+ /-!
+ # Theorem 3.7 for graphs with flatness and clique pieces (sparse form)

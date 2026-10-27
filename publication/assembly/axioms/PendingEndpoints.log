@@ -1,0 +1,3 @@
+checks/PendingEndpoints.lean:17:0: 'RefinedAbsorption.Pending.theorem_2_8' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/PendingEndpoints.lean:18:0: 'RefinedAbsorption.Pending.theorem_6_3' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/PendingEndpoints.lean:19:0: 'RefinedAbsorption.Pending.theorem_6_2' depends on axioms: [propext, Classical.choice, Quot.sound]

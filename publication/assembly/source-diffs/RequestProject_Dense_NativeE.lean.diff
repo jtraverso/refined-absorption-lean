@@ -1,0 +1,11 @@
+--- original/RequestProject/Dense/NativeE.lean
++++ current/RefinedAbsorption/Dense/NativeE.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Dense.StageE
+-public import RequestProject.Dense.Native
++public import RefinedAbsorption.Dense.StageE
++public import RefinedAbsorption.Dense.Native
+ 
+ /-!
+ # `o(n)`-budget strong multi-refiners from link levels in `ε`-form

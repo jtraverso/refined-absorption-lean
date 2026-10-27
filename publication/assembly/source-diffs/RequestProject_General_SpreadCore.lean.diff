@@ -1,0 +1,13 @@
+--- original/RequestProject/General/SpreadCore.lean
++++ current/RefinedAbsorption/General/SpreadCore.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.General.PermCount
+-public import RequestProject.General.GenSpread
+-public import RequestProject.Sharp.Descent
++public import RefinedAbsorption.General.PermCount
++public import RefinedAbsorption.General.GenSpread
++public import RefinedAbsorption.Sharp.Descent
+ 
+ /-!
+ # Spreading set systems by independent random permutations

@@ -1,0 +1,9 @@
+--- original/RequestProject/Faithful2024/Section6.lean
++++ current/RefinedAbsorption/Faithful2024/Section6.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Faithful2024.MultiGadget
++public import RefinedAbsorption.Faithful2024.MultiGadget
+ 
+ /-!
+ # Section 6.3 of arXiv:2402.17855v1: Theorems 6.2, 6.3 and Lemma 6.4

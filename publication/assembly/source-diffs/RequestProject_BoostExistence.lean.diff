@@ -1,0 +1,11 @@
+--- original/RequestProject/BoostExistence.lean
++++ current/RefinedAbsorption/BoostExistence.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Reserves
+-public import RequestProject.Boost
++public import RefinedAbsorption.Reserves
++public import RefinedAbsorption.Boost
+ 
+ /-!
+ # The Existence Conjecture from the two remaining ingredients

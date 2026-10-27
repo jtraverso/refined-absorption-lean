@@ -1,0 +1,11 @@
+--- original/RequestProject/GridRefiner/Labels.lean
++++ current/RefinedAbsorption/GridRefiner/Labels.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.GridRefiner.Lift
+-public import RequestProject.LocalRefiner.OwnedChains
++public import RefinedAbsorption.GridRefiner.Lift
++public import RefinedAbsorption.LocalRefiner.OwnedChains
+ 
+ /-!
+ # Labels of the grid refiner

@@ -1,0 +1,12 @@
+--- original/checks/PendingAxioms.lean
++++ current/checks/PendingAxioms.lean
+@@ -1,5 +1,7 @@
+-import RequestProject.NibbleDesigns
+-import RequestProject.GeneralEmbedding.Main
++module
++
++public import RefinedAbsorption.NibbleDesigns
++public import RefinedAbsorption.GeneralEmbedding.Main
+ open RefinedAbsorption
+ #print axioms nibbleForDesigns
+ #print axioms generalEmbeddingLemma

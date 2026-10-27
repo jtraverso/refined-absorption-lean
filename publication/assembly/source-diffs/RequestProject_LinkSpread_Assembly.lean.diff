@@ -1,0 +1,15 @@
+--- original/RequestProject/LinkSpread/Assembly.lean
++++ current/RefinedAbsorption/LinkSpread/Assembly.lean
+@@ -1,8 +1,8 @@
+ module
+-public import RequestProject.LinkSpread.Comp
+-public import RequestProject.FlatDown.LinkAccounting
+-public import RequestProject.Placement.ReserveLemma52
+-public import RequestProject.Dense.ExistenceE
++public import RefinedAbsorption.LinkSpread.Comp
++public import RefinedAbsorption.FlatDown.LinkAccounting
++public import RefinedAbsorption.Placement.ReserveLemma52
++public import RefinedAbsorption.Dense.ExistenceE
+ 
+ /-!
+ # Link levels from tagged link refiners

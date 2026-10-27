@@ -1,0 +1,15 @@
+--- original/RequestProject/Local/LevelOneSharp.lean
++++ current/RefinedAbsorption/Local/LevelOneSharp.lean
+@@ -1,8 +1,8 @@
+ module
+-public import RequestProject.Local.FlatEmbedMain
+-public import RequestProject.Local.StageZero
+-public import RequestProject.Local.TaggedA
+-public import RequestProject.LinkSpread.LevelOneFinal
++public import RefinedAbsorption.Local.FlatEmbedMain
++public import RefinedAbsorption.Local.StageZero
++public import RefinedAbsorption.Local.TaggedA
++public import RefinedAbsorption.LinkSpread.LevelOneFinal
+ 
+ /-!
+ # Theorem 3.8 for `3`-graphs from the flat theorem for graphs

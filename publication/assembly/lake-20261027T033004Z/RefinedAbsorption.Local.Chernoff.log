@@ -1,0 +1,9 @@
+COMMAND ["lake", "--quiet", "--packages=.lake/local-packages.json", "build", "+RefinedAbsorption.Local.Chernoff:olean"]
+⚠ [2351/2351] Built RefinedAbsorption.Local.Chernoff (42s)
+warning: RefinedAbsorption/Local/Chernoff.lean:107:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```

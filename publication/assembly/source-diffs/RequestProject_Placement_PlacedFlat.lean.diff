@@ -1,0 +1,13 @@
+--- original/RequestProject/Placement/PlacedFlat.lean
++++ current/RefinedAbsorption/Placement/PlacedFlat.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.FlatDown.FlatDegree
+-public import RequestProject.FlatDown.LinkAccounting
+-public import RequestProject.Placement.MultiEmbed
++public import RefinedAbsorption.FlatDown.FlatDegree
++public import RefinedAbsorption.FlatDown.LinkAccounting
++public import RefinedAbsorption.Placement.MultiEmbed
+ 
+ /-!
+ # The flat step in `Fin n` with placed completion supports

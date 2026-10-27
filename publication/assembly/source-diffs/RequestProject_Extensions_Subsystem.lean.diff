@@ -1,0 +1,11 @@
+--- original/RequestProject/Extensions/Subsystem.lean
++++ current/RefinedAbsorption/Extensions/Subsystem.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Extensions.Embedding
+-public import RequestProject.Extensions.CountCore
++public import RefinedAbsorption.Extensions.Embedding
++public import RefinedAbsorption.Extensions.CountCore
+ 
+ /-!
+ # Steiner systems with prescribed subsystems (Doyen–Wilson type)

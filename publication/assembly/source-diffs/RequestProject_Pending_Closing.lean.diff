@@ -1,0 +1,9 @@
+--- original/RequestProject/Pending/Closing.lean
++++ current/RefinedAbsorption/Pending/Closing.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Nibble.LLL
++public import RefinedAbsorption.Nibble.LLL
+ 
+ /-!
+ # Closing lemma: an `A₀`-perfect matching from many options per vertex (Local Lemma)

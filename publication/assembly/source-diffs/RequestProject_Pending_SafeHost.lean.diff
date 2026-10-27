@@ -1,0 +1,11 @@
+--- original/RequestProject/Pending/SafeHost.lean
++++ current/RefinedAbsorption/Pending/SafeHost.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Pending.SafeAbsorbers
+-public import RequestProject.Original2024.Host
++public import RefinedAbsorption.Pending.SafeAbsorbers
++public import RefinedAbsorption.Original2024.Host
+ 
+ /-!
+ # Refined omni-absorbers in a dense host, safe with respect to a given packing

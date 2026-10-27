@@ -1,0 +1,9 @@
+--- original/RequestProject/OddGrid/StageDiv.lean
++++ current/RefinedAbsorption/OddGrid/StageDiv.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.OddGrid.Stage
++public import RefinedAbsorption.OddGrid.Stage
+ 
+ /-!
+ # Divisibility in a stage

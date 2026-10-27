@@ -1,0 +1,9 @@
+--- original/RequestProject/HyperPlan/LinkLift.lean
++++ current/RefinedAbsorption/HyperPlan/LinkLift.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.HyperPlan.Segment
++public import RefinedAbsorption.HyperPlan.Segment
+ 
+ /-!
+ # Lifting routes from the link of a vertex

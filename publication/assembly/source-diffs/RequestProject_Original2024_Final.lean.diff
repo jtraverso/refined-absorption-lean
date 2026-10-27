@@ -1,0 +1,9 @@
+--- original/RequestProject/Original2024/Final.lean
++++ current/RefinedAbsorption/Original2024/Final.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Original2024.MinDegree
++public import RefinedAbsorption.Original2024.MinDegree
+ 
+ /-!
+ # The theorems of the original article (Delcourt–Postle 2024), collected

@@ -1,0 +1,9 @@
+--- original/RequestProject/Placement/ChainLevelsE.lean
++++ current/RefinedAbsorption/Placement/ChainLevelsE.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Placement.ChainLevels
++public import RefinedAbsorption.Placement.ChainLevels
+ 
+ /-!
+ # Link levels with a vanishing additive term (`ε`-form)

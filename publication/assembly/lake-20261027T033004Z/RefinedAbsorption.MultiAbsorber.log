@@ -1,0 +1,23 @@
+COMMAND ["lake", "--quiet", "--packages=.lake/local-packages.json", "build", "+RefinedAbsorption.MultiAbsorber:olean"]
+⚠ [2334/2335] Replayed RefinedAbsorption.Counting
+warning: RefinedAbsorption/Counting.lean:190:76: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [2335/2335] Built RefinedAbsorption.MultiAbsorber (40s)
+warning: RefinedAbsorption/MultiAbsorber.lean:78:29: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: RefinedAbsorption/MultiAbsorber.lean:79:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RefinedAbsorption/MultiAbsorber.lean:85:65: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: RefinedAbsorption/MultiAbsorber.lean:86:64: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲

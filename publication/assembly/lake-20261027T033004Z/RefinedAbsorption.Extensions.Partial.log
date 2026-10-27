@@ -1,0 +1,11 @@
+COMMAND ["lake", "--quiet", "--packages=.lake/local-packages.json", "build", "+RefinedAbsorption.Extensions.Partial:olean"]
+⚠ [2334/2335] Replayed RefinedAbsorption.Counting
+warning: RefinedAbsorption/Counting.lean:190:76: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [2335/2335] Built RefinedAbsorption.Extensions.Partial (43s)
+warning: RefinedAbsorption/Extensions/Partial.lean:204:11: `Finset.prod_le_prod'` has been deprecated: Use `Finset.prod_le_prod` instead
+
+Hint: Replace the deprecated name:
+  prod_le_prod'̵

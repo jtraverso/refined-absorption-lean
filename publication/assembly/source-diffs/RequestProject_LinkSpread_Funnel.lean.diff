@@ -1,0 +1,9 @@
+--- original/RequestProject/LinkSpread/Funnel.lean
++++ current/RefinedAbsorption/LinkSpread/Funnel.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.MultiRefiner.PieceDeg
++public import RefinedAbsorption.MultiRefiner.PieceDeg
+ 
+ /-!
+ # A counting bound for tagged refiners whose pieces sit in few small reserves

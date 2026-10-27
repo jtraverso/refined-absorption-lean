@@ -1,0 +1,9 @@
+--- original/RequestProject/Nibble/Main.lean
++++ current/RefinedAbsorption/Nibble/Main.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Nibble.Params
++public import RefinedAbsorption.Nibble.Params
+ 
+ /-!
+ # The nibble with test sets for nearly regular hypergraphs

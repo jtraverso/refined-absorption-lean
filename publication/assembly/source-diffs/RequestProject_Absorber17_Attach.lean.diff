@@ -1,0 +1,57 @@
+--- original/RequestProject/Absorber17/Attach.lean
++++ current/RefinedAbsorption/Absorber17/Attach.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Absorber17.Theorem
++public import RefinedAbsorption.Absorber17.Theorem
+ 
+ /-!
+ # Attaching absorbers to the pieces of a refiner family
+@@ -30,7 +30,9 @@
+     S.equivFin.symm.injective (Subtype.val_injective h)⟩
+   have hψS : ∀ i, ψ i ∈ S := fun i => (S.equivFin.symm i).2
+   have hrange : ∀ x ∈ S, ∃ i, ψ i = x := fun x hx =>
+-    ⟨S.equivFin ⟨x, hx⟩, by simp [ψ]⟩
++    ⟨S.equivFin ⟨x, hx⟩, by
++      change ((S.equivFin.symm (S.equivFin ⟨x, hx⟩)) : V) = x
++      simp⟩
+   have hpre : ∀ e ∈ L, (e.preimage ψ ψ.injective.injOn).map ψ = e := by
+     intro e he
+     ext x
+@@ -65,7 +67,8 @@
+       · exact Fin.ext h⟩
+   have hφ : (Fin.castLEEmb hN).trans φ = ψ.trans Function.Embedding.inl := by
+     ext i
+-    simp [φ, i.2]
++    change (if h : i.1 < k then Sum.inl (ψ ⟨i.1, h⟩) else Sum.inr i.1) = Sum.inl (ψ i)
++    rw [dif_pos i.2]
+   refine ⟨gmap φ A', ?_, ?_⟩
+   · have h := habs.gmap φ
+     change IsAbsorber q r (gmap φ (gmap (Fin.castLEEmb hN) LS)) _ at h
+@@ -81,7 +84,8 @@
+       by_contra h
+       apply hno x.1
+       refine mem_map.2 ⟨x, hx, ?_⟩
+-      simp [φ, h]
++      change (if hk : x.1 < k then Sum.inl (ψ ⟨x.1, hk⟩) else Sum.inr x.1) = Sum.inr x.1
++      rw [dif_neg h]
+     change x ∈ vertexSet (gmap (Fin.castLEEmb hN) LS)
+     rw [vertexSet_gmap]
+     refine mem_map.2 ⟨⟨x.1, hxk⟩, ?_, Fin.ext rfl⟩
+@@ -156,11 +160,12 @@
+     obtain ⟨f₀, -, rfl⟩ := mem_gmap.1 hf
+     obtain ⟨y, -, hy⟩ := mem_map.1 hn
+     cases y with
+-    | inl y => simp [tagE] at hy
++    | inl y =>
++      change Sum.inl y = Sum.inr (W₁, n) at hy
++      cases hy
+     | inr y =>
+-      simp only [tagE, Function.Embedding.coeFn_mk, Sum.elim_inr, Sum.inr.injEq,
+-        Prod.mk.injEq] at hy
+-      exact hy.1.symm
++      change Sum.inr (W, y) = Sum.inr (W₁, n) at hy
++      exact (congrArg Prod.fst (Sum.inr.inj hy)).symm
+   refine ⟨A, fun W' => if h : HasDecomposition q r (A W' ∪ W') then Classical.choose h else ∅,
+     fun W' => if h : HasDecomposition q r (A W') then Classical.choose h else ∅, ?_⟩
+   refine ⟨fun W' hW' => ?_, fun W' hW' => ?_, fun W₁' hW₁' W₂' hW₂' hne => ?_,

@@ -1,0 +1,11 @@
+--- original/RequestProject/Nibble/LocalMain.lean
++++ current/RefinedAbsorption/Nibble/LocalMain.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Nibble.LocalIterate
+-public import RequestProject.Nibble.Main
++public import RefinedAbsorption.Nibble.LocalIterate
++public import RefinedAbsorption.Nibble.Main
+ 
+ /-!
+ # The nibble without a bound on the number of vertices

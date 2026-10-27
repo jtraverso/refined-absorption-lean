@@ -1,0 +1,10 @@
+--- original/checks/IntersectionAxioms.lean
++++ current/checks/IntersectionAxioms.lean
+@@ -1,4 +1,6 @@
+-import RequestProject.Extensions.Intersection
++module
++
++public import RefinedAbsorption.Extensions.Intersection
+ 
+ open RefinedAbsorption.Extensions
+ 

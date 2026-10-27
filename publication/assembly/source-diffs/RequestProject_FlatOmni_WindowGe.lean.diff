@@ -1,0 +1,9 @@
+--- original/RequestProject/FlatOmni/WindowGe.lean
++++ current/RefinedAbsorption/FlatOmni/WindowGe.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Sharp.Sparsify
++public import RefinedAbsorption.Sharp.Sparsify
+ 
+ /-!
+ # The window stage for every multiplicity bound

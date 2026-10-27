@@ -1,0 +1,919 @@
+{
+  "status": "RUNNING",
+  "required": 308,
+  "started_utc": "2026-10-27T03:30:04.875377+00:00",
+  "run": "publication/assembly/lake-20261027T033004Z",
+  "compiled": [
+    {
+      "module": "RefinedAbsorption.MathlibImports",
+      "source_sha256": "b5d386f1a80985a61ae4bc814f253cce7a2fa000e1eb55ce832d3c352fc4d308",
+      "exit_code": 0,
+      "seconds": 21.75,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.MathlibImports.log"
+    },
+    {
+      "module": "RefinedAbsorption.Extensions.PolynomialExternal",
+      "source_sha256": "f257fd737b303643c77650e2e130929bd7e4e91d2f16b2981c77a3253d4b55a1",
+      "exit_code": 0,
+      "seconds": 32.75,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Extensions.PolynomialExternal.log"
+    },
+    {
+      "module": "RefinedAbsorption.Basic",
+      "source_sha256": "a4b25802cfae7a88b82ec31c78cd6d32c03802c434f6895a5d2105326159bf05",
+      "exit_code": 0,
+      "seconds": 72.22,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Basic.log"
+    },
+    {
+      "module": "RefinedAbsorption.BeckFiala",
+      "source_sha256": "3a23b1b4726d08c0a610ff4a748576c3a8b40fb61d55ea9225d675c9886d2f40",
+      "exit_code": 0,
+      "seconds": 82.22,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.BeckFiala.log"
+    },
+    {
+      "module": "RefinedAbsorption.Extensions.PolynomialTools",
+      "source_sha256": "20295524b173b82483a0759ddd78d2734ad01c0f0a780621b40a17b2400363ab",
+      "exit_code": 0,
+      "seconds": 70.78,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Extensions.PolynomialTools.log"
+    },
+    {
+      "module": "RefinedAbsorption.Counting",
+      "source_sha256": "77e534c7c43bfad52a002949856ce1e56e454b494c98aab4f47ad27d457fb200",
+      "exit_code": 0,
+      "seconds": 68.91,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Counting.log"
+    },
+    {
+      "module": "RefinedAbsorption.Faithful2024.Section2",
+      "source_sha256": "f3efc2bb7da85df4faa24da2e7a1934654c2afcf6aa8264ed02768c6c4cff3e0",
+      "exit_code": 0,
+      "seconds": 66.84,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Faithful2024.Section2.log"
+    },
+    {
+      "module": "RefinedAbsorption.Extensions.NashWilliamsSchedule",
+      "source_sha256": "d0154c894dc28dedae9a7e6d05805386bd95c82b5e59fa483918ee92eed17d10",
+      "exit_code": 0,
+      "seconds": 80.3,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Extensions.NashWilliamsSchedule.log"
+    },
+    {
+      "module": "RefinedAbsorption.Absorbers",
+      "source_sha256": "7d95b58dec5da180452c40019dc33b2016d3570b809381c7ba7c818d66fe7207",
+      "exit_code": 0,
+      "seconds": 71.45,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Absorbers.log"
+    },
+    {
+      "module": "RefinedAbsorption.Designs",
+      "source_sha256": "946ebefbfd102f272f4717d6fa0473a008c1bebee8f5306d20518a2ce3e21b4e",
+      "exit_code": 0,
+      "seconds": 74.17,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Designs.log"
+    },
+    {
+      "module": "RefinedAbsorption.Extensions.Partial",
+      "source_sha256": "cfabaae8e4340a4df752c0835682c81af9e03c672f3e8c2ce017eba7773338b8",
+      "exit_code": 0,
+      "seconds": 69.58,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Extensions.Partial.log"
+    },
+    {
+      "module": "RefinedAbsorption.Absorber17.Booster",
+      "source_sha256": "776fd7852d269b0670c3337ece0fe62b0716d6871feff505677b47a2e93f5acc",
+      "exit_code": 0,
+      "seconds": 72.55,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Absorber17.Booster.log"
+    },
+    {
+      "module": "RefinedAbsorption.GJW.Trades",
+      "source_sha256": "fd0a1f31601e250d8bc520baf6f4220404088bf29a84c472a3950968cb2e99ee",
+      "exit_code": 0,
+      "seconds": 76.5,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GJW.Trades.log"
+    },
+    {
+      "module": "RefinedAbsorption.Extensions.CountCore",
+      "source_sha256": "764a7f5e7428ae05fcff2fe207b960c4d689c4498b071aff50a587529629099d",
+      "exit_code": 0,
+      "seconds": 68.51,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Extensions.CountCore.log"
+    },
+    {
+      "module": "RefinedAbsorption.Gadget",
+      "source_sha256": "bc03ace98a36914534169945e3b6e3fd19bf2a14cddf0925313c5bb4c631c11f",
+      "exit_code": 0,
+      "seconds": 71.49,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Gadget.log"
+    },
+    {
+      "module": "RefinedAbsorption.General.Coloring",
+      "source_sha256": "0eece0b5ae62c7aec2a35cce9349004a2883de308938783bb630b3aafa957da3",
+      "exit_code": 0,
+      "seconds": 68.97,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.General.Coloring.log"
+    },
+    {
+      "module": "RefinedAbsorption.General.PermCount",
+      "source_sha256": "075ff398deb6a682ed67184378400b32f8fdbd09155b3d524df05d65d477e7bd",
+      "exit_code": 0,
+      "seconds": 65.86,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.General.PermCount.log"
+    },
+    {
+      "module": "RefinedAbsorption.GeneralEmbedding.Defs",
+      "source_sha256": "27bda407d042c7131dac8e9a4463a1477b63010a1cead02d5794bb411ed345de",
+      "exit_code": 0,
+      "seconds": 63.89,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GeneralEmbedding.Defs.log"
+    },
+    {
+      "module": "RefinedAbsorption.HyperPlan.Box",
+      "source_sha256": "e8c3d8aecc7d102d21d8b02fc0792b2d5c88fa19c594cde86454ef04a96a6604",
+      "exit_code": 0,
+      "seconds": 71.5,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.HyperPlan.Box.log"
+    },
+    {
+      "module": "RefinedAbsorption.Local.Chernoff",
+      "source_sha256": "b07fe6db3fedaab19cccdab3402978c6ac9ee9d420f9f030cd5901a70c7008cf",
+      "exit_code": 0,
+      "seconds": 68.84,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Local.Chernoff.log"
+    },
+    {
+      "module": "RefinedAbsorption.GeneralEmbedding.Counting",
+      "source_sha256": "31300d25b0159c8caed25ab4e8a9c65656cae5bdb7d883d06fef2efbbd6c1f6d",
+      "exit_code": 0,
+      "seconds": 70.45,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GeneralEmbedding.Counting.log"
+    },
+    {
+      "module": "RefinedAbsorption.MultiAbsorber",
+      "source_sha256": "09f8b0c19592f93dd59e3e2f214b2fc1e8f9052e4d382dfaa04d0117722d30e3",
+      "exit_code": 0,
+      "seconds": 70.03,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.MultiAbsorber.log"
+    },
+    {
+      "module": "RefinedAbsorption.General.GenSpread",
+      "source_sha256": "f60005f1567dfceca1b439a3ae79f544c5329cbd68a6159f6296b91dcbc98160",
+      "exit_code": 0,
+      "seconds": 73.0,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.General.GenSpread.log"
+    },
+    {
+      "module": "RefinedAbsorption.GeneralEmbedding.State",
+      "source_sha256": "a5fa99afb4591f6ed997fbda2d353ada43055d530724823177382bf6d62ce374",
+      "exit_code": 0,
+      "seconds": 68.3,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GeneralEmbedding.State.log"
+    },
+    {
+      "module": "RefinedAbsorption.GJW.Main",
+      "source_sha256": "16eeaf804c5ffdc7500c9b582106805b151774f98bb953b285e56bed17607de6",
+      "exit_code": 0,
+      "seconds": 76.31,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GJW.Main.log"
+    },
+    {
+      "module": "RefinedAbsorption.Local.Affine",
+      "source_sha256": "863a40c219d7f14b4db11658ddc507c7ea77b247e647cbdac181a6718a0472c9",
+      "exit_code": 0,
+      "seconds": 84.47,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Local.Affine.log"
+    },
+    {
+      "module": "RefinedAbsorption.GeneralEmbedding.Step",
+      "source_sha256": "30b64afca34a6a60c6ac766bfc626fd7309635c38eaf9ae915ff944f4176d314",
+      "exit_code": 0,
+      "seconds": 84.99,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GeneralEmbedding.Step.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.FiniteProb",
+      "source_sha256": "a2da8a76897d14b8658961a9fae5c9bffd75c98ab7531ff61dca9ad58e599f47",
+      "exit_code": 0,
+      "seconds": 88.14,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.FiniteProb.log"
+    },
+    {
+      "module": "RefinedAbsorption.OddGrid.Greedy",
+      "source_sha256": "92459a920e6a53aa0d8da950b719e9253c1dc1d5d95e8f91afcbf706c87ee6de",
+      "exit_code": 0,
+      "seconds": 76.16,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.OddGrid.Greedy.log"
+    },
+    {
+      "module": "RefinedAbsorption.GeneralEmbedding.Bad",
+      "source_sha256": "7fd00b702e36c4abb6a954d316384c61c450cc63fd36df9c37bbe1399a4fc498",
+      "exit_code": 0,
+      "seconds": 93.0,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GeneralEmbedding.Bad.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.Hyper",
+      "source_sha256": "970066a2c22d30af3093659881b83b12a5c2b755397876b2a5abe92c7fd6e157",
+      "exit_code": 0,
+      "seconds": 73.34,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.Hyper.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.LLL",
+      "source_sha256": "c32e4e02f03963b1f0116e3c9f7e3ee07d2657fa5abdee2d1c6c622b6f18beb9",
+      "exit_code": 0,
+      "seconds": 86.39,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.LLL.log"
+    },
+    {
+      "module": "RefinedAbsorption.GeneralEmbedding.Good",
+      "source_sha256": "e7c5abf6971a422a3a2877ba13b68c337d9fa4e47c88056b99d84a9e66e05612",
+      "exit_code": 0,
+      "seconds": 71.64,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GeneralEmbedding.Good.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.RoundProb",
+      "source_sha256": "d3731f08f3eae4c7a41b81c5da2340dd436e5a423d326ae9dc66be13e2ef6fd1",
+      "exit_code": 0,
+      "seconds": 76.52,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.RoundProb.log"
+    },
+    {
+      "module": "RefinedAbsorption.Pending.Closing",
+      "source_sha256": "93134f26ae1562af36d592b748f60c842aa01353aeb5c457a8d847bc09f05e61",
+      "exit_code": 0,
+      "seconds": 83.41,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Pending.Closing.log"
+    },
+    {
+      "module": "RefinedAbsorption.GeneralEmbedding.Greedy",
+      "source_sha256": "c97a1ead907bf1888d0d5bc67040bfa2650aad0d382bb63c611f94ea4269d9f7",
+      "exit_code": 0,
+      "seconds": 93.11,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GeneralEmbedding.Greedy.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.Waste",
+      "source_sha256": "5e539484742fb3956c91b43d39504be62da30f00c208d9f8e049d2edb068a2ce",
+      "exit_code": 0,
+      "seconds": 99.06,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.Waste.log"
+    },
+    {
+      "module": "RefinedAbsorption.Pending.Danger",
+      "source_sha256": "228ad3e4bbc8b8b7f1637239706b0da3c31296ed0832a3145eb571c678921338",
+      "exit_code": 0,
+      "seconds": 89.08,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Pending.Danger.log"
+    },
+    {
+      "module": "RefinedAbsorption.GeneralEmbedding.Main",
+      "source_sha256": "ec1df0cba7bc17bed8286c188b5767f50371ac7cb1745aa564f0dfb77485be90",
+      "exit_code": 0,
+      "seconds": 86.3,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GeneralEmbedding.Main.log"
+    },
+    {
+      "module": "RefinedAbsorption.Pending.Regularize",
+      "source_sha256": "4552508e7e86fdf2aabb3c854d3764ca6583d167d175412524c56ea5b4a62ed1",
+      "exit_code": 0,
+      "seconds": 79.09,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Pending.Regularize.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.RoundBounds",
+      "source_sha256": "7f338e0f31a1e39cf627a9aec61b4040b42166018af759dcfa3b72f80fc6629f",
+      "exit_code": 0,
+      "seconds": 127.12,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.RoundBounds.log"
+    },
+    {
+      "module": "RefinedAbsorption.FaithfulSurvey2025.Embedding",
+      "source_sha256": "7a938d15cafc2e62b8a50c948d7213db7dd6c49731104b25949014afd792f2eb",
+      "exit_code": 0,
+      "seconds": 84.81,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.FaithfulSurvey2025.Embedding.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.Balance",
+      "source_sha256": "41d6fbf8d9be95fd03d9f38c468cf293a9244b266eec3fe2380828f0efe4ff60",
+      "exit_code": 0,
+      "seconds": 78.09,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.Balance.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.Defs",
+      "source_sha256": "4c9b1266dc7525c63d73e97b841e28b7b1260e97f866c9f7fa2099199f0c3c27",
+      "exit_code": 0,
+      "seconds": 76.14,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.Defs.log"
+    },
+    {
+      "module": "RefinedAbsorption.RefinerOne.Chain",
+      "source_sha256": "bc46157b5c47214cac62e7d3d7e052834711cd602fcd983ee62d2e92c791fe95",
+      "exit_code": 0,
+      "seconds": 77.39,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.RefinerOne.Chain.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.Round",
+      "source_sha256": "7b2d9c539899448f318aedb90679fd51d70a0792376b5ae1dcc13941f15abd92",
+      "exit_code": 0,
+      "seconds": 136.92,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.Round.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.Counting",
+      "source_sha256": "fcf6a85a424d9fc4ac3f4e529e25b78bf2ac578c440c1d325c83c864c2992d33",
+      "exit_code": 0,
+      "seconds": 74.84,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.Counting.log"
+    },
+    {
+      "module": "RefinedAbsorption.Sharp.Special",
+      "source_sha256": "c343d88fe4c0963c0cbf13f36c6d1bad3412e81b53a676220de88e09b21439ee",
+      "exit_code": 0,
+      "seconds": 74.22,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Sharp.Special.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.Iterate",
+      "source_sha256": "d6badefefc87b73086ea935464c80045954674b6bc4487a89bf21c15da5800f6",
+      "exit_code": 0,
+      "seconds": 91.16,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.Iterate.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.LocalRound",
+      "source_sha256": "ed56d7ea92976c92f35ac86339a20fdab8ffd502d768beba8283a320059510a2",
+      "exit_code": 0,
+      "seconds": 100.19,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.LocalRound.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.Inner",
+      "source_sha256": "701948c200345226ae46061e3aa956ebce0451dfcbae0b99e1b4ba9df60405f9",
+      "exit_code": 0,
+      "seconds": 79.55,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.Inner.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.LocalIterate",
+      "source_sha256": "f6ebf645508587714a3a2aa2f659e262d13276f91245b82ca557859fffda4aea",
+      "exit_code": 0,
+      "seconds": 85.23,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.LocalIterate.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.Params",
+      "source_sha256": "7785f6b75d75e8278b7ab40c528eab2b4ed5c97a429175ad44d63e750740176b",
+      "exit_code": 0,
+      "seconds": 133.7,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.Params.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.ClusterInner",
+      "source_sha256": "f6d2f0c947e54dd46d73615c94a12f8e9e94d99c82ac967d9b4ae58137d43b93",
+      "exit_code": 0,
+      "seconds": 77.06,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.ClusterInner.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.Lemma52",
+      "source_sha256": "01f07ade84ca0fbea10dc4a14836130a3f463c5949b2277c3e42e5ff9fe8e6f7",
+      "exit_code": 0,
+      "seconds": 76.25,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.Lemma52.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.PlacedDeg",
+      "source_sha256": "e41cd7b9a4066d46c91b774f771f7fbbbe54b86fa849b2a9ca5bc1b877e2a964",
+      "exit_code": 0,
+      "seconds": 73.3,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.PlacedDeg.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.Main",
+      "source_sha256": "8279c9ef3eb43ae521626ba7364529e83cb8a0b043e903afff601f4a7b3b76c9",
+      "exit_code": 0,
+      "seconds": 113.0,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.Main.log"
+    },
+    {
+      "module": "RefinedAbsorption.Pending.SafeInner",
+      "source_sha256": "4b81ff4d234a35133bebe790f48e6626fe4ad6af14aee19f763230a5a6e9ab80",
+      "exit_code": 0,
+      "seconds": 69.78,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Pending.SafeInner.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.Cluster",
+      "source_sha256": "4a6beae6bd3c46a7f1964435d6ad4e190dadb6bb08b5d62015552514b6472e7a",
+      "exit_code": 0,
+      "seconds": 74.89,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.Cluster.log"
+    },
+    {
+      "module": "RefinedAbsorption.Pending.SafeEmbed",
+      "source_sha256": "d4dc2add84ea2089f7a4b82e3f2d4c3812f164ef69d896ad643fe6598b8f42ac",
+      "exit_code": 0,
+      "seconds": 65.84,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Pending.SafeEmbed.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.ReserveInner",
+      "source_sha256": "73bcdd319649e061fc3c28e06fe5d733c2362c7f889cb6585a700fc8548379bc",
+      "exit_code": 0,
+      "seconds": 69.33,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.ReserveInner.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.LocalMain",
+      "source_sha256": "da606d76c0271c4a2500adc759306234004bd13e5db722efe1774ec9e43148b4",
+      "exit_code": 0,
+      "seconds": 122.31,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.LocalMain.log"
+    },
+    {
+      "module": "RefinedAbsorption.Statements",
+      "source_sha256": "3f7bf57bdccfa175b71500f76197579d831eb118136a63b40da4ad88a68dc513",
+      "exit_code": 0,
+      "seconds": 74.62,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Statements.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.ReserveLemma52",
+      "source_sha256": "daa01bcc2b399c9fd1b77d2fd5b12e088de0037ee5e93b22e6aad7b6b5ae5e3c",
+      "exit_code": 0,
+      "seconds": 76.75,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.ReserveLemma52.log"
+    },
+    {
+      "module": "RefinedAbsorption.Pending.MultiNibble",
+      "source_sha256": "ab4c05c214420f9419f6b9092bfc4117641f9ffb3351abef482dded463a837f4",
+      "exit_code": 0,
+      "seconds": 83.64,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Pending.MultiNibble.log"
+    },
+    {
+      "module": "RefinedAbsorption.Boost",
+      "source_sha256": "0e2c3f282fe0f5d8abd9a8bd2e5393dec893d0985a357e7f06b85fe2f2974d79",
+      "exit_code": 0,
+      "seconds": 101.56,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Boost.log"
+    },
+    {
+      "module": "RefinedAbsorption.Kirkman",
+      "source_sha256": "e7fb3478ef3bacfde3d24a86ec4d2413c8ff8e788e41a7d178b19bd7ef10f1d0",
+      "exit_code": 0,
+      "seconds": 79.91,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Kirkman.log"
+    },
+    {
+      "module": "RefinedAbsorption.ExistenceProof",
+      "source_sha256": "666a9b5f052e0b3578037ea28063c47e0e0351f6b8e02384c78d56c2d2f8969e",
+      "exit_code": 0,
+      "seconds": 105.2,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.ExistenceProof.log"
+    },
+    {
+      "module": "RefinedAbsorption.Pending.Core28",
+      "source_sha256": "297bcb829a9be64d74355c7c3d934a2e2f406980f74448dfb38d4e8399e5752f",
+      "exit_code": 0,
+      "seconds": 73.28,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Pending.Core28.log"
+    },
+    {
+      "module": "RefinedAbsorption.Pending.Theorem63One",
+      "source_sha256": "c72d98b8f411e2b1be5103dd6abf7ba27f1487e4502e50282df405640df49672",
+      "exit_code": 0,
+      "seconds": 68.16,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Pending.Theorem63One.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.MultiEmbed",
+      "source_sha256": "d489c8e77af07e9867f83cee29681b5d6f0fcf5a15cc0c9c5d4a1d8ef66e9795",
+      "exit_code": 0,
+      "seconds": 67.02,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.MultiEmbed.log"
+    },
+    {
+      "module": "RefinedAbsorption.ReserveCover",
+      "source_sha256": "e5d08bc2a04582b217c815b2c28316d34c0b97c1685d519070af14287fae0440",
+      "exit_code": 0,
+      "seconds": 91.06,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.ReserveCover.log"
+    },
+    {
+      "module": "RefinedAbsorption.Reserves",
+      "source_sha256": "b4f1af9cd482cf871a11dbb4d51c06678a996f58325d61585e2de1165c8c3e1b",
+      "exit_code": 0,
+      "seconds": 102.56,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Reserves.log"
+    },
+    {
+      "module": "RefinedAbsorption.BoostExistence",
+      "source_sha256": "d5729658cbec6e2f8456a87c7940d19d4cda623c27741a00915d7b2342538205",
+      "exit_code": 0,
+      "seconds": 80.78,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.BoostExistence.log"
+    },
+    {
+      "module": "RefinedAbsorption.Pending.Theorem28",
+      "source_sha256": "d052cb0c39cdb079fd57d620881873fb8fa1410d2355205dd7cd565473925c12",
+      "exit_code": 0,
+      "seconds": 195.34,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Pending.Theorem28.log"
+    },
+    {
+      "module": "RefinedAbsorption.Multigraph.StrongReserves",
+      "source_sha256": "dca40999b950c88ae5dda3411db5282a9426b8beb0b20ecc6b43c812c6f68725",
+      "exit_code": 0,
+      "seconds": 88.12,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Multigraph.StrongReserves.log"
+    },
+    {
+      "module": "RefinedAbsorption.NibbleReserves",
+      "source_sha256": "9bdab38f77eed2c429c7921e548d8cf4bf05d9aed6340bed30366ea6696515ba",
+      "exit_code": 0,
+      "seconds": 62.27,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.NibbleReserves.log"
+    },
+    {
+      "module": "RefinedAbsorption.OmniFromRefiner",
+      "source_sha256": "dd5a7d3ec5d4094a8c44f233e0d4decfcd52a4cab8e2c53f9139b67f6cd11ef6",
+      "exit_code": 0,
+      "seconds": 62.42,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.OmniFromRefiner.log"
+    },
+    {
+      "module": "RefinedAbsorption.Absorber17.Maps",
+      "source_sha256": "fe6fbbe41f82ba09a5781a44476b0ee956e13bf3f71d1b1697fe081dc9062fd0",
+      "exit_code": 0,
+      "seconds": 68.38,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Absorber17.Maps.log"
+    },
+    {
+      "module": "RefinedAbsorption.RefinerReductions",
+      "source_sha256": "13d9e3a494d4c00f7cbf82bb37e9e6563da3688ccf661e4e0b7544cde2a93786",
+      "exit_code": 0,
+      "seconds": 70.84,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.RefinerReductions.log"
+    },
+    {
+      "module": "RefinedAbsorption.Absorber17.Transfer",
+      "source_sha256": "71d4dba755687967f0e4b5714e9ffe57f2039a55df5139665e9a95892df32046",
+      "exit_code": 0,
+      "seconds": 65.81,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Absorber17.Transfer.log"
+    },
+    {
+      "module": "RefinedAbsorption.Absorber17.AntiClique",
+      "source_sha256": "f291758d6ecc521a196e6cfe4063769c7e731316444cfb9f536248081042a2ab",
+      "exit_code": 0,
+      "seconds": 74.2,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Absorber17.AntiClique.log"
+    },
+    {
+      "module": "RefinedAbsorption.WeightedNibbleBridge",
+      "source_sha256": "1e6309bf699b69655a9c8677124d445428e0085c9196efc5e162df7de9e3c792",
+      "exit_code": 0,
+      "seconds": 188.89,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.WeightedNibbleBridge.log"
+    },
+    {
+      "module": "RefinedAbsorption.MultiRefiner.Basic",
+      "source_sha256": "50c7cadd1e62f2066a94ea86dce239a511fe7e759278b0a97fff2e2fe9d813dc",
+      "exit_code": 0,
+      "seconds": 70.38,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.MultiRefiner.Basic.log"
+    },
+    {
+      "module": "RefinedAbsorption.Absorber17.Construction",
+      "source_sha256": "b34f1e6e95a14cd13f379c8bf7c79f9158b7fe6b9ccaa547fdf601427d885083",
+      "exit_code": 0,
+      "seconds": 84.58,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Absorber17.Construction.log"
+    },
+    {
+      "module": "RefinedAbsorption.Multigraph.ReserveCoverMulti",
+      "source_sha256": "c1b043e2b0ee1707dcb48398603dbd42cebd17fa1c0536f82b9373a058d0d879",
+      "exit_code": 0,
+      "seconds": 90.88,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Multigraph.ReserveCoverMulti.log"
+    },
+    {
+      "module": "RefinedAbsorption.FlatDown.ChainLink",
+      "source_sha256": "ee4e83553ccd48f2420e6d525ae46758319dc4812da71877427ac656c2e50149",
+      "exit_code": 0,
+      "seconds": 79.3,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.FlatDown.ChainLink.log"
+    },
+    {
+      "module": "RefinedAbsorption.Absorber17.Theorem",
+      "source_sha256": "b5a33f84b3e81fa3b0402ba078eb90128e5a486713568acd26af7fcd4078dc80",
+      "exit_code": 0,
+      "seconds": 69.92,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Absorber17.Theorem.log"
+    },
+    {
+      "module": "RefinedAbsorption.LocalRefiner.Segments",
+      "source_sha256": "572fa6cc3780468d5677389ecfc7c92b8597b7a26afe6a3f5f2243cf339570bb",
+      "exit_code": 0,
+      "seconds": 69.22,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.LocalRefiner.Segments.log"
+    },
+    {
+      "module": "RefinedAbsorption.MultiRefiner.Chain",
+      "source_sha256": "37d46b6b0f944783206b7f84df568014f3f51c513d85ada648a281c3ce2acfd7",
+      "exit_code": 0,
+      "seconds": 67.36,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.MultiRefiner.Chain.log"
+    },
+    {
+      "module": "RefinedAbsorption.Absorber17.Attach",
+      "source_sha256": "8cc882a95367e508c80470ac417a7af52aaa5038b0a3263792d35dc9d08273a5",
+      "exit_code": 0,
+      "seconds": 71.31,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Absorber17.Attach.log"
+    },
+    {
+      "module": "RefinedAbsorption.GridRefiner.Lift",
+      "source_sha256": "402cc7e021accda35a97908fd6a77237557ed169b1ad233ef038fbcfb59c9a7c",
+      "exit_code": 0,
+      "seconds": 81.7,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GridRefiner.Lift.log"
+    },
+    {
+      "module": "RefinedAbsorption.LocalRefiner.Gadgets",
+      "source_sha256": "1bc81cadc953bf0be530b5f2a6f64feec6a9543e0f0f61b663dc7372d8973e77",
+      "exit_code": 0,
+      "seconds": 86.53,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.LocalRefiner.Gadgets.log"
+    },
+    {
+      "module": "RefinedAbsorption.Absorber17.Library",
+      "source_sha256": "cb37f195690557b7b130bed39262e7db00bce25374131c15357df8d6cea7e249",
+      "exit_code": 0,
+      "seconds": 84.0,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Absorber17.Library.log"
+    },
+    {
+      "module": "RefinedAbsorption.HyperPlan.Lift",
+      "source_sha256": "c48c3dcaf6a08ae43e65c3224f7d2db800a6b11046a3723c154bbc1ffe83e04e",
+      "exit_code": 0,
+      "seconds": 71.55,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.HyperPlan.Lift.log"
+    },
+    {
+      "module": "RefinedAbsorption.MultiRefiner.FakeEdge",
+      "source_sha256": "4a58d2c242de3983b0b4b070584a280965a7be47a4c24b76a2abfd74033e884f",
+      "exit_code": 0,
+      "seconds": 82.2,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.MultiRefiner.FakeEdge.log"
+    },
+    {
+      "module": "RefinedAbsorption.MultiRefiner.Restrict",
+      "source_sha256": "6be79c5e3718e0d4705391692cbaa85c4dc79a0954b7f9249ce6686a321446c0",
+      "exit_code": 0,
+      "seconds": 78.62,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.MultiRefiner.Restrict.log"
+    },
+    {
+      "module": "RefinedAbsorption.MultiRefiner.Reduction",
+      "source_sha256": "7388c1460567c6f7cda8c2c05293560d226e2e7919642beeec64f361fa3c1706",
+      "exit_code": 0,
+      "seconds": 72.83,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.MultiRefiner.Reduction.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.Absorbers",
+      "source_sha256": "e05fc7a8379da718eeef0efcce3f026518ccfa1f6bdd3bf8685cb2d61b662a73",
+      "exit_code": 0,
+      "seconds": 71.16,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.Absorbers.log"
+    },
+    {
+      "module": "RefinedAbsorption.Nibble.Bridge",
+      "source_sha256": "8c10633ee6b5b22222dce85d73059e275d98e3472d6e7fe938cf0c684c4cb1c0",
+      "exit_code": 0,
+      "seconds": 158.0,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Nibble.Bridge.log"
+    },
+    {
+      "module": "RefinedAbsorption.MultiRefiner.Pipeline",
+      "source_sha256": "fa64319b1d4f8935566461ecb07aff5dcf502b309ff5cdbfab56054827d068a9",
+      "exit_code": 0,
+      "seconds": 71.05,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.MultiRefiner.Pipeline.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.FakeGadget",
+      "source_sha256": "6a4f0ac36f6b728baf36776c29a23d8848c0ea855a2003e04845f4f8ef8b9c97",
+      "exit_code": 0,
+      "seconds": 76.34,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.FakeGadget.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.ImageRefiner",
+      "source_sha256": "4b4970018a250bcebda45731d17f3d3a5be859f0bc5c541a386ed657aa42768a",
+      "exit_code": 0,
+      "seconds": 70.78,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.ImageRefiner.log"
+    },
+    {
+      "module": "RefinedAbsorption.Multigraph.NibbleMulti",
+      "source_sha256": "73afb87c3a1d01004be12636497a44ed75f3f45076a7a3ebd71f60013fbf9262",
+      "exit_code": 0,
+      "seconds": 89.27,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Multigraph.NibbleMulti.log"
+    },
+    {
+      "module": "RefinedAbsorption.NibbleDesigns",
+      "source_sha256": "751073e5b751139a9742e1c2b4b548a0372616b339c0b865c11542ec772bdb84",
+      "exit_code": 0,
+      "seconds": 97.2,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.NibbleDesigns.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.Interface",
+      "source_sha256": "a14489c933ba060066622851f8bbd7ebf15948842617578be8b1370234205490",
+      "exit_code": 0,
+      "seconds": 79.69,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.Interface.log"
+    },
+    {
+      "module": "RefinedAbsorption.Pending.SafeNibble",
+      "source_sha256": "5040e2aedb41cfa0dda1c52479f9c89751afe063497724eea1e87cbd8c81c55b",
+      "exit_code": 0,
+      "seconds": 98.94,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Pending.SafeNibble.log"
+    },
+    {
+      "module": "RefinedAbsorption.RefineDown.Step",
+      "source_sha256": "110a3b347c0527c8fe591b386e93967ca3e4ac7475a983ebde84dc7cd229c219",
+      "exit_code": 0,
+      "seconds": 87.33,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.RefineDown.Step.log"
+    },
+    {
+      "module": "RefinedAbsorption.Placement.Reduction",
+      "source_sha256": "f50a4cdd95157709675aa750f85d4c55868cba3f955d6088db63fb2dc715b369",
+      "exit_code": 0,
+      "seconds": 97.83,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Placement.Reduction.log"
+    },
+    {
+      "module": "RefinedAbsorption.RefineDown.Transport",
+      "source_sha256": "c71377cb3e3b6f744ca5e2fe3f7bdd30a1f0ca458d714b428c051809e0168d16",
+      "exit_code": 0,
+      "seconds": 90.67,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.RefineDown.Transport.log"
+    },
+    {
+      "module": "RefinedAbsorption.RefinerOne.Transfer",
+      "source_sha256": "eb41b4d2cd8b3071083d101facaadf0d33af4eb24be941ca77d7ffbcbe8a8692",
+      "exit_code": 0,
+      "seconds": 96.62,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.RefinerOne.Transfer.log"
+    },
+    {
+      "module": "RefinedAbsorption.FlatDown.Basic",
+      "source_sha256": "a8fd8e8f2e779195d1f2dd9087e24ecb682725161fe9264f39463b5e17aec22d",
+      "exit_code": 0,
+      "seconds": 88.28,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.FlatDown.Basic.log"
+    },
+    {
+      "module": "RefinedAbsorption.Original2024.HostReduction",
+      "source_sha256": "e08cbc9d7cb2746048c8aa8954acad4f5db2b7d43450f4c1cacadc676520172e",
+      "exit_code": 0,
+      "seconds": 102.05,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.Original2024.HostReduction.log"
+    },
+    {
+      "module": "RefinedAbsorption.LocalRefiner.OwnedChains",
+      "source_sha256": "36ccb6e97d59937aa0a29b9129ee96598f20820b3c8e8e1cd8762eefeaf78155",
+      "exit_code": 0,
+      "seconds": 81.48,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.LocalRefiner.OwnedChains.log"
+    },
+    {
+      "module": "RefinedAbsorption.FlatDown.AntiEdge",
+      "source_sha256": "cf4b4529e49fbb6b69c0d230a82382dd10848198dfb9516157011c0a71c2399a",
+      "exit_code": 0,
+      "seconds": 75.81,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.FlatDown.AntiEdge.log"
+    },
+    {
+      "module": "RefinedAbsorption.GridRefiner.Labels",
+      "source_sha256": "48f19a15ad88d5b59983e4c32a3bda08c9e410b14335c23081cbec8ad164ec06",
+      "exit_code": 0,
+      "seconds": 75.3,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GridRefiner.Labels.log"
+    },
+    {
+      "module": "RefinedAbsorption.FlatDown.Small",
+      "source_sha256": "c88673dd2892e6a7bf53398fe6c8ad2c208396b4dfde984a15c5995d07557095",
+      "exit_code": 0,
+      "seconds": 82.8,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.FlatDown.Small.log"
+    },
+    {
+      "module": "RefinedAbsorption.GridRefiner.Parity",
+      "source_sha256": "bd88404643fd26d267370d87d6a0bf59a429f740041baa45d05d906cc0eb36d5",
+      "exit_code": 0,
+      "seconds": 76.98,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GridRefiner.Parity.log"
+    },
+    {
+      "module": "RefinedAbsorption.FlatDown.MultDegree",
+      "source_sha256": "45b4e5adf038eecc5c1a6a7320af2f40eaf8cd8096ecf2cc38b81857444c2667",
+      "exit_code": 0,
+      "seconds": 72.36,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.FlatDown.MultDegree.log"
+    },
+    {
+      "module": "RefinedAbsorption.FlatDown.Completion",
+      "source_sha256": "469452c5a3bb835b23811920617f644747c970b6c842ef81fe0f1f3eaee3aa71",
+      "exit_code": 0,
+      "seconds": 86.81,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.FlatDown.Completion.log"
+    },
+    {
+      "module": "RefinedAbsorption.LocalRefiner.Construction",
+      "source_sha256": "036514554e9b88a2b49953327201a2c6cc2175aa2a828dde0c3c151f2e194a19",
+      "exit_code": 0,
+      "seconds": 82.34,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.LocalRefiner.Construction.log"
+    },
+    {
+      "module": "RefinedAbsorption.GridRefiner.OddSwitch",
+      "source_sha256": "4f1e4257dcc4039a9d6afd822d7bc9e610238a3822c04b0ebb56a78df37d2cb1",
+      "exit_code": 0,
+      "seconds": 88.45,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.GridRefiner.OddSwitch.log"
+    },
+    {
+      "module": "RefinedAbsorption.FlatDown.FlatStep",
+      "source_sha256": "6cd11046991cec86f09909a790d4f912df8efb296ebc09b850d5a2e5ac72cba1",
+      "exit_code": 0,
+      "seconds": 80.14,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.FlatDown.FlatStep.log"
+    },
+    {
+      "module": "RefinedAbsorption.MultiRefiner.PieceDeg",
+      "source_sha256": "d97bfcb9e156e1fc596fa3f366e572776b27dc9e66ae51f122bc666a37e96b62",
+      "exit_code": 0,
+      "seconds": 73.24,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.MultiRefiner.PieceDeg.log"
+    },
+    {
+      "module": "RefinedAbsorption.OddGrid.Basic",
+      "source_sha256": "592a4d56d59faadcda37369f995e0eb7cd41f59a5ea2a09ac22e5e40fe608dd1",
+      "exit_code": 0,
+      "seconds": 75.11,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.OddGrid.Basic.log"
+    },
+    {
+      "module": "RefinedAbsorption.LocalRefiner.Refiner",
+      "source_sha256": "1777060f4df13cf4d6bc755373b80f399cba71e40ee9ffd74f9b82b105842e91",
+      "exit_code": 0,
+      "seconds": 81.02,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.LocalRefiner.Refiner.log"
+    },
+    {
+      "module": "RefinedAbsorption.LinkSpread.Funnel",
+      "source_sha256": "288a61f9c7cb47a254e3b5f085adde460216d3d2d8390cbdb4f41eb961ba0062",
+      "exit_code": 0,
+      "seconds": 68.61,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.LinkSpread.Funnel.log"
+    },
+    {
+      "module": "RefinedAbsorption.FlatDown.FlatProof",
+      "source_sha256": "1acfe2125098bd5ef5c435be4409713bb14cdbd270f525de704c7b6a061fe639",
+      "exit_code": 0,
+      "seconds": 78.24,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.FlatDown.FlatProof.log"
+    },
+    {
+      "module": "RefinedAbsorption.LocalRefiner.Loads",
+      "source_sha256": "a3165153c1ffd42c48c8006a69cfc305a75eb23edafb60493161601cc352df2a",
+      "exit_code": 0,
+      "seconds": 80.95,
+      "log": "publication/assembly/lake-20261027T033004Z/RefinedAbsorption.LocalRefiner.Loads.log"
+    }
+  ],
+  "failed": {},
+  "current": [
+    "RefinedAbsorption.FlatDown.Closure",
+    "RefinedAbsorption.FlatDown.FlatDegree",
+    "RefinedAbsorption.OddGrid.Chain"
+  ],
+  "checked": 129,
+  "updated_utc": "2026-10-27T04:31:35.650434+00:00"
+}

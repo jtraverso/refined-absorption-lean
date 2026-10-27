@@ -1,0 +1,19 @@
+--- original/RequestProject/Absorber17/Theorem.lean
++++ current/RefinedAbsorption/Absorber17/Theorem.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Absorber17.Construction
+-public import RequestProject.GJW.Main
++public import RefinedAbsorption.Absorber17.Construction
++public import RefinedAbsorption.GJW.Main
+ 
+ /-!
+ # Theorem 1.7: existence of absorbers
+@@ -59,6 +59,7 @@
+   · rintro ⟨s, rfl⟩; exact (Q.equivFin.symm _).2
+   · intro hx
+     refine ⟨Fin.cast h (Q.equivFin ⟨x, hx⟩), ?_⟩
++    change ((Q.equivFin.symm (Fin.cast h.symm (Fin.cast h (Q.equivFin ⟨x, hx⟩)))) : W) = x
+     simp
+ 
+ /-- The indexed presentation of a multi-absorber. -/

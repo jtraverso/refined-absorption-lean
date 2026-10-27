@@ -1,0 +1,9 @@
+--- original/RequestProject/General/LocalK.lean
++++ current/RefinedAbsorption/General/LocalK.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.General.Defs
++public import RefinedAbsorption.General.Defs
+ 
+ /-!
+ # Local refiners in uniformity `k` with the sublinear additive term

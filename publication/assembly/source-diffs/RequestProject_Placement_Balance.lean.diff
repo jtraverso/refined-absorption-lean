@@ -1,0 +1,9 @@
+--- original/RequestProject/Placement/Balance.lean
++++ current/RefinedAbsorption/Placement/Balance.lean
+@@ -1,5 +1,5 @@
+ module
+-public import Mathlib
++public import RefinedAbsorption.MathlibImports
+ 
+ /-!
+ # Greedy balancing of choices

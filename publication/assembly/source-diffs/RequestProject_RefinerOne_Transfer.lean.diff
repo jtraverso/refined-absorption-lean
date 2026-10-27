@@ -1,0 +1,11 @@
+--- original/RequestProject/RefinerOne/Transfer.lean
++++ current/RefinedAbsorption/RefinerOne/Transfer.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.RefinerOne.Chain
+-public import RequestProject.RefinerReductions
++public import RefinedAbsorption.RefinerOne.Chain
++public import RefinedAbsorption.RefinerReductions
+ 
+ /-!
+ # The chain refiner on an arbitrary vertex type

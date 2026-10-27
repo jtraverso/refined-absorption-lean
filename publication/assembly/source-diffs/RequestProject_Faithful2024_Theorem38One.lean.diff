@@ -1,0 +1,11 @@
+--- original/RequestProject/Faithful2024/Theorem38One.lean
++++ current/RefinedAbsorption/Faithful2024/Theorem38One.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Faithful2024.Theorem38Two
+-public import RequestProject.Original2024.FlatOne
++public import RefinedAbsorption.Faithful2024.Theorem38Two
++public import RefinedAbsorption.Original2024.FlatOne
+ 
+ /-!
+ # Theorem 3.8 of arXiv:2402.17855v1, faithful form, `r = 1`

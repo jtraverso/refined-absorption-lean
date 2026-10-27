@@ -1,0 +1,11 @@
+--- original/RequestProject/Multigraph/NibbleMulti.lean
++++ current/RefinedAbsorption/Multigraph/NibbleMulti.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Multigraph.ReserveCoverMulti
+-public import RequestProject.Nibble.Bridge
++public import RefinedAbsorption.Multigraph.ReserveCoverMulti
++public import RefinedAbsorption.Nibble.Bridge
+ 
+ /-!
+ # Corollary 2.4 for multigraphs (nibble with reserves for multigraphs)

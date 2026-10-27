@@ -1,0 +1,9 @@
+--- original/RequestProject/Kirkman.lean
++++ current/RefinedAbsorption/Kirkman.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Statements
++public import RefinedAbsorption.Statements
+ 
+ /-!
+ # Kirkman's theorem

@@ -1,0 +1,11 @@
+checks/AssemblyAxioms.lean:3:0: 'RefinedAbsorption.Assembly.pippengerSpencerPolynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/AssemblyAxioms.lean:4:0: 'RefinedAbsorption.Assembly.nashWilliamsExternal' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/AssemblyAxioms.lean:5:0: 'RefinedAbsorption.Assembly.steiner_quantitatively_almost_resolvable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/AssemblyAxioms.lean:6:0: 'RefinedAbsorption.Assembly.exists_quantitatively_almost_resolvable_steiner' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/AssemblyAxioms.lean:7:0: 'RefinedAbsorption.Assembly.nash_williams_scheduled_decomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

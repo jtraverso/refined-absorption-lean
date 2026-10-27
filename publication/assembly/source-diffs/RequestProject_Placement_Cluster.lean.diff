@@ -1,0 +1,11 @@
+--- original/RequestProject/Placement/Cluster.lean
++++ current/RefinedAbsorption/Placement/Cluster.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Placement.ClusterInner
+-public import RequestProject.Placement.Lemma52
++public import RefinedAbsorption.Placement.ClusterInner
++public import RefinedAbsorption.Placement.Lemma52
+ 
+ /-!
+ # Clustered placement (Lemma 5.2 with control of piece vertex sets)

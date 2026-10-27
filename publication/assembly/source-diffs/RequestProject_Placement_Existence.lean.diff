@@ -1,0 +1,11 @@
+--- original/RequestProject/Placement/Existence.lean
++++ current/RefinedAbsorption/Placement/Existence.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Placement.Assembly
+-public import RequestProject.RefinerOne.Existence
++public import RefinedAbsorption.Placement.Assembly
++public import RefinedAbsorption.RefinerOne.Existence
+ 
+ /-!
+ # The Existence Conjecture from the native refine-down construction

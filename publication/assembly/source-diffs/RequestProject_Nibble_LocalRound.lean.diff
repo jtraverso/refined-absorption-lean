@@ -1,0 +1,11 @@
+--- original/RequestProject/Nibble/LocalRound.lean
++++ current/RefinedAbsorption/Nibble/LocalRound.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Nibble.Round
+-public import RequestProject.Nibble.LLL
++public import RefinedAbsorption.Nibble.Round
++public import RefinedAbsorption.Nibble.LLL
+ 
+ /-!
+ # One round of the nibble, via the Local Lemma

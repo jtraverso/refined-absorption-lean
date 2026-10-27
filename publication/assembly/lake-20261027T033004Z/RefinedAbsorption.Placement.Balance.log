@@ -1,0 +1,1 @@
+COMMAND ["lake", "--quiet", "--packages=.lake/local-packages.json", "build", "+RefinedAbsorption.Placement.Balance:olean"]

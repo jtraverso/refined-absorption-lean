@@ -1,0 +1,9 @@
+--- original/RequestProject/Placement/ImageRefiner.lean
++++ current/RefinedAbsorption/Placement/ImageRefiner.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.MultiRefiner.Basic
++public import RefinedAbsorption.MultiRefiner.Basic
+ 
+ /-!
+ # Replacing copies of a multi-refiner by simple images

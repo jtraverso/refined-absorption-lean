@@ -1,0 +1,9 @@
+--- original/RequestProject/Faithful2024/Defs.lean
++++ current/RefinedAbsorption/Faithful2024/Defs.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Original2024.Flat
++public import RefinedAbsorption.Original2024.Flat
+ 
+ /-!
+ # Faithful statements of the original article (Delcourt–Postle, arXiv:2402.17855v1)

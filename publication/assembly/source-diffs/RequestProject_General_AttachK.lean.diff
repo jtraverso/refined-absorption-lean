@@ -1,0 +1,11 @@
+--- original/RequestProject/General/AttachK.lean
++++ current/RefinedAbsorption/General/AttachK.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.General.CliquePiecesK
+-public import RequestProject.FlatOmni.Attach
++public import RefinedAbsorption.General.CliquePiecesK
++public import RefinedAbsorption.FlatOmni.Attach
+ 
+ /-!
+ # Attaching bounded absorbers to the pieces inside the reserve, uniformity `k`

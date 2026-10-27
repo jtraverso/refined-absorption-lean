@@ -1,0 +1,22 @@
+--- original/RequestProject/Placement/LastFlat.lean
++++ current/RefinedAbsorption/Placement/LastFlat.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.Placement.PlacedFlat
+-public import RequestProject.Placement.Balance
+-public import RequestProject.FlatDown.ChainLink
++public import RefinedAbsorption.Placement.PlacedFlat
++public import RefinedAbsorption.Placement.Balance
++public import RefinedAbsorption.FlatDown.ChainLink
+ 
+ /-!
+ # The last flat step in `Fin n`: spread `1`-uniform link refiners
+@@ -75,7 +75,7 @@
+   unfold lfX at h
+   rw [dif_pos hi, dif_pos hj] at h
+   have := (lnk ends Z X T).equivFin.symm.injective (Subtype.ext h)
+-  simpa using this
++  exact congrArg Fin.val this
+ 
+ theorem image_lfX (e₀ : E) (T : Finset (Fin n)) :
+     (range (lfM ends Z X T)).image (lfX ends Z X e₀ T) = lnk ends Z X T := by

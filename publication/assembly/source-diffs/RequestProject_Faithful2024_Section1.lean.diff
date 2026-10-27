@@ -1,0 +1,11 @@
+--- original/RequestProject/Faithful2024/Section1.lean
++++ current/RefinedAbsorption/Faithful2024/Section1.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Faithful2024.Transport
+-public import RequestProject.Original2024.Final
++public import RefinedAbsorption.Faithful2024.Transport
++public import RefinedAbsorption.Original2024.Final
+ 
+ /-!
+ # Theorems 1.7 and 1.11 of arXiv:2402.17855v1, faithful form

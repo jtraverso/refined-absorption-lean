@@ -1,0 +1,15 @@
+--- original/RequestProject/General/Levels.lean
++++ current/RefinedAbsorption/General/Levels.lean
+@@ -1,8 +1,8 @@
+ module
+-public import RequestProject.General.EmbedGen
+-public import RequestProject.General.FlatOmniK
+-public import RequestProject.General.StageS
+-public import RequestProject.Placement.Existence
++public import RefinedAbsorption.General.EmbedGen
++public import RefinedAbsorption.General.FlatOmniK
++public import RefinedAbsorption.General.StageS
++public import RefinedAbsorption.Placement.Existence
+ 
+ /-!
+ # The sparse link levels in every uniformity, and Theorem 3.8

@@ -1,0 +1,11 @@
+--- original/RequestProject/Window/Linear.lean
++++ current/RefinedAbsorption/Window/Linear.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Window.Descent
+-public import RequestProject.LinkSpread.LevelOneFinal
++public import RefinedAbsorption.Window.Descent
++public import RefinedAbsorption.LinkSpread.LevelOneFinal
+ 
+ /-!
+ # The window stage with a linear cost

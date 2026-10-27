@@ -1,0 +1,13 @@
+--- original/RequestProject/Dense/Stage.lean
++++ current/RefinedAbsorption/Dense/Stage.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.RefineDown.MultiRound
+-public import RequestProject.Placement.ChainLevels
+-public import RequestProject.FlatDown.MultDegree
++public import RefinedAbsorption.RefineDown.MultiRound
++public import RefinedAbsorption.Placement.ChainLevels
++public import RefinedAbsorption.FlatDown.MultDegree
+ 
+ /-!
+ # One stage of the multigraph refine-down construction

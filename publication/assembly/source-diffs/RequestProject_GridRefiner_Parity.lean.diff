@@ -1,0 +1,11 @@
+--- original/RequestProject/GridRefiner/Parity.lean
++++ current/RefinedAbsorption/GridRefiner/Parity.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.GridRefiner.Labels
+-public import RequestProject.LocalRefiner.Gadgets
++public import RefinedAbsorption.GridRefiner.Labels
++public import RefinedAbsorption.LocalRefiner.Gadgets
+ 
+ /-!
+ # The parity obstruction for odd `q` (`r = 2`)

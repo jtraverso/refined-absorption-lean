@@ -1,0 +1,16 @@
+checks/ExtensionsAxioms.lean:9:0: 'RefinedAbsorption.Extensions.partialSteiner_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/ExtensionsAxioms.lean:10:0: 'RefinedAbsorption.Extensions.partialSteiner_embedding' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/ExtensionsAxioms.lean:11:0: 'RefinedAbsorption.Extensions.partialSteiner_embeds' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/ExtensionsAxioms.lean:12:0: 'RefinedAbsorption.Extensions.log_card_steinerSystems_theta' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/ExtensionsAxioms.lean:13:0: 'RefinedAbsorption.Extensions.steiner_extends_subsystem' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/ExtensionsAxioms.lean:14:0: 'RefinedAbsorption.Extensions.steiner_with_subsystem' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/ExtensionsAxioms.lean:17:0: 'RefinedAbsorption.Extensions.optimal_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/ExtensionsAxioms.lean:18:0: 'RefinedAbsorption.Extensions.optimal_packing_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/ExtensionsAxioms.lean:19:0: 'RefinedAbsorption.Extensions.optimal_covering' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/ExtensionsAxioms.lean:20:0: 'RefinedAbsorption.Extensions.packing_leftover_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/ExtensionsAxioms.lean:21:0: 'RefinedAbsorption.Extensions.covering_excess_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/ExtensionsAxioms.lean:22:0: 'RefinedAbsorption.Extensions.steiner_almost_resolvable' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/ExtensionsAxioms.lean:23:0: 'RefinedAbsorption.Extensions.exists_almost_resolvable_steiner' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/ExtensionsAxioms.lean:24:0: 'RefinedAbsorption.Extensions.resolution_classes_lower' depends on axioms: [propext, Classical.choice, Quot.sound]

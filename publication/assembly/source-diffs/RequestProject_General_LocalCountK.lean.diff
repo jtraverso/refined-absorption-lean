@@ -1,0 +1,11 @@
+--- original/RequestProject/General/LocalCountK.lean
++++ current/RefinedAbsorption/General/LocalCountK.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.General.SpreadCore
+-public import RequestProject.SparseChain.FlatEmbedS
++public import RefinedAbsorption.General.SpreadCore
++public import RefinedAbsorption.SparseChain.FlatEmbedS
+ 
+ /-!
+ # Local counts for flat clique refiners in uniformity `k`

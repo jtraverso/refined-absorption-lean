@@ -1,0 +1,11 @@
+--- original/RequestProject/FlatOmni/CliquePieces.lean
++++ current/RefinedAbsorption/FlatOmni/CliquePieces.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.FlatOmni.Fakes
+-public import RequestProject.Absorber17.Library
++public import RefinedAbsorption.FlatOmni.Fakes
++public import RefinedAbsorption.Absorber17.Library
+ 
+ /-!
+ # From a refiner with absorbers to an omni-absorber with clique pieces

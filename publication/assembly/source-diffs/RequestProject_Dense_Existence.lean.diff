@@ -1,0 +1,15 @@
+--- original/RequestProject/Dense/Existence.lean
++++ current/RefinedAbsorption/Dense/Existence.lean
+@@ -1,8 +1,8 @@
+ module
+-public import RequestProject.Dense.Native
+-public import RequestProject.Nibble.Bridge
+-public import RequestProject.Reserves
+-public import RequestProject.Boost
++public import RefinedAbsorption.Dense.Native
++public import RefinedAbsorption.Nibble.Bridge
++public import RefinedAbsorption.Reserves
++public import RefinedAbsorption.Boost
+ 
+ /-!
+ # Steiner systems from strong multi-refiners with an `o(n)` budget

@@ -1,0 +1,15 @@
+--- original/RequestProject/General/FlatOmniK.lean
++++ current/RefinedAbsorption/General/FlatOmniK.lean
+@@ -1,8 +1,8 @@
+ module
+-public import RequestProject.General.LocalK
+-public import RequestProject.General.FakeStageK
+-public import RequestProject.General.AttachK
+-public import RequestProject.FlatOmni.Assembly
++public import RefinedAbsorption.General.LocalK
++public import RefinedAbsorption.General.FakeStageK
++public import RefinedAbsorption.General.AttachK
++public import RefinedAbsorption.FlatOmni.Assembly
+ 
+ /-!
+ # Theorem 3.7 in every uniformity (flatness, clique pieces, small trace), sparse form

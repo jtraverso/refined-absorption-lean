@@ -1,0 +1,11 @@
+--- original/RequestProject/Pending/Theorem63Final.lean
++++ current/RefinedAbsorption/Pending/Theorem63Final.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Pending.Theorem63
+-public import RequestProject.Pending.Theorem63One
++public import RefinedAbsorption.Pending.Theorem63
++public import RefinedAbsorption.Pending.Theorem63One
+ 
+ /-!
+ # Theorem 6.3 of arXiv:2402.17855v1, proved

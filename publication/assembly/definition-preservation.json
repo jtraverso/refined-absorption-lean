@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "checked_declarations": 821,
+  "scope": "Comment/whitespace-normalized non-proof declaration spans, including structures. Instance proofs and theorem proofs are outside this comparison.",
+  "changed_spans": []
+}

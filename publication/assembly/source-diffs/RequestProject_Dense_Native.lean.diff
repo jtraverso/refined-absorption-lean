@@ -1,0 +1,11 @@
+--- original/RequestProject/Dense/Native.lean
++++ current/RefinedAbsorption/Dense/Native.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Dense.Iterate
+-public import RequestProject.Placement.Assembly
++public import RefinedAbsorption.Dense.Iterate
++public import RefinedAbsorption.Placement.Assembly
+ 
+ /-!
+ # Strong multi-refiners on `K_n^r` with an `o(n)` degree budget

@@ -1,0 +1,11 @@
+--- original/RequestProject/Extensions/Packing.lean
++++ current/RefinedAbsorption/Extensions/Packing.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Extensions.Embedding
+-public import RequestProject.Extensions.CountCore
++public import RefinedAbsorption.Extensions.Embedding
++public import RefinedAbsorption.Extensions.CountCore
+ 
+ /-!
+ # Optimal packings and coverings of `K_n^r` for every `n` (strong Erdős–Hanani)

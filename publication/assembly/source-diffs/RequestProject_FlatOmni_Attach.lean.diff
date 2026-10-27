@@ -1,0 +1,11 @@
+--- original/RequestProject/FlatOmni/Attach.lean
++++ current/RefinedAbsorption/FlatOmni/Attach.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.FlatOmni.CliquePieces
+-public import RequestProject.Placement.Absorbers
++public import RefinedAbsorption.FlatOmni.CliquePieces
++public import RefinedAbsorption.Placement.Absorbers
+ 
+ /-!
+ # Attaching bounded absorbers to the pieces, inside the reserve

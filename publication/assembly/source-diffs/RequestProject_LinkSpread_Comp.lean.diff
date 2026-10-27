@@ -1,0 +1,9 @@
+--- original/RequestProject/LinkSpread/Comp.lean
++++ current/RefinedAbsorption/LinkSpread/Comp.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.LinkSpread.Chain
++public import RefinedAbsorption.LinkSpread.Chain
+ 
+ /-!
+ # Composition of tagged outputs

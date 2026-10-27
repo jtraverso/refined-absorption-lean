@@ -1,0 +1,9 @@
+--- original/RequestProject/General/CliquePiecesK.lean
++++ current/RefinedAbsorption/General/CliquePiecesK.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.FlatOmni.CliquePieces
++public import RefinedAbsorption.FlatOmni.CliquePieces
+ 
+ /-!
+ # Clique pieces from a refiner with attached absorbers, uniformity `k`

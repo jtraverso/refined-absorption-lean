@@ -1,0 +1,23 @@
+--- original/RequestProject/Placement/Absorbers.lean
++++ current/RefinedAbsorption/Placement/Absorbers.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Placement.Lemma52
+-public import RequestProject.Absorber17.Library
++public import RefinedAbsorption.Placement.Lemma52
++public import RefinedAbsorption.Absorber17.Library
+ 
+ /-!
+ # Placing the bounded absorber library inside `K_n^r`
+@@ -75,7 +75,10 @@
+   let ψ : Fin k ↪ V := ⟨fun i => (T.equivFin.symm i).1, fun i j h =>
+     T.equivFin.symm.injective (Subtype.val_injective h)⟩
+   have hψT : ∀ i, ψ i ∈ T := fun i => (T.equivFin.symm i).2
+-  have hrange : ∀ x ∈ T, ∃ i, ψ i = x := fun x hx => ⟨T.equivFin ⟨x, hx⟩, by simp [ψ]⟩
++  have hrange : ∀ x ∈ T, ∃ i, ψ i = x := fun x hx =>
++    ⟨T.equivFin ⟨x, hx⟩, by
++      change ((T.equivFin.symm (T.equivFin ⟨x, hx⟩)) : V) = x
++      simp⟩
+   have hpre : ∀ e ∈ L, (e.preimage ψ ψ.injective.injOn).map ψ = e := by
+     intro e he
+     ext x

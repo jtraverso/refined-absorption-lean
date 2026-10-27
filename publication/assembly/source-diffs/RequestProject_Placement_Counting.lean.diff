@@ -1,0 +1,9 @@
+--- original/RequestProject/Placement/Counting.lean
++++ current/RefinedAbsorption/Placement/Counting.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Placement.Defs
++public import RefinedAbsorption.Placement.Defs
+ 
+ /-!
+ # Counting lemmas for the Partial Clique Embedding Lemma

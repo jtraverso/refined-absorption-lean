@@ -1,0 +1,23 @@
+checks/FaithfulAxioms.lean:14:0: 'RefinedAbsorption.Faithful2024.theorem_1_7' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/FaithfulAxioms.lean:15:0: 'RefinedAbsorption.Faithful2024.theorem_1_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/FaithfulAxioms.lean:17:0: 'RefinedAbsorption.Faithful2024.theorem_3_8_conclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/FaithfulAxioms.lean:18:0: 'RefinedAbsorption.Faithful2024.theorem_3_8' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/FaithfulAxioms.lean:19:0: 'RefinedAbsorption.Faithful2024.theorem_3_7_for_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/FaithfulAxioms.lean:20:0: 'RefinedAbsorption.Faithful2024.theorem_3_7' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/FaithfulAxioms.lean:21:0: 'RefinedAbsorption.Faithful2024.theorem_3_8_conclusion_via_3_7' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/FaithfulAxioms.lean:23:0: 'RefinedAbsorption.Faithful2024.lemma_6_4' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/FaithfulAxioms.lean:25:0: 'RefinedAbsorption.FaithfulSurvey2025.isGlobalEmbedding_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/FaithfulAxioms.lean:26:0: 'RefinedAbsorption.FaithfulSurvey2025.IsGlobalEmbedding.injective_piece' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/FaithfulAxioms.lean:27:0: 'RefinedAbsorption.FaithfulSurvey2025.IsGlobalEmbedding.newEdgesDistinct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/FaithfulAxioms.lean:28:0: 'RefinedAbsorption.FaithfulSurvey2025.not_generalEmbeddingLemmaLiteral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/FaithfulAxioms.lean:29:0: 'RefinedAbsorption.FaithfulSurvey2025.generalEmbedding_piecewise' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

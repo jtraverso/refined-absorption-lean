@@ -1,0 +1,9 @@
+--- original/RequestProject/Absorbers.lean
++++ current/RefinedAbsorption/Absorbers.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Counting
++public import RefinedAbsorption.Counting
+ 
+ /-!
+ # Absorbers, omni-absorbers, refinedness, boosters and refiners

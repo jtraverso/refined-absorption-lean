@@ -1,0 +1,13 @@
+--- original/RequestProject/SparseChain/WindowS.lean
++++ current/RefinedAbsorption/SparseChain/WindowS.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.Sharp.Sparsify
+-public import RequestProject.SparseChain.StageS
+-public import RequestProject.FlatOmni.SharpBounds
++public import RefinedAbsorption.Sharp.Sparsify
++public import RefinedAbsorption.SparseChain.StageS
++public import RefinedAbsorption.FlatOmni.SharpBounds
+ 
+ /-!
+ # Theorem 3.8 from sparse link levels

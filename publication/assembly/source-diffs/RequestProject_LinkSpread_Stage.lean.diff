@@ -1,0 +1,13 @@
+--- original/RequestProject/LinkSpread/Stage.lean
++++ current/RefinedAbsorption/LinkSpread/Stage.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.LinkSpread.RoundOut
+-public import RequestProject.FlatDown.MultDegree
+-public import RequestProject.Dense.Stage
++public import RefinedAbsorption.LinkSpread.RoundOut
++public import RefinedAbsorption.FlatDown.MultDegree
++public import RefinedAbsorption.Dense.Stage
+ 
+ /-!
+ # One stage for all link graphs at once

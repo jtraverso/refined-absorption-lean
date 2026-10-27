@@ -1,0 +1,11 @@
+--- original/RequestProject/OddGrid/PlanStrong.lean
++++ current/RefinedAbsorption/OddGrid/PlanStrong.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.OddGrid.PlanLoad
+-public import RequestProject.Placement.Interface
++public import RefinedAbsorption.OddGrid.PlanLoad
++public import RefinedAbsorption.Placement.Interface
+ 
+ /-!
+ # A valid plan gives a strong multi-refiner

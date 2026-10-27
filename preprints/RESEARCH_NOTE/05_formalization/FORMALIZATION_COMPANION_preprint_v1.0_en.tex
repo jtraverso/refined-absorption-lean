@@ -1,0 +1,291 @@
+% Adapted from the author's public Erdos Paper IV v1.23 series_template.tex.
+% Layout provenance is recorded in 02_validation; the Markdown is semantic authority.
+\documentclass[english,11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\usepackage{amsmath,amssymb}
+\providecommand{\mathscr}{\mathcal}
+\usepackage[english]{babel}
+\usepackage{microtype,parskip}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{xcolor,xurl}
+\usepackage{hyperref,bookmark}
+\usepackage{etoolbox,needspace}
+\setcounter{secnumdepth}{-\maxdimen}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}\small}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{11\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+\urlstyle{same}
+\hypersetup{pdftitle={Refined absorption: formalization and reproducibility companion},pdfauthor={Juan Pablo Traverso Gianini},
+pdflang={en-US},colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\title{Refined absorption: formalization and reproducibility companion}
+\author{Juan Pablo Traverso Gianini\\
+\small Independent researcher, Santiago, Chile\\
+\small \href{mailto:jtraverso@gmail.com}{jtraverso@gmail.com}\\
+\small ORCID: 0009-0003-6068-4096}
+\date{}
+\begin{document}
+\raggedbottom
+\maketitle
+\textbf{Companion to} \emph{Formalizing refined absorption: proof interfaces and consequences}, research note, preprint 1.0.
+
+\textbf{Editorial draft --- 27 October 2026.} The formal freeze is complete; DOI reservation and the public document release remain pending.
+
+© 2026 Juan Pablo Traverso Gianini. Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.
+
+\subsection{Abstract}\label{abstract}
+
+This companion identifies the proved declarations, source versions and reproducibility evidence accompanying the research note. The formal freeze contains 316 local Lean sources and the evidence from a clean project Lake campaign, with pinned dependency caches reused. Its 360 endpoint axiom queries report only the three stated foundational axioms or no axioms. We distinguish the complete local build, the aggregate import root, the selected comparison interfaces and Palomar's separate verification. We also record the additive ambient-vertex interface, the survey embedding qualification, the exact scope of the intersection and scheduling results, and the pinned external proofs that close the quantitative assembly.
+
+\subsection{1. Mathematical sources and scope}\label{mathematical-sources-and-scope}
+
+The two principal texts are Delcourt--Postle {[}1{]}, with statement baseline arXiv:2402.17855v1, and Postle {[}2{]}, developed against arXiv:2510.19978v1. The survey's published identifier is DOI 10.1137/25M1805977, ICM 2026, Volume 6, pages 212--231. Its Conjecture 1.1, Theorem 1.10, Definitions 3.6--3.7 and Lemma 3.8 were checked in that edition. This is a check of the identified statements, not whole-document equivalence between editions.
+
+The formalization contains the principal absorption, dense decomposition and design-existence endpoints listed below. The arbitrary-index endpoint proves existence of simple block families for all fixed \(q>r\ge2\) and \(\lambda\ge1\) at all sufficiently large admissible orders. It is not restricted to the Steiner case. General high-girth applications remain outside this scope.
+
+The source theorem authors retain mathematical attribution. The note explains interfaces and derives consequences from proved inputs. Classical triple-system intersection work {[}10,11{]} is acknowledged; historical priority for each general-parameter consequence is not asserted. The Nash--Williams input is attributed to Delcourt--Postle {[}7{]}, with the reused formal proof documented in {[}8,9{]}.
+
+\subsection{2. Canonical endpoints}\label{canonical-endpoints}
+
+The following tables identify the eighteen declarations selected by the three comparison configurations. Their full types are in the standalone Challenges; the source extraction spans and hashes are in \texttt{provenance/\allowbreak{}palomar-extractions.\allowbreak{}json}. Every selected name occurs in the frozen axiom-query outputs. The library contains further proved declarations beyond this selection.
+
+
+\Needspace{7\baselineskip}
+\subsubsection{2.1. Original article}\label{original-article}
+
+{\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Source result
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Canonical declaration
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+{[}1, Theorem 1.7{]} & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Faithful2024.\allowbreak{}theorem\_\allowbreak{}1\_\allowbreak{}7} \\
+{[}1, Theorem 1.11{]} & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Faithful2024.\allowbreak{}theorem\_\allowbreak{}1\_\allowbreak{}11} \\
+{[}1, Theorem 6.1{]} & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Original2024.\allowbreak{}theorem\_\allowbreak{}6\_\allowbreak{}1} \\
+{[}1, Theorem 2.8{]} & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Pending.\allowbreak{}theorem\_\allowbreak{}2\_\allowbreak{}8} \\
+{[}1, Theorem 6.2{]}, ambient clause exposed & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Faithful2024.\allowbreak{}theorem\_\allowbreak{}6\_\allowbreak{}2\_\allowbreak{}ambient} \\
+{[}1, Theorem 6.3{]} & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Pending.\allowbreak{}theorem\_\allowbreak{}6\_\allowbreak{}3} \\
+\end{longtable}
+}
+
+The first two endpoints retain explicit host vertex sets and the distinction between bounded edge usage, bounded member size and the refinement degree of a family. The reserve theorem uses labelled edge copies, degree bounds on the designated root set and the stated ambient intersection. It does not substitute global near-regularity or an edge-count cap for that contract.
+
+The old \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Pending.\allowbreak{}theorem\_\allowbreak{}6\_\allowbreak{}2} remains available. Its absorber predicate uses the edge support of the old graph. The additive endpoint also forbids an absorber edge wholly contained in the full old vertex set. It includes isolated labels and permits mixed old/new edges. The inherited namespace \texttt{Pending} is not a statement that these proved endpoints remain open.
+
+
+\Needspace{7\baselineskip}
+\subsubsection{2.2. Survey}\label{survey}
+
+{\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Source or qualification
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Canonical declaration
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+{[}2, Theorem 1.10{]} & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Final.\allowbreak{}theorem\_\allowbreak{}1\_\allowbreak{}10} \\
+{[}2, Conjecture 1.1{]}, fixed index at least one & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}existence\allowbreak{}Conjecture\_\allowbreak{}proved} \\
+Steiner existence specialization & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Final.\allowbreak{}existence\allowbreak{}Conjecture\_\allowbreak{}steiner} \\
+Negation of literal global embedding conclusion & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Faithful\allowbreak{}Survey2025.\allowbreak{}not\_\allowbreak{}general\allowbreak{}Embedding\allowbreak{}Lemma\allowbreak{}Literal} \\
+Proved piecewise replacement & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Faithful\allowbreak{}Survey2025.\allowbreak{}general\allowbreak{}Embedding\_\allowbreak{}piecewise} \\
+\end{longtable}
+}
+
+The last two rows are distinct claims. The global predicate uses old vertices occurring in the indexed pieces. The perfect-matching witness covers all old vertices, so it also refutes the printed conclusion on the full old vertex set. No general definitional identity across every unused-vertex convention is inferred from that witness.
+
+The survey's proof reference {[}4, Appendix B{]} was followed. Its proof exists; it also writes a global injection. The piecewise theorem permits separate injective maps, with the host conditions and distinct images of new edges. It must not be reported as a proof of the global assertion.
+
+
+\Needspace{7\baselineskip}
+\subsubsection{2.3. Research note}\label{research-note}
+
+{\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Location in the note
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Canonical declaration
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Theorem 5.1 & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Extensions.\allowbreak{}steiner\_\allowbreak{}completion\_\allowbreak{}avoiding} \\
+Corollary 5.2(i) & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Extensions.\allowbreak{}steiner\_\allowbreak{}intersection\_\allowbreak{}prescribed} \\
+Corollary 5.2(ii) & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Extensions.\allowbreak{}partial\allowbreak{}Steiner\_\allowbreak{}intersection\_\allowbreak{}embedding} \\
+Proposition 5.3 & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Extensions.\allowbreak{}steiner\_\allowbreak{}intersection\_\allowbreak{}spectrum\_\allowbreak{}poly} \\
+Theorem 6.2, every existing system & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Assembly.\allowbreak{}steiner\_\allowbreak{}quantitatively\_\allowbreak{}almost\_\allowbreak{}resolvable} \\
+Theorem 6.2, existence & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Assembly.\allowbreak{}exists\_\allowbreak{}quantitatively\_\allowbreak{}almost\_\allowbreak{}resolvable\_\allowbreak{}steiner} \\
+Theorem 6.3 & \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Assembly.\allowbreak{}nash\_\allowbreak{}williams\_\allowbreak{}scheduled\_\allowbreak{}decomposition} \\
+\end{longtable}
+}
+
+The intersection endpoints are in \texttt{Refined\allowbreak{}Absorption/\allowbreak{}Extensions/\allowbreak{}Intersection.\allowbreak{}lean}. They use the compatible decomposition theorem, ordinary sparse completion and finite packing lemmas. The three closed quantitative endpoints are in \texttt{Refined\allowbreak{}Absorption/\allowbreak{}Assembly.\allowbreak{}lean}. Their older conditional predecessors are retained unchanged.
+
+\subsection{3. Quantifiers and representation}\label{quantifiers-and-representation}
+
+For completion and prescribed sparse intersections, fix \(q>r\ge1\) first. The positive sparsity constant and order threshold are chosen before the ambient order and the partial systems. Sparsity concerns \(\Delta_{r-1}(H(P))\), the covered \(r\)-graph. The forbidden partial system need not be sparse. The additional crossing guarantee is restricted to forbidden blocks whose \(r\)-edges avoid \(H(P)\).
+
+For arbitrary-index existence, fix \(q>r\ge2\) and \(\lambda\ge1\) before choosing the order threshold. The threshold may depend on all three parameters. The admissibility condition uses that index; no uniform threshold over all indices is asserted.
+
+For finite exact-intersection embedding, a given finite partial system determines an order threshold. Every larger admissible order admits an injection and two systems with precisely the image block family in common. The injection is chosen with the systems; the endpoint does not quantify over every previously prescribed injection. The spectrum endpoint chooses both systems and gives an initial interval \(0\le k\le c n^r\).
+
+The universal Steiner-colouring result fixes \(q>r\ge2\), then chooses \(\gamma,n_0\) before \(n\) and the Steiner system. The existence variant adds admissibility. Lean writes the point-degree quotient as natural division before casting to the reals: \[R=\frac{\binom{n-1}{r-1}}{\binom{q-1}{r-1}}.\] The counting proof establishes exact divisibility for a Steiner system, so this is the ordinary point degree, rather than a floor approximation. The formal colour map is defined on finite vertex sets and is constrained on the system's blocks. Its number of labels satisfies \[R\le m\le R+R^{1-\gamma}.\] Unused labels are allowed. The note consequently states an upper bound on the number of partial parallel classes, with the lower bound justified separately.
+
+For the graph application there are universal constants \(\gamma,n_0\) before the finite graph. The hypotheses are triangle divisibility, sufficiently large order and the exact inequality \[3n\le4\delta(G).\] The output is an actual triangle decomposition and a proper colouring of its triangle hypergraph, with \[\Delta(G)/2\le m
+\le\Delta(G)/2+(\Delta(G)/2)^{1-\gamma}.\] No near-regularity hypothesis on the graph, external theorem premise or spanning-factor conclusion appears. Both quantitative applications have \(0<\gamma<1\).
+
+Finite types and decidable-equality instances are representation parameters. The selected contracts use ordinary finite types in universe zero. Block families are finite sets, so the fixed-index existence result does not allow repeated blocks. The name \texttt{steiner\_\allowbreak{}orthogonal\_\allowbreak{}mate} elsewhere in the library denotes bounded cross-intersections and no common blocks; classical Steiner orthogonality is not asserted.
+
+\subsection{4. Proved external assembly}\label{proved-external-assembly}
+
+The source pin for Pippenger--Spencer is
+
+\texttt{b1927339\allowbreak{}6d369332\allowbreak{}fb489fe0\allowbreak{}7e61e27c\allowbreak{}9e7f9233}
+
+in \texttt{jtraverso/\allowbreak{}pippenger-spencer}. The installed cut contains \texttt{Basic.\allowbreak{}lean}, \texttt{Colour\allowbreak{}Hypergraph.\allowbreak{}lean} and \texttt{Polynomial.\allowbreak{}lean} under \texttt{Refined\allowbreak{}Absorption/\allowbreak{}Upstream/\allowbreak{}Pippenger\allowbreak{}Spencer/\allowbreak{}}. Only import routes and line endings changed. Nineteen shared matching sources were verified identical after import-prefix substitution and are reused from the Nash--Williams dependency. Original and installed byte hashes, including CRLF/LF normalization, are recorded in \texttt{provenance/\allowbreak{}assembly-sources.\allowbreak{}json}.
+
+The polynomial colouring endpoint is \texttt{Pseudorandom.\allowbreak{}chromatic\_\allowbreak{}index\_\allowbreak{}polynomial}. It is proved through the Ehard--Glock--Joos input {[}6{]}, using an auxiliary colour hypergraph and completion. Its exact contract includes maximum degree, polynomial codegrees and an exponential edge-count cap. It has no lower-degree condition. This is not an assertion that {[}5{]} prints that exact quantitative formulation.
+
+The Nash--Williams dependency is \texttt{jtraverso/\allowbreak{}nash-williams-lean} at
+
+\texttt{2603197a\allowbreak{}bdbf0a60\allowbreak{}0ec663f6\allowbreak{}f046f70f\allowbreak{}bd209d4a}.
+
+The actual endpoint is \texttt{Nash\allowbreak{}Williams18.\allowbreak{}Paper\allowbreak{}I.\allowbreak{}nash\_\allowbreak{}williams\_\allowbreak{}via\_\allowbreak{}paper\allowbreak{}II}, imported from \texttt{Request\allowbreak{}Project.\allowbreak{}NW18.\allowbreak{}Paper\allowbreak{}IIAssembly}. The local module \texttt{Refined\allowbreak{}Absorption.\allowbreak{}External\allowbreak{}Proofs} supplies both contracts by direct application of these proved endpoints. The three final declarations in \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Assembly} therefore have neither external theorem hypothesis.
+
+The local module root was relocated from \texttt{Request\allowbreak{}Project} to \texttt{Refined\allowbreak{}Absorption} to avoid a collision with the dependency's module routes. Mathematical declaration namespaces were preserved. The source-cut licence and correspondence records are included in the repository.
+
+\subsection{5. Build, axioms and preservation}\label{build-axioms-and-preservation}
+
+The formal source commit is
+
+\texttt{5428ee9b\allowbreak{}772e67dd\allowbreak{}7ec6da44\allowbreak{}3199b36a\allowbreak{}003b72d4}.
+
+It is identified by the local formal-source tag \texttt{formal-v1.\allowbreak{}0}. The toolchain is \texttt{leanprover/\allowbreak{}lean4:v4.\allowbreak{}35.\allowbreak{}0-rc3}; Mathlib is pinned to
+
+\texttt{c55e6e78\allowbreak{}6f49471c\allowbreak{}72fbddbe\allowbreak{}c5415808\allowbreak{}896aec1e}.
+
+The manifest fixes ten Git dependencies, including Nash--Williams. Their actual checkout revisions and clean tracked trees were checked. The default Lake targets are \texttt{Refined\allowbreak{}Absorption}, \texttt{checks} and \texttt{Palomar}. The aggregate root imports all 300 local library modules. Ten check modules and six standalone interface modules are additional explicit targets, giving 316 local sources.
+
+The campaign began with the project build directory absent. Pinned dependency caches were reused; a cold rebuild of Mathlib and the whole dependency development is not claimed. After 129 completed modules, the bounded scheduler was resumed using width-one chains, checking saved source hashes and genuine Lake traces. The continuation included two additive source-fidelity modules and completed all 310 library/check targets, followed by the actual default build. The six Palomar interfaces were then registered and compiled sequentially, followed by another successful default build.
+
+One aggregate-root attempt failed because its module documentation preceded imports. Moving that comment after the imports corrected the packaging error. A resumption attempt also exposed a Windows text-decoding issue; the helper was corrected to read UTF-8 traces explicitly. No retained mathematical declaration changed. Failed logs and the corrected campaign history remain in \texttt{publication/\allowbreak{}assembly/\allowbreak{}}.
+
+After the inputs were committed, the freeze validator compared every Lean source and configuration file with the committed bytes, ran Lake's rehash/no-build freshness check, checked genuine traces and recorded source and artifact hashes. This is a continuation of one clean project campaign, not a claim that each module was compiled exactly once.
+
+{\begin{longtable}[]{@{}lr@{}}
+\toprule\noalign{}
+Check module & Queries \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{Axiom\allowbreak{}Check} & 290 \\
+\texttt{Extensions\allowbreak{}Axioms} & 14 \\
+\texttt{Faithful\allowbreak{}Axioms} & 13 \\
+\texttt{Intersection\allowbreak{}Axioms} & 11 \\
+\texttt{Original2024Axioms} & 14 \\
+\texttt{Pending\allowbreak{}Axioms} & 2 \\
+\texttt{Pending\allowbreak{}Endpoints} & 3 \\
+\texttt{Quantitative\allowbreak{}Axioms} & 7 \\
+\texttt{Assembly\allowbreak{}Axioms} & 5 \\
+\texttt{Source\allowbreak{}Fidelity\allowbreak{}Axioms} & 1 \\
+Total & 360 \\
+\end{longtable}
+}
+
+These are queries, not a claim of 360 distinct theorem names. The outputs contain only \texttt{propext}, \texttt{Classical.\allowbreak{}choice} and \texttt{Quot.\allowbreak{}sound}, or no axioms. The retained proof development has no unresolved proof hole or project axiom. The Challenges deliberately contain eighteen statement placeholders; their Solutions do not import them and supply the actual proofs. ``Axiom-free'' would be inaccurate.
+
+All 300 original returned Lean sources are retained. The migration's comparison reports no textual declaration-header differences and no change to 821 comment/whitespace-normalized non-proof declaration spans. The later import relocation preserves all 301 migrated sources modulo its documented prefix substitution. These are textual checks, not a cross-version kernel equivalence theorem. The older direct-Lean migration record, with 301 sources and 354 queries, remains historical evidence and is not substituted for the final Lake certificate.
+
+\subsection{6. Archive and reproduction}\label{archive-and-reproduction}
+
+The immutable formal archive is
+
+\texttt{publication/\allowbreak{}formal-freeze/\allowbreak{}formal-v1.\allowbreak{}0-5428ee9b772e.\allowbreak{}tar.\allowbreak{}gz},
+
+with SHA-256
+
+\texttt{e9bb21b1\allowbreak{}7a110a39\allowbreak{}2a7751af\allowbreak{}efb9a2e9\allowbreak{}d6bf218c\allowbreak{}7e6dac78\allowbreak{}8006234f\allowbreak{}3af09c05}.
+
+It contains the source commit and the completed build evidence. The external \texttt{FREEZE.\allowbreak{}json} receipt and SHA sidecar identify that archive. The validation record \texttt{publication/\allowbreak{}assembly/\allowbreak{}VALIDATION.\allowbreak{}json} has SHA-256
+
+\texttt{45321434\allowbreak{}a170482d\allowbreak{}8473182e\allowbreak{}cc8c1fd6\allowbreak{}0b66a84b\allowbreak{}b9480ef7\allowbreak{}f6c26f9f\allowbreak{}2b130157}.
+
+From the complete publication checkout, \texttt{python\ tools/\allowbreak{}verify\_\allowbreak{}formal\_\allowbreak{}freeze.\allowbreak{}py} checks current and archived source correspondence, archive integrity, the original-source archive and the recorded axiom logs. It does not execute Lean or independently replay proofs. The formal archive cannot contain its own archive-hash receipt; use the complete publication checkout for that convenience checker.
+
+For a fresh proof reconstruction, use a separate checkout of the formal source commit, or extract the formal archive, install the pinned Lean toolchain, and run:
+
+\begin{verbatim}
+lake exe cache get
+lake build
+\end{verbatim}
+
+The public manifest uses immutable Git revisions. Machine-local override paths used in the recorded Windows campaign are ignored by Git and are not needed by this portable configuration. Compiled artifact hashes describe the recorded platform; a reconstruction on another platform need not reproduce those binary bytes.
+
+The manuscripts are maintained in English and Spanish Markdown, then converted through the author's Nash--Williams series template to final TeX and PDFs. Rendered-page inspection, bilingual parity and document hashes are separate from the formal-source freeze. Later document and metadata commits can retain the frozen Lean/configuration bytes; exact publication and registry commits are recorded in their own receipts.
+
+\subsection{7. Comparison and review boundary}\label{comparison-and-review-boundary}
+
+The comparison configurations are \texttt{Palomar/\allowbreak{}Article2024.\allowbreak{}comparator.\allowbreak{}json}, \texttt{Palomar/\allowbreak{}Survey2025.\allowbreak{}comparator.\allowbreak{}json} and \texttt{Palomar/\allowbreak{}Research\allowbreak{}Note.\allowbreak{}comparator.\allowbreak{}json}. Each has a standalone Mathlib-only Challenge and a Solution importing the relevant proofs. Definitions in the Challenges have specified bodies; only the theorem statements have deliberate placeholders.
+
+Local compilation and the axiom report establish the evidence described above. Palomar's complete preflight, Challenge/Solution comparison, independent kernel check, editorial review and registration are further stages with separate receipts. This companion does not turn a local build into such a certificate.
+
+The internal review is performed by Codex under the author's direction and is recorded as self-assessment. Aristotle contributed proof development and formalization; Codex contributed migration, assembly, the additive ambient interface, exposition and release preparation. The author accepts responsibility for the work. No independent human peer review is claimed.
+
+\subsection{References}\label{references}
+
+\begingroup\small\raggedright
+\setlength{\parskip}{3pt}
+
+{[}1{]} M. Delcourt and L. Postle, \emph{Refined Absorption: A New Proof of the Existence Conjecture}, arXiv:2402.17855v1 (2024). \url{https://doi.org/10.48550/arXiv.2402.17855}.
+
+{[}2{]} L. Postle, \emph{Refined Absorption: A New Proof of the Existence Conjecture and Its Applications to Extremal and Probabilistic Design Theory}, Proceedings of the International Congress of Mathematicians 2026, Volume 6, 212--231. \url{https://doi.org/10.1137/25M1805977}. Statement baseline: arXiv:2510.19978v1 (2025), \url{https://doi.org/10.48550/arXiv.2510.19978}.
+
+{[}3{]} M. Delcourt and L. Postle, \emph{Finding an Almost Perfect Matching in a Hypergraph Avoiding Forbidden Submatchings}, arXiv:2204.08981 (2022). \url{https://doi.org/10.48550/arXiv.2204.08981}.
+
+{[}4{]} M. Delcourt, C. Henderson, T. Lesgourgues and L. Postle, \emph{Erdős meets Nash-Williams}, arXiv:2507.23624v1 (2025), Appendix B. \url{https://doi.org/10.48550/arXiv.2507.23624}.
+
+{[}5{]} N. Pippenger and J. Spencer, \emph{Asymptotic behavior of the chromatic index for hypergraphs}, Journal of Combinatorial Theory, Series A 51 (1989), 24--42. \url{https://doi.org/10.1016/0097-3165(89)90074-5}.
+
+{[}6{]} S. Ehard, S. Glock and F. Joos, \emph{Pseudorandom hypergraph matchings}, Combinatorics, Probability and Computing 29(6) (2020), 868--885. \url{https://doi.org/10.1017/S0963548320000280}.
+
+{[}7{]} M. Delcourt and L. Postle, \emph{A Proof of Nash-Williams' Conjecture}, arXiv:2606.11178v1 (2026). \url{https://doi.org/10.48550/arXiv.2606.11178}.
+
+{[}8{]} J. P. Traverso Gianini, \emph{Triangle decompositions I: Formalizing the Nash--Williams theorem in Lean}, preprint 1.0 (2026). \url{https://doi.org/10.5281/zenodo.23428173}.
+
+{[}9{]} J. P. Traverso Gianini, \emph{Triangle decompositions II: Robust absorption for typed triangles}, preprint 1.0 (2026). \url{https://doi.org/10.5281/zenodo.23502224}.
+
+{[}10{]} C. C. Lindner and A. Rosa, \emph{Steiner triple systems having a prescribed number of triples in common}, Canadian Journal of Mathematics 27(5) (1975), 1166--1175. \url{https://doi.org/10.4153/CJM-1975-122-4}.
+
+{[}11{]} C. C. Lindner and A. Rosa, \emph{Steiner triple systems having a prescribed number of triples in common (corrigendum)}, Canadian Journal of Mathematics 30(4) (1978), 896. \url{https://doi.org/10.4153/CJM-1978-077-9}.
+
+{[}12{]} L. de Moura and S. Ullrich, \emph{The Lean 4 Theorem Prover and Programming Language}, Automated Deduction --- CADE 28 (2021), 625--635. \url{https://doi.org/10.1007/978-3-030-79876-5_37}.
+
+{[}13{]} The mathlib Community, \emph{The Lean Mathematical Library}, Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (2020), 367--381. \url{https://doi.org/10.1145/3372885.3373824}.
+
+\endgroup
+
+\end{document}

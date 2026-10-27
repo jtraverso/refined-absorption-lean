@@ -1,0 +1,54 @@
+[
+  {
+    "stage": "First complete English authoring draft, before the dedicated editorial audit and translation parity review. Mathematical authority remains the formal freeze and protected-element index.",
+    "source": "preprints/RESEARCH_NOTE/01_manuscript/RESEARCH_NOTE_preprint_v1.0_en.md",
+    "baseline": "preprints/RESEARCH_NOTE/02_validation/baseline/RESEARCH_NOTE_first_en.md",
+    "sha256": "25c33dce7bc5fcb031fdd2b9db2bf44e19b9efbf92a8d5b59538d431c45431e6",
+    "formal_source_commit": "5428ee9b772e67dd7ec6da443199b36a003b72d4",
+    "headings": [
+      "## Abstract",
+      "## 1. Sources and purpose",
+      "## 2. A minimal framework",
+      "## 3. Three proof interfaces",
+      "### 3.1. Reserve matching and local tests",
+      "### 3.2. Avoidance must survive absorption",
+      "### 3.3. Compatible absorbers from compatible decompositions",
+      "## 4. Two fidelity distinctions",
+      "### 4.1. Old vertices and edge support",
+      "### 4.2. Global and piecewise embeddings",
+      "## 5. Completion and exact intersections",
+      "#### Theorem 5.1",
+      "#### Corollary 5.2",
+      "#### Proposition 5.3",
+      "## 6. Polynomial bounds for classes and schedules",
+      "### 6.1. The colouring input",
+      "### 6.2. Steiner systems",
+      "#### Theorem 6.2",
+      "### 6.3. Nash\u2013Williams schedules",
+      "#### Theorem 6.3",
+      "## 7. Formal scope and reproducibility",
+      "## References"
+    ]
+  },
+  {
+    "stage": "First complete Spanish authoring draft, before dedicated editorial and semantic audit.",
+    "source": "preprints/RESEARCH_NOTE/01_manuscript/RESEARCH_NOTE_preprint_v1.0_es.md",
+    "baseline": "preprints/RESEARCH_NOTE/02_validation/baseline/RESEARCH_NOTE_first_es.md",
+    "sha256": "4f276ef4fb54bc5968bfa9572d4a43cfbb6d1055d09787bd2685ca38c69224d8",
+    "formal_source_commit": "5428ee9b772e67dd7ec6da443199b36a003b72d4"
+  },
+  {
+    "stage": "First complete companion authoring draft before dedicated editorial audit.",
+    "source": "preprints/RESEARCH_NOTE/05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_en.md",
+    "baseline": "preprints/RESEARCH_NOTE/02_validation/baseline/FORMALIZATION_COMPANION_first_en.md",
+    "sha256": "d134cf7dfc50665203f643ff2f22e3295ce232cec644b24b6f6b0f212f985f79",
+    "formal_source_commit": "5428ee9b772e67dd7ec6da443199b36a003b72d4"
+  },
+  {
+    "stage": "First complete companion authoring draft before dedicated editorial audit.",
+    "source": "preprints/RESEARCH_NOTE/05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_es.md",
+    "baseline": "preprints/RESEARCH_NOTE/02_validation/baseline/FORMALIZATION_COMPANION_first_es.md",
+    "sha256": "8e31f779c25170ee1bded75a3fd418f74226df046b3bc295687534e900da6b7c",
+    "formal_source_commit": "5428ee9b772e67dd7ec6da443199b36a003b72d4"
+  }
+]

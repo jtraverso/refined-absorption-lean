@@ -1,0 +1,2 @@
+checks/PendingAxioms.lean:6:0: 'RefinedAbsorption.nibbleForDesigns' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/PendingAxioms.lean:7:0: 'RefinedAbsorption.generalEmbeddingLemma' depends on axioms: [propext, Classical.choice, Quot.sound]

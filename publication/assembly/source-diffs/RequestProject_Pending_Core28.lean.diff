@@ -1,0 +1,11 @@
+--- original/RequestProject/Pending/Core28.lean
++++ current/RefinedAbsorption/Pending/Core28.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Pending.MultiNibble
+-public import RequestProject.Pending.Closing
++public import RefinedAbsorption.Pending.MultiNibble
++public import RefinedAbsorption.Pending.Closing
+ 
+ /-!
+ # Theorem 2.8 for a fixed `D`: the combinatorial core

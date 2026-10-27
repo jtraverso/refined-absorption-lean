@@ -1,0 +1,9 @@
+--- original/RequestProject/Original2024/FlatChain.lean
++++ current/RefinedAbsorption/Original2024/FlatChain.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.SparseChain.StageS
++public import RefinedAbsorption.SparseChain.StageS
+ 
+ /-!
+ # The refine-down stage with new copies meeting the reserve

@@ -1,0 +1,11 @@
+--- original/RequestProject/GJW/Main.lean
++++ current/RefinedAbsorption/GJW/Main.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.GJW.Trades
+-public import RequestProject.MultiAbsorber
++public import RefinedAbsorption.GJW.Trades
++public import RefinedAbsorption.MultiAbsorber
+ 
+ /-!
+ # The theorem of Graver–Jurkat and Wilson (Theorem 3.2)

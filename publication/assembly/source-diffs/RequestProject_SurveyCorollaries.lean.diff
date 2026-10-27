@@ -1,0 +1,13 @@
+--- original/RequestProject/SurveyCorollaries.lean
++++ current/RefinedAbsorption/SurveyCorollaries.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.SurveyReserves
+-public import RequestProject.Final
+-public import RequestProject.Multigraph.Existence
++public import RefinedAbsorption.SurveyReserves
++public import RefinedAbsorption.Final
++public import RefinedAbsorption.Multigraph.Existence
+ 
+ /-!
+ # Further results of the survey, unconditionally

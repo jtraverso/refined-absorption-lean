@@ -1,0 +1,9 @@
+--- original/RequestProject/ReserveCover.lean
++++ current/RefinedAbsorption/ReserveCover.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.ExistenceProof
++public import RefinedAbsorption.ExistenceProof
+ 
+ /-!
+ # Covering a leftover with reserves

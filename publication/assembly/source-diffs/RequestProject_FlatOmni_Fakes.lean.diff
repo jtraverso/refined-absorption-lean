@@ -1,0 +1,13 @@
+--- original/RequestProject/FlatOmni/Fakes.lean
++++ current/RefinedAbsorption/FlatOmni/Fakes.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.FlatOmni.LocalRefiner
+-public import RequestProject.Placement.FakeGadget
+-public import RequestProject.Placement.ReserveLemma52
++public import RefinedAbsorption.FlatOmni.LocalRefiner
++public import RefinedAbsorption.Placement.FakeGadget
++public import RefinedAbsorption.Placement.ReserveLemma52
+ 
+ /-!
+ # Replacing the new copies of a local refiner by fake edges in the reserve

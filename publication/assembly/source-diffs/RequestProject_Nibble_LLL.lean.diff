@@ -1,0 +1,9 @@
+--- original/RequestProject/Nibble/LLL.lean
++++ current/RefinedAbsorption/Nibble/LLL.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Nibble.FiniteProb
++public import RefinedAbsorption.Nibble.FiniteProb
+ 
+ /-!
+ # The Lovász Local Lemma for random subsets

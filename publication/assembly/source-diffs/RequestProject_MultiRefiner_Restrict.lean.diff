@@ -1,0 +1,9 @@
+--- original/RequestProject/MultiRefiner/Restrict.lean
++++ current/RefinedAbsorption/MultiRefiner/Restrict.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.MultiRefiner.Basic
++public import RefinedAbsorption.MultiRefiner.Basic
+ 
+ /-!
+ # Restricting a residual multi-refiner to a sub-multigraph

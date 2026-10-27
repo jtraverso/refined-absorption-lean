@@ -1,0 +1,11 @@
+--- original/RequestProject/RefinerOne/Existence.lean
++++ current/RefinedAbsorption/RefinerOne/Existence.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.RefinerOne.Instance
+-public import RequestProject.Nibble.Bridge
++public import RefinedAbsorption.RefinerOne.Instance
++public import RefinedAbsorption.Nibble.Bridge
+ 
+ /-!
+ # Reducing the remaining hypothesis to uniformities `r ≥ 2`

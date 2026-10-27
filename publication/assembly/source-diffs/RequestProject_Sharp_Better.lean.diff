@@ -1,0 +1,11 @@
+--- original/RequestProject/Sharp/Better.lean
++++ current/RefinedAbsorption/Sharp/Better.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Sharp.Descent
+-public import RequestProject.Dense.Native
++public import RefinedAbsorption.Sharp.Descent
++public import RefinedAbsorption.Dense.Native
+ 
+ /-!
+ # The Better Refine Down Lemma (Lemma 3.14) and Theorem 3.8

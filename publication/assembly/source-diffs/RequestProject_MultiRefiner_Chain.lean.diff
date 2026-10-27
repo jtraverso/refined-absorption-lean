@@ -1,0 +1,9 @@
+--- original/RequestProject/MultiRefiner/Chain.lean
++++ current/RefinedAbsorption/MultiRefiner/Chain.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.MultiRefiner.Basic
++public import RefinedAbsorption.MultiRefiner.Basic
+ 
+ /-!
+ # Chains of residual refiners with a uniform refinement constant

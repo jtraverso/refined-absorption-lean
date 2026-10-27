@@ -1,0 +1,9 @@
+--- original/RequestProject/LocalRefiner/Refiner.lean
++++ current/RefinedAbsorption/LocalRefiner/Refiner.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.LocalRefiner.Construction
++public import RefinedAbsorption.LocalRefiner.Construction
+ 
+ /-!
+ # The local refiner is a multi-refiner

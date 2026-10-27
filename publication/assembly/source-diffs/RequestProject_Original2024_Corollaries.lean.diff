@@ -1,0 +1,11 @@
+--- original/RequestProject/Original2024/Corollaries.lean
++++ current/RefinedAbsorption/Original2024/Corollaries.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Original2024.FlatOne
+-public import RequestProject.Multigraph.Existence
++public import RefinedAbsorption.Original2024.FlatOne
++public import RefinedAbsorption.Multigraph.Existence
+ 
+ /-!
+ # Corollaries of the original article (Delcourt–Postle 2024)

@@ -1,0 +1,9 @@
+--- original/RequestProject/GridRefiner/OddSwitch.lean
++++ current/RefinedAbsorption/GridRefiner/OddSwitch.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.GridRefiner.Parity
++public import RefinedAbsorption.GridRefiner.Parity
+ 
+ /-!
+ # One switch stage with partner tokens (`r = 2`)

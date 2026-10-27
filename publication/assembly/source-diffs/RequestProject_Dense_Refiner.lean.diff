@@ -1,0 +1,11 @@
+--- original/RequestProject/Dense/Refiner.lean
++++ current/RefinedAbsorption/Dense/Refiner.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Dense.Stage
+-public import RequestProject.MultiRefiner.Chain
++public import RefinedAbsorption.Dense.Stage
++public import RefinedAbsorption.MultiRefiner.Chain
+ 
+ /-!
+ # Multigraph refiners inside a reserve, by iterated stages

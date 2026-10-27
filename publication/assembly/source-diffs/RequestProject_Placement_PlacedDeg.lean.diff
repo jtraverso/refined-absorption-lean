@@ -1,0 +1,9 @@
+--- original/RequestProject/Placement/PlacedDeg.lean
++++ current/RefinedAbsorption/Placement/PlacedDeg.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Placement.Counting
++public import RefinedAbsorption.Placement.Counting
+ 
+ /-!
+ # Degrees in a placed gadget

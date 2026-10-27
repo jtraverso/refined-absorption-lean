@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-27T06:21:46.945223+00:00",
+  "configuration_sha256": "a536afc8f8f51800824470204c01e55376f579d7c793c53e7c97b8b521a4847c",
+  "modules": [
+    {
+      "module": "Palomar.Article2024Challenge",
+      "source_sha256": "779b7340011b55909f4f267a76c25d61df7a6819173cc9df6b9c98fd94708511",
+      "exit_code": 0,
+      "seconds": 59.55,
+      "log": "publication/assembly/Palomar.Article2024Challenge.log"
+    },
+    {
+      "module": "Palomar.Article2024Solution",
+      "source_sha256": "6ec6c1d2aa23811a9e213abb1663e236a81dd143039fa4186318a002737fc8eb",
+      "exit_code": 0,
+      "seconds": 63.83,
+      "log": "publication/assembly/Palomar.Article2024Solution.log"
+    },
+    {
+      "module": "Palomar.ResearchNoteChallenge",
+      "source_sha256": "d781379e0b66d14b9e01bfce75b22a66468ba007f9ea83f8adf7f5606fa18baf",
+      "exit_code": 0,
+      "seconds": 60.19,
+      "log": "publication/assembly/Palomar.ResearchNoteChallenge.log"
+    },
+    {
+      "module": "Palomar.ResearchNoteSolution",
+      "source_sha256": "5dc7f299ee7b54858427b10e016d03a550a782f14b5e7556d57ffe8738e7f146",
+      "exit_code": 0,
+      "seconds": 170.05,
+      "log": "publication/assembly/Palomar.ResearchNoteSolution.log"
+    },
+    {
+      "module": "Palomar.Survey2025Challenge",
+      "source_sha256": "9aa9a65d3ffe9c977d412a2f338557ba24698b9bf609e73ddc2c410a1c9fc165",
+      "exit_code": 0,
+      "seconds": 61.42,
+      "log": "publication/assembly/Palomar.Survey2025Challenge.log"
+    },
+    {
+      "module": "Palomar.Survey2025Solution",
+      "source_sha256": "58cbd7c114dcd55302a5e00d2531ecb30178e36104945f790ccb2c5c3e7e0bac",
+      "exit_code": 0,
+      "seconds": 65.72,
+      "log": "publication/assembly/Palomar.Survey2025Solution.log"
+    }
+  ],
+  "final_command": [
+    "lake",
+    "--quiet",
+    "--packages=.lake/local-packages.json",
+    "build"
+  ],
+  "final_exit_code": 0,
+  "finished_utc": "2026-10-27T06:31:33.368100+00:00"
+}

@@ -1,0 +1,11 @@
+--- original/RequestProject/LinkSpread/Flat.lean
++++ current/RefinedAbsorption/LinkSpread/Flat.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.LinkSpread.Fibre
+-public import RequestProject.Placement.PlacedFlat
++public import RefinedAbsorption.LinkSpread.Fibre
++public import RefinedAbsorption.Placement.PlacedFlat
+ 
+ /-!
+ # The flat step for all link graphs at once (tagged flat step)

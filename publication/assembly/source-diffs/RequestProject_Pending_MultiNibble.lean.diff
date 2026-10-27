@@ -1,0 +1,13 @@
+--- original/RequestProject/Pending/MultiNibble.lean
++++ current/RefinedAbsorption/Pending/MultiNibble.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.Pending.Regularize
+-public import RequestProject.Nibble.LocalMain
+-public import RequestProject.Faithful2024.Section2
++public import RefinedAbsorption.Pending.Regularize
++public import RefinedAbsorption.Nibble.LocalMain
++public import RefinedAbsorption.Faithful2024.Section2
+ 
+ /-!
+ # A local nibble for labelled multi-hypergraphs, near-regular only on `A`

@@ -1,0 +1,15 @@
+--- original/RequestProject/Sharp/Sparsify.lean
++++ current/RefinedAbsorption/Sharp/Sparsify.lean
+@@ -1,8 +1,8 @@
+ module
+-public import RequestProject.Sharp.SparsBuild
+-public import RequestProject.Sharp.SparsArith
+-public import RequestProject.Sharp.Special
+-public import RequestProject.Sharp.Partition
++public import RefinedAbsorption.Sharp.SparsBuild
++public import RefinedAbsorption.Sharp.SparsArith
++public import RefinedAbsorption.Sharp.Special
++public import RefinedAbsorption.Sharp.Partition
+ 
+ /-!
+ # The Edge Sparsification Lemma (Lemma 3.12)

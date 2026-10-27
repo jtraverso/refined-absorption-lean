@@ -1,0 +1,11 @@
+--- original/RequestProject/HyperPlan/Load.lean
++++ current/RefinedAbsorption/HyperPlan/Load.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.HyperPlan.Plan
+-public import RequestProject.OddGrid.PlanLoad
++public import RefinedAbsorption.HyperPlan.Plan
++public import RefinedAbsorption.OddGrid.PlanLoad
+ 
+ /-!
+ # Loads of a plan, uniformity `r`

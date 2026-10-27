@@ -1,0 +1,91 @@
+{
+  "status": "PASS_RENDERED_PAGE_REVIEW",
+  "reviewer": "Codex internal self-assessment",
+  "review_method": "Visual inspection of all current rendered full pages at 150 dpi and all four contact sheets, after last pagination correction.",
+  "reviewed": [
+    {
+      "doc": 0,
+      "sha256": "e9ec208e0cf9bb50137bf1147090baa614ab61d18b13256bcfe51494c2ff7f4c",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "notes": "Title/metadata, framework and reserve/counting formulas inspected full resolution; no collisions, missing glyphs or overflow. Completion/intersection statements and corrected section transition inspected; quantitative formulas and full Nash statement fit. Final proof and all bibliography entries inspected; title/body/formulas/references clear and within margins."
+    },
+    {
+      "doc": 1,
+      "sha256": "1d8f5ba449874bf34653ae12b253c4e800c1c80ceaa7b41c2a0f566749ae8e3e",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "notes": "All full-resolution pages inspected: titles, accents, equations, full statements, proof transitions, scope and references fit. Corrected Theorem 5.1 entirely on page 6. No overflow/collision/missing glyphs."
+    },
+    {
+      "doc": 2,
+      "sha256": "c54da445c6a063c7c2da0dc8090257b37d09a75098fb052e2c318e571fab76ce",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "notes": "All full-resolution pages inspected, including all 18 canonical endpoint table rows, pins, archive/validation hashes, build/axiom table and references. No clipped content, collision, missing glyph or margin overflow."
+    },
+    {
+      "doc": 3,
+      "sha256": "2d7f78b769888646527dc5062d72929a58c7c1f138236c05cd1ea33558d3a73d",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "notes": "All full-resolution pages inspected, including all 18 canonical endpoint table rows, pins, archive/validation hashes, build/axiom table and references. No clipped content, collision, missing glyph or margin overflow."
+    }
+  ],
+  "reference": {
+    "pdf": "C:/nw/release-readme-citation/preprints/PAPER_II/01_manuscript/PAPER_II_preprint_v1.0_en.pdf",
+    "sha256": "5f7eef757877bd66462dff3ae1fde9df119acabcadac036d50676c3dff4f18d7",
+    "pages": [
+      1,
+      2,
+      3,
+      6,
+      18
+    ],
+    "features": [
+      "title and author block",
+      "table typography",
+      "section hierarchy",
+      "reference typography"
+    ],
+    "theorem_page_comparison": "Actual Theorem A on reference page 6 inspected; named statements, proof paragraphs and surrounding text use consistent typography.",
+    "figures": "not applicable: no figures in these documents"
+  },
+  "limitations": "No independent human visual review. DOI insertion or later PDF regeneration invalidates this acceptance.",
+  "completed_utc": "2026-10-27 07:58:22 UTC"
+}

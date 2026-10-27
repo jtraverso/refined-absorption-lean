@@ -1,0 +1,14 @@
+--- original/checks/Original2024Axioms.lean
++++ current/checks/Original2024Axioms.lean
+@@ -1,6 +1,8 @@
+-import RequestProject.Original2024.Final
+-import RequestProject.Original2024.MinDegree
+-import RequestProject.Original2024.Corollaries
++module
++
++public import RefinedAbsorption.Original2024.Final
++public import RefinedAbsorption.Original2024.MinDegree
++public import RefinedAbsorption.Original2024.Corollaries
+ open RefinedAbsorption.Original2024
+ #print axioms theorem_1_4
+ #print axioms theorem_3_8

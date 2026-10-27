@@ -1,0 +1,9 @@
+--- original/RequestProject/ExistenceProof.lean
++++ current/RefinedAbsorption/ExistenceProof.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Statements
++public import RefinedAbsorption.Statements
+ 
+ /-!
+ # The refined absorption proof of the Existence Conjecture (Section 2)

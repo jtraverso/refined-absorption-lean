@@ -1,0 +1,25 @@
+--- original/RequestProject/HyperPlan/Box.lean
++++ current/RefinedAbsorption/HyperPlan/Box.lean
+@@ -1,5 +1,5 @@
+ module
+-public import Mathlib
++public import RefinedAbsorption.MathlibImports
+ 
+ /-!
+ # Boxes: the basic class-preserving moves for `r`-sets
+@@ -110,7 +110,6 @@
+         exact (mem_bt_flip h hJ hx (fun h' => hxS (h' ▸ hy)) (fun h' => hρS (h' ▸ hy))).1 (hS hy)
+       · intro hS y hy
+         exact (mem_bt_flip h hJ hx (fun h' => hxS (h' ▸ hy)) (fun h' => hρS (h' ▸ hy))).2 (hS hy)
+-    dsimp only
+     by_cases hS : S ⊆ bt e ρ J
+     · rw [if_pos hS, if_pos (hiff.1 hS)]
+       have hcard : (e \ symmDiff J {x}).card + 1 = (e \ J).card ∨
+@@ -152,7 +151,6 @@
+     · rw [if_neg hS, if_neg (fun h' => hS (hiff.2 h'))]; simp
+   · intro J hJ hne
+     intro heq
+-    dsimp only at heq
+     have : x ∈ J ↔ x ∈ symmDiff J {x} := by rw [heq]
+     simp [mem_symmDiff] at this
+   · intro J hJ

@@ -1,0 +1,9 @@
+--- original/RequestProject/Extensions/AlmostResolvable.lean
++++ current/RefinedAbsorption/Extensions/AlmostResolvable.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Extensions.Packing
++public import RefinedAbsorption.Extensions.Packing
+ 
+ /-!
+ # Asymptotically resolvable Steiner systems (from the Pippenger–Spencer theorem)

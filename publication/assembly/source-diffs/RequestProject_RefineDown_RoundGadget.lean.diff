@@ -1,0 +1,15 @@
+--- original/RequestProject/RefineDown/RoundGadget.lean
++++ current/RefinedAbsorption/RefineDown/RoundGadget.lean
+@@ -1,8 +1,8 @@
+ module
+-public import RequestProject.RefineDown.Step
+-public import RequestProject.RefineDown.Transport
+-public import RequestProject.Placement.Cluster
+-public import RequestProject.Placement.PlacedDeg
++public import RefinedAbsorption.RefineDown.Step
++public import RefinedAbsorption.RefineDown.Transport
++public import RefinedAbsorption.Placement.Cluster
++public import RefinedAbsorption.Placement.PlacedDeg
+ 
+ /-!
+ # The anti-edge round as gadgets on `Fin n`

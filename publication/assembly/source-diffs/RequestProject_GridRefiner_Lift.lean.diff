@@ -1,0 +1,9 @@
+--- original/RequestProject/GridRefiner/Lift.lean
++++ current/RefinedAbsorption/GridRefiner/Lift.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.LocalRefiner.Segments
++public import RefinedAbsorption.LocalRefiner.Segments
+ 
+ /-!
+ # Lifting label-level residual refiners

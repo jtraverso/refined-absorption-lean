@@ -1,0 +1,9 @@
+--- original/RequestProject/Sharp/SparsCount.lean
++++ current/RefinedAbsorption/Sharp/SparsCount.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Sharp.CliqueRefiner
++public import RefinedAbsorption.Sharp.CliqueRefiner
+ 
+ /-!
+ # Degree counting for the Edge Sparsification Lemma

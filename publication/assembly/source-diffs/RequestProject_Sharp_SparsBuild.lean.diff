@@ -1,0 +1,11 @@
+--- original/RequestProject/Sharp/SparsBuild.lean
++++ current/RefinedAbsorption/Sharp/SparsBuild.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Sharp.SparsCount
+-public import RequestProject.FlatDown.MultDegree
++public import RefinedAbsorption.Sharp.SparsCount
++public import RefinedAbsorption.FlatDown.MultDegree
+ 
+ /-!
+ # The refiner of the Edge Sparsification Lemma

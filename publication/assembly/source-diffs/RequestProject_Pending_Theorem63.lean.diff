@@ -1,0 +1,13 @@
+--- original/RequestProject/Pending/Theorem63.lean
++++ current/RefinedAbsorption/Pending/Theorem63.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.Pending.SafeHost
+-public import RequestProject.Pending.SafeNibble
+-public import RequestProject.Original2024.MinDegree
++public import RefinedAbsorption.Pending.SafeHost
++public import RefinedAbsorption.Pending.SafeNibble
++public import RefinedAbsorption.Original2024.MinDegree
+ 
+ /-!
+ # Theorem 6.3 of arXiv:2402.17855v1, uniformity `r ≥ 2`

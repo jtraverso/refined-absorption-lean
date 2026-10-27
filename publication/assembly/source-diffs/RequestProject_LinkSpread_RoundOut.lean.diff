@@ -1,0 +1,11 @@
+--- original/RequestProject/LinkSpread/RoundOut.lean
++++ current/RefinedAbsorption/LinkSpread/RoundOut.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.LinkSpread.Comp
+-public import RequestProject.LinkSpread.Round
++public import RefinedAbsorption.LinkSpread.Comp
++public import RefinedAbsorption.LinkSpread.Round
+ 
+ /-!
+ # The tagged round as a tagged output

@@ -1,0 +1,22 @@
+--- original/RequestProject/OddGrid/PlanDecomp.lean
++++ current/RefinedAbsorption/OddGrid/PlanDecomp.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.OddGrid.Plan
++public import RefinedAbsorption.OddGrid.Plan
+ 
+ /-!
+ # Valid plans are label-level decompositions
+@@ -107,9 +107,9 @@
+       · simp [pwP, hu]
+       · intro e' he'' hne
+         simp only [pwP]
+-        rw [if_neg]
+-        intro hu'
+-        exact hne (hlon e' (by rw [← outs_inp (K := K) q t]; exact he'') hu')
++        by_cases hu' : u ∈ e'
++        · exact False.elim (hne (hlon e' (by rw [← outs_inp (K := K) q t]; exact he'') hu'))
++        · simp [hu']
+       · intro h; exact absurd he h
+     rw [hcls, castHom_eq_zero_iff hd] at hc
+     simp [hc]

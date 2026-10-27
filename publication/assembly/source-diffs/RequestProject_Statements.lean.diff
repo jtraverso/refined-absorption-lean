@@ -1,0 +1,11 @@
+--- original/RequestProject/Statements.lean
++++ current/RefinedAbsorption/Statements.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Designs
+-public import RequestProject.Absorbers
++public import RefinedAbsorption.Designs
++public import RefinedAbsorption.Absorbers
+ 
+ /-!
+ # Statements of the main theorems, lemmas and conjectures discussed in the paper

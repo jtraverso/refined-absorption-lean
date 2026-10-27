@@ -1,0 +1,17 @@
+checks/QuantitativeAxioms.lean:22:0: 'RefinedAbsorption.Extensions.steiner_quantitatively_almost_resolvable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/QuantitativeAxioms.lean:25:0: 'RefinedAbsorption.Extensions.exists_quantitatively_almost_resolvable_steiner' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/QuantitativeAxioms.lean:28:0: 'RefinedAbsorption.External.nash_williams_scheduled_decomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/QuantitativeAxioms.lean:31:0: 'RefinedAbsorption.External.two_mul_degree_of_isTriangleDecomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/QuantitativeAxioms.lean:32:0: 'RefinedAbsorption.External.codegree_le_one_of_isTriangleDecomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/QuantitativeAxioms.lean:33:0: 'RefinedAbsorption.Extensions.degree_eq_deg_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/QuantitativeAxioms.lean:34:0: 'RefinedAbsorption.Extensions.codegree_eq_deg_pair' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,11 @@
+--- original/RequestProject/General/MultiRoot.lean
++++ current/RefinedAbsorption/General/MultiRoot.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Placement.ReserveLemma52
+-public import RequestProject.FlatOmni.CliquePieces
++public import RefinedAbsorption.Placement.ReserveLemma52
++public import RefinedAbsorption.FlatOmni.CliquePieces
+ 
+ /-!
+ # The Partial Clique Embedding Lemma with several root sets per gadget

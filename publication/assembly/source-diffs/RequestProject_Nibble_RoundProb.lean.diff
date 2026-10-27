@@ -1,0 +1,10 @@
+--- original/RequestProject/Nibble/RoundProb.lean
++++ current/RefinedAbsorption/Nibble/RoundProb.lean
+@@ -1,5 +1,6 @@
+ module
+-public import RequestProject.Nibble.Hyper
++public import Mathlib.Algebra.Order.Chebyshev
++public import RefinedAbsorption.Nibble.Hyper
+ 
+ /-!
+ # The random quantities of one nibble round

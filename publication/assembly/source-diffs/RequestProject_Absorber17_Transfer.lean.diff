@@ -1,0 +1,11 @@
+--- original/RequestProject/Absorber17/Transfer.lean
++++ current/RefinedAbsorption/Absorber17/Transfer.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Absorber17.Maps
+-public import RequestProject.Statements
++public import RefinedAbsorption.Absorber17.Maps
++public import RefinedAbsorption.Statements
+ 
+ /-!
+ # Transporting absorbers

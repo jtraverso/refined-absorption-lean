@@ -1,0 +1,24 @@
+--- original/RequestProject/HyperPlan/Plan.lean
++++ current/RefinedAbsorption/HyperPlan/Plan.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.HyperPlan.Stage
+-public import RequestProject.OddGrid.PlanDecomp
++public import RefinedAbsorption.HyperPlan.Stage
++public import RefinedAbsorption.OddGrid.PlanDecomp
+ 
+ /-!
+ # Multi-stage plans, uniformity `r`
+@@ -222,9 +222,9 @@
+     · simp [pwR, hSe]
+     · intro e' he'' hne
+       simp only [pwR]
+-      rw [if_neg]
+-      intro hS'
+-      exact hne (hlone e' (by rw [← outs_inpR (K := K) q r t]; exact he'') hS')
++      by_cases hS' : S ⊆ e'
++      · exact False.elim (hne (hlone e' (by rw [← outs_inpR (K := K) q r t]; exact he'') hS'))
++      · simp [hS']
+     · intro h; exact absurd he h
+   rwa [hcl] at h1
+ 

@@ -1,0 +1,9 @@
+--- original/RequestProject/Nibble/Hyper.lean
++++ current/RefinedAbsorption/Nibble/Hyper.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Nibble.FiniteProb
++public import RefinedAbsorption.Nibble.FiniteProb
+ 
+ /-!
+ # Hypergraph notions for one round of the nibble

@@ -1,0 +1,7 @@
+COMMAND ["lake", "--quiet", "--packages=.lake/local-packages.json", "build", "+Palomar.Survey2025Challenge:olean"]
+⚠ [2332/2332] Built Palomar.Survey2025Challenge (37s)
+warning: Palomar/Survey2025Challenge.lean:163:8: declaration uses `sorry`
+warning: Palomar/Survey2025Challenge.lean:173:8: declaration uses `sorry`
+warning: Palomar/Survey2025Challenge.lean:176:8: declaration uses `sorry`
+warning: Palomar/Survey2025Challenge.lean:325:8: declaration uses `sorry`
+warning: Palomar/Survey2025Challenge.lean:328:8: declaration uses `sorry`

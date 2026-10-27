@@ -1,0 +1,9 @@
+--- original/RequestProject/FlatOmni/StageK.lean
++++ current/RefinedAbsorption/FlatOmni/StageK.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Dense.Stage
++public import RefinedAbsorption.Dense.Stage
+ 
+ /-!
+ # One refine-down stage with an arbitrary ratio `|U| ≤ K₀ |Z|`

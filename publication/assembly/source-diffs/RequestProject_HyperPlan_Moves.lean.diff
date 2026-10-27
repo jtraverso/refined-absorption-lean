@@ -1,0 +1,11 @@
+--- original/RequestProject/HyperPlan/Moves.lean
++++ current/RefinedAbsorption/HyperPlan/Moves.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.HyperPlan.Load
+-public import RequestProject.HyperPlan.Box
++public import RefinedAbsorption.HyperPlan.Load
++public import RefinedAbsorption.HyperPlan.Box
+ 
+ /-!
+ # Valid moves for `r`-sets

@@ -1,0 +1,11 @@
+--- original/RequestProject/Pending/Theorem62.lean
++++ current/RefinedAbsorption/Pending/Theorem62.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Pending.Theorem63Final
+-public import RequestProject.Extensions.Packing
++public import RefinedAbsorption.Pending.Theorem63Final
++public import RefinedAbsorption.Extensions.Packing
+ 
+ /-!
+ # Theorem 6.2 of arXiv:2402.17855v1, proved from Theorems 6.1 and 6.3

@@ -1,0 +1,11 @@
+--- original/RequestProject/Nibble/Bridge.lean
++++ current/RefinedAbsorption/Nibble/Bridge.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.WeightedNibbleBridge
+-public import RequestProject.Nibble.Main
++public import RefinedAbsorption.WeightedNibbleBridge
++public import RefinedAbsorption.Nibble.Main
+ 
+ /-!
+ # The nibble with leftover degree control, proved

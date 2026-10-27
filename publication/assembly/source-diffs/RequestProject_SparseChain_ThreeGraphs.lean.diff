@@ -1,0 +1,13 @@
+--- original/RequestProject/SparseChain/ThreeGraphs.lean
++++ current/RefinedAbsorption/SparseChain/ThreeGraphs.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.SparseChain.FlatEmbedS
+-public import RequestProject.SparseChain.WindowS
+-public import RequestProject.Local.LevelOneSharp
++public import RefinedAbsorption.SparseChain.FlatEmbedS
++public import RefinedAbsorption.SparseChain.WindowS
++public import RefinedAbsorption.Local.LevelOneSharp
+ 
+ /-!
+ # Theorem 3.8 for `3`-graphs

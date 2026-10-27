@@ -1,0 +1,6 @@
+COMMAND ["C:\\Users\\jtraverso\\.elan\\toolchains\\leanprover--lean4---v4.35.0-rc3\\bin\\lean.exe", "--root=C:\\nw\\refined-absorption-lean", "-j1", "-M4096", "C:\\nw\\refined-absorption-lean\\Palomar\\Survey2025Challenge.lean"]
+C:\nw\refined-absorption-lean\Palomar\Survey2025Challenge.lean:163:8: warning: declaration uses `sorry`
+C:\nw\refined-absorption-lean\Palomar\Survey2025Challenge.lean:173:8: warning: declaration uses `sorry`
+C:\nw\refined-absorption-lean\Palomar\Survey2025Challenge.lean:176:8: warning: declaration uses `sorry`
+C:\nw\refined-absorption-lean\Palomar\Survey2025Challenge.lean:325:8: warning: declaration uses `sorry`
+C:\nw\refined-absorption-lean\Palomar\Survey2025Challenge.lean:328:8: warning: declaration uses `sorry`

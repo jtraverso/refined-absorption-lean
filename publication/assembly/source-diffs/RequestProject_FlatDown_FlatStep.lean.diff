@@ -1,0 +1,9 @@
+--- original/RequestProject/FlatDown/FlatStep.lean
++++ current/RefinedAbsorption/FlatDown/FlatStep.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.FlatDown.Completion
++public import RefinedAbsorption.FlatDown.Completion
+ 
+ /-!
+ # The step from `i`-flat to `(i-1)`-flat

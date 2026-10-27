@@ -1,0 +1,9 @@
+--- original/RequestProject/HyperPlan/Class.lean
++++ current/RefinedAbsorption/HyperPlan/Class.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.OddGrid.StageDiv
++public import RefinedAbsorption.OddGrid.StageDiv
+ 
+ /-!
+ # Weighted labels of uniformity `r`: face classes and divisibility

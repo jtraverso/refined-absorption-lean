@@ -1,0 +1,9 @@
+--- original/RequestProject/Pending/RootLight.lean
++++ current/RefinedAbsorption/Pending/RootLight.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Faithful2024.Section6
++public import RefinedAbsorption.Faithful2024.Section6
+ 
+ /-!
+ # A uniformly bounded library of root-light absorbers

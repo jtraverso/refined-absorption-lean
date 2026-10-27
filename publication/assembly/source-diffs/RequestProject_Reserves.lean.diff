@@ -1,0 +1,41 @@
+--- original/RequestProject/Reserves.lean
++++ current/RefinedAbsorption/Reserves.lean
+@@ -1,5 +1,6 @@
+ module
+-public import RequestProject.ExistenceProof
++public import RefinedAbsorption.ExistenceProof
++public import Mathlib.Combinatorics.Enumerative.DoubleCounting
+ 
+ /-!
+ # An explicit construction of reserves
+@@ -59,7 +60,9 @@
+   have hinj : Set.InjOn (fun v : Fin n => (v.val / s ^ (i + 1), v.val % s ^ i))
+       (univ.filter (fun v : Fin n => dig s i v = c) : Set (Fin n)) := by
+     intro v hv w hw h
+-    simp only [coe_filter, mem_univ, true_and, Set.mem_setOf_eq, dig] at hv hw
++    have hv' : dig s i v = c := (Finset.mem_filter.mp hv).2
++    have hw' : dig s i w = c := (Finset.mem_filter.mp hw).2
++    dsimp only [dig] at hv' hw'
+     simp only [Prod.mk.injEq] at h
+     have key : ∀ x : ℕ,
+         x = x / s ^ (i + 1) * s ^ (i + 1) + x / s ^ i % s * s ^ i + x % s ^ i := by
+@@ -70,7 +73,7 @@
+       nth_rewrite 1 [← h1, ← h2]
+       ring
+     apply Fin.ext
+-    rw [key v.val, key w.val, h.1, h.2, hv, hw]
++    rw [key v.val, key w.val, h.1, h.2, hv', hw']
+   have hmaps : Set.MapsTo (fun v : Fin n => (v.val / s ^ (i + 1), v.val % s ^ i))
+       (univ.filter (fun v : Fin n => dig s i v = c) : Set (Fin n))
+       (range (n / s ^ (i + 1) + 1) ×ˢ range (s ^ i) : Finset (ℕ × ℕ)) := by
+@@ -326,8 +329,8 @@
+ 
+ theorem reserveCliques_eq_goodSets {n : ℕ} (q r : ℕ) (X : Finset (Finset (Fin n)))
+     (e : Finset (Fin n)) : reserveCliques q r X e = goodSets r q X e := by
+-  ext Q
+-  simp only [reserveCliques, goodSets, cliqueEdges, mem_filter]
++  unfold reserveCliques goodSets cliqueEdges
++  congr 1
+ 
+ /-! ### The weak reserves lemma -/
+ 

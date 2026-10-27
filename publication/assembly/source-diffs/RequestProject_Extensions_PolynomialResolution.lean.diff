@@ -1,0 +1,11 @@
+--- original/RequestProject/Extensions/PolynomialResolution.lean
++++ current/RefinedAbsorption/Extensions/PolynomialResolution.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Extensions.AlmostResolvable
+-public import RequestProject.Extensions.PolynomialTools
++public import RefinedAbsorption.Extensions.AlmostResolvable
++public import RefinedAbsorption.Extensions.PolynomialTools
+ 
+ /-!
+ # Steiner systems are almost resolvable with a polynomial error term

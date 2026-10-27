@@ -1,0 +1,9 @@
+--- original/RequestProject/SurveyReserves.lean
++++ current/RefinedAbsorption/SurveyReserves.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Original2024.RelReserves
++public import RefinedAbsorption.Original2024.RelReserves
+ 
+ /-!
+ # Lemma 2.1 of the survey (Reserves), as stated

@@ -1,0 +1,17 @@
+--- original/RequestProject/Extensions/Intersection.lean
++++ current/RefinedAbsorption/Extensions/Intersection.lean
+@@ -1,9 +1,9 @@
+ module
+-public import RequestProject.Pending.Theorem63Final
+-public import RequestProject.Extensions.Completion
+-public import RequestProject.Extensions.Embedding
+-public import RequestProject.Extensions.CountCore
+-public import RequestProject.Extensions.Packing
++public import RefinedAbsorption.Pending.Theorem63Final
++public import RefinedAbsorption.Extensions.Completion
++public import RefinedAbsorption.Extensions.Embedding
++public import RefinedAbsorption.Extensions.CountCore
++public import RefinedAbsorption.Extensions.Packing
+ 
+ /-!
+ # Disjoint mates and the intersection problem for Steiner systems

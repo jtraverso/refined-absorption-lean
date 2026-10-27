@@ -1,0 +1,11 @@
+--- original/RequestProject/SparseChain/StageS.lean
++++ current/RefinedAbsorption/SparseChain/StageS.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Dense.Stage
+-public import RequestProject.SparseChain.Levels
++public import RefinedAbsorption.Dense.Stage
++public import RefinedAbsorption.SparseChain.Levels
+ 
+ /-!
+ # One sparse stage of the multigraph refine-down construction

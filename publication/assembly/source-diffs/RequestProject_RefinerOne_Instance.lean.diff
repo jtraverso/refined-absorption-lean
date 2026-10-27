@@ -1,0 +1,9 @@
+--- original/RequestProject/RefinerOne/Instance.lean
++++ current/RefinedAbsorption/RefinerOne/Instance.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.RefinerOne.Transfer
++public import RefinedAbsorption.RefinerOne.Transfer
+ 
+ /-!
+ # `RefinerWithAbsorbers` for `r = 1`

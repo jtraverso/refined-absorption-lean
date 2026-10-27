@@ -1,0 +1,9 @@
+--- original/RequestProject/GeneralEmbedding/Main.lean
++++ current/RefinedAbsorption/GeneralEmbedding/Main.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.GeneralEmbedding.Greedy
++public import RefinedAbsorption.GeneralEmbedding.Greedy
+ 
+ /-!
+ # Lemma 3.8 of the survey (General Embedding): proof

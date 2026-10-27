@@ -1,0 +1,9 @@
+--- original/RequestProject/OddGrid/Merge.lean
++++ current/RefinedAbsorption/OddGrid/Merge.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.OddGrid.Concat
++public import RefinedAbsorption.OddGrid.Concat
+ 
+ /-!
+ # Merging a set of vertices into hubs

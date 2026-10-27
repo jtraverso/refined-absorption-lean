@@ -1,0 +1,9 @@
+--- original/RequestProject/OddGrid/Grid.lean
++++ current/RefinedAbsorption/OddGrid/Grid.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.OddGrid.Merge
++public import RefinedAbsorption.OddGrid.Merge
+ 
+ /-!
+ # Grids of vertices and rook pairs

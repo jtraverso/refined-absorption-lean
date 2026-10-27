@@ -1,0 +1,11 @@
+--- original/RequestProject/HyperPlan/Stage.lean
++++ current/RefinedAbsorption/HyperPlan/Stage.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.HyperPlan.Class
+-public import RequestProject.OddGrid.Compose
++public import RefinedAbsorption.HyperPlan.Class
++public import RefinedAbsorption.OddGrid.Compose
+ 
+ /-!
+ # Divisibility in a stage, uniformity `r`

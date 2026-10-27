@@ -1,0 +1,11 @@
+--- original/RequestProject/Faithful2024/FlatSparsify.lean
++++ current/RefinedAbsorption/Faithful2024/FlatSparsify.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Sharp.Sparsify
+-public import RequestProject.Sharp.Better
++public import RefinedAbsorption.Sharp.Sparsify
++public import RefinedAbsorption.Sharp.Better
+ 
+ /-!
+ # The Edge Sparsification Lemma with flatness (Lemma 3.12(2) of arXiv:2402.17855v1)

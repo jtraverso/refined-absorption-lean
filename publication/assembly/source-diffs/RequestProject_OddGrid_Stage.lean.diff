@@ -1,0 +1,9 @@
+--- original/RequestProject/OddGrid/Stage.lean
++++ current/RefinedAbsorption/OddGrid/Stage.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.OddGrid.Chain
++public import RefinedAbsorption.OddGrid.Chain
+ 
+ /-!
+ # One stage of the grid refiner

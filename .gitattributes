@@ -1,1 +1,6 @@
 * text=auto eol=lf
+# Preserve recorded evidence bytes: their hashes describe original console/JSON files.
+publication/assembly/** -text
+*.pdf -text
+*.zip -text
+*.gz -text

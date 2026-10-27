@@ -1,0 +1,9 @@
+--- original/RequestProject/GJW/Trades.lean
++++ current/RefinedAbsorption/GJW/Trades.lean
+@@ -1,5 +1,5 @@
+ module
+-public import Mathlib
++public import RefinedAbsorption.MathlibImports
+ 
+ /-!
+ # Integer-weighted `r`-graphs, null designs and trades

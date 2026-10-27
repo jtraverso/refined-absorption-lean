@@ -1,0 +1,9 @@
+--- original/RequestProject/Sharp/CliqueRefiner.lean
++++ current/RefinedAbsorption/Sharp/CliqueRefiner.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Sharp.Better
++public import RefinedAbsorption.Sharp.Better
+ 
+ /-!
+ # Private cliques: the first refiner of the Edge Sparsification Lemma

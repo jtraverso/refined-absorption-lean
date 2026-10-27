@@ -1,0 +1,9 @@
+--- original/RequestProject/MultiRefiner/Basic.lean
++++ current/RefinedAbsorption/MultiRefiner/Basic.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.RefinerReductions
++public import RefinedAbsorption.RefinerReductions
+ 
+ /-!
+ # Multigraph refiners with residue

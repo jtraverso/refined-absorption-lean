@@ -1,0 +1,9 @@
+--- original/RequestProject/OddGrid/Extra.lean
++++ current/RefinedAbsorption/OddGrid/Extra.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.OddGrid.Phase
++public import RefinedAbsorption.OddGrid.Phase
+ 
+ /-!
+ # Merging an extra column

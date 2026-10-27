@@ -1,0 +1,9 @@
+--- original/RequestProject/Placement/Defs.lean
++++ current/RefinedAbsorption/Placement/Defs.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Basic
++public import RefinedAbsorption.Basic
+ 
+ /-!
+ # Placing bounded rooted gadgets in `K_n^r`: definitions

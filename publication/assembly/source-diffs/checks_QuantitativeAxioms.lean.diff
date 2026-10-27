@@ -1,0 +1,12 @@
+--- original/checks/QuantitativeAxioms.lean
++++ current/checks/QuantitativeAxioms.lean
+@@ -1,5 +1,7 @@
+-import RequestProject.Extensions.PolynomialResolution
+-import RequestProject.Extensions.NashWilliamsSchedule
++module
++
++public import RefinedAbsorption.Extensions.PolynomialResolution
++public import RefinedAbsorption.Extensions.NashWilliamsSchedule
+ 
+ /-! Axiom and statement check for the quantitative extensions.
+ 

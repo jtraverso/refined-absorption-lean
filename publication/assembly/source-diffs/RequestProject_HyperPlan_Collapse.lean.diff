@@ -1,0 +1,11 @@
+--- original/RequestProject/HyperPlan/Collapse.lean
++++ current/RefinedAbsorption/HyperPlan/Collapse.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.HyperPlan.Moves
+-public import RequestProject.HyperPlan.Strong
++public import RefinedAbsorption.HyperPlan.Moves
++public import RefinedAbsorption.HyperPlan.Strong
+ 
+ /-!
+ # Collapsing an `r`-partite `r`-graph onto a single set

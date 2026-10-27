@@ -1,0 +1,9 @@
+--- original/RequestProject/Extensions/NashWilliamsSchedule.lean
++++ current/RefinedAbsorption/Extensions/NashWilliamsSchedule.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Extensions.PolynomialTools
++public import RefinedAbsorption.Extensions.PolynomialTools
+ 
+ /-!
+ # Scheduling a Nash–Williams triangle decomposition in `Δ(G)/2 + o(Δ(G))` rounds

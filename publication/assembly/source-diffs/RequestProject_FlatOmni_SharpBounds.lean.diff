@@ -1,0 +1,11 @@
+--- original/RequestProject/FlatOmni/SharpBounds.lean
++++ current/RefinedAbsorption/FlatOmni/SharpBounds.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Sharp.Descent
+-public import RequestProject.Placement.Assembly
++public import RefinedAbsorption.Sharp.Descent
++public import RefinedAbsorption.Placement.Assembly
+ 
+ /-!
+ # Two bounds on the potential `sharpPot 2`

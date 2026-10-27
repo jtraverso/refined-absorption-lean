@@ -1,0 +1,11 @@
+--- original/RequestProject/Pending/Theorem63One.lean
++++ current/RefinedAbsorption/Pending/Theorem63One.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Pending.Danger
+-public import RequestProject.Statements
++public import RefinedAbsorption.Pending.Danger
++public import RefinedAbsorption.Statements
+ 
+ /-!
+ # Theorem 6.3 of arXiv:2402.17855v1, uniformity `r = 1`

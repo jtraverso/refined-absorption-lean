@@ -2,7 +2,7 @@
 
 Project: Refined absorption formalization and research note.
 Paper title: Formalizing refined absorption: proof interfaces and consequences.
-Manuscript version: 1.0, to be authored after the clean formal freeze.
+Manuscript version: 1.0 editorial draft, authored after the completed clean formal freeze; English and Spanish note and companion exist.
 Target journal: No journal selected; public research note with a Zenodo DOI.
 Audience: Combinatorialists familiar with designs and absorption; Lean experience is not assumed.
 Editorial owner: Juan Pablo Traverso Gianini.
@@ -17,7 +17,7 @@ First-person policy: Restrained authorial voice; no invented collaboration or in
 Notation policy: Fixed q > r, degrees distinguished by their uniformity, block families distinguished from covered r-edges. Source theorem numbers always identify the source text.
 Citation style: Numbered bibliography, DOI links, version-specific theorem locations.
 Abstract limit: Approximately 180 words in English; mathematically identical Spanish abstract.
-Length constraints: Aim for 12–16 pages for the note; companion length determined by reproducibility needs. Clarity takes priority over an arbitrary page target.
+Length constraints: Initial target 12–16 pages; the complete note occupies 10 English / 11 Spanish pages without padding. The companions each occupy seven pages. Clarity takes priority over an arbitrary page target.
 Protected elements: Existing Lean definitions, statements and proofs; exact external contracts; quantifier ranges; divisibility conditions; thresholds; the distinction between partial parallel classes and a resolution; the distinction between global and piecewise embeddings.
 Permitted structural changes: Group corollaries around the completion-avoiding theorem; move module names, full endpoint maps, execution records and hashes into the companion.
 Formal aggregate root: RefinedAbsorption.lean, covering all 300 library modules after adding the ambient-vertex interface for 6.2.

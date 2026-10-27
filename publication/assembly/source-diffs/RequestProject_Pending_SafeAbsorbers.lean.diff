@@ -1,0 +1,25 @@
+--- original/RequestProject/Pending/SafeAbsorbers.lean
++++ current/RefinedAbsorption/Pending/SafeAbsorbers.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.Pending.RootLight
+-public import RequestProject.Pending.SafeEmbed
+-public import RequestProject.Placement.Absorbers
++public import RefinedAbsorption.Pending.RootLight
++public import RefinedAbsorption.Pending.SafeEmbed
++public import RefinedAbsorption.Placement.Absorbers
+ 
+ /-!
+ # Attached absorbers whose cliques are safe with respect to a given packing
+@@ -133,7 +133,10 @@
+   let ψ : Fin k ↪ Fin n := ⟨fun i => (Tv.equivFin.symm i).1, fun i j h =>
+     Tv.equivFin.symm.injective (Subtype.val_injective h)⟩
+   have hψ : ∀ i, ψ i ∈ Tv := fun i => (Tv.equivFin.symm i).2
+-  have hrange : ∀ x ∈ Tv, ∃ i, ψ i = x := fun x hx => ⟨Tv.equivFin ⟨x, hx⟩, by simp [ψ]⟩
++  have hrange : ∀ x ∈ Tv, ∃ i, ψ i = x := fun x hx =>
++    ⟨Tv.equivFin ⟨x, hx⟩, by
++      change ((Tv.equivFin.symm (Tv.equivFin ⟨x, hx⟩)) : Fin n) = x
++      simp⟩
+   have hpre : ∀ e ∈ W, (e.preimage ψ ψ.injective.injOn).map ψ = e := by
+     intro e he
+     ext x

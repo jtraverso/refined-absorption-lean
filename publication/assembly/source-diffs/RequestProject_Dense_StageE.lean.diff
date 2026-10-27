@@ -1,0 +1,11 @@
+--- original/RequestProject/Dense/StageE.lean
++++ current/RefinedAbsorption/Dense/StageE.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Dense.Stage
+-public import RequestProject.Placement.ChainLevelsE
++public import RefinedAbsorption.Dense.Stage
++public import RefinedAbsorption.Placement.ChainLevelsE
+ 
+ /-!
+ # One stage, with link levels in `ε`-form

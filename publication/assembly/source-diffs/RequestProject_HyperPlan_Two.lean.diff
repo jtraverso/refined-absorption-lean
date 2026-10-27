@@ -1,0 +1,11 @@
+--- original/RequestProject/HyperPlan/Two.lean
++++ current/RefinedAbsorption/HyperPlan/Two.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.HyperPlan.Native
+-public import RequestProject.HyperPlan.Moves
++public import RefinedAbsorption.HyperPlan.Native
++public import RefinedAbsorption.HyperPlan.Moves
+ 
+ /-!
+ # The grid plans of `r = 2` are `r`-uniform plans

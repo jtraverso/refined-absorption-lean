@@ -1,0 +1,9 @@
+--- original/RequestProject/Pending/Danger.lean
++++ current/RefinedAbsorption/Pending/Danger.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Basic
++public import RefinedAbsorption.Basic
+ 
+ /-!
+ # Dangerous cliques with respect to a given packing

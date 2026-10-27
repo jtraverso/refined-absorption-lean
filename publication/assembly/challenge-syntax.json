@@ -1,0 +1,23 @@
+[
+  {
+    "module": "Palomar.Article2024Challenge",
+    "exit_code": 0,
+    "source_sha256": "779b7340011b55909f4f267a76c25d61df7a6819173cc9df6b9c98fd94708511",
+    "seconds": 60.97,
+    "log": "publication/assembly/Article2024Challenge-syntax.log"
+  },
+  {
+    "module": "Palomar.ResearchNoteChallenge",
+    "exit_code": 0,
+    "source_sha256": "d781379e0b66d14b9e01bfce75b22a66468ba007f9ea83f8adf7f5606fa18baf",
+    "seconds": 53.49,
+    "log": "publication/assembly/ResearchNoteChallenge-syntax.log"
+  },
+  {
+    "module": "Palomar.Survey2025Challenge",
+    "exit_code": 0,
+    "source_sha256": "9aa9a65d3ffe9c977d412a2f338557ba24698b9bf609e73ddc2c410a1c9fc165",
+    "seconds": 48.95,
+    "log": "publication/assembly/Survey2025Challenge-syntax.log"
+  }
+]

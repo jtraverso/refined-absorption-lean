@@ -1,0 +1,11 @@
+--- original/RequestProject/Window/Native.lean
++++ current/RefinedAbsorption/Window/Native.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Window.Descent
+-public import RequestProject.HyperPlan.Native
++public import RefinedAbsorption.Window.Descent
++public import RefinedAbsorption.HyperPlan.Native
+ 
+ /-!
+ # The exact budget of Theorem 1.10 from one window stage

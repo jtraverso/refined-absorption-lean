@@ -1,0 +1,9 @@
+--- original/RequestProject/General/FakeStageK.lean
++++ current/RefinedAbsorption/General/FakeStageK.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.General.FakeRounds
++public import RefinedAbsorption.General.FakeRounds
+ 
+ /-!
+ # Fake edges for the new copies of a local refiner, uniformity `k`

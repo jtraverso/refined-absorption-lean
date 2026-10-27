@@ -1,0 +1,13 @@
+--- original/RequestProject/General/EmbedGen.lean
++++ current/RefinedAbsorption/General/EmbedGen.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.General.Defs
+-public import RequestProject.General.SpreadPerm
+-public import RequestProject.General.LocalCountK
++public import RefinedAbsorption.General.Defs
++public import RefinedAbsorption.General.SpreadPerm
++public import RefinedAbsorption.General.LocalCountK
+ 
+ /-!
+ # Random embedding of local refiners for outside parts of any size (Lemma 4.1)

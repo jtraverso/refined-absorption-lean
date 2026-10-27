@@ -1,0 +1,2979 @@
+{
+  "original_lean_sources": 300,
+  "deleted_original_sources": [],
+  "relocations": [
+    {
+      "original": "RequestProject/Absorbers.lean",
+      "current": "RefinedAbsorption/Absorbers.lean"
+    },
+    {
+      "original": "RequestProject/Applications.lean",
+      "current": "RefinedAbsorption/Applications.lean"
+    },
+    {
+      "original": "RequestProject/Basic.lean",
+      "current": "RefinedAbsorption/Basic.lean"
+    },
+    {
+      "original": "RequestProject/BeckFiala.lean",
+      "current": "RefinedAbsorption/BeckFiala.lean"
+    },
+    {
+      "original": "RequestProject/Boost.lean",
+      "current": "RefinedAbsorption/Boost.lean"
+    },
+    {
+      "original": "RequestProject/BoostExistence.lean",
+      "current": "RefinedAbsorption/BoostExistence.lean"
+    },
+    {
+      "original": "RequestProject/Counting.lean",
+      "current": "RefinedAbsorption/Counting.lean"
+    },
+    {
+      "original": "RequestProject/Designs.lean",
+      "current": "RefinedAbsorption/Designs.lean"
+    },
+    {
+      "original": "RequestProject/ExistenceProof.lean",
+      "current": "RefinedAbsorption/ExistenceProof.lean"
+    },
+    {
+      "original": "RequestProject/Final.lean",
+      "current": "RefinedAbsorption/Final.lean"
+    },
+    {
+      "original": "RequestProject/Gadget.lean",
+      "current": "RefinedAbsorption/Gadget.lean"
+    },
+    {
+      "original": "RequestProject/Kirkman.lean",
+      "current": "RefinedAbsorption/Kirkman.lean"
+    },
+    {
+      "original": "RequestProject/Main.lean",
+      "current": "RefinedAbsorption/Main.lean"
+    },
+    {
+      "original": "RequestProject/MultiAbsorber.lean",
+      "current": "RefinedAbsorption/MultiAbsorber.lean"
+    },
+    {
+      "original": "RequestProject/NibbleDesigns.lean",
+      "current": "RefinedAbsorption/NibbleDesigns.lean"
+    },
+    {
+      "original": "RequestProject/NibbleReserves.lean",
+      "current": "RefinedAbsorption/NibbleReserves.lean"
+    },
+    {
+      "original": "RequestProject/OmniFromRefiner.lean",
+      "current": "RefinedAbsorption/OmniFromRefiner.lean"
+    },
+    {
+      "original": "RequestProject/RefinerReductions.lean",
+      "current": "RefinedAbsorption/RefinerReductions.lean"
+    },
+    {
+      "original": "RequestProject/ReserveCover.lean",
+      "current": "RefinedAbsorption/ReserveCover.lean"
+    },
+    {
+      "original": "RequestProject/Reserves.lean",
+      "current": "RefinedAbsorption/Reserves.lean"
+    },
+    {
+      "original": "RequestProject/Statements.lean",
+      "current": "RefinedAbsorption/Statements.lean"
+    },
+    {
+      "original": "RequestProject/SurveyCorollaries.lean",
+      "current": "RefinedAbsorption/SurveyCorollaries.lean"
+    },
+    {
+      "original": "RequestProject/SurveyReserves.lean",
+      "current": "RefinedAbsorption/SurveyReserves.lean"
+    },
+    {
+      "original": "RequestProject/WeightedNibbleBridge.lean",
+      "current": "RefinedAbsorption/WeightedNibbleBridge.lean"
+    },
+    {
+      "original": "RequestProject/Absorber17/AntiClique.lean",
+      "current": "RefinedAbsorption/Absorber17/AntiClique.lean"
+    },
+    {
+      "original": "RequestProject/Absorber17/Attach.lean",
+      "current": "RefinedAbsorption/Absorber17/Attach.lean"
+    },
+    {
+      "original": "RequestProject/Absorber17/Booster.lean",
+      "current": "RefinedAbsorption/Absorber17/Booster.lean"
+    },
+    {
+      "original": "RequestProject/Absorber17/Construction.lean",
+      "current": "RefinedAbsorption/Absorber17/Construction.lean"
+    },
+    {
+      "original": "RequestProject/Absorber17/Library.lean",
+      "current": "RefinedAbsorption/Absorber17/Library.lean"
+    },
+    {
+      "original": "RequestProject/Absorber17/Maps.lean",
+      "current": "RefinedAbsorption/Absorber17/Maps.lean"
+    },
+    {
+      "original": "RequestProject/Absorber17/Theorem.lean",
+      "current": "RefinedAbsorption/Absorber17/Theorem.lean"
+    },
+    {
+      "original": "RequestProject/Absorber17/Transfer.lean",
+      "current": "RefinedAbsorption/Absorber17/Transfer.lean"
+    },
+    {
+      "original": "RequestProject/Dense/Existence.lean",
+      "current": "RefinedAbsorption/Dense/Existence.lean"
+    },
+    {
+      "original": "RequestProject/Dense/ExistenceE.lean",
+      "current": "RefinedAbsorption/Dense/ExistenceE.lean"
+    },
+    {
+      "original": "RequestProject/Dense/Iterate.lean",
+      "current": "RefinedAbsorption/Dense/Iterate.lean"
+    },
+    {
+      "original": "RequestProject/Dense/Native.lean",
+      "current": "RefinedAbsorption/Dense/Native.lean"
+    },
+    {
+      "original": "RequestProject/Dense/NativeE.lean",
+      "current": "RefinedAbsorption/Dense/NativeE.lean"
+    },
+    {
+      "original": "RequestProject/Dense/Refiner.lean",
+      "current": "RefinedAbsorption/Dense/Refiner.lean"
+    },
+    {
+      "original": "RequestProject/Dense/Stage.lean",
+      "current": "RefinedAbsorption/Dense/Stage.lean"
+    },
+    {
+      "original": "RequestProject/Dense/StageE.lean",
+      "current": "RefinedAbsorption/Dense/StageE.lean"
+    },
+    {
+      "original": "RequestProject/Extensions/AlmostResolvable.lean",
+      "current": "RefinedAbsorption/Extensions/AlmostResolvable.lean"
+    },
+    {
+      "original": "RequestProject/Extensions/Completion.lean",
+      "current": "RefinedAbsorption/Extensions/Completion.lean"
+    },
+    {
+      "original": "RequestProject/Extensions/Count.lean",
+      "current": "RefinedAbsorption/Extensions/Count.lean"
+    },
+    {
+      "original": "RequestProject/Extensions/CountCore.lean",
+      "current": "RefinedAbsorption/Extensions/CountCore.lean"
+    },
+    {
+      "original": "RequestProject/Extensions/Embedding.lean",
+      "current": "RefinedAbsorption/Extensions/Embedding.lean"
+    },
+    {
+      "original": "RequestProject/Extensions/Intersection.lean",
+      "current": "RefinedAbsorption/Extensions/Intersection.lean"
+    },
+    {
+      "original": "RequestProject/Extensions/NashWilliamsSchedule.lean",
+      "current": "RefinedAbsorption/Extensions/NashWilliamsSchedule.lean"
+    },
+    {
+      "original": "RequestProject/Extensions/Packing.lean",
+      "current": "RefinedAbsorption/Extensions/Packing.lean"
+    },
+    {
+      "original": "RequestProject/Extensions/Partial.lean",
+      "current": "RefinedAbsorption/Extensions/Partial.lean"
+    },
+    {
+      "original": "RequestProject/Extensions/PolynomialExternal.lean",
+      "current": "RefinedAbsorption/Extensions/PolynomialExternal.lean"
+    },
+    {
+      "original": "RequestProject/Extensions/PolynomialResolution.lean",
+      "current": "RefinedAbsorption/Extensions/PolynomialResolution.lean"
+    },
+    {
+      "original": "RequestProject/Extensions/PolynomialTools.lean",
+      "current": "RefinedAbsorption/Extensions/PolynomialTools.lean"
+    },
+    {
+      "original": "RequestProject/Extensions/Subsystem.lean",
+      "current": "RefinedAbsorption/Extensions/Subsystem.lean"
+    },
+    {
+      "original": "RequestProject/Faithful2024/Defs.lean",
+      "current": "RefinedAbsorption/Faithful2024/Defs.lean"
+    },
+    {
+      "original": "RequestProject/Faithful2024/FlatLabelled.lean",
+      "current": "RefinedAbsorption/Faithful2024/FlatLabelled.lean"
+    },
+    {
+      "original": "RequestProject/Faithful2024/FlatSparsify.lean",
+      "current": "RefinedAbsorption/Faithful2024/FlatSparsify.lean"
+    },
+    {
+      "original": "RequestProject/Faithful2024/MultiGadget.lean",
+      "current": "RefinedAbsorption/Faithful2024/MultiGadget.lean"
+    },
+    {
+      "original": "RequestProject/Faithful2024/Section1.lean",
+      "current": "RefinedAbsorption/Faithful2024/Section1.lean"
+    },
+    {
+      "original": "RequestProject/Faithful2024/Section2.lean",
+      "current": "RefinedAbsorption/Faithful2024/Section2.lean"
+    },
+    {
+      "original": "RequestProject/Faithful2024/Section6.lean",
+      "current": "RefinedAbsorption/Faithful2024/Section6.lean"
+    },
+    {
+      "original": "RequestProject/Faithful2024/Theorem37.lean",
+      "current": "RefinedAbsorption/Faithful2024/Theorem37.lean"
+    },
+    {
+      "original": "RequestProject/Faithful2024/Theorem37Aux.lean",
+      "current": "RefinedAbsorption/Faithful2024/Theorem37Aux.lean"
+    },
+    {
+      "original": "RequestProject/Faithful2024/Theorem38One.lean",
+      "current": "RefinedAbsorption/Faithful2024/Theorem38One.lean"
+    },
+    {
+      "original": "RequestProject/Faithful2024/Theorem38Two.lean",
+      "current": "RefinedAbsorption/Faithful2024/Theorem38Two.lean"
+    },
+    {
+      "original": "RequestProject/Faithful2024/Transport.lean",
+      "current": "RefinedAbsorption/Faithful2024/Transport.lean"
+    },
+    {
+      "original": "RequestProject/FaithfulSurvey2025/Embedding.lean",
+      "current": "RefinedAbsorption/FaithfulSurvey2025/Embedding.lean"
+    },
+    {
+      "original": "RequestProject/FlatDown/AntiEdge.lean",
+      "current": "RefinedAbsorption/FlatDown/AntiEdge.lean"
+    },
+    {
+      "original": "RequestProject/FlatDown/Basic.lean",
+      "current": "RefinedAbsorption/FlatDown/Basic.lean"
+    },
+    {
+      "original": "RequestProject/FlatDown/ChainLink.lean",
+      "current": "RefinedAbsorption/FlatDown/ChainLink.lean"
+    },
+    {
+      "original": "RequestProject/FlatDown/Closure.lean",
+      "current": "RefinedAbsorption/FlatDown/Closure.lean"
+    },
+    {
+      "original": "RequestProject/FlatDown/Completion.lean",
+      "current": "RefinedAbsorption/FlatDown/Completion.lean"
+    },
+    {
+      "original": "RequestProject/FlatDown/FlatDegree.lean",
+      "current": "RefinedAbsorption/FlatDown/FlatDegree.lean"
+    },
+    {
+      "original": "RequestProject/FlatDown/FlatProof.lean",
+      "current": "RefinedAbsorption/FlatDown/FlatProof.lean"
+    },
+    {
+      "original": "RequestProject/FlatDown/FlatStep.lean",
+      "current": "RefinedAbsorption/FlatDown/FlatStep.lean"
+    },
+    {
+      "original": "RequestProject/FlatDown/LinkAccounting.lean",
+      "current": "RefinedAbsorption/FlatDown/LinkAccounting.lean"
+    },
+    {
+      "original": "RequestProject/FlatDown/MultDegree.lean",
+      "current": "RefinedAbsorption/FlatDown/MultDegree.lean"
+    },
+    {
+      "original": "RequestProject/FlatDown/Small.lean",
+      "current": "RefinedAbsorption/FlatDown/Small.lean"
+    },
+    {
+      "original": "RequestProject/FlatOmni/Assembly.lean",
+      "current": "RefinedAbsorption/FlatOmni/Assembly.lean"
+    },
+    {
+      "original": "RequestProject/FlatOmni/Attach.lean",
+      "current": "RefinedAbsorption/FlatOmni/Attach.lean"
+    },
+    {
+      "original": "RequestProject/FlatOmni/CliquePieces.lean",
+      "current": "RefinedAbsorption/FlatOmni/CliquePieces.lean"
+    },
+    {
+      "original": "RequestProject/FlatOmni/Descent.lean",
+      "current": "RefinedAbsorption/FlatOmni/Descent.lean"
+    },
+    {
+      "original": "RequestProject/FlatOmni/Fakes.lean",
+      "current": "RefinedAbsorption/FlatOmni/Fakes.lean"
+    },
+    {
+      "original": "RequestProject/FlatOmni/LocalRefiner.lean",
+      "current": "RefinedAbsorption/FlatOmni/LocalRefiner.lean"
+    },
+    {
+      "original": "RequestProject/FlatOmni/SharpBounds.lean",
+      "current": "RefinedAbsorption/FlatOmni/SharpBounds.lean"
+    },
+    {
+      "original": "RequestProject/FlatOmni/StageK.lean",
+      "current": "RefinedAbsorption/FlatOmni/StageK.lean"
+    },
+    {
+      "original": "RequestProject/FlatOmni/WindowGe.lean",
+      "current": "RefinedAbsorption/FlatOmni/WindowGe.lean"
+    },
+    {
+      "original": "RequestProject/General/AttachK.lean",
+      "current": "RefinedAbsorption/General/AttachK.lean"
+    },
+    {
+      "original": "RequestProject/General/CliquePiecesK.lean",
+      "current": "RefinedAbsorption/General/CliquePiecesK.lean"
+    },
+    {
+      "original": "RequestProject/General/Coloring.lean",
+      "current": "RefinedAbsorption/General/Coloring.lean"
+    },
+    {
+      "original": "RequestProject/General/Defs.lean",
+      "current": "RefinedAbsorption/General/Defs.lean"
+    },
+    {
+      "original": "RequestProject/General/EmbedGen.lean",
+      "current": "RefinedAbsorption/General/EmbedGen.lean"
+    },
+    {
+      "original": "RequestProject/General/FakeRounds.lean",
+      "current": "RefinedAbsorption/General/FakeRounds.lean"
+    },
+    {
+      "original": "RequestProject/General/FakesK.lean",
+      "current": "RefinedAbsorption/General/FakesK.lean"
+    },
+    {
+      "original": "RequestProject/General/FakeStageK.lean",
+      "current": "RefinedAbsorption/General/FakeStageK.lean"
+    },
+    {
+      "original": "RequestProject/General/FlatOmniK.lean",
+      "current": "RefinedAbsorption/General/FlatOmniK.lean"
+    },
+    {
+      "original": "RequestProject/General/GenSpread.lean",
+      "current": "RefinedAbsorption/General/GenSpread.lean"
+    },
+    {
+      "original": "RequestProject/General/Levels.lean",
+      "current": "RefinedAbsorption/General/Levels.lean"
+    },
+    {
+      "original": "RequestProject/General/LocalCountK.lean",
+      "current": "RefinedAbsorption/General/LocalCountK.lean"
+    },
+    {
+      "original": "RequestProject/General/LocalK.lean",
+      "current": "RefinedAbsorption/General/LocalK.lean"
+    },
+    {
+      "original": "RequestProject/General/MultiRoot.lean",
+      "current": "RefinedAbsorption/General/MultiRoot.lean"
+    },
+    {
+      "original": "RequestProject/General/PermCount.lean",
+      "current": "RefinedAbsorption/General/PermCount.lean"
+    },
+    {
+      "original": "RequestProject/General/SpreadCore.lean",
+      "current": "RefinedAbsorption/General/SpreadCore.lean"
+    },
+    {
+      "original": "RequestProject/General/SpreadPerm.lean",
+      "current": "RefinedAbsorption/General/SpreadPerm.lean"
+    },
+    {
+      "original": "RequestProject/General/StageS.lean",
+      "current": "RefinedAbsorption/General/StageS.lean"
+    },
+    {
+      "original": "RequestProject/GeneralEmbedding/Bad.lean",
+      "current": "RefinedAbsorption/GeneralEmbedding/Bad.lean"
+    },
+    {
+      "original": "RequestProject/GeneralEmbedding/Counting.lean",
+      "current": "RefinedAbsorption/GeneralEmbedding/Counting.lean"
+    },
+    {
+      "original": "RequestProject/GeneralEmbedding/Defs.lean",
+      "current": "RefinedAbsorption/GeneralEmbedding/Defs.lean"
+    },
+    {
+      "original": "RequestProject/GeneralEmbedding/Good.lean",
+      "current": "RefinedAbsorption/GeneralEmbedding/Good.lean"
+    },
+    {
+      "original": "RequestProject/GeneralEmbedding/Greedy.lean",
+      "current": "RefinedAbsorption/GeneralEmbedding/Greedy.lean"
+    },
+    {
+      "original": "RequestProject/GeneralEmbedding/Main.lean",
+      "current": "RefinedAbsorption/GeneralEmbedding/Main.lean"
+    },
+    {
+      "original": "RequestProject/GeneralEmbedding/State.lean",
+      "current": "RefinedAbsorption/GeneralEmbedding/State.lean"
+    },
+    {
+      "original": "RequestProject/GeneralEmbedding/Step.lean",
+      "current": "RefinedAbsorption/GeneralEmbedding/Step.lean"
+    },
+    {
+      "original": "RequestProject/GJW/Main.lean",
+      "current": "RefinedAbsorption/GJW/Main.lean"
+    },
+    {
+      "original": "RequestProject/GJW/Trades.lean",
+      "current": "RefinedAbsorption/GJW/Trades.lean"
+    },
+    {
+      "original": "RequestProject/GridRefiner/Labels.lean",
+      "current": "RefinedAbsorption/GridRefiner/Labels.lean"
+    },
+    {
+      "original": "RequestProject/GridRefiner/Lift.lean",
+      "current": "RefinedAbsorption/GridRefiner/Lift.lean"
+    },
+    {
+      "original": "RequestProject/GridRefiner/OddSwitch.lean",
+      "current": "RefinedAbsorption/GridRefiner/OddSwitch.lean"
+    },
+    {
+      "original": "RequestProject/GridRefiner/Parity.lean",
+      "current": "RefinedAbsorption/GridRefiner/Parity.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Box.lean",
+      "current": "RefinedAbsorption/HyperPlan/Box.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Class.lean",
+      "current": "RefinedAbsorption/HyperPlan/Class.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Collapse.lean",
+      "current": "RefinedAbsorption/HyperPlan/Collapse.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Empty.lean",
+      "current": "RefinedAbsorption/HyperPlan/Empty.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/EmptyMany.lean",
+      "current": "RefinedAbsorption/HyperPlan/EmptyMany.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Lift.lean",
+      "current": "RefinedAbsorption/HyperPlan/Lift.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/LinkLift.lean",
+      "current": "RefinedAbsorption/HyperPlan/LinkLift.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Load.lean",
+      "current": "RefinedAbsorption/HyperPlan/Load.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Mono.lean",
+      "current": "RefinedAbsorption/HyperPlan/Mono.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Moves.lean",
+      "current": "RefinedAbsorption/HyperPlan/Moves.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Native.lean",
+      "current": "RefinedAbsorption/HyperPlan/Native.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Persist.lean",
+      "current": "RefinedAbsorption/HyperPlan/Persist.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Plan.lean",
+      "current": "RefinedAbsorption/HyperPlan/Plan.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Segment.lean",
+      "current": "RefinedAbsorption/HyperPlan/Segment.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Stage.lean",
+      "current": "RefinedAbsorption/HyperPlan/Stage.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Strong.lean",
+      "current": "RefinedAbsorption/HyperPlan/Strong.lean"
+    },
+    {
+      "original": "RequestProject/HyperPlan/Two.lean",
+      "current": "RefinedAbsorption/HyperPlan/Two.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/Assembly.lean",
+      "current": "RefinedAbsorption/LinkSpread/Assembly.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/Chain.lean",
+      "current": "RefinedAbsorption/LinkSpread/Chain.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/Comp.lean",
+      "current": "RefinedAbsorption/LinkSpread/Comp.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/Fibre.lean",
+      "current": "RefinedAbsorption/LinkSpread/Fibre.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/Flat.lean",
+      "current": "RefinedAbsorption/LinkSpread/Flat.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/Funnel.lean",
+      "current": "RefinedAbsorption/LinkSpread/Funnel.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/LevelOne.lean",
+      "current": "RefinedAbsorption/LinkSpread/LevelOne.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/LevelOneFinal.lean",
+      "current": "RefinedAbsorption/LinkSpread/LevelOneFinal.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/LevelOneIter.lean",
+      "current": "RefinedAbsorption/LinkSpread/LevelOneIter.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/PerUniformity.lean",
+      "current": "RefinedAbsorption/LinkSpread/PerUniformity.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/Round.lean",
+      "current": "RefinedAbsorption/LinkSpread/Round.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/RoundOut.lean",
+      "current": "RefinedAbsorption/LinkSpread/RoundOut.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/Stage.lean",
+      "current": "RefinedAbsorption/LinkSpread/Stage.lean"
+    },
+    {
+      "original": "RequestProject/LinkSpread/TRefOut.lean",
+      "current": "RefinedAbsorption/LinkSpread/TRefOut.lean"
+    },
+    {
+      "original": "RequestProject/Local/Affine.lean",
+      "current": "RefinedAbsorption/Local/Affine.lean"
+    },
+    {
+      "original": "RequestProject/Local/Chernoff.lean",
+      "current": "RefinedAbsorption/Local/Chernoff.lean"
+    },
+    {
+      "original": "RequestProject/Local/CliqueOmni.lean",
+      "current": "RefinedAbsorption/Local/CliqueOmni.lean"
+    },
+    {
+      "original": "RequestProject/Local/FlatEmbed.lean",
+      "current": "RefinedAbsorption/Local/FlatEmbed.lean"
+    },
+    {
+      "original": "RequestProject/Local/FlatEmbedMain.lean",
+      "current": "RefinedAbsorption/Local/FlatEmbedMain.lean"
+    },
+    {
+      "original": "RequestProject/Local/LevelOneSharp.lean",
+      "current": "RefinedAbsorption/Local/LevelOneSharp.lean"
+    },
+    {
+      "original": "RequestProject/Local/LocalAssembly.lean",
+      "current": "RefinedAbsorption/Local/LocalAssembly.lean"
+    },
+    {
+      "original": "RequestProject/Local/Prepend.lean",
+      "current": "RefinedAbsorption/Local/Prepend.lean"
+    },
+    {
+      "original": "RequestProject/Local/StageZero.lean",
+      "current": "RefinedAbsorption/Local/StageZero.lean"
+    },
+    {
+      "original": "RequestProject/Local/TaggedA.lean",
+      "current": "RefinedAbsorption/Local/TaggedA.lean"
+    },
+    {
+      "original": "RequestProject/LocalRefiner/Construction.lean",
+      "current": "RefinedAbsorption/LocalRefiner/Construction.lean"
+    },
+    {
+      "original": "RequestProject/LocalRefiner/Gadgets.lean",
+      "current": "RefinedAbsorption/LocalRefiner/Gadgets.lean"
+    },
+    {
+      "original": "RequestProject/LocalRefiner/Loads.lean",
+      "current": "RefinedAbsorption/LocalRefiner/Loads.lean"
+    },
+    {
+      "original": "RequestProject/LocalRefiner/Native.lean",
+      "current": "RefinedAbsorption/LocalRefiner/Native.lean"
+    },
+    {
+      "original": "RequestProject/LocalRefiner/OwnedChains.lean",
+      "current": "RefinedAbsorption/LocalRefiner/OwnedChains.lean"
+    },
+    {
+      "original": "RequestProject/LocalRefiner/Refiner.lean",
+      "current": "RefinedAbsorption/LocalRefiner/Refiner.lean"
+    },
+    {
+      "original": "RequestProject/LocalRefiner/Segments.lean",
+      "current": "RefinedAbsorption/LocalRefiner/Segments.lean"
+    },
+    {
+      "original": "RequestProject/Multigraph/Existence.lean",
+      "current": "RefinedAbsorption/Multigraph/Existence.lean"
+    },
+    {
+      "original": "RequestProject/Multigraph/NibbleMulti.lean",
+      "current": "RefinedAbsorption/Multigraph/NibbleMulti.lean"
+    },
+    {
+      "original": "RequestProject/Multigraph/ReserveCoverMulti.lean",
+      "current": "RefinedAbsorption/Multigraph/ReserveCoverMulti.lean"
+    },
+    {
+      "original": "RequestProject/Multigraph/StrongReserves.lean",
+      "current": "RefinedAbsorption/Multigraph/StrongReserves.lean"
+    },
+    {
+      "original": "RequestProject/MultiRefiner/Basic.lean",
+      "current": "RefinedAbsorption/MultiRefiner/Basic.lean"
+    },
+    {
+      "original": "RequestProject/MultiRefiner/Chain.lean",
+      "current": "RefinedAbsorption/MultiRefiner/Chain.lean"
+    },
+    {
+      "original": "RequestProject/MultiRefiner/FakeEdge.lean",
+      "current": "RefinedAbsorption/MultiRefiner/FakeEdge.lean"
+    },
+    {
+      "original": "RequestProject/MultiRefiner/PieceDeg.lean",
+      "current": "RefinedAbsorption/MultiRefiner/PieceDeg.lean"
+    },
+    {
+      "original": "RequestProject/MultiRefiner/Pipeline.lean",
+      "current": "RefinedAbsorption/MultiRefiner/Pipeline.lean"
+    },
+    {
+      "original": "RequestProject/MultiRefiner/Reduction.lean",
+      "current": "RefinedAbsorption/MultiRefiner/Reduction.lean"
+    },
+    {
+      "original": "RequestProject/MultiRefiner/Restrict.lean",
+      "current": "RefinedAbsorption/MultiRefiner/Restrict.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/Bridge.lean",
+      "current": "RefinedAbsorption/Nibble/Bridge.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/FiniteProb.lean",
+      "current": "RefinedAbsorption/Nibble/FiniteProb.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/Hyper.lean",
+      "current": "RefinedAbsorption/Nibble/Hyper.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/Iterate.lean",
+      "current": "RefinedAbsorption/Nibble/Iterate.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/LLL.lean",
+      "current": "RefinedAbsorption/Nibble/LLL.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/LocalIterate.lean",
+      "current": "RefinedAbsorption/Nibble/LocalIterate.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/LocalMain.lean",
+      "current": "RefinedAbsorption/Nibble/LocalMain.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/LocalRound.lean",
+      "current": "RefinedAbsorption/Nibble/LocalRound.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/Main.lean",
+      "current": "RefinedAbsorption/Nibble/Main.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/Params.lean",
+      "current": "RefinedAbsorption/Nibble/Params.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/Round.lean",
+      "current": "RefinedAbsorption/Nibble/Round.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/RoundBounds.lean",
+      "current": "RefinedAbsorption/Nibble/RoundBounds.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/RoundProb.lean",
+      "current": "RefinedAbsorption/Nibble/RoundProb.lean"
+    },
+    {
+      "original": "RequestProject/Nibble/Waste.lean",
+      "current": "RefinedAbsorption/Nibble/Waste.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Assemble.lean",
+      "current": "RefinedAbsorption/OddGrid/Assemble.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Base.lean",
+      "current": "RefinedAbsorption/OddGrid/Base.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Basic.lean",
+      "current": "RefinedAbsorption/OddGrid/Basic.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Chain.lean",
+      "current": "RefinedAbsorption/OddGrid/Chain.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Compose.lean",
+      "current": "RefinedAbsorption/OddGrid/Compose.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Concat.lean",
+      "current": "RefinedAbsorption/OddGrid/Concat.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Extra.lean",
+      "current": "RefinedAbsorption/OddGrid/Extra.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Greedy.lean",
+      "current": "RefinedAbsorption/OddGrid/Greedy.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Grid.lean",
+      "current": "RefinedAbsorption/OddGrid/Grid.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Halve.lean",
+      "current": "RefinedAbsorption/OddGrid/Halve.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Merge.lean",
+      "current": "RefinedAbsorption/OddGrid/Merge.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Native.lean",
+      "current": "RefinedAbsorption/OddGrid/Native.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Phase.lean",
+      "current": "RefinedAbsorption/OddGrid/Phase.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Plan.lean",
+      "current": "RefinedAbsorption/OddGrid/Plan.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/PlanDecomp.lean",
+      "current": "RefinedAbsorption/OddGrid/PlanDecomp.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/PlanLoad.lean",
+      "current": "RefinedAbsorption/OddGrid/PlanLoad.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/PlanMult.lean",
+      "current": "RefinedAbsorption/OddGrid/PlanMult.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/PlanStrong.lean",
+      "current": "RefinedAbsorption/OddGrid/PlanStrong.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/Stage.lean",
+      "current": "RefinedAbsorption/OddGrid/Stage.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/StageDiv.lean",
+      "current": "RefinedAbsorption/OddGrid/StageDiv.lean"
+    },
+    {
+      "original": "RequestProject/OddGrid/XStage.lean",
+      "current": "RefinedAbsorption/OddGrid/XStage.lean"
+    },
+    {
+      "original": "RequestProject/Original2024/Core.lean",
+      "current": "RefinedAbsorption/Original2024/Core.lean"
+    },
+    {
+      "original": "RequestProject/Original2024/Corollaries.lean",
+      "current": "RefinedAbsorption/Original2024/Corollaries.lean"
+    },
+    {
+      "original": "RequestProject/Original2024/Defs.lean",
+      "current": "RefinedAbsorption/Original2024/Defs.lean"
+    },
+    {
+      "original": "RequestProject/Original2024/Final.lean",
+      "current": "RefinedAbsorption/Original2024/Final.lean"
+    },
+    {
+      "original": "RequestProject/Original2024/Flat.lean",
+      "current": "RefinedAbsorption/Original2024/Flat.lean"
+    },
+    {
+      "original": "RequestProject/Original2024/FlatChain.lean",
+      "current": "RefinedAbsorption/Original2024/FlatChain.lean"
+    },
+    {
+      "original": "RequestProject/Original2024/FlatOne.lean",
+      "current": "RefinedAbsorption/Original2024/FlatOne.lean"
+    },
+    {
+      "original": "RequestProject/Original2024/Host.lean",
+      "current": "RefinedAbsorption/Original2024/Host.lean"
+    },
+    {
+      "original": "RequestProject/Original2024/HostAssembly.lean",
+      "current": "RefinedAbsorption/Original2024/HostAssembly.lean"
+    },
+    {
+      "original": "RequestProject/Original2024/HostOne.lean",
+      "current": "RefinedAbsorption/Original2024/HostOne.lean"
+    },
+    {
+      "original": "RequestProject/Original2024/HostReduction.lean",
+      "current": "RefinedAbsorption/Original2024/HostReduction.lean"
+    },
+    {
+      "original": "RequestProject/Original2024/MinDegree.lean",
+      "current": "RefinedAbsorption/Original2024/MinDegree.lean"
+    },
+    {
+      "original": "RequestProject/Original2024/RelReserves.lean",
+      "current": "RefinedAbsorption/Original2024/RelReserves.lean"
+    },
+    {
+      "original": "RequestProject/Pending/Closing.lean",
+      "current": "RefinedAbsorption/Pending/Closing.lean"
+    },
+    {
+      "original": "RequestProject/Pending/Core28.lean",
+      "current": "RefinedAbsorption/Pending/Core28.lean"
+    },
+    {
+      "original": "RequestProject/Pending/Danger.lean",
+      "current": "RefinedAbsorption/Pending/Danger.lean"
+    },
+    {
+      "original": "RequestProject/Pending/MultiNibble.lean",
+      "current": "RefinedAbsorption/Pending/MultiNibble.lean"
+    },
+    {
+      "original": "RequestProject/Pending/Regularize.lean",
+      "current": "RefinedAbsorption/Pending/Regularize.lean"
+    },
+    {
+      "original": "RequestProject/Pending/RootLight.lean",
+      "current": "RefinedAbsorption/Pending/RootLight.lean"
+    },
+    {
+      "original": "RequestProject/Pending/SafeAbsorbers.lean",
+      "current": "RefinedAbsorption/Pending/SafeAbsorbers.lean"
+    },
+    {
+      "original": "RequestProject/Pending/SafeEmbed.lean",
+      "current": "RefinedAbsorption/Pending/SafeEmbed.lean"
+    },
+    {
+      "original": "RequestProject/Pending/SafeHost.lean",
+      "current": "RefinedAbsorption/Pending/SafeHost.lean"
+    },
+    {
+      "original": "RequestProject/Pending/SafeInner.lean",
+      "current": "RefinedAbsorption/Pending/SafeInner.lean"
+    },
+    {
+      "original": "RequestProject/Pending/SafeNibble.lean",
+      "current": "RefinedAbsorption/Pending/SafeNibble.lean"
+    },
+    {
+      "original": "RequestProject/Pending/Theorem28.lean",
+      "current": "RefinedAbsorption/Pending/Theorem28.lean"
+    },
+    {
+      "original": "RequestProject/Pending/Theorem62.lean",
+      "current": "RefinedAbsorption/Pending/Theorem62.lean"
+    },
+    {
+      "original": "RequestProject/Pending/Theorem63.lean",
+      "current": "RefinedAbsorption/Pending/Theorem63.lean"
+    },
+    {
+      "original": "RequestProject/Pending/Theorem63Final.lean",
+      "current": "RefinedAbsorption/Pending/Theorem63Final.lean"
+    },
+    {
+      "original": "RequestProject/Pending/Theorem63One.lean",
+      "current": "RefinedAbsorption/Pending/Theorem63One.lean"
+    },
+    {
+      "original": "RequestProject/Placement/Absorbers.lean",
+      "current": "RefinedAbsorption/Placement/Absorbers.lean"
+    },
+    {
+      "original": "RequestProject/Placement/Assembly.lean",
+      "current": "RefinedAbsorption/Placement/Assembly.lean"
+    },
+    {
+      "original": "RequestProject/Placement/Balance.lean",
+      "current": "RefinedAbsorption/Placement/Balance.lean"
+    },
+    {
+      "original": "RequestProject/Placement/ChainLevels.lean",
+      "current": "RefinedAbsorption/Placement/ChainLevels.lean"
+    },
+    {
+      "original": "RequestProject/Placement/ChainLevelsE.lean",
+      "current": "RefinedAbsorption/Placement/ChainLevelsE.lean"
+    },
+    {
+      "original": "RequestProject/Placement/Cluster.lean",
+      "current": "RefinedAbsorption/Placement/Cluster.lean"
+    },
+    {
+      "original": "RequestProject/Placement/ClusterInner.lean",
+      "current": "RefinedAbsorption/Placement/ClusterInner.lean"
+    },
+    {
+      "original": "RequestProject/Placement/Counting.lean",
+      "current": "RefinedAbsorption/Placement/Counting.lean"
+    },
+    {
+      "original": "RequestProject/Placement/Defs.lean",
+      "current": "RefinedAbsorption/Placement/Defs.lean"
+    },
+    {
+      "original": "RequestProject/Placement/Existence.lean",
+      "current": "RefinedAbsorption/Placement/Existence.lean"
+    },
+    {
+      "original": "RequestProject/Placement/FakeGadget.lean",
+      "current": "RefinedAbsorption/Placement/FakeGadget.lean"
+    },
+    {
+      "original": "RequestProject/Placement/ImageRefiner.lean",
+      "current": "RefinedAbsorption/Placement/ImageRefiner.lean"
+    },
+    {
+      "original": "RequestProject/Placement/Inner.lean",
+      "current": "RefinedAbsorption/Placement/Inner.lean"
+    },
+    {
+      "original": "RequestProject/Placement/Interface.lean",
+      "current": "RefinedAbsorption/Placement/Interface.lean"
+    },
+    {
+      "original": "RequestProject/Placement/LastFlat.lean",
+      "current": "RefinedAbsorption/Placement/LastFlat.lean"
+    },
+    {
+      "original": "RequestProject/Placement/Lemma52.lean",
+      "current": "RefinedAbsorption/Placement/Lemma52.lean"
+    },
+    {
+      "original": "RequestProject/Placement/MultiEmbed.lean",
+      "current": "RefinedAbsorption/Placement/MultiEmbed.lean"
+    },
+    {
+      "original": "RequestProject/Placement/PlacedDeg.lean",
+      "current": "RefinedAbsorption/Placement/PlacedDeg.lean"
+    },
+    {
+      "original": "RequestProject/Placement/PlacedFlat.lean",
+      "current": "RefinedAbsorption/Placement/PlacedFlat.lean"
+    },
+    {
+      "original": "RequestProject/Placement/Reduction.lean",
+      "current": "RefinedAbsorption/Placement/Reduction.lean"
+    },
+    {
+      "original": "RequestProject/Placement/ReserveInner.lean",
+      "current": "RefinedAbsorption/Placement/ReserveInner.lean"
+    },
+    {
+      "original": "RequestProject/Placement/ReserveLemma52.lean",
+      "current": "RefinedAbsorption/Placement/ReserveLemma52.lean"
+    },
+    {
+      "original": "RequestProject/RefineDown/Iterate.lean",
+      "current": "RefinedAbsorption/RefineDown/Iterate.lean"
+    },
+    {
+      "original": "RequestProject/RefineDown/MultiRound.lean",
+      "current": "RefinedAbsorption/RefineDown/MultiRound.lean"
+    },
+    {
+      "original": "RequestProject/RefineDown/ReserveRound.lean",
+      "current": "RefinedAbsorption/RefineDown/ReserveRound.lean"
+    },
+    {
+      "original": "RequestProject/RefineDown/Round.lean",
+      "current": "RefinedAbsorption/RefineDown/Round.lean"
+    },
+    {
+      "original": "RequestProject/RefineDown/RoundGadget.lean",
+      "current": "RefinedAbsorption/RefineDown/RoundGadget.lean"
+    },
+    {
+      "original": "RequestProject/RefineDown/RoundGadgetGen.lean",
+      "current": "RefinedAbsorption/RefineDown/RoundGadgetGen.lean"
+    },
+    {
+      "original": "RequestProject/RefineDown/Step.lean",
+      "current": "RefinedAbsorption/RefineDown/Step.lean"
+    },
+    {
+      "original": "RequestProject/RefineDown/Transport.lean",
+      "current": "RefinedAbsorption/RefineDown/Transport.lean"
+    },
+    {
+      "original": "RequestProject/RefinerOne/Chain.lean",
+      "current": "RefinedAbsorption/RefinerOne/Chain.lean"
+    },
+    {
+      "original": "RequestProject/RefinerOne/Existence.lean",
+      "current": "RefinedAbsorption/RefinerOne/Existence.lean"
+    },
+    {
+      "original": "RequestProject/RefinerOne/Instance.lean",
+      "current": "RefinedAbsorption/RefinerOne/Instance.lean"
+    },
+    {
+      "original": "RequestProject/RefinerOne/Transfer.lean",
+      "current": "RefinedAbsorption/RefinerOne/Transfer.lean"
+    },
+    {
+      "original": "RequestProject/Sharp/Better.lean",
+      "current": "RefinedAbsorption/Sharp/Better.lean"
+    },
+    {
+      "original": "RequestProject/Sharp/CliqueRefiner.lean",
+      "current": "RefinedAbsorption/Sharp/CliqueRefiner.lean"
+    },
+    {
+      "original": "RequestProject/Sharp/Descent.lean",
+      "current": "RefinedAbsorption/Sharp/Descent.lean"
+    },
+    {
+      "original": "RequestProject/Sharp/Partition.lean",
+      "current": "RefinedAbsorption/Sharp/Partition.lean"
+    },
+    {
+      "original": "RequestProject/Sharp/SparsArith.lean",
+      "current": "RefinedAbsorption/Sharp/SparsArith.lean"
+    },
+    {
+      "original": "RequestProject/Sharp/SparsBuild.lean",
+      "current": "RefinedAbsorption/Sharp/SparsBuild.lean"
+    },
+    {
+      "original": "RequestProject/Sharp/SparsCount.lean",
+      "current": "RefinedAbsorption/Sharp/SparsCount.lean"
+    },
+    {
+      "original": "RequestProject/Sharp/Sparsify.lean",
+      "current": "RefinedAbsorption/Sharp/Sparsify.lean"
+    },
+    {
+      "original": "RequestProject/Sharp/Special.lean",
+      "current": "RefinedAbsorption/Sharp/Special.lean"
+    },
+    {
+      "original": "RequestProject/SparseChain/FlatEmbedS.lean",
+      "current": "RefinedAbsorption/SparseChain/FlatEmbedS.lean"
+    },
+    {
+      "original": "RequestProject/SparseChain/Levels.lean",
+      "current": "RefinedAbsorption/SparseChain/Levels.lean"
+    },
+    {
+      "original": "RequestProject/SparseChain/StageS.lean",
+      "current": "RefinedAbsorption/SparseChain/StageS.lean"
+    },
+    {
+      "original": "RequestProject/SparseChain/ThreeGraphs.lean",
+      "current": "RefinedAbsorption/SparseChain/ThreeGraphs.lean"
+    },
+    {
+      "original": "RequestProject/SparseChain/WindowS.lean",
+      "current": "RefinedAbsorption/SparseChain/WindowS.lean"
+    },
+    {
+      "original": "RequestProject/Window/Descent.lean",
+      "current": "RefinedAbsorption/Window/Descent.lean"
+    },
+    {
+      "original": "RequestProject/Window/Linear.lean",
+      "current": "RefinedAbsorption/Window/Linear.lean"
+    },
+    {
+      "original": "RequestProject/Window/Native.lean",
+      "current": "RefinedAbsorption/Window/Native.lean"
+    }
+  ],
+  "changed_sources": [
+    {
+      "file": "checks/AxiomCheck.lean",
+      "current_file": "checks/AxiomCheck.lean",
+      "before": "78b10bdaa66d401e2495e4b5c0fd9c679f1a92be0cc14f66304fb7696bf34121",
+      "after": "3022f8f3768842cbee119130e1139ca83c3438048cfa3922753136cf8264251a"
+    },
+    {
+      "file": "checks/ExtensionsAxioms.lean",
+      "current_file": "checks/ExtensionsAxioms.lean",
+      "before": "c681fe74da8c601ddd4f504910244a3a6a4d615d748bdfc94e2a3e0e08eaf23c",
+      "after": "2b4c6cb006dc76f5ce7d72f4746a3cab66484d1a8b7e21c894b39feb6e0cf638"
+    },
+    {
+      "file": "checks/FaithfulAxioms.lean",
+      "current_file": "checks/FaithfulAxioms.lean",
+      "before": "ddc3f5c98228240e0823e8f6d5fdac660000d9aea1863a8ac350266590477079",
+      "after": "4358e194262dde476d9d8cc32c76af064281e28475868fc190cf3d1f1cf0f2b4"
+    },
+    {
+      "file": "checks/IntersectionAxioms.lean",
+      "current_file": "checks/IntersectionAxioms.lean",
+      "before": "e6091b942df3e1aa0f48c90d95490d3108ced51397afa0641916c8b8a2fc13e7",
+      "after": "de5479699d25ab631502b4ac18b0b810acd3cf5936776daddef95ad42e9bc179"
+    },
+    {
+      "file": "checks/Original2024Axioms.lean",
+      "current_file": "checks/Original2024Axioms.lean",
+      "before": "ac1b06883889191fa090eaf11d847787c66778f7622852189234ceb344b0270e",
+      "after": "0aaf3049447faef5d5d8d46d3a4f2a88f923d5232eeb49d28ab98c24ca65580d"
+    },
+    {
+      "file": "checks/PendingAxioms.lean",
+      "current_file": "checks/PendingAxioms.lean",
+      "before": "4bff2930a699a24680b0d7e425c6201eccffadd700c6bd039e3e61e03d18b44f",
+      "after": "f0cac63d5de1ecbb789fb7bc90cacf2cf0da55111f2e74447359a5850bbc380a"
+    },
+    {
+      "file": "checks/PendingEndpoints.lean",
+      "current_file": "checks/PendingEndpoints.lean",
+      "before": "8741e006f9feb341956837c7b3b4e30dea6ca41fc429222e98b929fad405b58d",
+      "after": "6c525b7391cc5d6780e38154086284f7ba31c2e989c918b7df8bd97c7d447332"
+    },
+    {
+      "file": "checks/QuantitativeAxioms.lean",
+      "current_file": "checks/QuantitativeAxioms.lean",
+      "before": "9cb2dbe440e03fcc37760ff66573276619b5a79556d63fbfd02bd74dc8752720",
+      "after": "86a6efde75891a0a5d377f81ed8bce9a959cb7368795c051b3ecb41094d2f326"
+    },
+    {
+      "file": "RequestProject/Absorbers.lean",
+      "current_file": "RefinedAbsorption/Absorbers.lean",
+      "before": "01e7cbf3ec7f9536eb60c8c3e4d914f56682a02a6726fbb6c0c8ee83037c63b8",
+      "after": "7d95b58dec5da180452c40019dc33b2016d3570b809381c7ba7c818d66fe7207"
+    },
+    {
+      "file": "RequestProject/Applications.lean",
+      "current_file": "RefinedAbsorption/Applications.lean",
+      "before": "fa75a2cbfbaee9dbf5fa3136a51097a9cc0096aa95b15df5a1ed8adecb1abb34",
+      "after": "a9b8153b21b480eb1221423624a6726d14c024614d194e6e4ab23c9b010eaec5"
+    },
+    {
+      "file": "RequestProject/Basic.lean",
+      "current_file": "RefinedAbsorption/Basic.lean",
+      "before": "6f9ce9a0c59beeea84cf8cbb186daaaa65a86781f67f4b82dbab1086b426db70",
+      "after": "a4b25802cfae7a88b82ec31c78cd6d32c03802c434f6895a5d2105326159bf05"
+    },
+    {
+      "file": "RequestProject/BeckFiala.lean",
+      "current_file": "RefinedAbsorption/BeckFiala.lean",
+      "before": "ba056e252f6699ba9dcf6dc2f85fd923b4faf73b4caf5908d436418b683704f7",
+      "after": "3a23b1b4726d08c0a610ff4a748576c3a8b40fb61d55ea9225d675c9886d2f40"
+    },
+    {
+      "file": "RequestProject/Boost.lean",
+      "current_file": "RefinedAbsorption/Boost.lean",
+      "before": "fb89269e0a254c0a2c4004bbf6ea75ae3ec5f18f3fe7585606b57df7991c3a30",
+      "after": "0e2c3f282fe0f5d8abd9a8bd2e5393dec893d0985a357e7f06b85fe2f2974d79"
+    },
+    {
+      "file": "RequestProject/BoostExistence.lean",
+      "current_file": "RefinedAbsorption/BoostExistence.lean",
+      "before": "5db022f6e3f27f7a2318ac57cc6502d32e1616eaa8b33431e457d5d02b7e492b",
+      "after": "d5729658cbec6e2f8456a87c7940d19d4cda623c27741a00915d7b2342538205"
+    },
+    {
+      "file": "RequestProject/Counting.lean",
+      "current_file": "RefinedAbsorption/Counting.lean",
+      "before": "26855ed28cfec08aad714f25471f7d5b801d4c97479e49cea751ddfd9b2c2569",
+      "after": "77e534c7c43bfad52a002949856ce1e56e454b494c98aab4f47ad27d457fb200"
+    },
+    {
+      "file": "RequestProject/Designs.lean",
+      "current_file": "RefinedAbsorption/Designs.lean",
+      "before": "01961b6594b771d5927a73aacff1cad6e6059b19711bad55254143df58e0449f",
+      "after": "946ebefbfd102f272f4717d6fa0473a008c1bebee8f5306d20518a2ce3e21b4e"
+    },
+    {
+      "file": "RequestProject/ExistenceProof.lean",
+      "current_file": "RefinedAbsorption/ExistenceProof.lean",
+      "before": "822938dd362bc834fdfe62e9e91186672f93d4475d6b18cdb04bea86ec77d003",
+      "after": "666a9b5f052e0b3578037ea28063c47e0e0351f6b8e02384c78d56c2d2f8969e"
+    },
+    {
+      "file": "RequestProject/Final.lean",
+      "current_file": "RefinedAbsorption/Final.lean",
+      "before": "8c49340a122b7b472ee8f1a03b321be6efd15f5addb0e10f09a19cc7fa2f88b8",
+      "after": "796578e1ccb4acee06e9ba24485fdc50bb4cfdb2c36a2bcbd5be940cdbf44a18"
+    },
+    {
+      "file": "RequestProject/Gadget.lean",
+      "current_file": "RefinedAbsorption/Gadget.lean",
+      "before": "3d577025a164acce1549d3a0f152b5195ab64355b1e5f188d65a1606104d1572",
+      "after": "bc03ace98a36914534169945e3b6e3fd19bf2a14cddf0925313c5bb4c631c11f"
+    },
+    {
+      "file": "RequestProject/Kirkman.lean",
+      "current_file": "RefinedAbsorption/Kirkman.lean",
+      "before": "a4725c6f66519754bd71b6bac60ac3dcf932006b6a4ed01e04d19beb2c1903a5",
+      "after": "e7fb3478ef3bacfde3d24a86ec4d2413c8ff8e788e41a7d178b19bd7ef10f1d0"
+    },
+    {
+      "file": "RequestProject/Main.lean",
+      "current_file": "RefinedAbsorption/Main.lean",
+      "before": "082429ed1c7b8d313f103e9df8429d2f92c03919df9f3f7699d988f07a0354b0",
+      "after": "321be55ab58f0e12f1ecd79861cae622d2f505df6de02fed1fb0461ccaa395fd"
+    },
+    {
+      "file": "RequestProject/MultiAbsorber.lean",
+      "current_file": "RefinedAbsorption/MultiAbsorber.lean",
+      "before": "19e650de9cf10219736d4fb2fbd6f12672b13ea94489c174cab5bcbb52dd690a",
+      "after": "09f8b0c19592f93dd59e3e2f214b2fc1e8f9052e4d382dfaa04d0117722d30e3"
+    },
+    {
+      "file": "RequestProject/NibbleDesigns.lean",
+      "current_file": "RefinedAbsorption/NibbleDesigns.lean",
+      "before": "bb39dd28c20ffda88161e364763a7ae9349faee119dd1baf756bcf830baab630",
+      "after": "751073e5b751139a9742e1c2b4b548a0372616b339c0b865c11542ec772bdb84"
+    },
+    {
+      "file": "RequestProject/NibbleReserves.lean",
+      "current_file": "RefinedAbsorption/NibbleReserves.lean",
+      "before": "6177b1eccc35a138c576ae6a4debb2bea8d31389f9150afbbbe876df0fc9c839",
+      "after": "9bdab38f77eed2c429c7921e548d8cf4bf05d9aed6340bed30366ea6696515ba"
+    },
+    {
+      "file": "RequestProject/OmniFromRefiner.lean",
+      "current_file": "RefinedAbsorption/OmniFromRefiner.lean",
+      "before": "7abf70a1c27f3b9e3e30cfba7fd016711795bf7908dcf0beb550de3ed4cd234c",
+      "after": "dd5a7d3ec5d4094a8c44f233e0d4decfcd52a4cab8e2c53f9139b67f6cd11ef6"
+    },
+    {
+      "file": "RequestProject/RefinerReductions.lean",
+      "current_file": "RefinedAbsorption/RefinerReductions.lean",
+      "before": "3ffd463a12a1bd2c8590ffb92509f790291c8eae03be8897248c4de17d3beec7",
+      "after": "13d9e3a494d4c00f7cbf82bb37e9e6563da3688ccf661e4e0b7544cde2a93786"
+    },
+    {
+      "file": "RequestProject/ReserveCover.lean",
+      "current_file": "RefinedAbsorption/ReserveCover.lean",
+      "before": "788edb16938b16cfe49b39f3f2224337a406d2a5d0ed74533731e392eeac420a",
+      "after": "e5d08bc2a04582b217c815b2c28316d34c0b97c1685d519070af14287fae0440"
+    },
+    {
+      "file": "RequestProject/Reserves.lean",
+      "current_file": "RefinedAbsorption/Reserves.lean",
+      "before": "5d2b7f24b8910fec074c967eb3e5d590b43a540796535924a0b0378f02870b0d",
+      "after": "b4f1af9cd482cf871a11dbb4d51c06678a996f58325d61585e2de1165c8c3e1b"
+    },
+    {
+      "file": "RequestProject/Statements.lean",
+      "current_file": "RefinedAbsorption/Statements.lean",
+      "before": "a454263e2521728b4ad54111fa932f0fcb73a68c6613ab04c45be55513488360",
+      "after": "3f7bf57bdccfa175b71500f76197579d831eb118136a63b40da4ad88a68dc513"
+    },
+    {
+      "file": "RequestProject/SurveyCorollaries.lean",
+      "current_file": "RefinedAbsorption/SurveyCorollaries.lean",
+      "before": "166aa4d6dd5804e9582014bd763faa25982c78046298e36baf9fb265a589a31c",
+      "after": "85137743d864e41e2dc07ec8aed5576f98c2a54bfafef5336fcfbca3a2de7f2a"
+    },
+    {
+      "file": "RequestProject/SurveyReserves.lean",
+      "current_file": "RefinedAbsorption/SurveyReserves.lean",
+      "before": "550c6e5b868192675a84da9e8a47eb4fad2c302e90c870171008dcb9db797d09",
+      "after": "b00436fc01ae5243aa2a739d4d73c2009d45cbce5f07e6c70a900ad29c3615b2"
+    },
+    {
+      "file": "RequestProject/WeightedNibbleBridge.lean",
+      "current_file": "RefinedAbsorption/WeightedNibbleBridge.lean",
+      "before": "027e9c7689e68b436e4685c404c74eb25954f278396397c570d264c37e17afb8",
+      "after": "1e6309bf699b69655a9c8677124d445428e0085c9196efc5e162df7de9e3c792"
+    },
+    {
+      "file": "RequestProject/Absorber17/AntiClique.lean",
+      "current_file": "RefinedAbsorption/Absorber17/AntiClique.lean",
+      "before": "03d9115958d942ac94ea0ec7aa4edc1ec9cb1616e757308a0513274b47c5af61",
+      "after": "f291758d6ecc521a196e6cfe4063769c7e731316444cfb9f536248081042a2ab"
+    },
+    {
+      "file": "RequestProject/Absorber17/Attach.lean",
+      "current_file": "RefinedAbsorption/Absorber17/Attach.lean",
+      "before": "4b3796c6a0360fa046aa3efe5545217f0885cbb35051aaee240aa5c89f41839c",
+      "after": "8cc882a95367e508c80470ac417a7af52aaa5038b0a3263792d35dc9d08273a5"
+    },
+    {
+      "file": "RequestProject/Absorber17/Booster.lean",
+      "current_file": "RefinedAbsorption/Absorber17/Booster.lean",
+      "before": "2dc0f9d5bbd3ff592a131ed5ab0456c50d4dc90127ad221af73b76e2f7c1dc52",
+      "after": "776fd7852d269b0670c3337ece0fe62b0716d6871feff505677b47a2e93f5acc"
+    },
+    {
+      "file": "RequestProject/Absorber17/Construction.lean",
+      "current_file": "RefinedAbsorption/Absorber17/Construction.lean",
+      "before": "38e1ba6df6403d45194c548ef5823c014ef74139e8d879699837b9b1cb3ee146",
+      "after": "b34f1e6e95a14cd13f379c8bf7c79f9158b7fe6b9ccaa547fdf601427d885083"
+    },
+    {
+      "file": "RequestProject/Absorber17/Library.lean",
+      "current_file": "RefinedAbsorption/Absorber17/Library.lean",
+      "before": "70362748b472f781bf766f23ee3c4c564a3164bc69d52141b220918f091ef433",
+      "after": "cb37f195690557b7b130bed39262e7db00bce25374131c15357df8d6cea7e249"
+    },
+    {
+      "file": "RequestProject/Absorber17/Maps.lean",
+      "current_file": "RefinedAbsorption/Absorber17/Maps.lean",
+      "before": "9a657fcee58ae1523438eb6622ff305abc559ec0686819705bec975009d49443",
+      "after": "fe6fbbe41f82ba09a5781a44476b0ee956e13bf3f71d1b1697fe081dc9062fd0"
+    },
+    {
+      "file": "RequestProject/Absorber17/Theorem.lean",
+      "current_file": "RefinedAbsorption/Absorber17/Theorem.lean",
+      "before": "34f089dac9d39d5008dc8ed7b6dd371289fe831f833d6b5ab1c2374e43f8aeea",
+      "after": "b5a33f84b3e81fa3b0402ba078eb90128e5a486713568acd26af7fcd4078dc80"
+    },
+    {
+      "file": "RequestProject/Absorber17/Transfer.lean",
+      "current_file": "RefinedAbsorption/Absorber17/Transfer.lean",
+      "before": "77439bdf3eda55e06babfb57f837bdc1ba813980ffbbb6c16bd46bc3f768c37c",
+      "after": "71d4dba755687967f0e4b5714e9ffe57f2039a55df5139665e9a95892df32046"
+    },
+    {
+      "file": "RequestProject/Dense/Existence.lean",
+      "current_file": "RefinedAbsorption/Dense/Existence.lean",
+      "before": "bc39a10963eb633de74a89bb45a0763afff806cf49e6c4737893535e720e88a6",
+      "after": "cfcdafb4e6b67cc07f0a0cc7d5496bb9c32fcf22ec191a29bd1de10bd754fa1f"
+    },
+    {
+      "file": "RequestProject/Dense/ExistenceE.lean",
+      "current_file": "RefinedAbsorption/Dense/ExistenceE.lean",
+      "before": "4f8e4b3d386f7ef9b7517c93b8bf47938ae7ff8471ca6a7cc1b27a43399e2dcf",
+      "after": "84559f19498c315e5a4e393f1c783de545c19e70e28f8e264f3539f44138f8cd"
+    },
+    {
+      "file": "RequestProject/Dense/Iterate.lean",
+      "current_file": "RefinedAbsorption/Dense/Iterate.lean",
+      "before": "b04ce61a50d060312c398382ba2f0a9b262df71be72c69901570a05b96fdbbdd",
+      "after": "94ed92324a21a11e309a38a74157794404d0953f01f426d1e6dff35677080dd9"
+    },
+    {
+      "file": "RequestProject/Dense/Native.lean",
+      "current_file": "RefinedAbsorption/Dense/Native.lean",
+      "before": "f2643f90881754a15c63a482ca69fccfacb59e4cc13cc217c74c199d76ae30a2",
+      "after": "b06563cb9d375352a45ed420bc2e39b4e18ba59bebb07962a8c68af7ef761cf2"
+    },
+    {
+      "file": "RequestProject/Dense/NativeE.lean",
+      "current_file": "RefinedAbsorption/Dense/NativeE.lean",
+      "before": "fef7274e0c376767b7daafcc76669ef6942660f8449d3433b34eb8bb09b5123c",
+      "after": "cee745bb0ef2b4ec7ffc5136e01ebf622b6a79219ccf5e7a86321df3ae7daa41"
+    },
+    {
+      "file": "RequestProject/Dense/Refiner.lean",
+      "current_file": "RefinedAbsorption/Dense/Refiner.lean",
+      "before": "bd48251109d5b5d56440db3d4a61f9b412cf0c4507562ff14dc958f604ad9fa3",
+      "after": "c4610f750752513236a15d95433c1a7984445dbb03990d0111b6e14d34ca00b5"
+    },
+    {
+      "file": "RequestProject/Dense/Stage.lean",
+      "current_file": "RefinedAbsorption/Dense/Stage.lean",
+      "before": "f419260094d959a14f4a0abe6eeee1086357a3b544f5f610d5146a8de5c74641",
+      "after": "5a98349a7b01edb800ba7d83e85af3ba6c639bcbd3edd8cfc2eeab67490dfeac"
+    },
+    {
+      "file": "RequestProject/Dense/StageE.lean",
+      "current_file": "RefinedAbsorption/Dense/StageE.lean",
+      "before": "c39205c4511ffdb5c3b0ec6d1764d2610fd505f4858280fda3d596ad939af73d",
+      "after": "ac248c18a70efcde599e10fb13d8c543f1002bf3a6c8c680f932171f62ea2b19"
+    },
+    {
+      "file": "RequestProject/Extensions/AlmostResolvable.lean",
+      "current_file": "RefinedAbsorption/Extensions/AlmostResolvable.lean",
+      "before": "79946d8e0de8c0e0f02174e28d974dca18bf354ae1cf7a07c3f2d2f5b8e2ac06",
+      "after": "65b994786ab606e9a2cc901c224cdeeaf8429f2f8aa094193fe179f0a4676013"
+    },
+    {
+      "file": "RequestProject/Extensions/Completion.lean",
+      "current_file": "RefinedAbsorption/Extensions/Completion.lean",
+      "before": "e105a48c7d295d6bb7235da47235774c86e112a5952c49741c66e1ea03e8d976",
+      "after": "f7ae0f7fd002425ba0703290e59381f561909f9ace9daab5e2ee4a1dad8e6347"
+    },
+    {
+      "file": "RequestProject/Extensions/Count.lean",
+      "current_file": "RefinedAbsorption/Extensions/Count.lean",
+      "before": "a85c8d788d24e8c46a0794f63494913d02a4e8794ffe2c4ab3feb9e2c237d2d1",
+      "after": "96d82dceab7949a2e4b1fea702724dc4bb743c9235dec9d7f33722f73d884822"
+    },
+    {
+      "file": "RequestProject/Extensions/CountCore.lean",
+      "current_file": "RefinedAbsorption/Extensions/CountCore.lean",
+      "before": "248cb2d14caa8e804aa4956d6eb302dbcfd2395aebb1598b63dd49547ebda2bf",
+      "after": "764a7f5e7428ae05fcff2fe207b960c4d689c4498b071aff50a587529629099d"
+    },
+    {
+      "file": "RequestProject/Extensions/Embedding.lean",
+      "current_file": "RefinedAbsorption/Extensions/Embedding.lean",
+      "before": "3b5751550433c428074ead16b5da18add89ee73b7969dde6babc3e193539bdf9",
+      "after": "3131f38c0eebf366c9868bff032525ea21fc37781a1b5fe09a59fb24c0c8e55b"
+    },
+    {
+      "file": "RequestProject/Extensions/Intersection.lean",
+      "current_file": "RefinedAbsorption/Extensions/Intersection.lean",
+      "before": "465690c110a611cdc69dfec0df96869d603fa8b1ff2c06411299f8aa3923d470",
+      "after": "cdeff77acdaaac22d29a87776266fc293249b7e158c0328062fea96360ba5f0a"
+    },
+    {
+      "file": "RequestProject/Extensions/NashWilliamsSchedule.lean",
+      "current_file": "RefinedAbsorption/Extensions/NashWilliamsSchedule.lean",
+      "before": "34b9bfa4c8fdc7f8a0b8417a0a09d19f136a735090385b655a3c8352442c9f81",
+      "after": "d0154c894dc28dedae9a7e6d05805386bd95c82b5e59fa483918ee92eed17d10"
+    },
+    {
+      "file": "RequestProject/Extensions/Packing.lean",
+      "current_file": "RefinedAbsorption/Extensions/Packing.lean",
+      "before": "be2ceaceeb1ea0eb69dee16282344e40b704a2445421ecf889d9796263a9b16f",
+      "after": "483ee7ce94d363ce56fff5fe54de3d1e92547f8fb1d26556c183fc20d90cab97"
+    },
+    {
+      "file": "RequestProject/Extensions/Partial.lean",
+      "current_file": "RefinedAbsorption/Extensions/Partial.lean",
+      "before": "3d62e433f3b20228e9a49eeb9e67043f8c02dbe8c412579992c65c46e26b0898",
+      "after": "cfabaae8e4340a4df752c0835682c81af9e03c672f3e8c2ce017eba7773338b8"
+    },
+    {
+      "file": "RequestProject/Extensions/PolynomialExternal.lean",
+      "current_file": "RefinedAbsorption/Extensions/PolynomialExternal.lean",
+      "before": "872b83c693e26808e5ce89d8cfb94f9210819ec4b137edf0a3b6aa281d66ef1f",
+      "after": "f257fd737b303643c77650e2e130929bd7e4e91d2f16b2981c77a3253d4b55a1"
+    },
+    {
+      "file": "RequestProject/Extensions/PolynomialResolution.lean",
+      "current_file": "RefinedAbsorption/Extensions/PolynomialResolution.lean",
+      "before": "a5057bf7f0d0719b53a1a4037c311f8df4e5b9375238caaa98855bbd96ebcf39",
+      "after": "a8a17cccaa578b2d1adca62a13651b4aea5e6fa731845a967fae280b3b3b24d7"
+    },
+    {
+      "file": "RequestProject/Extensions/PolynomialTools.lean",
+      "current_file": "RefinedAbsorption/Extensions/PolynomialTools.lean",
+      "before": "fc6855272f5b8a1533869ccd54f22d3c8c9beeb773f8a7768fcc31484b37b555",
+      "after": "20295524b173b82483a0759ddd78d2734ad01c0f0a780621b40a17b2400363ab"
+    },
+    {
+      "file": "RequestProject/Extensions/Subsystem.lean",
+      "current_file": "RefinedAbsorption/Extensions/Subsystem.lean",
+      "before": "cb9bce76875915c837ce4b9c496675482f0f8cffe80fb16cd4d6501a00df1fd3",
+      "after": "e821a8b444dd1850cd6386c05e23d948521d76345a30b32c85b4d720c29412b9"
+    },
+    {
+      "file": "RequestProject/Faithful2024/Defs.lean",
+      "current_file": "RefinedAbsorption/Faithful2024/Defs.lean",
+      "before": "8e44dc13fd2ea7e731c69da93d24639eecfb42ba42cbf3f53ad74fded3b9279f",
+      "after": "8723d4ff6c64270a7a6e532f66e4492d8867f3f37ad199ec6eccc3d605fe0eb8"
+    },
+    {
+      "file": "RequestProject/Faithful2024/FlatLabelled.lean",
+      "current_file": "RefinedAbsorption/Faithful2024/FlatLabelled.lean",
+      "before": "9550539103718ee60c192b5d52415595663cc8ad850f2f2edb266a5cf80af408",
+      "after": "5a8d3f43b1393653438ca0edb577923a0f829b90f6a204e427681120a4eb133b"
+    },
+    {
+      "file": "RequestProject/Faithful2024/FlatSparsify.lean",
+      "current_file": "RefinedAbsorption/Faithful2024/FlatSparsify.lean",
+      "before": "a766b96d1b2c0cfa5ddc84fc7d19c518f49dab2a7a87421bacda61d02d495f9e",
+      "after": "0c17becfd40270280c7a0e47997b48c8984115e1c470bffcec59dfe671d56edd"
+    },
+    {
+      "file": "RequestProject/Faithful2024/MultiGadget.lean",
+      "current_file": "RefinedAbsorption/Faithful2024/MultiGadget.lean",
+      "before": "d5ea22e7b336f52585f1a798b0ac93761ce0d04c0d7c8389f03d6115d2167b54",
+      "after": "146ac4fbc42dd60b241c5dc73ccabbf31a58ac050707af2bcd5b8e67e697e31d"
+    },
+    {
+      "file": "RequestProject/Faithful2024/Section1.lean",
+      "current_file": "RefinedAbsorption/Faithful2024/Section1.lean",
+      "before": "f6545f91c446c35311cfc2b7fedc9029620c7a9f98a77e3c0a0f715ca3570ef0",
+      "after": "4afbf3e0908a2e21dbd0e0c707a3710eeb3c728dad5776c785c0b03aa53c41d3"
+    },
+    {
+      "file": "RequestProject/Faithful2024/Section2.lean",
+      "current_file": "RefinedAbsorption/Faithful2024/Section2.lean",
+      "before": "77085ec2b8908c335234812c3bc8f4ebb671b315fbe575990b5bb4125fbe2290",
+      "after": "f3efc2bb7da85df4faa24da2e7a1934654c2afcf6aa8264ed02768c6c4cff3e0"
+    },
+    {
+      "file": "RequestProject/Faithful2024/Section6.lean",
+      "current_file": "RefinedAbsorption/Faithful2024/Section6.lean",
+      "before": "a45a48ca1d925a951d282d3654cc96c6f8616fc777f004fd47bb2e0353b8dbda",
+      "after": "66642b84db2557205c1e7906a4b4dd14056962bb977eb9cdfc75ceab5ffd2b78"
+    },
+    {
+      "file": "RequestProject/Faithful2024/Theorem37.lean",
+      "current_file": "RefinedAbsorption/Faithful2024/Theorem37.lean",
+      "before": "e8a316e44849b21600c3df88d068324dc0f1d241e06ad18cde6f1474a5ba0ea0",
+      "after": "5509d81ece79124e498ecebaea5676f14f67b7bec15bbb7fbb60cdec232d1af0"
+    },
+    {
+      "file": "RequestProject/Faithful2024/Theorem37Aux.lean",
+      "current_file": "RefinedAbsorption/Faithful2024/Theorem37Aux.lean",
+      "before": "5d0c83e6daf5b9f3adf8e8eabd46f1e8efd26207a0c0f782e579cdb2c5bdc0cd",
+      "after": "036bd64732d833e04be6ac815e09659c37db896aa3dfa349f6763300bb21b0fe"
+    },
+    {
+      "file": "RequestProject/Faithful2024/Theorem38One.lean",
+      "current_file": "RefinedAbsorption/Faithful2024/Theorem38One.lean",
+      "before": "dbec28efbf0d312d84d4d0e7e2c1e581257ea78d67073e79d536be5cdda8e106",
+      "after": "209d88849211a9d3d0de1afefd76a6355580daaf6c6a293321a4cc4a77004bb0"
+    },
+    {
+      "file": "RequestProject/Faithful2024/Theorem38Two.lean",
+      "current_file": "RefinedAbsorption/Faithful2024/Theorem38Two.lean",
+      "before": "dde2296d01fe8178ce41dacbe7ee85c4e7317b3d54699ecb5b09e32ee757e5c6",
+      "after": "ac433301543783e4936d56e7e4731b061ecd0bcc20289f348e6d3b0298c62f32"
+    },
+    {
+      "file": "RequestProject/Faithful2024/Transport.lean",
+      "current_file": "RefinedAbsorption/Faithful2024/Transport.lean",
+      "before": "7915c8c685b911cfa9578b00e6d4b57803f40ef4d3d6ccc119b7a6c6e25934b9",
+      "after": "b65d60465991757b4dabcd9b790e449da46e6b0d2471d4d90341abdd41906515"
+    },
+    {
+      "file": "RequestProject/FaithfulSurvey2025/Embedding.lean",
+      "current_file": "RefinedAbsorption/FaithfulSurvey2025/Embedding.lean",
+      "before": "00d4cbed2c36b9e8936214f97cce493edd8cffc47340af518d6c8b8d602ba073",
+      "after": "7a938d15cafc2e62b8a50c948d7213db7dd6c49731104b25949014afd792f2eb"
+    },
+    {
+      "file": "RequestProject/FlatDown/AntiEdge.lean",
+      "current_file": "RefinedAbsorption/FlatDown/AntiEdge.lean",
+      "before": "a4cc7af84297342d436613172c855787ee2ab8de7753d34012d02e06a1091421",
+      "after": "cf4b4529e49fbb6b69c0d230a82382dd10848198dfb9516157011c0a71c2399a"
+    },
+    {
+      "file": "RequestProject/FlatDown/Basic.lean",
+      "current_file": "RefinedAbsorption/FlatDown/Basic.lean",
+      "before": "b6b702540886eb73ee895e6a5343ac32592896e8166af91608937a2055cf88e3",
+      "after": "a8fd8e8f2e779195d1f2dd9087e24ecb682725161fe9264f39463b5e17aec22d"
+    },
+    {
+      "file": "RequestProject/FlatDown/ChainLink.lean",
+      "current_file": "RefinedAbsorption/FlatDown/ChainLink.lean",
+      "before": "253019676f2be2fbe6fb0eb5b9084d64d1e1ee330cf9be920f55f8b31220a8fb",
+      "after": "ee4e83553ccd48f2420e6d525ae46758319dc4812da71877427ac656c2e50149"
+    },
+    {
+      "file": "RequestProject/FlatDown/Closure.lean",
+      "current_file": "RefinedAbsorption/FlatDown/Closure.lean",
+      "before": "21a92b10c807f5b602954f0f9bd9d25c9e2e7e01781b5ed574af4f0fc8cc4552",
+      "after": "57c30e3f57a20f3f5a9e6ee599ccdf2dc626425d1564770348d7b272393bf076"
+    },
+    {
+      "file": "RequestProject/FlatDown/Completion.lean",
+      "current_file": "RefinedAbsorption/FlatDown/Completion.lean",
+      "before": "3f282cd3ead765f1c4e36dbeef3895a6ae353fa78450bc081f5e3d9380a93d23",
+      "after": "469452c5a3bb835b23811920617f644747c970b6c842ef81fe0f1f3eaee3aa71"
+    },
+    {
+      "file": "RequestProject/FlatDown/FlatDegree.lean",
+      "current_file": "RefinedAbsorption/FlatDown/FlatDegree.lean",
+      "before": "7f91c5142cf5f435f1c69bec7bb16be5a03665ff5c031066d3b0de75d50d5dda",
+      "after": "927a1cc3e790b253049906fcc55c311b73a5228379d62bf0b8504236be9762fe"
+    },
+    {
+      "file": "RequestProject/FlatDown/FlatProof.lean",
+      "current_file": "RefinedAbsorption/FlatDown/FlatProof.lean",
+      "before": "07044a083a0961da4bf0053f4695ad6d4038918197ba4831aa19313d6423df33",
+      "after": "1acfe2125098bd5ef5c435be4409713bb14cdbd270f525de704c7b6a061fe639"
+    },
+    {
+      "file": "RequestProject/FlatDown/FlatStep.lean",
+      "current_file": "RefinedAbsorption/FlatDown/FlatStep.lean",
+      "before": "561089f7ca37100ca526a89c7989071e91679f23e648aeafcd5c36707bcd5eae",
+      "after": "6cd11046991cec86f09909a790d4f912df8efb296ebc09b850d5a2e5ac72cba1"
+    },
+    {
+      "file": "RequestProject/FlatDown/LinkAccounting.lean",
+      "current_file": "RefinedAbsorption/FlatDown/LinkAccounting.lean",
+      "before": "a48eeabf80395920578fef9f00357833ae60f320e61867ffb46df704b20f7038",
+      "after": "6a33b3ed50f3a0b6d740ca5e156dfdc18c149e7b37a5435d772b497cc0c33932"
+    },
+    {
+      "file": "RequestProject/FlatDown/MultDegree.lean",
+      "current_file": "RefinedAbsorption/FlatDown/MultDegree.lean",
+      "before": "b4cb7da1f6fd53a12fcdcf6676ba175504adbc0da70bccbfbd5605fbf7a4ea92",
+      "after": "45b4e5adf038eecc5c1a6a7320af2f40eaf8cd8096ecf2cc38b81857444c2667"
+    },
+    {
+      "file": "RequestProject/FlatDown/Small.lean",
+      "current_file": "RefinedAbsorption/FlatDown/Small.lean",
+      "before": "27068acf6b1647c5c0e8b43eeb6e48170c2a2552b0f2bebfa252400bfb974066",
+      "after": "c88673dd2892e6a7bf53398fe6c8ad2c208396b4dfde984a15c5995d07557095"
+    },
+    {
+      "file": "RequestProject/FlatOmni/Assembly.lean",
+      "current_file": "RefinedAbsorption/FlatOmni/Assembly.lean",
+      "before": "1b4c737a44fc2d2386c7abce19546707fc7cc1a60d8deeef807e7c2e07833c0d",
+      "after": "ef5c9065e8350ef0c462baa6861b5bd7533db989f847f1325dc23ae48ddd574c"
+    },
+    {
+      "file": "RequestProject/FlatOmni/Attach.lean",
+      "current_file": "RefinedAbsorption/FlatOmni/Attach.lean",
+      "before": "d4d7a228c921fd37bb3866c2db8039662b4484bf32de5f1c4290e8f15d2583de",
+      "after": "f846f39553fcdf98e38fa5b00997d768d043723a52a3a89a8222e813fe25f4cc"
+    },
+    {
+      "file": "RequestProject/FlatOmni/CliquePieces.lean",
+      "current_file": "RefinedAbsorption/FlatOmni/CliquePieces.lean",
+      "before": "221c3253f610442480449c9e670f12a291028dd74c34c800feb0153009d61030",
+      "after": "03e31359944c0500626224964fa4b3d14d0dd29c95da8b91d63e5a616ab41922"
+    },
+    {
+      "file": "RequestProject/FlatOmni/Descent.lean",
+      "current_file": "RefinedAbsorption/FlatOmni/Descent.lean",
+      "before": "34eb155987d182a0f7ae6cfacc1509b21dfc1d69a42763f34f5a4d3c28093bcd",
+      "after": "10f22732773f64cb0be3b59616d878e68e528c5340a57304b56f52c8cbe4bd40"
+    },
+    {
+      "file": "RequestProject/FlatOmni/Fakes.lean",
+      "current_file": "RefinedAbsorption/FlatOmni/Fakes.lean",
+      "before": "0c1daeb38862433f3693c4d1d82488ed4bbff5158f02a84c6e37ce3ed6237a87",
+      "after": "e5313225bdbe7d8e8f8ffa4fc34d4d74f81440e4cea077d13b2804e8b4ff1255"
+    },
+    {
+      "file": "RequestProject/FlatOmni/LocalRefiner.lean",
+      "current_file": "RefinedAbsorption/FlatOmni/LocalRefiner.lean",
+      "before": "b1c1169db3a21cbded2b26ecb1d1216708a197cdf50bb5d8e05c45dc501dfb36",
+      "after": "933e7656d5fb880e9e6489e75a4b9de9da1418602a9f66ad3e9a4eaf3a0c670f"
+    },
+    {
+      "file": "RequestProject/FlatOmni/SharpBounds.lean",
+      "current_file": "RefinedAbsorption/FlatOmni/SharpBounds.lean",
+      "before": "a08d226cd1b1259de9d4d2fec94db7ee83040988cbe25f187a1ef28b30af1194",
+      "after": "a90d8c94830e960c788c23dcbe5d00596811d35c190a0793e9a1b0e420bad2e4"
+    },
+    {
+      "file": "RequestProject/FlatOmni/StageK.lean",
+      "current_file": "RefinedAbsorption/FlatOmni/StageK.lean",
+      "before": "1abe86f3007ac759303fa74d4c1ba63397121eb56920d8a1af6e1462e24e05c3",
+      "after": "5b142a52ffa0e51436beff404bf172fd4d1e9547f306f44c09dd48c1b46b70a7"
+    },
+    {
+      "file": "RequestProject/FlatOmni/WindowGe.lean",
+      "current_file": "RefinedAbsorption/FlatOmni/WindowGe.lean",
+      "before": "a3e8e8179451b56e7cb5460e033acb927286794e0e5d983e7f0f81c5f1a83c86",
+      "after": "2a5574216a4e62dd828b4bf5c4648d0a27a27a25fcb534454aa4b8e4d35807ad"
+    },
+    {
+      "file": "RequestProject/General/AttachK.lean",
+      "current_file": "RefinedAbsorption/General/AttachK.lean",
+      "before": "75d8e3e824123a799707e5cbb19805cc376041c350d0ce10ad0cbc2e4c3332d1",
+      "after": "42954c9f664b92796faab05d2f216e825bdd0eea7209728fc0baccf8b5159037"
+    },
+    {
+      "file": "RequestProject/General/CliquePiecesK.lean",
+      "current_file": "RefinedAbsorption/General/CliquePiecesK.lean",
+      "before": "798baa8ed05760b80e1b314c72e04b1703dd93149bdfd75ac5696bca4cb997c5",
+      "after": "6d90f0302edf3097f67970183690cb7b07964d5dbdb6a1ad2e2291756a343309"
+    },
+    {
+      "file": "RequestProject/General/Coloring.lean",
+      "current_file": "RefinedAbsorption/General/Coloring.lean",
+      "before": "b696cef5c2542c65f7753fb0054f86edaa3020cc8ad8428a329cd78207d54baa",
+      "after": "0eece0b5ae62c7aec2a35cce9349004a2883de308938783bb630b3aafa957da3"
+    },
+    {
+      "file": "RequestProject/General/Defs.lean",
+      "current_file": "RefinedAbsorption/General/Defs.lean",
+      "before": "4bcc2935cbbad47c56a4fceafbd1a81e3a2eab49eac39faf37fbd4ebfc477b01",
+      "after": "79b51108d83d6ea819552b345b49e3e8ec794ae8e54f97c7fdac420ec7bd46f0"
+    },
+    {
+      "file": "RequestProject/General/EmbedGen.lean",
+      "current_file": "RefinedAbsorption/General/EmbedGen.lean",
+      "before": "1dd6d5fb797da0b5c900628347604f3f4e70244693ec3affa47b72f9ace6dde6",
+      "after": "496b52ec066061ac44b4aa87496e5902a3625fcf4f99c6c9df6661676b779893"
+    },
+    {
+      "file": "RequestProject/General/FakeRounds.lean",
+      "current_file": "RefinedAbsorption/General/FakeRounds.lean",
+      "before": "53e59a7ab46e307fb39080a1e8d3aaa6fcd521657d2b8fc2dda1bff7ae8afc51",
+      "after": "788e2036d7f479b2056144e4754c147b2da703aae039d232fb3e6f222cdc9ca3"
+    },
+    {
+      "file": "RequestProject/General/FakesK.lean",
+      "current_file": "RefinedAbsorption/General/FakesK.lean",
+      "before": "0328bf72dfb7ee18b359715f99ecae37014badd2c0e0a9187564cb9cc8484765",
+      "after": "559d8bd776e13746d900c2cab3afba876bbd1a2a7309bfaa9a43be2095b6e81a"
+    },
+    {
+      "file": "RequestProject/General/FakeStageK.lean",
+      "current_file": "RefinedAbsorption/General/FakeStageK.lean",
+      "before": "e958e88830d0c28bf775ec8a866588b7e7ef6f7981a99679c4a953caa0f9d354",
+      "after": "062412220778778705dd5ef366238eef71e57643c23c64e8edfa6b33ac1264c4"
+    },
+    {
+      "file": "RequestProject/General/FlatOmniK.lean",
+      "current_file": "RefinedAbsorption/General/FlatOmniK.lean",
+      "before": "810a5e7840ac46c5475ecdfcc8d096a5677850e0741ea8b5c245cc5325765a69",
+      "after": "d2dcc0614d3463c76117e88ca44fb1e28c3584c1e01a5a58084ac6a434478e4e"
+    },
+    {
+      "file": "RequestProject/General/GenSpread.lean",
+      "current_file": "RefinedAbsorption/General/GenSpread.lean",
+      "before": "d27de920502e0744c7e1171ea2f6adf939b61b11460f55c2aba1facfaad169b1",
+      "after": "f60005f1567dfceca1b439a3ae79f544c5329cbd68a6159f6296b91dcbc98160"
+    },
+    {
+      "file": "RequestProject/General/Levels.lean",
+      "current_file": "RefinedAbsorption/General/Levels.lean",
+      "before": "9b17886c367fa2e8e2e61037139029772f95aa604141f522f22a0ef420a357ed",
+      "after": "a08ac3df44579885e603998779985cd965e5a70f8a00483d1c9a61a5eeb7e8df"
+    },
+    {
+      "file": "RequestProject/General/LocalCountK.lean",
+      "current_file": "RefinedAbsorption/General/LocalCountK.lean",
+      "before": "99ee0d3ebe6a79e46d52d932373e92cd102abcedb1a89cb7ecf83f23b883ec8b",
+      "after": "47c6037a445f5cbe2914ce1b7ea865c89c7317891db0138eb1116f5a23bcc859"
+    },
+    {
+      "file": "RequestProject/General/LocalK.lean",
+      "current_file": "RefinedAbsorption/General/LocalK.lean",
+      "before": "2436f46f1f56603349aa4134ac3c14e72f52f4462198de598c82967b84d818bc",
+      "after": "487dc25eba6ee19e34e05d20e4fc04994a4836fb9549c7ef4c1141b5d82faf37"
+    },
+    {
+      "file": "RequestProject/General/MultiRoot.lean",
+      "current_file": "RefinedAbsorption/General/MultiRoot.lean",
+      "before": "cbcbe5e73a65713ec0ae003ed032da110fe10f86e7de3730bcbf38d209f3a5b6",
+      "after": "142b647440c2a8ecd9d42f87fadbe1f38a325f6eff30cd26c795fdf7fdfd7eb9"
+    },
+    {
+      "file": "RequestProject/General/PermCount.lean",
+      "current_file": "RefinedAbsorption/General/PermCount.lean",
+      "before": "120f5b150ff9f84263614b65fe735435afaa26cedc4819f5ff098f762bc2cb9b",
+      "after": "075ff398deb6a682ed67184378400b32f8fdbd09155b3d524df05d65d477e7bd"
+    },
+    {
+      "file": "RequestProject/General/SpreadCore.lean",
+      "current_file": "RefinedAbsorption/General/SpreadCore.lean",
+      "before": "4461537625b1288888a1482ea08923f64a0859eac4195912d66d9a74b43552b6",
+      "after": "831b569a35f2bfefcd7757c2f826c61ece6bfa9ede96323775ac2e557d43617b"
+    },
+    {
+      "file": "RequestProject/General/SpreadPerm.lean",
+      "current_file": "RefinedAbsorption/General/SpreadPerm.lean",
+      "before": "71fbadf92409683b88553b14506ce1b18c635f1882615d142589275e7e4c9931",
+      "after": "9dad4b5e57406b2e5425c7e9a526b054a0b34c1bb805d055f55cda8eaf3d59f1"
+    },
+    {
+      "file": "RequestProject/General/StageS.lean",
+      "current_file": "RefinedAbsorption/General/StageS.lean",
+      "before": "15683066865d18bf3ddb5737af8f48eb0b840791b503427fc742a469dac066cc",
+      "after": "17cefc548f39eddc42686cbf3647e83f2a3db16e21c790f69139ded5753f5101"
+    },
+    {
+      "file": "RequestProject/GeneralEmbedding/Bad.lean",
+      "current_file": "RefinedAbsorption/GeneralEmbedding/Bad.lean",
+      "before": "e9d306b69804348c7360f704e7d4fae5ba736f7d3a9819b3f28b997a6f4f2d36",
+      "after": "7fd00b702e36c4abb6a954d316384c61c450cc63fd36df9c37bbe1399a4fc498"
+    },
+    {
+      "file": "RequestProject/GeneralEmbedding/Counting.lean",
+      "current_file": "RefinedAbsorption/GeneralEmbedding/Counting.lean",
+      "before": "800c84d1a8312e38e74c526f3c432b5cb07dbf9450685c4c802534b69788fde8",
+      "after": "31300d25b0159c8caed25ab4e8a9c65656cae5bdb7d883d06fef2efbbd6c1f6d"
+    },
+    {
+      "file": "RequestProject/GeneralEmbedding/Defs.lean",
+      "current_file": "RefinedAbsorption/GeneralEmbedding/Defs.lean",
+      "before": "265b063ceb6230c5e09e4193fcc56a51bf16978827ff1f155ddda3643281e495",
+      "after": "27bda407d042c7131dac8e9a4463a1477b63010a1cead02d5794bb411ed345de"
+    },
+    {
+      "file": "RequestProject/GeneralEmbedding/Good.lean",
+      "current_file": "RefinedAbsorption/GeneralEmbedding/Good.lean",
+      "before": "8d03dba89cc5f66630bcc287b37bb1938aedc149dcb1dec536cf07c10aad376e",
+      "after": "e7c5abf6971a422a3a2877ba13b68c337d9fa4e47c88056b99d84a9e66e05612"
+    },
+    {
+      "file": "RequestProject/GeneralEmbedding/Greedy.lean",
+      "current_file": "RefinedAbsorption/GeneralEmbedding/Greedy.lean",
+      "before": "34d8ba980c116f9fa99c3d49d99e296268927a719849292583e8753c28cfa1be",
+      "after": "c97a1ead907bf1888d0d5bc67040bfa2650aad0d382bb63c611f94ea4269d9f7"
+    },
+    {
+      "file": "RequestProject/GeneralEmbedding/Main.lean",
+      "current_file": "RefinedAbsorption/GeneralEmbedding/Main.lean",
+      "before": "a76917acfe6f5a9fec82e9b75be571547bc344d38fc13b5b67c289bf5216c738",
+      "after": "ec1df0cba7bc17bed8286c188b5767f50371ac7cb1745aa564f0dfb77485be90"
+    },
+    {
+      "file": "RequestProject/GeneralEmbedding/State.lean",
+      "current_file": "RefinedAbsorption/GeneralEmbedding/State.lean",
+      "before": "c59e62e2049aa688c51a11fdaa3c260f1aece319cb92300890d61f3533ff7f78",
+      "after": "a5fa99afb4591f6ed997fbda2d353ada43055d530724823177382bf6d62ce374"
+    },
+    {
+      "file": "RequestProject/GeneralEmbedding/Step.lean",
+      "current_file": "RefinedAbsorption/GeneralEmbedding/Step.lean",
+      "before": "bcdf90186c2279fb45fed94b835be79c4fb92b2a7ca232d01418006336a49a5f",
+      "after": "30b64afca34a6a60c6ac766bfc626fd7309635c38eaf9ae915ff944f4176d314"
+    },
+    {
+      "file": "RequestProject/GJW/Main.lean",
+      "current_file": "RefinedAbsorption/GJW/Main.lean",
+      "before": "e5bd46cc77503096f314cba22c1717e998e7fc891d80ff6c6cc2f21596305870",
+      "after": "16eeaf804c5ffdc7500c9b582106805b151774f98bb953b285e56bed17607de6"
+    },
+    {
+      "file": "RequestProject/GJW/Trades.lean",
+      "current_file": "RefinedAbsorption/GJW/Trades.lean",
+      "before": "779c95b7df7241fb13c251daff476f1b428115ddc32ca81cbc87991eb39a489c",
+      "after": "fd0a1f31601e250d8bc520baf6f4220404088bf29a84c472a3950968cb2e99ee"
+    },
+    {
+      "file": "RequestProject/GridRefiner/Labels.lean",
+      "current_file": "RefinedAbsorption/GridRefiner/Labels.lean",
+      "before": "983c34e37e1eee7e40421d6fd6a3ee83561329c489aebaba462e11c6efed72a7",
+      "after": "48f19a15ad88d5b59983e4c32a3bda08c9e410b14335c23081cbec8ad164ec06"
+    },
+    {
+      "file": "RequestProject/GridRefiner/Lift.lean",
+      "current_file": "RefinedAbsorption/GridRefiner/Lift.lean",
+      "before": "73bd9ccdc0703348da0d8c968a0de7f0e5e6cbe030c0e945d1df0d8411b31e5c",
+      "after": "402cc7e021accda35a97908fd6a77237557ed169b1ad233ef038fbcfb59c9a7c"
+    },
+    {
+      "file": "RequestProject/GridRefiner/OddSwitch.lean",
+      "current_file": "RefinedAbsorption/GridRefiner/OddSwitch.lean",
+      "before": "da84b3a0bc8c0cbaa5848010b1cdd7de5d9c3de1ec6517bbd789acee9b35172f",
+      "after": "4f1e4257dcc4039a9d6afd822d7bc9e610238a3822c04b0ebb56a78df37d2cb1"
+    },
+    {
+      "file": "RequestProject/GridRefiner/Parity.lean",
+      "current_file": "RefinedAbsorption/GridRefiner/Parity.lean",
+      "before": "e9b18f8e4be4b26befc28d7cb0118172667c463040232b5c62e43e0211c0cd09",
+      "after": "bd88404643fd26d267370d87d6a0bf59a429f740041baa45d05d906cc0eb36d5"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Box.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Box.lean",
+      "before": "137317d2a6b23d3f93fbf45c1ba98ddc2f6d7c1d1e94509ed89ff09b7d4311c3",
+      "after": "e8c3d8aecc7d102d21d8b02fc0792b2d5c88fa19c594cde86454ef04a96a6604"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Class.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Class.lean",
+      "before": "8690baee996e7ba2027f09b5d92d1b4a68677ec17aced9bdd4670165fd7e0729",
+      "after": "b9b5cf8dc754bc6aba5193ce8bbfe4706db73402824da8c71634150c1f2aca8b"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Collapse.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Collapse.lean",
+      "before": "2f1a65ccc0e4fe17c2ea3b70e08847e8636c7817b1704a06ab9008cc86d1111d",
+      "after": "e713abd183a2c64ce711d61529ef1893f7f9b5d935cd0654861c6096db933f43"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Empty.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Empty.lean",
+      "before": "37f9440c76265b344e1afbead7f5aa8e61b4923c699343578eb6a481a20d7dc0",
+      "after": "2bc88d4be46344a8b30e9e3354aab1ac8a2c8d983894a90afdcaaf788b1d90dc"
+    },
+    {
+      "file": "RequestProject/HyperPlan/EmptyMany.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/EmptyMany.lean",
+      "before": "9f165b7804d50c1011dbf5c4ade4551989db18254086c1ce2022d22f7b4afca8",
+      "after": "9156512e2972603d5573b1a97680f950ab83f3e92d80e46a27e39b026d927a5d"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Lift.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Lift.lean",
+      "before": "1c793e3a9687b5e3d4a8d645dcdb254fca6d240a6eb2bb88848fdcc04d8fc976",
+      "after": "c48c3dcaf6a08ae43e65c3224f7d2db800a6b11046a3723c154bbc1ffe83e04e"
+    },
+    {
+      "file": "RequestProject/HyperPlan/LinkLift.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/LinkLift.lean",
+      "before": "ae29b574fea95210451c356b8bab92f9a98e500e73250864cd1cbc3d3a27e90f",
+      "after": "9c643de2cd8ab440bc8e9751cfc42e32cc0a10faa84ab31ad96fc605bda303fc"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Load.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Load.lean",
+      "before": "62af9bfffce14f21e4a99d0d1c22202bc94e6ba7599166233b5b7ac14d6cad37",
+      "after": "6323ff6305667fae9050af331c8f17389cdd3cac3a364f1fcdf3f9a4387618cf"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Mono.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Mono.lean",
+      "before": "8c74cdcd1fba5daea699bfbb4f9d3fcf7b233a8c3f05064a7db3e62dda191aa0",
+      "after": "992977495cbc27029917b563a67af6a7806c219343f6c78d722c17ccfe18e3ec"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Moves.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Moves.lean",
+      "before": "9825e2f925ffaade72f018d8a4caac0405561e95e8830b36ded66ace81ab8e5a",
+      "after": "d01605d71a5bd8594e57e325b38a48d5bd2d40a0928d2fa2cf01976b476c3f2f"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Native.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Native.lean",
+      "before": "a902d25fce6412f0420781f61ce8066beedf4d9263d335e75ece26a5795f7530",
+      "after": "2904743e79f759edb998de941328ec96c072228b03e523c5240ab59f3bbdf22b"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Persist.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Persist.lean",
+      "before": "ce1eb1c514a0aaf139cc74202329fcf5a696a2351730c5dae8f4de3c295f1129",
+      "after": "46f76bf0e1cb9b9ddf0a43825aa04852991907746d528d7082e02dad035f6fa2"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Plan.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Plan.lean",
+      "before": "589cae97ad91fc24e76b28055e8ee33580763c8288e6658bf39bb8079273ccc9",
+      "after": "3511b17cc465982679249ca4fac963821e4228e9a03ce193da67ec9fb21e4ca3"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Segment.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Segment.lean",
+      "before": "36aea27d514334568fa1ffedc8ad70c19fc5fd47e917fbf13c564023008955e6",
+      "after": "0ee47f4020a2fffe8b7d9a554246336cc0a46d40f8747b252604a8c55bb93507"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Stage.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Stage.lean",
+      "before": "500a41c9b68d903530057fd3ef12769a96886eb2ce2ded24c6e305ebf7fe0704",
+      "after": "9892839b2c0dfa2e4301fcb18fbb5293e297c510aab03dc3615d1d5024f32209"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Strong.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Strong.lean",
+      "before": "9bbe820163894c183274e260f77efd05825794938fb217cbf5f02db491dcd9d9",
+      "after": "06a4c5066a70ff357214e9ca1a2e5cd1f0e288ed5507e365084dc0022e450e7c"
+    },
+    {
+      "file": "RequestProject/HyperPlan/Two.lean",
+      "current_file": "RefinedAbsorption/HyperPlan/Two.lean",
+      "before": "ff56a862b38ce3ff52257c649e99eee8e11ba629a43d800e697bec0d277dd875",
+      "after": "28882ee0615ff8d35d8b6b016d3c4f8c01611670646f570dc3e74336b31ec36f"
+    },
+    {
+      "file": "RequestProject/LinkSpread/Assembly.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/Assembly.lean",
+      "before": "4818996e8f6743070cd931def37748ddec8fad7932b1d4d68648736dc6d45958",
+      "after": "faf502271b564759d65b4d0964ae20ef9661354e7713734ad32e997f2564c781"
+    },
+    {
+      "file": "RequestProject/LinkSpread/Chain.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/Chain.lean",
+      "before": "862dca30c970ae2671afaf16431cbf82fecc7b97a105c4dd8b815eccfc5b49c7",
+      "after": "7b914ca84ce82a4afe7da7085f15ca7cfc5766e9c9df791c137f8af6126b250b"
+    },
+    {
+      "file": "RequestProject/LinkSpread/Comp.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/Comp.lean",
+      "before": "3d781d32e25eed0bfd9e6e25af2cd473ce0161ef7c6a6c00ba6208ed39697bd7",
+      "after": "e08d168493d9ff1e1c53759ecccb4af3dc31ce64048c631c7b92dc21f58e80df"
+    },
+    {
+      "file": "RequestProject/LinkSpread/Fibre.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/Fibre.lean",
+      "before": "c2c5bc9d73c0331c55402b5d6014dc6a9fd539257327064285bf7d106456fc20",
+      "after": "d48e3ac8669a7b3ec32846cecfda0532623537bfb4516959539bf81e05c51c2b"
+    },
+    {
+      "file": "RequestProject/LinkSpread/Flat.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/Flat.lean",
+      "before": "5ff8864db758791c1803b6c155cbd63e93c4592b4d5b5d7c524060ebb3e03979",
+      "after": "39849a6e08f89742b67f21e1a78b4034452f0ff5aabb7d1a53a7123953910ec1"
+    },
+    {
+      "file": "RequestProject/LinkSpread/Funnel.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/Funnel.lean",
+      "before": "3473836ff9b5ddbbc96a638f26110763c79a51a8358dcbe71e515d4ca5922893",
+      "after": "288a61f9c7cb47a254e3b5f085adde460216d3d2d8390cbdb4f41eb961ba0062"
+    },
+    {
+      "file": "RequestProject/LinkSpread/LevelOne.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/LevelOne.lean",
+      "before": "742879d70ccfecdc8d2fd0854831aac44c9ae930804507489efb49b8670b3fde",
+      "after": "7db0353cf48a0ab8d7016103938219f7a36f554f3865ce5b517f27290e698d05"
+    },
+    {
+      "file": "RequestProject/LinkSpread/LevelOneFinal.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/LevelOneFinal.lean",
+      "before": "f00b326f78ccfbe7f68ede4237a6543c1f6e561a12afc8438709a58e58d6efaf",
+      "after": "506a21691a8720c0538cedb2bff1cc2819453f7bf6c312c36bd4dfba10d8b2f5"
+    },
+    {
+      "file": "RequestProject/LinkSpread/LevelOneIter.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/LevelOneIter.lean",
+      "before": "1756da2d524d6bf1809f886ee0903b19d8c7754c500f677ebfd0cbb3b02e971b",
+      "after": "d8c1ab99a8696cc8de15ebee176e27f94fdc1dc30e2f5e87ad5d0fb1779bfb12"
+    },
+    {
+      "file": "RequestProject/LinkSpread/PerUniformity.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/PerUniformity.lean",
+      "before": "c2a951be3f5b33b911125f9469cb19a216262a650227f71fb99d368416251622",
+      "after": "730d6bd33bd699276c6c7281402d141cca0cabcc63537b736ca04bcf52b7e140"
+    },
+    {
+      "file": "RequestProject/LinkSpread/Round.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/Round.lean",
+      "before": "a76cd4665ea418353e5b5d09274cff2bbdc396665b91ddbb4e1671229bde2766",
+      "after": "2f531e32cafb63f437bb63c08bccc74e532588c976496c2fa604674ac6f79819"
+    },
+    {
+      "file": "RequestProject/LinkSpread/RoundOut.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/RoundOut.lean",
+      "before": "45bfd9c80e1e76ca87466790c6cbed43355b73331aa553bf852a6cdd54931eaa",
+      "after": "e981f72b3fece61a818d02e2b28f873163f40a01b5b6d17d35a37c3a9f24ae32"
+    },
+    {
+      "file": "RequestProject/LinkSpread/Stage.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/Stage.lean",
+      "before": "6554a6a516d5814eda4edfc3ebd3bec30f38369977bf0811ff3acb102f8719fe",
+      "after": "d01d37e3e85ca9c61c325d7dd25068adbeb9a08b1e33928162c80fb06e459735"
+    },
+    {
+      "file": "RequestProject/LinkSpread/TRefOut.lean",
+      "current_file": "RefinedAbsorption/LinkSpread/TRefOut.lean",
+      "before": "064b5611db918e353c24a635e3ea6d05ed7e23cfb9f346f8d0a46a17a55f793d",
+      "after": "8219c9424b4393090d7276dbb3291dd53005eed016e675d9f0503db388d4e155"
+    },
+    {
+      "file": "RequestProject/Local/Affine.lean",
+      "current_file": "RefinedAbsorption/Local/Affine.lean",
+      "before": "8fce2efc938a97c8ef86ecfbc6f095ad51e358b06e8964b315c05da3dfdb42d8",
+      "after": "863a40c219d7f14b4db11658ddc507c7ea77b247e647cbdac181a6718a0472c9"
+    },
+    {
+      "file": "RequestProject/Local/Chernoff.lean",
+      "current_file": "RefinedAbsorption/Local/Chernoff.lean",
+      "before": "b5fb47d138f96269662f6b196fb42e099dca849fc72c5d54292157189c1c6e9a",
+      "after": "b07fe6db3fedaab19cccdab3402978c6ac9ee9d420f9f030cd5901a70c7008cf"
+    },
+    {
+      "file": "RequestProject/Local/CliqueOmni.lean",
+      "current_file": "RefinedAbsorption/Local/CliqueOmni.lean",
+      "before": "f333a1186a133f4e7262945b0311e14177e60dbf9102d43eafa7a09da9862598",
+      "after": "359c4dd293b17215a7f6d6466c1329048a5d4747c56173f11811b9147b9c668b"
+    },
+    {
+      "file": "RequestProject/Local/FlatEmbed.lean",
+      "current_file": "RefinedAbsorption/Local/FlatEmbed.lean",
+      "before": "19a79e325db83ba1798883f76822333a33b035d80d0ff8b5098248a551430620",
+      "after": "3256f0f62d8a2397367bceaf3736c7ded1d47b1073bfa695979ad083d23e091e"
+    },
+    {
+      "file": "RequestProject/Local/FlatEmbedMain.lean",
+      "current_file": "RefinedAbsorption/Local/FlatEmbedMain.lean",
+      "before": "dd222b1d36ccd0aa34c35d87db127092229a3f20288832b73cc3d1b48e1e1463",
+      "after": "4830f759f5d2b445f9743340c0c1474e03d349ae6f365c3a18a9b3bbbd0a0d58"
+    },
+    {
+      "file": "RequestProject/Local/LevelOneSharp.lean",
+      "current_file": "RefinedAbsorption/Local/LevelOneSharp.lean",
+      "before": "e2b50a7c7c925906eae7673ccfaf9868e8b640a0fcb2707a9a43b9b2f3961abd",
+      "after": "b5009049cca47b048901695c6c2ff56298459179a47c79668ea6a4d7eef79717"
+    },
+    {
+      "file": "RequestProject/Local/LocalAssembly.lean",
+      "current_file": "RefinedAbsorption/Local/LocalAssembly.lean",
+      "before": "763dcb5e3d002e333327eb365baa8a4e7b3e173b8f53d1426577aa673eebc61a",
+      "after": "09dbcdfbc5fe698836e4604b48a5cb92b78bb9e1144caefee1b20431f984bb8d"
+    },
+    {
+      "file": "RequestProject/Local/Prepend.lean",
+      "current_file": "RefinedAbsorption/Local/Prepend.lean",
+      "before": "44c2b433110974b5a833c6c130b232ea040b150886520f15b4e9c2458b28c7db",
+      "after": "8db6a980a88ca928fe75d4f5e05ec50eb192cf2bd056b05275effef4ace76d7e"
+    },
+    {
+      "file": "RequestProject/Local/StageZero.lean",
+      "current_file": "RefinedAbsorption/Local/StageZero.lean",
+      "before": "5b61ee80498dd969fd868f531916215949f3ee17de0866c6b8bdf00ae05b9630",
+      "after": "5dd33e78439310434540418055890e8f7932dea7a2a3b84151449bf007ba6e0b"
+    },
+    {
+      "file": "RequestProject/Local/TaggedA.lean",
+      "current_file": "RefinedAbsorption/Local/TaggedA.lean",
+      "before": "b00ff39a98d81b4da6bdcdf789cbf1a92a22e314d62351f8a9b16593f1980113",
+      "after": "acc5d4293208ff472856df1ddf25030a7799e9b59d3c3dc6182a3f1c03661d6a"
+    },
+    {
+      "file": "RequestProject/LocalRefiner/Construction.lean",
+      "current_file": "RefinedAbsorption/LocalRefiner/Construction.lean",
+      "before": "9603508c80114a01fca73dd980d9bec7cebd8368f688f57162c1f7a29313552e",
+      "after": "036514554e9b88a2b49953327201a2c6cc2175aa2a828dde0c3c151f2e194a19"
+    },
+    {
+      "file": "RequestProject/LocalRefiner/Gadgets.lean",
+      "current_file": "RefinedAbsorption/LocalRefiner/Gadgets.lean",
+      "before": "df39200afbbdb77668ebdfc24ec0346ad9a066f4ac7e39ebe53e6175ec14e018",
+      "after": "1bc81cadc953bf0be530b5f2a6f64feec6a9543e0f0f61b663dc7372d8973e77"
+    },
+    {
+      "file": "RequestProject/LocalRefiner/Loads.lean",
+      "current_file": "RefinedAbsorption/LocalRefiner/Loads.lean",
+      "before": "6cf7b5abc1412cdcf38fe50154c8c5f644c5e8c1fca5b8d67df549b9b4283501",
+      "after": "a3165153c1ffd42c48c8006a69cfc305a75eb23edafb60493161601cc352df2a"
+    },
+    {
+      "file": "RequestProject/LocalRefiner/Native.lean",
+      "current_file": "RefinedAbsorption/LocalRefiner/Native.lean",
+      "before": "9198b351d6890589f599a339b4c74521da4f8a0a2586d6be63f74932c599e94a",
+      "after": "ab44b13c0a8ea4bb128b169d9202fda4f1868142909391664e65de3d6a2695b1"
+    },
+    {
+      "file": "RequestProject/LocalRefiner/OwnedChains.lean",
+      "current_file": "RefinedAbsorption/LocalRefiner/OwnedChains.lean",
+      "before": "2749a1cabef5141a95b9b22d363742ddc83a58f9558519546f71410c2e04d9e3",
+      "after": "36ccb6e97d59937aa0a29b9129ee96598f20820b3c8e8e1cd8762eefeaf78155"
+    },
+    {
+      "file": "RequestProject/LocalRefiner/Refiner.lean",
+      "current_file": "RefinedAbsorption/LocalRefiner/Refiner.lean",
+      "before": "02e49bd8e5e7187539dd4787c8471028ac5b7263e8e852a8b4e2428184ad5997",
+      "after": "1777060f4df13cf4d6bc755373b80f399cba71e40ee9ffd74f9b82b105842e91"
+    },
+    {
+      "file": "RequestProject/LocalRefiner/Segments.lean",
+      "current_file": "RefinedAbsorption/LocalRefiner/Segments.lean",
+      "before": "0c7cce34bdb7d0e0aa5271b02efd1b2d9dc2efbd5be69c7df207785a16f534d8",
+      "after": "572fa6cc3780468d5677389ecfc7c92b8597b7a26afe6a3f5f2243cf339570bb"
+    },
+    {
+      "file": "RequestProject/Multigraph/Existence.lean",
+      "current_file": "RefinedAbsorption/Multigraph/Existence.lean",
+      "before": "d116079fd4f1943987c625eaf00d78d27fb69ef9e286601c365304ab968f9b52",
+      "after": "641a01751bb5675ace00be1fb311d4ec18871faba0b5f302e32addc868aadcfa"
+    },
+    {
+      "file": "RequestProject/Multigraph/NibbleMulti.lean",
+      "current_file": "RefinedAbsorption/Multigraph/NibbleMulti.lean",
+      "before": "de0fa22c201274844bf867ee8a20901705d63ad06361bd440e8ca1d186647f1a",
+      "after": "73afb87c3a1d01004be12636497a44ed75f3f45076a7a3ebd71f60013fbf9262"
+    },
+    {
+      "file": "RequestProject/Multigraph/ReserveCoverMulti.lean",
+      "current_file": "RefinedAbsorption/Multigraph/ReserveCoverMulti.lean",
+      "before": "e65a647c14d15e9e2a8baf733dc1adb2057f78b9b8215ae3effbc36abbdb484a",
+      "after": "c1b043e2b0ee1707dcb48398603dbd42cebd17fa1c0536f82b9373a058d0d879"
+    },
+    {
+      "file": "RequestProject/Multigraph/StrongReserves.lean",
+      "current_file": "RefinedAbsorption/Multigraph/StrongReserves.lean",
+      "before": "8ee1c22c6d7de19fe4c41d9b2deb8f9d82136c5c5f7cc93ec8d16a4679f7164a",
+      "after": "dca40999b950c88ae5dda3411db5282a9426b8beb0b20ecc6b43c812c6f68725"
+    },
+    {
+      "file": "RequestProject/MultiRefiner/Basic.lean",
+      "current_file": "RefinedAbsorption/MultiRefiner/Basic.lean",
+      "before": "f7bae02a8ef30c3842584c162413e6d7b6cc3370a10d47453dae1e70fbb11593",
+      "after": "50c7cadd1e62f2066a94ea86dce239a511fe7e759278b0a97fff2e2fe9d813dc"
+    },
+    {
+      "file": "RequestProject/MultiRefiner/Chain.lean",
+      "current_file": "RefinedAbsorption/MultiRefiner/Chain.lean",
+      "before": "687bbcb2bebe5e60122f24dc8afdddc3f499d6c556f83d4cd0f33f5689194e8b",
+      "after": "37d46b6b0f944783206b7f84df568014f3f51c513d85ada648a281c3ce2acfd7"
+    },
+    {
+      "file": "RequestProject/MultiRefiner/FakeEdge.lean",
+      "current_file": "RefinedAbsorption/MultiRefiner/FakeEdge.lean",
+      "before": "b0029d7d2839433353b43d42dbb39d4835490815d6b69caed2715c6f0cc82c8b",
+      "after": "4a58d2c242de3983b0b4b070584a280965a7be47a4c24b76a2abfd74033e884f"
+    },
+    {
+      "file": "RequestProject/MultiRefiner/PieceDeg.lean",
+      "current_file": "RefinedAbsorption/MultiRefiner/PieceDeg.lean",
+      "before": "d99df521d7717eea37db95fb46e585a878bc968015630395d390bcea1e1b68a3",
+      "after": "d97bfcb9e156e1fc596fa3f366e572776b27dc9e66ae51f122bc666a37e96b62"
+    },
+    {
+      "file": "RequestProject/MultiRefiner/Pipeline.lean",
+      "current_file": "RefinedAbsorption/MultiRefiner/Pipeline.lean",
+      "before": "a3636913e3fef010c4fa37bbce7c48327a0a86f885cb766c88d0f107cb6fe9ec",
+      "after": "fa64319b1d4f8935566461ecb07aff5dcf502b309ff5cdbfab56054827d068a9"
+    },
+    {
+      "file": "RequestProject/MultiRefiner/Reduction.lean",
+      "current_file": "RefinedAbsorption/MultiRefiner/Reduction.lean",
+      "before": "b37e1234ea919deac51cd4ab9a7b67a52475917f3ae8d508cfcc3570345c4d89",
+      "after": "7388c1460567c6f7cda8c2c05293560d226e2e7919642beeec64f361fa3c1706"
+    },
+    {
+      "file": "RequestProject/MultiRefiner/Restrict.lean",
+      "current_file": "RefinedAbsorption/MultiRefiner/Restrict.lean",
+      "before": "34351859fca5c3487cf8d67ab8fd93c0f6fcfb559380b6ca28f611bcebc5c2c0",
+      "after": "6be79c5e3718e0d4705391692cbaa85c4dc79a0954b7f9249ce6686a321446c0"
+    },
+    {
+      "file": "RequestProject/Nibble/Bridge.lean",
+      "current_file": "RefinedAbsorption/Nibble/Bridge.lean",
+      "before": "edcd11bb28fddb9984ed36c25adca3d54b0c83e51169fd97ffd7aa356ab55e93",
+      "after": "8c10633ee6b5b22222dce85d73059e275d98e3472d6e7fe938cf0c684c4cb1c0"
+    },
+    {
+      "file": "RequestProject/Nibble/FiniteProb.lean",
+      "current_file": "RefinedAbsorption/Nibble/FiniteProb.lean",
+      "before": "0b860e1b4d6d4693bfcdeb81cb7beb996aa4b2a06e970748188e7433445d5bca",
+      "after": "a2da8a76897d14b8658961a9fae5c9bffd75c98ab7531ff61dca9ad58e599f47"
+    },
+    {
+      "file": "RequestProject/Nibble/Hyper.lean",
+      "current_file": "RefinedAbsorption/Nibble/Hyper.lean",
+      "before": "993e051521103da3df1f5f48a31b3dee236552ec1e3cb398f203411c28a65748",
+      "after": "970066a2c22d30af3093659881b83b12a5c2b755397876b2a5abe92c7fd6e157"
+    },
+    {
+      "file": "RequestProject/Nibble/Iterate.lean",
+      "current_file": "RefinedAbsorption/Nibble/Iterate.lean",
+      "before": "965bba8844d64a162ad5c3a2c33b156af3ee5ca4402b87e871a39cdddb49304d",
+      "after": "d6badefefc87b73086ea935464c80045954674b6bc4487a89bf21c15da5800f6"
+    },
+    {
+      "file": "RequestProject/Nibble/LLL.lean",
+      "current_file": "RefinedAbsorption/Nibble/LLL.lean",
+      "before": "d21a55b28757b41ff595043f12902a903fec8746f74b9d78e51f89b88c4fd14d",
+      "after": "c32e4e02f03963b1f0116e3c9f7e3ee07d2657fa5abdee2d1c6c622b6f18beb9"
+    },
+    {
+      "file": "RequestProject/Nibble/LocalIterate.lean",
+      "current_file": "RefinedAbsorption/Nibble/LocalIterate.lean",
+      "before": "53df2e46fa2b712211babc00e57099bc21fb6ce2ddc6b7d4199b6dad355b37fd",
+      "after": "f6ebf645508587714a3a2aa2f659e262d13276f91245b82ca557859fffda4aea"
+    },
+    {
+      "file": "RequestProject/Nibble/LocalMain.lean",
+      "current_file": "RefinedAbsorption/Nibble/LocalMain.lean",
+      "before": "1b29a0510dd88add9fd839d52a0a56aaa9a6a3f16df0a601f547d723a2ca6848",
+      "after": "da606d76c0271c4a2500adc759306234004bd13e5db722efe1774ec9e43148b4"
+    },
+    {
+      "file": "RequestProject/Nibble/LocalRound.lean",
+      "current_file": "RefinedAbsorption/Nibble/LocalRound.lean",
+      "before": "f4e8e76067eb6a75c9a8e1275adae35c9ef148a41cdc8b2c982b78b6639d1c45",
+      "after": "ed56d7ea92976c92f35ac86339a20fdab8ffd502d768beba8283a320059510a2"
+    },
+    {
+      "file": "RequestProject/Nibble/Main.lean",
+      "current_file": "RefinedAbsorption/Nibble/Main.lean",
+      "before": "96bb56405ac4b1494610128dba781641d16a57cb6ed05410afcfb57e80c83ba9",
+      "after": "8279c9ef3eb43ae521626ba7364529e83cb8a0b043e903afff601f4a7b3b76c9"
+    },
+    {
+      "file": "RequestProject/Nibble/Params.lean",
+      "current_file": "RefinedAbsorption/Nibble/Params.lean",
+      "before": "7f86e934c6e913ed7522883cd31dc52fa4d6b6932554436d39949a35b92d674b",
+      "after": "7785f6b75d75e8278b7ab40c528eab2b4ed5c97a429175ad44d63e750740176b"
+    },
+    {
+      "file": "RequestProject/Nibble/Round.lean",
+      "current_file": "RefinedAbsorption/Nibble/Round.lean",
+      "before": "c54c320e527b050168b27b7a13e9def97633f38cb7cd771457443d79f72fece1",
+      "after": "7b2d9c539899448f318aedb90679fd51d70a0792376b5ae1dcc13941f15abd92"
+    },
+    {
+      "file": "RequestProject/Nibble/RoundBounds.lean",
+      "current_file": "RefinedAbsorption/Nibble/RoundBounds.lean",
+      "before": "cbe36160fde0ec6b23e34fcba29bf6cf70b1a19bebc3d174ffddc9cf8f62ea6b",
+      "after": "7f338e0f31a1e39cf627a9aec61b4040b42166018af759dcfa3b72f80fc6629f"
+    },
+    {
+      "file": "RequestProject/Nibble/RoundProb.lean",
+      "current_file": "RefinedAbsorption/Nibble/RoundProb.lean",
+      "before": "8af2e2922c3a357cd406dd18d31d0e1b7b5a2ccc656601c00f0fd8a821c800f1",
+      "after": "d3731f08f3eae4c7a41b81c5da2340dd436e5a423d326ae9dc66be13e2ef6fd1"
+    },
+    {
+      "file": "RequestProject/Nibble/Waste.lean",
+      "current_file": "RefinedAbsorption/Nibble/Waste.lean",
+      "before": "441bf3111d71a5e68d6c5aea9c0e65ba5ffc11c0f4cacc803ad4468c0f422c84",
+      "after": "5e539484742fb3956c91b43d39504be62da30f00c208d9f8e049d2edb068a2ce"
+    },
+    {
+      "file": "RequestProject/OddGrid/Assemble.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Assemble.lean",
+      "before": "55a9ce47925e447e09afcb2cccdb119d78a1663798cfebc188ae64ee1d10352b",
+      "after": "14c2521fe2429525033849ab156dab7dd05ac33e6b50abe4b697d24e57e5fcf5"
+    },
+    {
+      "file": "RequestProject/OddGrid/Base.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Base.lean",
+      "before": "411745968dbb1948b4a0d1c178f3a29b2605c5b820e12ff96ba8f5fe9d12713f",
+      "after": "8bdfedb79947b1f97fd87877e946b8d9c468f5db814158001dadfec878b29243"
+    },
+    {
+      "file": "RequestProject/OddGrid/Basic.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Basic.lean",
+      "before": "ea655c51a7ca15820483f3cd2ab3196c8fd3479a3b5d82f086bbc0258480009d",
+      "after": "592a4d56d59faadcda37369f995e0eb7cd41f59a5ea2a09ac22e5e40fe608dd1"
+    },
+    {
+      "file": "RequestProject/OddGrid/Chain.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Chain.lean",
+      "before": "e5aded2d3ddd5878b8f0c5be4e1784f140c09b006452ac09d36b3cd7d38b5fff",
+      "after": "f12f270ef709ae37c7eeb37c7b07b2aea8d6a179f2ac457c71b069b2cb9bea28"
+    },
+    {
+      "file": "RequestProject/OddGrid/Compose.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Compose.lean",
+      "before": "538efcf1e84c8816d1db086277c6d738ce1930339b42daa698ab65c6e0f08357",
+      "after": "5211514e6eef7ec33fef6fab745800f7e3c6afaf48c3b126f7a43fd979e31cec"
+    },
+    {
+      "file": "RequestProject/OddGrid/Concat.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Concat.lean",
+      "before": "c7420baefe3b71216df42c52feef9ac4fcd23f8b02543e380eaa33112b137dba",
+      "after": "38453a20c806f34328abce06819992b371a85ca63a61e4a69e955be1f071c123"
+    },
+    {
+      "file": "RequestProject/OddGrid/Extra.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Extra.lean",
+      "before": "b36c8755acdbae9e86b8ee31b735f047818de975fd1aa12188aafdd0f7adcf9c",
+      "after": "aa3d6aca0601bf51315321bfcb52a2c485e2d371e802bb47dac1fe6afb3cba07"
+    },
+    {
+      "file": "RequestProject/OddGrid/Greedy.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Greedy.lean",
+      "before": "6e8a459cde1c881df7c2bf46ec17f1d4075674bd720ac578053e429122b44f58",
+      "after": "92459a920e6a53aa0d8da950b719e9253c1dc1d5d95e8f91afcbf706c87ee6de"
+    },
+    {
+      "file": "RequestProject/OddGrid/Grid.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Grid.lean",
+      "before": "86db26042d44f6541694653dab9c7932d4d7c5cc29d4575d04ee1500fdfa1871",
+      "after": "2ad8b55e980a72017a4a27299a51f9a7f51105af7df0c2fe8dbd60055ab9e14d"
+    },
+    {
+      "file": "RequestProject/OddGrid/Halve.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Halve.lean",
+      "before": "ab388dd66d61d46608d2a6c9989f2a2fdb43fa1ab08ca0b4f52e748906f474df",
+      "after": "05e0be28cfd1fab6a01d37e13b02faeb5438cf72782a01dc1d3f597be9f5b46b"
+    },
+    {
+      "file": "RequestProject/OddGrid/Merge.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Merge.lean",
+      "before": "fc278e8490fc714ae88c18f4f9c2ddce22aaa0847f9df0759c7fdd2887d50739",
+      "after": "7f2bab55b240c99ebd89e57163dab685fecd99ae16f97aab09d077f462f2fca1"
+    },
+    {
+      "file": "RequestProject/OddGrid/Native.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Native.lean",
+      "before": "8bbf9a4f92bfee08a1eefbd3241851c185ef7eb6842fd34086d244ca72d81aaa",
+      "after": "22c39afa7f4e7f31f415269e7b61bd911abbfafd33d85f26b94a20792c732fbc"
+    },
+    {
+      "file": "RequestProject/OddGrid/Phase.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Phase.lean",
+      "before": "1ff56c4c0f88a2c3be5610b04627dea0024db760d570d5e88e1bf9782bc6903f",
+      "after": "e489d2ac2738338f5b2056f72d004af9c0df492cb0c709b2744e13c6cf7bc9b9"
+    },
+    {
+      "file": "RequestProject/OddGrid/Plan.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Plan.lean",
+      "before": "3eb603cf51c5fe338a7ac542059a814cef8f1cb58f2e3ce5872a9ab3b3c7a2b1",
+      "after": "49ec8d8e5965c14729aa7df255cf72f9ba38bdc7d4da0279fcf6633b3d838a1c"
+    },
+    {
+      "file": "RequestProject/OddGrid/PlanDecomp.lean",
+      "current_file": "RefinedAbsorption/OddGrid/PlanDecomp.lean",
+      "before": "99f0fe9a4f12b8462747f20ee2d350939a3256aa69bb60de3f2813afeabc7070",
+      "after": "87a1ff9d2cb09714bb9de1c40d6b1f48e9ebc05da2049b83c6e1f8c0d8b62ff5"
+    },
+    {
+      "file": "RequestProject/OddGrid/PlanLoad.lean",
+      "current_file": "RefinedAbsorption/OddGrid/PlanLoad.lean",
+      "before": "c41550dbabb74bfef4e1acb24f2ffbc642a2e3b33b5826d4751e85d7923a6d98",
+      "after": "875aa317780878fe2434c7ae1d5a4f094c6bdb6412ca2a8ce4a29b642a4410d6"
+    },
+    {
+      "file": "RequestProject/OddGrid/PlanMult.lean",
+      "current_file": "RefinedAbsorption/OddGrid/PlanMult.lean",
+      "before": "7a6ac0964b6093b1b1ce61e8708852595f42db86be1e244f61e80460d295cf8c",
+      "after": "eb31d500b560188266bd9a142b675a4be49b13906fd20de04473a9308d7c4005"
+    },
+    {
+      "file": "RequestProject/OddGrid/PlanStrong.lean",
+      "current_file": "RefinedAbsorption/OddGrid/PlanStrong.lean",
+      "before": "acb52aacdd21552486f3136d8c70a80b172bb9b1f60112b25c01f66d82dd8c49",
+      "after": "246f9678414880a5f6407d8d528fa4890b1857c4c8d2e340fbc96bc6ae4bf230"
+    },
+    {
+      "file": "RequestProject/OddGrid/Stage.lean",
+      "current_file": "RefinedAbsorption/OddGrid/Stage.lean",
+      "before": "7aea6b2e6befc30588db269a4666a1ba76cd2c199ba1dbbe91cdf50ac7615818",
+      "after": "a10893109222b385ab8fd1da4fddff7e36d38568916b381922cfe626b553d6ea"
+    },
+    {
+      "file": "RequestProject/OddGrid/StageDiv.lean",
+      "current_file": "RefinedAbsorption/OddGrid/StageDiv.lean",
+      "before": "efe6d95ea2377bb4b7ff562a323a675504c7a67801e6f395072d48714fb755d4",
+      "after": "d27e5fc68afc0cb8341737a7b6be7f4f331db1509bdcd2618dcc14b311c5b26a"
+    },
+    {
+      "file": "RequestProject/OddGrid/XStage.lean",
+      "current_file": "RefinedAbsorption/OddGrid/XStage.lean",
+      "before": "2ccc82f0aed667baee178b9f95eb65b676bf433342d080b2e65a0ded003a31a9",
+      "after": "c612ebfadb6a87087dc20bfd578f9ad5c93ca242fa77c99f7c1b65db23ea64d2"
+    },
+    {
+      "file": "RequestProject/Original2024/Core.lean",
+      "current_file": "RefinedAbsorption/Original2024/Core.lean",
+      "before": "ea0b72936de8a3b2acbdc54b331db3cf3471fd0635def2df428484d6569d7311",
+      "after": "12bf95de3d5c7d529303c33b0564aee3e8a4602fe32b512dda674f7117a79384"
+    },
+    {
+      "file": "RequestProject/Original2024/Corollaries.lean",
+      "current_file": "RefinedAbsorption/Original2024/Corollaries.lean",
+      "before": "afa86fb4670a550e0d010511d1ee1a974341e1ea02d84d0b3c209df989a2c361",
+      "after": "139c524743d4215ea59dccfe47db51dac5d9f8f8fa428329197fb908d1448e88"
+    },
+    {
+      "file": "RequestProject/Original2024/Defs.lean",
+      "current_file": "RefinedAbsorption/Original2024/Defs.lean",
+      "before": "7d5eecde1c3a28b574a68539c4a8750cfcc04d9c0146bfa2bb3f48df180e4404",
+      "after": "b680176031a73bec7ebf5d4100747c5544371e7f43c3014d025e032ca8eea38f"
+    },
+    {
+      "file": "RequestProject/Original2024/Final.lean",
+      "current_file": "RefinedAbsorption/Original2024/Final.lean",
+      "before": "553e90443be984540b241ee2cf35c3322fd64a86493726c219748da41ea79df3",
+      "after": "604593d85b1ed265d3836c96505e6d018290bddb4c25e2fd0f68d006be390a80"
+    },
+    {
+      "file": "RequestProject/Original2024/Flat.lean",
+      "current_file": "RefinedAbsorption/Original2024/Flat.lean",
+      "before": "16af8f57ab71bfc147208494cf3de76d1f951263a3f2e5bcfbe44fbd8a568400",
+      "after": "9ca9f8da6f68d12073d28bddc0397ce64235defb09716d77d7cb6883268f6a9a"
+    },
+    {
+      "file": "RequestProject/Original2024/FlatChain.lean",
+      "current_file": "RefinedAbsorption/Original2024/FlatChain.lean",
+      "before": "d31a0434907b602604860146441d74330c646d62debbbb7c73ceb7893b60896e",
+      "after": "a01931a97dd5837a4002206912df06a2d6e34547d9ebab1080c47ca552103413"
+    },
+    {
+      "file": "RequestProject/Original2024/FlatOne.lean",
+      "current_file": "RefinedAbsorption/Original2024/FlatOne.lean",
+      "before": "b79aaf088e5db3fca59bd0c326078a9f2f369c514ac634f3a8590d22ac13f949",
+      "after": "9da8fc61c445c4b69486ca2f669aa6326d10f562854c6ce6176fce18c7d0b430"
+    },
+    {
+      "file": "RequestProject/Original2024/Host.lean",
+      "current_file": "RefinedAbsorption/Original2024/Host.lean",
+      "before": "ace863901e28c633bc63fef554402cbc7af6517bb2569e50f5077ed52ee85a0f",
+      "after": "ebe40600dfdc188ec657cc590de66cb26f3a8d0eb436aa25f9d1c3c93cc3b13a"
+    },
+    {
+      "file": "RequestProject/Original2024/HostAssembly.lean",
+      "current_file": "RefinedAbsorption/Original2024/HostAssembly.lean",
+      "before": "a16d293b5b5a9d10ea1e26fc83c2db9fc49188a7f991a17938a9e374379beeff",
+      "after": "b38ddf5d33aa5df3f52e733d0d767233b14ab15af653505d7be3b66ac860f4f3"
+    },
+    {
+      "file": "RequestProject/Original2024/HostOne.lean",
+      "current_file": "RefinedAbsorption/Original2024/HostOne.lean",
+      "before": "c0345e174895a9d286c3d20ab1a0ca87b38ec57172e424144af1a0a339722e8a",
+      "after": "a0f856c014164d08b1bc77797c8a047490d89b0fad6c15a1e1d110498cefc738"
+    },
+    {
+      "file": "RequestProject/Original2024/HostReduction.lean",
+      "current_file": "RefinedAbsorption/Original2024/HostReduction.lean",
+      "before": "d3745a7c8a863973e5ab07e42e0398a3a521a554b3ddba69ae5ec39f8b35c2f3",
+      "after": "e08cbc9d7cb2746048c8aa8954acad4f5db2b7d43450f4c1cacadc676520172e"
+    },
+    {
+      "file": "RequestProject/Original2024/MinDegree.lean",
+      "current_file": "RefinedAbsorption/Original2024/MinDegree.lean",
+      "before": "0dcbd62fb7cb580dec7c79b1409d9a57ba52860eec6ba41e86eb5f9ac2407349",
+      "after": "bb1ad9cdb3490728a3173ece9ee39f864bcce2c7c0bfa3ee817dab7c56210899"
+    },
+    {
+      "file": "RequestProject/Original2024/RelReserves.lean",
+      "current_file": "RefinedAbsorption/Original2024/RelReserves.lean",
+      "before": "7a2c854abff772c7892d5724fdcbde5cdc349821e9e70907498a1dca6f622438",
+      "after": "a6acb42996a61b33efcde625b9fb1a00cf2a58eb5c65ae972f79b34a5e567f6d"
+    },
+    {
+      "file": "RequestProject/Pending/Closing.lean",
+      "current_file": "RefinedAbsorption/Pending/Closing.lean",
+      "before": "e22d7ed9539dcb021e1e8d3f57a95a9ae873da3c0ac93dc6f433eaefec8cc594",
+      "after": "93134f26ae1562af36d592b748f60c842aa01353aeb5c457a8d847bc09f05e61"
+    },
+    {
+      "file": "RequestProject/Pending/Core28.lean",
+      "current_file": "RefinedAbsorption/Pending/Core28.lean",
+      "before": "6ec4e93d05a062a7da51d5cd997babb0a63b9e46ada8138712e2e211bad484ae",
+      "after": "297bcb829a9be64d74355c7c3d934a2e2f406980f74448dfb38d4e8399e5752f"
+    },
+    {
+      "file": "RequestProject/Pending/Danger.lean",
+      "current_file": "RefinedAbsorption/Pending/Danger.lean",
+      "before": "f7f5fe1c17d09829c2f82841cbf00cc253dfd8f930a6b81feb57f4423bf17a79",
+      "after": "228ad3e4bbc8b8b7f1637239706b0da3c31296ed0832a3145eb571c678921338"
+    },
+    {
+      "file": "RequestProject/Pending/MultiNibble.lean",
+      "current_file": "RefinedAbsorption/Pending/MultiNibble.lean",
+      "before": "2014bf2f323a039c68ada7cb814a8b25c7c93eba074107d3accd9a996ddd0136",
+      "after": "ab4c05c214420f9419f6b9092bfc4117641f9ffb3351abef482dded463a837f4"
+    },
+    {
+      "file": "RequestProject/Pending/Regularize.lean",
+      "current_file": "RefinedAbsorption/Pending/Regularize.lean",
+      "before": "d3b1c8d55534e1e8cfa26b249a009c7664d4f48a178bc05da0185dbc856715fe",
+      "after": "4552508e7e86fdf2aabb3c854d3764ca6583d167d175412524c56ea5b4a62ed1"
+    },
+    {
+      "file": "RequestProject/Pending/RootLight.lean",
+      "current_file": "RefinedAbsorption/Pending/RootLight.lean",
+      "before": "23f2242bb30e926b3f4d1a071073059c682988335ca94dcd5384ff99941129dc",
+      "after": "3ba3d02368114be45375091fb82e5ae6456a0b681a30b99a0f2fedc112faab4f"
+    },
+    {
+      "file": "RequestProject/Pending/SafeAbsorbers.lean",
+      "current_file": "RefinedAbsorption/Pending/SafeAbsorbers.lean",
+      "before": "45f090ab6eee3c65efa3f960948cb84701fab38677d809de603f3eb678905bec",
+      "after": "cf4cde28a6692b84f9f322ba8c78dab91d6c682aa0af4ab20c49c80466a423f8"
+    },
+    {
+      "file": "RequestProject/Pending/SafeEmbed.lean",
+      "current_file": "RefinedAbsorption/Pending/SafeEmbed.lean",
+      "before": "1968b2e48876546bf2aacc16f9b81970c3b0b04b475b40fa654f6e25d51ab47c",
+      "after": "d4dc2add84ea2089f7a4b82e3f2d4c3812f164ef69d896ad643fe6598b8f42ac"
+    },
+    {
+      "file": "RequestProject/Pending/SafeHost.lean",
+      "current_file": "RefinedAbsorption/Pending/SafeHost.lean",
+      "before": "45261590e114196f9f7faccd3ac3795feff451f29d911e88665107811b0edd09",
+      "after": "29c810ecf6638aa320d67018e9b68d965a37e1239a5acda64ed5d4d4f292fa4c"
+    },
+    {
+      "file": "RequestProject/Pending/SafeInner.lean",
+      "current_file": "RefinedAbsorption/Pending/SafeInner.lean",
+      "before": "cf874d76d40aeecdfdbed615ee6f9876a0b33fd5744e1be72b81cc4ceb5ca1ee",
+      "after": "4b81ff4d234a35133bebe790f48e6626fe4ad6af14aee19f763230a5a6e9ab80"
+    },
+    {
+      "file": "RequestProject/Pending/SafeNibble.lean",
+      "current_file": "RefinedAbsorption/Pending/SafeNibble.lean",
+      "before": "f8559bfab8cdd37a3e14ae7214b626d1c19c5aa995b9e5169a508439b94404ad",
+      "after": "5040e2aedb41cfa0dda1c52479f9c89751afe063497724eea1e87cbd8c81c55b"
+    },
+    {
+      "file": "RequestProject/Pending/Theorem28.lean",
+      "current_file": "RefinedAbsorption/Pending/Theorem28.lean",
+      "before": "4a538dee4acfe50fd480ad45621b36a261fa0c2e0349582e2be49f08da5aaf2a",
+      "after": "d052cb0c39cdb079fd57d620881873fb8fa1410d2355205dd7cd565473925c12"
+    },
+    {
+      "file": "RequestProject/Pending/Theorem62.lean",
+      "current_file": "RefinedAbsorption/Pending/Theorem62.lean",
+      "before": "0212c8b9be753c13a814ad98e595f591d31cbd4447f13e78c2beef778c13ed4f",
+      "after": "f183bcb6d1ff634fc5baa7c525e0d95e18122948d77ecf437505d45531a453ac"
+    },
+    {
+      "file": "RequestProject/Pending/Theorem63.lean",
+      "current_file": "RefinedAbsorption/Pending/Theorem63.lean",
+      "before": "0174d9c7e4b4783496bfb38313e24f839d5d5f23028771bb1b2246838179cffd",
+      "after": "cc8421c38cbd03a02b59905ea0de95888a21d945637583d4d7c2c5643d4997fb"
+    },
+    {
+      "file": "RequestProject/Pending/Theorem63Final.lean",
+      "current_file": "RefinedAbsorption/Pending/Theorem63Final.lean",
+      "before": "3c9b459ac6a9eaed1099e6debf0b94a33e23343a3f768f99066552804c4f815b",
+      "after": "e9f8d8e6c889f2ca001f8d81d33e898644d61e8db333ff9a26d7b8505facc600"
+    },
+    {
+      "file": "RequestProject/Pending/Theorem63One.lean",
+      "current_file": "RefinedAbsorption/Pending/Theorem63One.lean",
+      "before": "2889753f3d48bd907b62e8fb088c2451cfa2b24bf64a065eb4c7828d4ffbff93",
+      "after": "c72d98b8f411e2b1be5103dd6abf7ba27f1487e4502e50282df405640df49672"
+    },
+    {
+      "file": "RequestProject/Placement/Absorbers.lean",
+      "current_file": "RefinedAbsorption/Placement/Absorbers.lean",
+      "before": "258a271751b9f32596dbc7b3c50e3550efafee08795be653241a416d758cb2d7",
+      "after": "e05fc7a8379da718eeef0efcce3f026518ccfa1f6bdd3bf8685cb2d61b662a73"
+    },
+    {
+      "file": "RequestProject/Placement/Assembly.lean",
+      "current_file": "RefinedAbsorption/Placement/Assembly.lean",
+      "before": "3a6d08f02dbbcc9782bf8852d4734a552704db877109cafe484a11799e8efc18",
+      "after": "f5c256fe5ba1067a71c5baa0c7fc9ece2864ad443c121fd34d3fa900ba8a2943"
+    },
+    {
+      "file": "RequestProject/Placement/Balance.lean",
+      "current_file": "RefinedAbsorption/Placement/Balance.lean",
+      "before": "fdaa35cb1ddf0314321c0276253976a8d07c8f96eb8cc117949acc6b00587895",
+      "after": "41d6fbf8d9be95fd03d9f38c468cf293a9244b266eec3fe2380828f0efe4ff60"
+    },
+    {
+      "file": "RequestProject/Placement/ChainLevels.lean",
+      "current_file": "RefinedAbsorption/Placement/ChainLevels.lean",
+      "before": "17425ea6b588a06471813f9d74a9f39ca7c487fbe22376a0cc3c4318f66056d0",
+      "after": "eead5b6710c4bc25d9557f4ecdbde40ed43fafa18316650663524f961b7a414e"
+    },
+    {
+      "file": "RequestProject/Placement/ChainLevelsE.lean",
+      "current_file": "RefinedAbsorption/Placement/ChainLevelsE.lean",
+      "before": "3d91ec43fffabc386147333f2e2c0e8698b544423acf377d4a8211cd1c9de78b",
+      "after": "c2c356d275d9ca2dde38071bf6a5433418213ac22c4e933b435507717e17c6ed"
+    },
+    {
+      "file": "RequestProject/Placement/Cluster.lean",
+      "current_file": "RefinedAbsorption/Placement/Cluster.lean",
+      "before": "0d9e86c831f73c9dc674da0f9c1ad8a410ba324040e48808421b419240a88595",
+      "after": "4a6beae6bd3c46a7f1964435d6ad4e190dadb6bb08b5d62015552514b6472e7a"
+    },
+    {
+      "file": "RequestProject/Placement/ClusterInner.lean",
+      "current_file": "RefinedAbsorption/Placement/ClusterInner.lean",
+      "before": "1c2a0bc44ffb0f4b89ccb0ecc2d5e4a8485903976b77e429b51c2ed586204f47",
+      "after": "f6d2f0c947e54dd46d73615c94a12f8e9e94d99c82ac967d9b4ae58137d43b93"
+    },
+    {
+      "file": "RequestProject/Placement/Counting.lean",
+      "current_file": "RefinedAbsorption/Placement/Counting.lean",
+      "before": "9b825d7f4de2b0eba47d185b9cb953bbf6bac4b30dca524ad96d268bb302aae7",
+      "after": "fcf6a85a424d9fc4ac3f4e529e25b78bf2ac578c440c1d325c83c864c2992d33"
+    },
+    {
+      "file": "RequestProject/Placement/Defs.lean",
+      "current_file": "RefinedAbsorption/Placement/Defs.lean",
+      "before": "90a656379cf3d4079aa1ec07441552e04ce08683e6713f9dd325bc58a6765bf1",
+      "after": "4c9b1266dc7525c63d73e97b841e28b7b1260e97f866c9f7fa2099199f0c3c27"
+    },
+    {
+      "file": "RequestProject/Placement/Existence.lean",
+      "current_file": "RefinedAbsorption/Placement/Existence.lean",
+      "before": "81a2d4d71ff2b0d58cff36b822a099c0233dadb493e5f9b4bb11ebf641ebb08b",
+      "after": "3236b866d133cfba2f149cd021fbc91eacf5ee382ef06e0059212ce09885d993"
+    },
+    {
+      "file": "RequestProject/Placement/FakeGadget.lean",
+      "current_file": "RefinedAbsorption/Placement/FakeGadget.lean",
+      "before": "c6836df9aa5d8ac111f6b541cffe054ee6e37a9787c99db4b85ce43cc396cfc3",
+      "after": "6a4f0ac36f6b728baf36776c29a23d8848c0ea855a2003e04845f4f8ef8b9c97"
+    },
+    {
+      "file": "RequestProject/Placement/ImageRefiner.lean",
+      "current_file": "RefinedAbsorption/Placement/ImageRefiner.lean",
+      "before": "36e69e630670dc12d97087d461e14750682f676de7179120256cc59da3993f78",
+      "after": "4b4970018a250bcebda45731d17f3d3a5be859f0bc5c541a386ed657aa42768a"
+    },
+    {
+      "file": "RequestProject/Placement/Inner.lean",
+      "current_file": "RefinedAbsorption/Placement/Inner.lean",
+      "before": "fc256cc19b37c60a8aead85324f3a48c85691ac98ecca690726c06fdcc3cb2ab",
+      "after": "701948c200345226ae46061e3aa956ebce0451dfcbae0b99e1b4ba9df60405f9"
+    },
+    {
+      "file": "RequestProject/Placement/Interface.lean",
+      "current_file": "RefinedAbsorption/Placement/Interface.lean",
+      "before": "bf3c3712e86e1a65894066e70be6f7fda3cad90e3a74c4932cd1d5bb1c887707",
+      "after": "a14489c933ba060066622851f8bbd7ebf15948842617578be8b1370234205490"
+    },
+    {
+      "file": "RequestProject/Placement/LastFlat.lean",
+      "current_file": "RefinedAbsorption/Placement/LastFlat.lean",
+      "before": "4e70ebb85360e92e90a615f84888fd41fd4a19d1e0c51ebaf06973d9cae6ca17",
+      "after": "51a226c05483ae4179c7db95983e09684542e0aeb076edd6262ea4c87459dcc2"
+    },
+    {
+      "file": "RequestProject/Placement/Lemma52.lean",
+      "current_file": "RefinedAbsorption/Placement/Lemma52.lean",
+      "before": "51eb6c32950c22be9d1dec9b5dbd66e3aa5dc9e26a9017e5bd0d26c9c8943104",
+      "after": "01f07ade84ca0fbea10dc4a14836130a3f463c5949b2277c3e42e5ff9fe8e6f7"
+    },
+    {
+      "file": "RequestProject/Placement/MultiEmbed.lean",
+      "current_file": "RefinedAbsorption/Placement/MultiEmbed.lean",
+      "before": "f51f0ae4ab7c3a9023070a1de5503ec2cafca773d3bd63e52d1c6f5a35fef58c",
+      "after": "d489c8e77af07e9867f83cee29681b5d6f0fcf5a15cc0c9c5d4a1d8ef66e9795"
+    },
+    {
+      "file": "RequestProject/Placement/PlacedDeg.lean",
+      "current_file": "RefinedAbsorption/Placement/PlacedDeg.lean",
+      "before": "620fa1e78232dcddb2fe671c1729100fcaa2e2f476842f878a08634bf2bdcbf6",
+      "after": "e41cd7b9a4066d46c91b774f771f7fbbbe54b86fa849b2a9ca5bc1b877e2a964"
+    },
+    {
+      "file": "RequestProject/Placement/PlacedFlat.lean",
+      "current_file": "RefinedAbsorption/Placement/PlacedFlat.lean",
+      "before": "4bbbd9e4d30e14e3be73e77005877f9860236275a51a7ba7f7decbef642f0e2b",
+      "after": "5d6e5b4f865e63b971c73d1ddb35f0d29badafb12015a36914037166c7e3dee4"
+    },
+    {
+      "file": "RequestProject/Placement/Reduction.lean",
+      "current_file": "RefinedAbsorption/Placement/Reduction.lean",
+      "before": "ca06d5985d0b5748913bebb91599c9564b2d0e331388079de13f0d30b8e69d9b",
+      "after": "f50a4cdd95157709675aa750f85d4c55868cba3f955d6088db63fb2dc715b369"
+    },
+    {
+      "file": "RequestProject/Placement/ReserveInner.lean",
+      "current_file": "RefinedAbsorption/Placement/ReserveInner.lean",
+      "before": "a955f9390e9e5f07b45a2bed937e3c22a2b9ad51a5a6d9568ab62180c921fb2d",
+      "after": "73bcdd319649e061fc3c28e06fe5d733c2362c7f889cb6585a700fc8548379bc"
+    },
+    {
+      "file": "RequestProject/Placement/ReserveLemma52.lean",
+      "current_file": "RefinedAbsorption/Placement/ReserveLemma52.lean",
+      "before": "37cfa73deb1608ea90c67be90e6f8742b8caba49e8687b047d0c71ea0785728a",
+      "after": "daa01bcc2b399c9fd1b77d2fd5b12e088de0037ee5e93b22e6aad7b6b5ae5e3c"
+    },
+    {
+      "file": "RequestProject/RefineDown/Iterate.lean",
+      "current_file": "RefinedAbsorption/RefineDown/Iterate.lean",
+      "before": "288b22697feb76119c45eba7410a5735bf62904c8429ad15091656834cce66c3",
+      "after": "9976bd0eb689ec78b55be693610f3dc4826ea8215758c588473fa53330df736f"
+    },
+    {
+      "file": "RequestProject/RefineDown/MultiRound.lean",
+      "current_file": "RefinedAbsorption/RefineDown/MultiRound.lean",
+      "before": "a0284efecf4a47c080e3c4f681f02bc797884decbac681c9122ea0f5ceed7434",
+      "after": "80ac988e01513490a3b646e757a5c4862eb0926669206f4adf53375b965e020e"
+    },
+    {
+      "file": "RequestProject/RefineDown/ReserveRound.lean",
+      "current_file": "RefinedAbsorption/RefineDown/ReserveRound.lean",
+      "before": "f1a41222dc42072cee0cd1b49c082af9ccd63693d6b077ad313ce35d0f412681",
+      "after": "6efd12cd2dbc2da00c884719197381610b39f735e97ececece5748d3c65b85be"
+    },
+    {
+      "file": "RequestProject/RefineDown/Round.lean",
+      "current_file": "RefinedAbsorption/RefineDown/Round.lean",
+      "before": "72b3ae62f592838ea3128b49c019ae9b8d87ba8d4219c5580bbac14a81d55d19",
+      "after": "2e24b4a52f37fe0ca624e0ed593ec9729c94bd3a6c643e774cfe69ac460eba25"
+    },
+    {
+      "file": "RequestProject/RefineDown/RoundGadget.lean",
+      "current_file": "RefinedAbsorption/RefineDown/RoundGadget.lean",
+      "before": "71b1d7f68018bdfdf6f3745ac2d9583286abeb4d08a0d2e4dab76e57ba5599f1",
+      "after": "5a766e6842d08992713443055ddb67feaeb7566460213cd2d9780dd4b506f8b9"
+    },
+    {
+      "file": "RequestProject/RefineDown/RoundGadgetGen.lean",
+      "current_file": "RefinedAbsorption/RefineDown/RoundGadgetGen.lean",
+      "before": "38ae544b102725b155dda0a0ac5d5052edd3409dc38a4860799ec33ef90975f6",
+      "after": "054332e44d34ac6531b5d38707d8986da525b5ae21c02881b55e7ae7640c9741"
+    },
+    {
+      "file": "RequestProject/RefineDown/Step.lean",
+      "current_file": "RefinedAbsorption/RefineDown/Step.lean",
+      "before": "414c35daa553f74740e5ae6f46f122282a911d8200881d037afa523f9106e4d9",
+      "after": "110a3b347c0527c8fe591b386e93967ca3e4ac7475a983ebde84dc7cd229c219"
+    },
+    {
+      "file": "RequestProject/RefineDown/Transport.lean",
+      "current_file": "RefinedAbsorption/RefineDown/Transport.lean",
+      "before": "4d9f52a54513e0ead9effea5804677b0a030a9a81934514a4d36d613d9c72443",
+      "after": "c71377cb3e3b6f744ca5e2fe3f7bdd30a1f0ca458d714b428c051809e0168d16"
+    },
+    {
+      "file": "RequestProject/RefinerOne/Chain.lean",
+      "current_file": "RefinedAbsorption/RefinerOne/Chain.lean",
+      "before": "985d020554d314cf28a72bc4979d498067a4bb19735b311ffc5ca3ee18435fc7",
+      "after": "bc46157b5c47214cac62e7d3d7e052834711cd602fcd983ee62d2e92c791fe95"
+    },
+    {
+      "file": "RequestProject/RefinerOne/Existence.lean",
+      "current_file": "RefinedAbsorption/RefinerOne/Existence.lean",
+      "before": "345ac9dbb6adc49aea02b612f788695d751c0c3f414c5407bac06687edc0da57",
+      "after": "6b146cb7151fad79c5172fb73314f66f19cd9fc0fde283465fc2cc651004dd21"
+    },
+    {
+      "file": "RequestProject/RefinerOne/Instance.lean",
+      "current_file": "RefinedAbsorption/RefinerOne/Instance.lean",
+      "before": "0f57ec87d05348b0264cd425c24ff18d08f72883014c525e1268e59f67c7d9ae",
+      "after": "bbfb8489be0a3ff10ff6d17f1208b5b09ca6dc8a198fd2cf9163ac5588151fa8"
+    },
+    {
+      "file": "RequestProject/RefinerOne/Transfer.lean",
+      "current_file": "RefinedAbsorption/RefinerOne/Transfer.lean",
+      "before": "97283396af8e9d7e60a841d46b1bf5f18a5baa0cc9cf4668905c2016e73792f1",
+      "after": "eb41b4d2cd8b3071083d101facaadf0d33af4eb24be941ca77d7ffbcbe8a8692"
+    },
+    {
+      "file": "RequestProject/Sharp/Better.lean",
+      "current_file": "RefinedAbsorption/Sharp/Better.lean",
+      "before": "969e4d3da0e5ef2141476872fd7d6dbd9b162b1f696e071330b211602afaacbe",
+      "after": "0ff1b2a0d28ec5379200febce527fc2b0852640d528963dacf47b0bbd5a082f5"
+    },
+    {
+      "file": "RequestProject/Sharp/CliqueRefiner.lean",
+      "current_file": "RefinedAbsorption/Sharp/CliqueRefiner.lean",
+      "before": "bca3d385b5245ed68a55f0865c81b9ba6c33d4a44f1c2c144d179cc4b19b861c",
+      "after": "c224bd483cae013648b8244af830d404bf7131495f92e9544f2152a2a73bb889"
+    },
+    {
+      "file": "RequestProject/Sharp/Descent.lean",
+      "current_file": "RefinedAbsorption/Sharp/Descent.lean",
+      "before": "37285d58269c9eab76c0664571bbb57a24887f2b6a48f2cf443c7486c7a8c6e1",
+      "after": "628b71447929c2aadcb49f2b76123e697f11a22a048af4bc6b5c3ebc999f3fe9"
+    },
+    {
+      "file": "RequestProject/Sharp/Partition.lean",
+      "current_file": "RefinedAbsorption/Sharp/Partition.lean",
+      "before": "557d28307e28cbf27679250a08f078e09803809712be1e956728fec3e00033d2",
+      "after": "5993bac3c2930d251cad27186ee13423f41865409f3b4497e7495e61315335a2"
+    },
+    {
+      "file": "RequestProject/Sharp/SparsArith.lean",
+      "current_file": "RefinedAbsorption/Sharp/SparsArith.lean",
+      "before": "2985972c766556e05fe076e12095d7085096092bcea8f29a80963b74ddac321b",
+      "after": "7d624c83470a714310752f4863afe5d3c4435849dd90e5ac4398bd818aa54772"
+    },
+    {
+      "file": "RequestProject/Sharp/SparsBuild.lean",
+      "current_file": "RefinedAbsorption/Sharp/SparsBuild.lean",
+      "before": "de19c8fdb9b71fa77b62e2ae5f561da930faf5f649c5d7a2512f529ed2f461d6",
+      "after": "0b8617cb5223739a600168ac9cab2115adc11e53e99c33a6294146385929b0c7"
+    },
+    {
+      "file": "RequestProject/Sharp/SparsCount.lean",
+      "current_file": "RefinedAbsorption/Sharp/SparsCount.lean",
+      "before": "72f818ecbd9d52e85fd8bb6cad3146b322a299961208ac47f9985800ea3c5dfa",
+      "after": "93627fd522e8fac25443558c175c9a2c876944426a775f4b98b8f5d653c7455a"
+    },
+    {
+      "file": "RequestProject/Sharp/Sparsify.lean",
+      "current_file": "RefinedAbsorption/Sharp/Sparsify.lean",
+      "before": "e66a1be721716f170e3f0f822ba1a65fe3b700d3639155ef00fac465246f6577",
+      "after": "d7e005da9d50e4f2990ae4ec88b28b9142ad74c039ba3d5abf608b9f13e797f0"
+    },
+    {
+      "file": "RequestProject/Sharp/Special.lean",
+      "current_file": "RefinedAbsorption/Sharp/Special.lean",
+      "before": "f29337cc9f5edd2c20a96500b6b6229dc4b5295c7da9787132d333f52f76064d",
+      "after": "c343d88fe4c0963c0cbf13f36c6d1bad3412e81b53a676220de88e09b21439ee"
+    },
+    {
+      "file": "RequestProject/SparseChain/FlatEmbedS.lean",
+      "current_file": "RefinedAbsorption/SparseChain/FlatEmbedS.lean",
+      "before": "e08ebd6a381cfccfcee8869d30e5117fe780ab0e55b9fafd722a37dd89b7a1f4",
+      "after": "65f43e1104784ce20142dcc710e361d7a7cf4421cae32764a610362500996a27"
+    },
+    {
+      "file": "RequestProject/SparseChain/Levels.lean",
+      "current_file": "RefinedAbsorption/SparseChain/Levels.lean",
+      "before": "91777c6a1a32791d14af4269cfef2a3e9c3b9767f2ea2a5297b697cf22508528",
+      "after": "3524e813e35f5837afd1cb197f46c48c7855bde0923822ca54f9cb66c67c3867"
+    },
+    {
+      "file": "RequestProject/SparseChain/StageS.lean",
+      "current_file": "RefinedAbsorption/SparseChain/StageS.lean",
+      "before": "5e26b05f3b436ad2ad0757676a1fbd002bc7bc8a241e454ce8cb6e274051bd9c",
+      "after": "e9633627bce4db8bcfeb704b7d8e7a83febcae6489a1ca55b0be59399c9849b5"
+    },
+    {
+      "file": "RequestProject/SparseChain/ThreeGraphs.lean",
+      "current_file": "RefinedAbsorption/SparseChain/ThreeGraphs.lean",
+      "before": "f59f10c76fb0f70de3e2de31d85225466acd8e740d04df23b9eb5312a64ae532",
+      "after": "b719905aab1b523e53d6298e84658e7828d76f80f0037e1c71013fd208ed955f"
+    },
+    {
+      "file": "RequestProject/SparseChain/WindowS.lean",
+      "current_file": "RefinedAbsorption/SparseChain/WindowS.lean",
+      "before": "79315328e8cdbc4036f38c065ec5cbf8733407bce81eb40b1cff60b382c26369",
+      "after": "586f7c0895edfeef683287b404a03af570c4c810d6cb080a0d2c3a6a31ee2bf1"
+    },
+    {
+      "file": "RequestProject/Window/Descent.lean",
+      "current_file": "RefinedAbsorption/Window/Descent.lean",
+      "before": "79492ea12101453405553d685ea530942cb84d8e149a9dcd74903c95c5f4dd19",
+      "after": "23caba6b4e5d06a6300b5f5a6657f153323d963b168866977c90739d9d342e4e"
+    },
+    {
+      "file": "RequestProject/Window/Linear.lean",
+      "current_file": "RefinedAbsorption/Window/Linear.lean",
+      "before": "b76eaa5b5c712a21a432ef4f49a9424741b704d15c8518c512e1648fc358a35d",
+      "after": "1b79ce2a977ce3ebf2f9a9ccf4f9fe29e1bc2b94622b6bb19fb75e03e0ce02ce"
+    },
+    {
+      "file": "RequestProject/Window/Native.lean",
+      "current_file": "RefinedAbsorption/Window/Native.lean",
+      "before": "9122dce536f875a2226229c59f3d559ce08257fff89967bd4c84b2382e8f2999",
+      "after": "0b940fff303fb4855d8ad9c9a209206fd7045e4e417ae33f349553c93777c46b"
+    }
+  ],
+  "signature_text_differences": [],
+  "active_flags": [],
+  "signature_audit_scope": "Textual declaration-header comparison, not cross-version kernel equivalence."
+}

@@ -1,0 +1,9 @@
+--- original/RequestProject/LocalRefiner/Segments.lean
++++ current/RefinedAbsorption/LocalRefiner/Segments.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.MultiRefiner.Basic
++public import RefinedAbsorption.MultiRefiner.Basic
+ 
+ /-!
+ # Labels made of bundles of parallel copies

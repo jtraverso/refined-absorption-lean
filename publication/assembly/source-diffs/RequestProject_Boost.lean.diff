@@ -1,0 +1,13 @@
+--- original/RequestProject/Boost.lean
++++ current/RefinedAbsorption/Boost.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.Statements
+-public import RequestProject.BeckFiala
+-public import RequestProject.Gadget
++public import RefinedAbsorption.Statements
++public import RefinedAbsorption.BeckFiala
++public import RefinedAbsorption.Gadget
+ 
+ /-!
+ # Proof of the boost lemma (Lemma 2.2)

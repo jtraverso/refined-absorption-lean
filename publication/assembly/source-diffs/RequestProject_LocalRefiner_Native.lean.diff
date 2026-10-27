@@ -1,0 +1,12 @@
+--- original/RequestProject/LocalRefiner/Native.lean
++++ current/RefinedAbsorption/LocalRefiner/Native.lean
+@@ -1,6 +1,7 @@
+ module
+-public import RequestProject.LocalRefiner.Loads
+-public import RequestProject.Placement.Assembly
++public import Mathlib.Analysis.Complex.ExponentialBounds
++public import RefinedAbsorption.LocalRefiner.Loads
++public import RefinedAbsorption.Placement.Assembly
+ 
+ /-!
+ # Strong multi-refiners with the exact budget for `r = 2` and `q` even

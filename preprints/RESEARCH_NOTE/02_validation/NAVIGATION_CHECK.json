@@ -1,0 +1,187 @@
+{
+  "status": "PASS",
+  "markdown_files": 23,
+  "local_targets_checked": 45,
+  "targets": [
+    {
+      "source": "preprints/RESEARCH_NOTE/LICENSE.md",
+      "target": "../../LICENSE"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "01_manuscript/RESEARCH_NOTE_preprint_v1.0_en.pdf"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "01_manuscript/RESEARCH_NOTE_preprint_v1.0_en.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "01_manuscript/RESEARCH_NOTE_preprint_v1.0_en.tex"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "01_manuscript/RESEARCH_NOTE_preprint_v1.0_es.pdf"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "01_manuscript/RESEARCH_NOTE_preprint_v1.0_es.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "01_manuscript/RESEARCH_NOTE_preprint_v1.0_es.tex"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_en.pdf"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_en.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_en.tex"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_es.pdf"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_es.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_es.tex"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "02_validation/REVIEW_SUMMARY.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "03_reproducibility/README.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "04_integrity/README.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "../../publication/formal-freeze/formal-v1.0-5428ee9b772e.tar.gz"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "LICENSE.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/README.md",
+      "target": "CHANGELOG.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/ARTIFACT_CONSISTENCY.md",
+      "target": "AUDIT_RESULT.json"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/ARTIFACT_CONSISTENCY.md",
+      "target": "VISUAL_REVIEW.json"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/BIBLIOGRAPHY_REVIEW.md",
+      "target": "../../../publication/BIBLIOGRAPHIC_DOSSIER.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md",
+      "target": "../../../publication/assembly/VALIDATION.json"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md",
+      "target": "../../../publication/assembly/BUILD_HISTORY.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md",
+      "target": "../05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_en.pdf"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md",
+      "target": "MATHEMATICAL_ALIGNMENT.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md",
+      "target": "SCOPE_AND_LIMITATIONS.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md",
+      "target": "EDITORIAL_REVIEW.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md",
+      "target": "SEMANTIC_INTEGRITY.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md",
+      "target": "BIBLIOGRAPHY_REVIEW.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md",
+      "target": "VISUAL_REVIEW.json"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md",
+      "target": "AUDIT_RESULT.json"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/SEMANTIC_INTEGRITY.md",
+      "target": "baseline/INDEX.json"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/SEMANTIC_INTEGRITY.md",
+      "target": "../../../publication/PROTECTED_ELEMENT_INDEX.json"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/02_validation/SEMANTIC_INTEGRITY.md",
+      "target": "AUDIT_RESULT.json"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/03_reproducibility/README.md",
+      "target": "../../../publication/formal-freeze/"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/03_reproducibility/README.md",
+      "target": "../../../publication/assembly/BUILD_HISTORY.md"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/04_integrity/README.md",
+      "target": "../../../publication/formal-freeze/"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/04_integrity/README.md",
+      "target": "../02_validation/VISUAL_REVIEW.json"
+    },
+    {
+      "source": "preprints/RESEARCH_NOTE/04_integrity/README.md",
+      "target": "../02_validation/AUDIT_RESULT.json"
+    },
+    {
+      "source": "README.md",
+      "target": "preprints/RESEARCH_NOTE/README.md"
+    },
+    {
+      "source": "README.md",
+      "target": "PUBLICATION_INDEX.md"
+    },
+    {
+      "source": "PUBLICATION_INDEX.md",
+      "target": "preprints/RESEARCH_NOTE/README.md"
+    },
+    {
+      "source": "PUBLICATION_INDEX.md",
+      "target": "preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md"
+    },
+    {
+      "source": "PUBLICATION_INDEX.md",
+      "target": "publication/formal-freeze/FREEZE.json"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+--- original/RequestProject/GeneralEmbedding/Counting.lean
++++ current/RefinedAbsorption/GeneralEmbedding/Counting.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.GeneralEmbedding.Defs
+-public import Mathlib
++public import RefinedAbsorption.GeneralEmbedding.Defs
++public import RefinedAbsorption.MathlibImports
+ 
+ /-!
+ # Counting lemmas for the General Embedding Lemma

@@ -1,0 +1,9 @@
+--- original/RequestProject/Local/FlatEmbedMain.lean
++++ current/RefinedAbsorption/Local/FlatEmbedMain.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Local.FlatEmbed
++public import RefinedAbsorption.Local.FlatEmbed
+ 
+ /-!
+ # Random embedding of flat local refiners: the construction

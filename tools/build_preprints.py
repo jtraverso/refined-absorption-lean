@@ -56,6 +56,16 @@ def main():
         texbody = re.sub(r"\\def\\LTcaptype\{none\}[^\n]*\n", "", converted.stdout)
         texbody = re.sub(r"\\texttt\{([^{}]*)\}", code_breaks, texbody)
         texbody = re.sub(r"(\\subsubsection\{)", r"\n\\Needspace{7\\baselineskip}\n\1", texbody)
+        statements = list(re.finditer(
+            r"\\paragraph\{(?:Theorem|Corollary|Proposition|Teorema|Corolario|Proposición) [0-9.]+\}", texbody))
+        if source.parent.name == "01_manuscript":
+            assert len(statements) == 5
+        for statement in reversed(statements):
+            proof = re.search(r"\\emph\{(?:Proof|Demostración)\.\}", texbody[statement.end():])
+            assert proof, statement[0]
+            end = statement.end() + proof.start()
+            texbody = (texbody[:statement.start()] + "\\par\n\\begin{samepage}\n"
+                       + texbody[statement.start():end] + "\\end{samepage}\n" + texbody[end:])
         bibliography = re.search(r"\\subsection\{(?:References|Referencias)\}[^\n]*\n", texbody)
         if bibliography:
             texbody = texbody[:bibliography.end()] + "\n\\begingroup\\small\\raggedright\n\\setlength{\\parskip}{3pt}\n" + texbody[bibliography.end():] + "\n\\endgroup\n"
@@ -90,6 +100,7 @@ def main():
         item = {"source": source.relative_to(ROOT).as_posix(), "markdown_sha256": digest,
                 "tex_sha256": sha(texpath), "pdf_sha256": sha(pdf), "template_sha256": sha(TEMPLATE),
                 "engine": engine, "converter": converter, "passes": 3, "layout_issues": issues,
+                "builder_sha256": sha(Path(__file__)),
                 "lean_build_executed": False}
         records = [r for r in records if r["source"] != item["source"]] + [item]
         record_path.write_bytes((json.dumps(records, indent=2) + "\n").encode("utf-8"))

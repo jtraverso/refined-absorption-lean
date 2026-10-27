@@ -1,0 +1,11 @@
+--- original/RequestProject/Placement/Assembly.lean
++++ current/RefinedAbsorption/Placement/Assembly.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Placement.Reduction
+-public import RequestProject.Placement.Absorbers
++public import RefinedAbsorption.Placement.Reduction
++public import RefinedAbsorption.Placement.Absorbers
+ 
+ /-!
+ # Assembling the final embedding step

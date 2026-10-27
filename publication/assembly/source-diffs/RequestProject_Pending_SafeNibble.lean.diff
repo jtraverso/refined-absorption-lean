@@ -1,0 +1,11 @@
+--- original/RequestProject/Pending/SafeNibble.lean
++++ current/RefinedAbsorption/Pending/SafeNibble.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Multigraph.NibbleMulti
+-public import RequestProject.Pending.Danger
++public import RefinedAbsorption.Multigraph.NibbleMulti
++public import RefinedAbsorption.Pending.Danger
+ 
+ /-!
+ # The nibble with reserves avoiding a sparse forbidden family

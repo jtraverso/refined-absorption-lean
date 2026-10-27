@@ -1,0 +1,13 @@
+--- original/RequestProject/HyperPlan/Strong.lean
++++ current/RefinedAbsorption/HyperPlan/Strong.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.HyperPlan.Load
+-public import RequestProject.HyperPlan.Lift
+-public import RequestProject.OddGrid.PlanStrong
++public import RefinedAbsorption.HyperPlan.Load
++public import RefinedAbsorption.HyperPlan.Lift
++public import RefinedAbsorption.OddGrid.PlanStrong
+ 
+ /-!
+ # A valid plan gives a strong multi-refiner, uniformity `r`

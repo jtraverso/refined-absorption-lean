@@ -1,0 +1,11 @@
+--- original/RequestProject/SparseChain/FlatEmbedS.lean
++++ current/RefinedAbsorption/SparseChain/FlatEmbedS.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Local.FlatEmbedMain
+-public import RequestProject.FlatOmni.Assembly
++public import RefinedAbsorption.Local.FlatEmbedMain
++public import RefinedAbsorption.FlatOmni.Assembly
+ 
+ /-!
+ # Random embedding of flat local refiners, sparse form

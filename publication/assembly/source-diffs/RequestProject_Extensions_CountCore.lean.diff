@@ -1,0 +1,11 @@
+--- original/RequestProject/Extensions/CountCore.lean
++++ current/RefinedAbsorption/Extensions/CountCore.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Designs
+-public import RequestProject.Extensions.Partial
++public import RefinedAbsorption.Designs
++public import RefinedAbsorption.Extensions.Partial
+ 
+ /-!
+ # Counting Steiner systems through their restrictions to a small set

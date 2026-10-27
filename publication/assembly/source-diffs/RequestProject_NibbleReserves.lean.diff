@@ -1,0 +1,11 @@
+--- original/RequestProject/NibbleReserves.lean
++++ current/RefinedAbsorption/NibbleReserves.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.ReserveCover
+-public import RequestProject.BoostExistence
++public import RefinedAbsorption.ReserveCover
++public import RefinedAbsorption.BoostExistence
+ 
+ /-!
+ # Corollary 2.4 from a nibble with leftover degree control

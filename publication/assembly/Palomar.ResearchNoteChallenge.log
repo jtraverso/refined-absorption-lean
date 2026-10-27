@@ -1,0 +1,9 @@
+COMMAND ["lake", "--quiet", "--packages=.lake/local-packages.json", "build", "+Palomar.ResearchNoteChallenge:olean"]
+⚠ [2332/2332] Built Palomar.ResearchNoteChallenge (36s)
+warning: Palomar/ResearchNoteChallenge.lean:128:8: declaration uses `sorry`
+warning: Palomar/ResearchNoteChallenge.lean:140:8: declaration uses `sorry`
+warning: Palomar/ResearchNoteChallenge.lean:149:8: declaration uses `sorry`
+warning: Palomar/ResearchNoteChallenge.lean:159:8: declaration uses `sorry`
+warning: Palomar/ResearchNoteChallenge.lean:248:8: declaration uses `sorry`
+warning: Palomar/ResearchNoteChallenge.lean:260:8: declaration uses `sorry`
+warning: Palomar/ResearchNoteChallenge.lean:274:8: declaration uses `sorry`

@@ -1,0 +1,13 @@
+--- original/RequestProject/Placement/FakeGadget.lean
++++ current/RefinedAbsorption/Placement/FakeGadget.lean
+@@ -1,7 +1,7 @@
+ module
+-public import RequestProject.Placement.PlacedDeg
+-public import RequestProject.MultiRefiner.Reduction
+-public import RequestProject.Absorber17.Library
++public import RefinedAbsorption.Placement.PlacedDeg
++public import RefinedAbsorption.MultiRefiner.Reduction
++public import RefinedAbsorption.Absorber17.Library
+ 
+ /-!
+ # Fake edges as gadgets

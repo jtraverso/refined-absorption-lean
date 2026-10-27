@@ -1,0 +1,9 @@
+--- original/RequestProject/Nibble/Params.lean
++++ current/RefinedAbsorption/Nibble/Params.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Nibble.Iterate
++public import RefinedAbsorption.Nibble.Iterate
+ 
+ /-!
+ # Choice of parameters for the iterated nibble

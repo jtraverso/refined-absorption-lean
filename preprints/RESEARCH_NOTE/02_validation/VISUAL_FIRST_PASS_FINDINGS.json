@@ -1,0 +1,17 @@
+{
+  "status": "CORRECTION_REQUIRED",
+  "scope": "First render, before visual acceptance.",
+  "findings": [
+    {
+      "pdf_sha256": "7341f1e566272820c23434cf5d480d5aa491fff4a8fe6cf6df95c25b72c63fe3",
+      "page": 7,
+      "issue": "Section 6 heading stranded at page bottom before subsection 6.1."
+    },
+    {
+      "pdf_sha256": "3d40aafb7d60107c6a1dc917adce7cec9563eb581eaa8e9875883ff05645ffe3",
+      "page": 6,
+      "issue": "Theorem 5.1 final no-sparsity clause moved alone to next page."
+    }
+  ],
+  "correction": "Template orphan control and body-converter samepage grouping of complete statements; no Markdown mathematical change. All four PDFs and renders must be regenerated."
+}

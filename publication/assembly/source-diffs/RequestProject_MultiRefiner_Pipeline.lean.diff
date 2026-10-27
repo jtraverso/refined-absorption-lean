@@ -1,0 +1,11 @@
+--- original/RequestProject/MultiRefiner/Pipeline.lean
++++ current/RefinedAbsorption/MultiRefiner/Pipeline.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.MultiRefiner.Reduction
+-public import RequestProject.Absorber17.Library
++public import RefinedAbsorption.MultiRefiner.Reduction
++public import RefinedAbsorption.Absorber17.Library
+ 
+ /-!
+ # From multi-refiners to refined omni-absorbers (on an extended vertex set)

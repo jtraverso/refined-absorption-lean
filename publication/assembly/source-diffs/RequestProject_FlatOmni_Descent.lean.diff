@@ -1,0 +1,9 @@
+--- original/RequestProject/FlatOmni/Descent.lean
++++ current/RefinedAbsorption/FlatOmni/Descent.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.FlatOmni.WindowGe
++public import RefinedAbsorption.FlatOmni.WindowGe
+ 
+ /-!
+ # Descent through windows inside a prescribed set

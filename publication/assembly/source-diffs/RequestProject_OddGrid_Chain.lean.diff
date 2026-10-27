@@ -1,0 +1,9 @@
+--- original/RequestProject/OddGrid/Chain.lean
++++ current/RefinedAbsorption/OddGrid/Chain.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.OddGrid.Basic
++public import RefinedAbsorption.OddGrid.Basic
+ 
+ /-!
+ # Accumulator chains

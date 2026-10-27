@@ -1,0 +1,11 @@
+--- original/RequestProject/OddGrid/XStage.lean
++++ current/RefinedAbsorption/OddGrid/XStage.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.OddGrid.Extra
+-public import RequestProject.OddGrid.Greedy
++public import RefinedAbsorption.OddGrid.Extra
++public import RefinedAbsorption.OddGrid.Greedy
+ 
+ /-!
+ # The first stage: routing the input graph into rook pairs

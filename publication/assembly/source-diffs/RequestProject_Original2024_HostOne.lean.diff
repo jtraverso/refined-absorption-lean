@@ -1,0 +1,11 @@
+--- original/RequestProject/Original2024/HostOne.lean
++++ current/RefinedAbsorption/Original2024/HostOne.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Original2024.Host
+-public import RequestProject.RefinerOne.Instance
++public import RefinedAbsorption.Original2024.Host
++public import RefinedAbsorption.RefinerOne.Instance
+ 
+ /-!
+ # Theorems 1.11 and 1.7 of the original article for `r = 1`

@@ -1,0 +1,9 @@
+--- original/RequestProject/Basic.lean
++++ current/RefinedAbsorption/Basic.lean
+@@ -1,5 +1,5 @@
+ module
+-public import Mathlib
++public import RefinedAbsorption.MathlibImports
+ 
+ /-!
+ # Basic definitions: `r`-graphs, `K_q^r`-divisibility, packings and decompositions

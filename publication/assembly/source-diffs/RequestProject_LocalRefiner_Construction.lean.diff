@@ -1,0 +1,11 @@
+--- original/RequestProject/LocalRefiner/Construction.lean
++++ current/RefinedAbsorption/LocalRefiner/Construction.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.LocalRefiner.OwnedChains
+-public import RequestProject.LocalRefiner.Gadgets
++public import RefinedAbsorption.LocalRefiner.OwnedChains
++public import RefinedAbsorption.LocalRefiner.Gadgets
+ 
+ /-!
+ # The local refiner at the level of labels

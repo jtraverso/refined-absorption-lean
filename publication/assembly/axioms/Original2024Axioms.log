@@ -1,0 +1,18 @@
+checks/Original2024Axioms.lean:7:0: 'RefinedAbsorption.Original2024.theorem_1_4' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/Original2024Axioms.lean:8:0: 'RefinedAbsorption.Original2024.theorem_3_8' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/Original2024Axioms.lean:9:0: 'RefinedAbsorption.Original2024.theorem_3_8_flat' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/Original2024Axioms.lean:10:0: 'RefinedAbsorption.Original2024.multiRefinerFlat' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/Original2024Axioms.lean:11:0: 'RefinedAbsorption.Original2024.MultiRefinerFlatConclusion.exists_inside' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/Original2024Axioms.lean:12:0: 'RefinedAbsorption.Original2024.theorem_1_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/Original2024Axioms.lean:13:0: 'RefinedAbsorption.Original2024.theorem_1_11_strong' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/Original2024Axioms.lean:14:0: 'RefinedAbsorption.Original2024.theorem_1_7' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/Original2024Axioms.lean:15:0: 'RefinedAbsorption.Original2024.theorem_1_7_strong' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/Original2024Axioms.lean:16:0: 'RefinedAbsorption.Original2024.theorem_6_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/Original2024Axioms.lean:17:0: 'RefinedAbsorption.Original2024.theorem_1_1_steiner' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/Original2024Axioms.lean:18:0: 'RefinedAbsorption.Original2024.theorem_1_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+checks/Original2024Axioms.lean:19:0: 'RefinedAbsorption.Original2024.decomposition_complete_minus_sparse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+checks/Original2024Axioms.lean:20:0: 'RefinedAbsorption.Original2024.theorem_3_7_local' depends on axioms: [propext, Classical.choice, Quot.sound]

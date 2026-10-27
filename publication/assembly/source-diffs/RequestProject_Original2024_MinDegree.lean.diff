@@ -1,0 +1,15 @@
+--- original/RequestProject/Original2024/MinDegree.lean
++++ current/RefinedAbsorption/Original2024/MinDegree.lean
+@@ -1,8 +1,8 @@
+ module
+-public import RequestProject.Original2024.HostOne
+-public import RequestProject.Original2024.RelReserves
+-public import RequestProject.Boost
+-public import RequestProject.Nibble.Bridge
++public import RefinedAbsorption.Original2024.HostOne
++public import RefinedAbsorption.Original2024.RelReserves
++public import RefinedAbsorption.Boost
++public import RefinedAbsorption.Nibble.Bridge
+ 
+ /-!
+ # Theorem 6.1 of the original article: the minimum degree version (`λ = 1`)

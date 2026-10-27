@@ -1,0 +1,11 @@
+--- original/RequestProject/FlatOmni/LocalRefiner.lean
++++ current/RefinedAbsorption/FlatOmni/LocalRefiner.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.FlatOmni.StageK
+-public import RequestProject.FlatOmni.Descent
++public import RefinedAbsorption.FlatOmni.StageK
++public import RefinedAbsorption.FlatOmni.Descent
+ 
+ /-!
+ # Local refiners for graphs with the sublinear additive term

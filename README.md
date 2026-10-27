@@ -13,6 +13,12 @@ selected consequences. It does not reproduce the two source papers, and no
 historical priority is claimed for every formalized corollary. The original
 results remain attributed to their authors.
 
+Read the [research note and formal companion in English or Spanish](preprints/RESEARCH_NOTE/README.md).
+The current documents are editorial drafts with an internal audit **PASS**;
+Zenodo DOI reservation, public release and Palomar verification remain pending.
+The [publication index](PUBLICATION_INDEX.md) separates documents, source DOIs
+and actual formal evidence.
+
 ## Formal scope
 
 - Refined omni-absorbers and refiners, dense decomposition, labelled reserve

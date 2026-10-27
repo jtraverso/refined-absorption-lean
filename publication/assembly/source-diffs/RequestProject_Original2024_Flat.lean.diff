@@ -1,0 +1,11 @@
+--- original/RequestProject/Original2024/Flat.lean
++++ current/RefinedAbsorption/Original2024/Flat.lean
+@@ -1,6 +1,6 @@
+ module
+-public import RequestProject.Original2024.FlatChain
+-public import RequestProject.Original2024.Final
++public import RefinedAbsorption.Original2024.FlatChain
++public import RefinedAbsorption.Original2024.Final
+ 
+ /-!
+ # Theorem 3.8 with the flatness output

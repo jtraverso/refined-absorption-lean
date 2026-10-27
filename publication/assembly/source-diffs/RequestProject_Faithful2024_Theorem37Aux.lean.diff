@@ -1,0 +1,9 @@
+--- original/RequestProject/Faithful2024/Theorem37Aux.lean
++++ current/RefinedAbsorption/Faithful2024/Theorem37Aux.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Faithful2024.MultiGadget
++public import RefinedAbsorption.Faithful2024.MultiGadget
+ 
+ /-!
+ # Auxiliary facts for the proof of Theorem 3.7 (arXiv:2402.17855v1)

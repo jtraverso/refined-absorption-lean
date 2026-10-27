@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "source_commit": "5428ee9b772e67dd7ec6da443199b36a003b72d4",
+  "archive": "publication/formal-freeze/formal-v1.0-5428ee9b772e.tar.gz",
+  "sha256": "e9bb21b17a110a392a7751afefb9a2e9d6bf218c7e6dac788006234f3af09c05",
+  "validation_sha256": "45321434a170482d8473182ecc8c1fd60b66a84bb9480ef7f6c26f9f2b130157",
+  "local_lean_modules": 316,
+  "axiom_queries": 360,
+  "scope": "Immutable formal-source and local-build-evidence freeze, before manuscript drafting. Not a Palomar certificate or a document release archive."
+}

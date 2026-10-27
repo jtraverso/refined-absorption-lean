@@ -1,0 +1,9 @@
+--- original/RequestProject/Sharp/SparsArith.lean
++++ current/RefinedAbsorption/Sharp/SparsArith.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Sharp.Descent
++public import RefinedAbsorption.Sharp.Descent
+ 
+ /-!
+ # Arithmetic of the Edge Sparsification Lemma

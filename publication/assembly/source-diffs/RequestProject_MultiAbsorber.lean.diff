@@ -1,0 +1,9 @@
+--- original/RequestProject/MultiAbsorber.lean
++++ current/RefinedAbsorption/MultiAbsorber.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.Counting
++public import RefinedAbsorption.Counting
+ 
+ /-!
+ # Multi-absorbers and integral decompositions (Section 3.1)

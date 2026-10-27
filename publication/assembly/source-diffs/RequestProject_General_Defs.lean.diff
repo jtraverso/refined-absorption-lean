@@ -1,0 +1,9 @@
+--- original/RequestProject/General/Defs.lean
++++ current/RefinedAbsorption/General/Defs.lean
+@@ -1,5 +1,5 @@
+ module
+-public import RequestProject.SparseChain.ThreeGraphs
++public import RefinedAbsorption.SparseChain.ThreeGraphs
+ 
+ /-!
+ # Flat clique omni-absorbers in every uniformity (definition)

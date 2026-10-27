@@ -1,0 +1,15 @@
+--- original/RequestProject/Faithful2024/Theorem38Two.lean
++++ current/RefinedAbsorption/Faithful2024/Theorem38Two.lean
+@@ -1,8 +1,8 @@
+ module
+-public import RequestProject.Faithful2024.FlatSparsify
+-public import RequestProject.Faithful2024.FlatLabelled
+-public import RequestProject.HyperPlan.Native
+-public import RequestProject.Faithful2024.Defs
++public import RefinedAbsorption.Faithful2024.FlatSparsify
++public import RefinedAbsorption.Faithful2024.FlatLabelled
++public import RefinedAbsorption.HyperPlan.Native
++public import RefinedAbsorption.Faithful2024.Defs
+ 
+ /-!
+ # Theorem 3.8 of arXiv:2402.17855v1, faithful form, `q > r ≥ 2`
