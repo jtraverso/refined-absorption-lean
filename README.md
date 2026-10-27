@@ -110,10 +110,17 @@ integrity and formalization-companion directory layout as the author's
 [Nash–Williams Papers I–II release](https://github.com/jtraverso/nash-williams-triangle-decompositions-release).
 That repository remains the publication home of those two papers.
 
-Three scoped Palomar interfaces are prepared: `Article2024`, `Survey2025` and
-`ResearchNote`. Local compilation, internal review, official preflight and
-registry review are distinct gates. No registration is claimed here before a
-registry receipt exists.
+The canonical Palomar submission is **one entry**: `Palomar/Unified.comparator.json`
+selects all eighteen principal declarations and uses the existing
+`RefinedAbsorption` aggregate root as its Solution. The article, survey and
+research note retain separate source attribution and DOI metadata. The three
+narrower profiles remain available as historical views; they are not three
+intended submissions. See the [joint comparison record](publication/palomar/UNIFIED_COMPARISON.md).
+
+The joint Challenge is additive. The original 316-source formal freeze is
+unchanged; the current project has 317 sources including that new comparison
+file. Local compilation, internal review, official preflight and registry review
+are distinct gates. No registration is claimed before a registry receipt exists.
 
 Source code is licensed under Apache 2.0; manuscripts are licensed under
 CC BY 4.0. The author is responsible for the formalization and exposition.

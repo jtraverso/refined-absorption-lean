@@ -39,7 +39,7 @@
   "external_pending": {
     "zenodo": "Draft23685654 with DOIreserved and metadata saved. Four audited PDF uploads need the Chrome extension file-URL permission; explicit user choice requested asynchronously. Nothing published on Zenodo yet.",
     "github": "Public repository and preprint-v1.0 release published; all 10 asset digests match local files. Source commit ab62cca3d797a939466c76f7ed302b20e8a422be.",
-    "palomar": "Three official complete reusable-workflow preflights actually running at released commit. Intake awaits pass reports, Zenodo publication and required exact-source/relationship user agreement."
+    "palomar": "Author requested one entry. Joint Challenge and default Lake build PASS; all 316 frozen sources/configuration unchanged; 317 current sources. Separate preflights cancelled. Joint official preflight follows the new source commit."
   },
   "formal_freeze": {
     "status": "PASS",
@@ -167,5 +167,54 @@
         "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/SHA256SUMS.txt"
       }
     ]
+  },
+  "canonical_palomar_entry": {
+    "comparator_config_path": "Palomar/Unified.comparator.json",
+    "formalization_metadata_path": "Palomar/Unified/formalization.yaml",
+    "challenge_module": "Palomar.UnifiedChallenge",
+    "solution_module": "RefinedAbsorption",
+    "selected_theorems": 18,
+    "scope": "One joint entry: article six, survey five, note seven; separate source DOIs preserved."
+  },
+  "additive_comparison_build": {
+    "status": "PASS",
+    "started_utc": "2026-10-27T08:51:33.076255+00:00",
+    "frozen_formal_source_commit": "5428ee9b772e67dd7ec6da443199b36a003b72d4",
+    "retained_frozen_sources": 316,
+    "new_challenge": "Palomar/UnifiedChallenge.lean",
+    "new_challenge_sha256": "2c6797941585ae2f01c2ff392ea485b0b759281573b6973ea7b50c2b7128b2e6",
+    "selected_theorems": 18,
+    "solution_module": "RefinedAbsorption",
+    "commands": [
+      {
+        "command": [
+          "lake",
+          "--quiet",
+          "--packages=.lake/local-packages.json",
+          "build",
+          "+Palomar.UnifiedChallenge:olean"
+        ],
+        "exit_code": 0,
+        "seconds": 72.47,
+        "log": "publication/palomar/unified-build/challenge.log",
+        "log_sha256": "45d0e6d87407ea0887fae575aaa03ee28a78bdcd9e94c6b3347b739bd8e4a03d"
+      },
+      {
+        "command": [
+          "lake",
+          "--quiet",
+          "--packages=.lake/local-packages.json",
+          "build"
+        ],
+        "exit_code": 0,
+        "seconds": 124.72,
+        "log": "publication/palomar/unified-build/default.log",
+        "log_sha256": "9b026686423021dbe6a3e0aedcdd428aaac6c5a63077be7059eea87aa856ad1f"
+      }
+    ],
+    "scope": "Additive comparison interface. All 316 frozen sources and the configuration remain byte-identical. The new Challenge deliberately has statement placeholders. This is local Lake evidence, not an official Comparator pass.",
+    "finished_utc": "2026-10-27T08:54:50.558481+00:00",
+    "trace_sha256": "760fb522e14d6a2f40ee85b405b3bba1e1047a70870bc2baae292b876498ae2b",
+    "current_local_sources": 317
   }
 }

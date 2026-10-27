@@ -5,6 +5,7 @@ Audit owner: Codex acting under Juan Pablo Traverso Gianini's direction. Self-as
 | Gate | Current status | Evidence |
 | --- | --- | --- |
 | Complete local Lake campaign | PASS | `assembly/VALIDATION.json`: 316 sources, 360 axiom queries |
+| Additive joint comparison and current default build | PASS | One new standalone Challenge; all 316 frozen sources/configuration unchanged; 317 current sources; `palomar/unified-build/RESULT.json` |
 | Frozen source and archive integrity | PASS | `formal-freeze/FREEZE.json`, immutable archive and static verification |
 | Original declaration preservation | PASS | 300 original sources; 821 normalized non-proof spans unchanged; import relocation recorded |
 | Selected endpoint coverage | PASS | All eighteen selected names occur in actual frozen axiom outputs |
@@ -15,7 +16,7 @@ Audit owner: Codex acting under Juan Pablo Traverso Gianini's direction. Self-as
 | Zenodo DOI reservation | PASS | Actual saved draft 23685654: `10.5281/zenodo.23685654`, `zenodo/note-reservation.json` |
 | Zenodo public deposit publication | PENDING | Saved metadata and DOI; PDF upload awaits the explicit choice about Chrome's file-URL access |
 | Public GitHub release | PASS | Actual public `preprint-v1.0` release; all ten asset digests verified in `github/RELEASE.json` |
-| Official Palomar preflight | RUNNING | Three complete official reusable-workflow dispatches at source commit `ab62cca3d797a939466c76f7ed302b20e8a422be`; `palomar/PREFLIGHT_RUNS.json` |
+| Official Palomar preflight | PREPARING JOINT RUN | The author requested one entry. Separate runs cancelled; canonical configuration `Palomar/Unified.comparator.json` selects all eighteen declarations |
 | Palomar intake, review and registration | PENDING | Require passing preflights, source/relationship agreement and a later decision on each actual private review |
 
 Current editorial verdict: `EDITORIALLY_READY`.

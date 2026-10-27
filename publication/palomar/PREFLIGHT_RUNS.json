@@ -1,5 +1,5 @@
 {
-  "status": "RUNNING_OFFICIAL_PREFLIGHTS",
+  "status": "SUPERSEDED_BY_SINGLE_ENTRY",
   "repository": "jtraverso/refined-absorption-lean",
   "source_commit": "ab62cca3d797a939466c76f7ed302b20e8a422be",
   "pipeline_commit": "c02bbeaed888df45c4e28c4e99dba540ad21552a",
@@ -22,10 +22,11 @@
         {
           "id": 122090593471,
           "name": "preflight / verify",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "cancelled"
         }
-      ]
+      ],
+      "status": "cancelled"
     },
     {
       "entry": "Survey2025",
@@ -43,10 +44,11 @@
         {
           "id": 122090757616,
           "name": "preflight / verify",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "cancelled"
         }
-      ]
+      ],
+      "status": "cancelled"
     },
     {
       "entry": "ResearchNote",
@@ -64,11 +66,13 @@
         {
           "id": 122090787478,
           "name": "preflight / verify",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "cancelled"
         }
-      ]
+      ],
+      "status": "cancelled"
     }
   ],
-  "scope": "Actual reusable-workflow dispatches on the released source commit. Running status is not a pass or a registry submission."
+  "scope": "Historical separate preflights, cancelled after the author requested one joint entry. None is claimed to have passed.",
+  "canonical_comparator_config_path": "Palomar/Unified.comparator.json"
 }

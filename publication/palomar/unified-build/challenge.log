@@ -1,0 +1,20 @@
+COMMAND ["lake", "--quiet", "--packages=.lake/local-packages.json", "build", "+Palomar.UnifiedChallenge:olean"]
+⚠ [2332/2332] Built Palomar.UnifiedChallenge (44s)
+warning: Palomar/UnifiedChallenge.lean:146:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:350:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:353:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:355:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:359:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:361:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:399:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:409:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:412:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:561:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:564:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:577:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:589:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:598:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:608:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:697:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:709:8: declaration uses `sorry`
+warning: Palomar/UnifiedChallenge.lean:723:8: declaration uses `sorry`

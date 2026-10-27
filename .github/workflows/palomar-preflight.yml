@@ -7,8 +7,9 @@ on:
         description: Statement interface to compare
         required: true
         type: choice
-        default: Article2024
+        default: Unified
         options:
+          - Unified
           - Article2024
           - Survey2025
           - ResearchNote

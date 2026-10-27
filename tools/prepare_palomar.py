@@ -161,4 +161,30 @@ for name, (body, names) in projects.items():
               "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"], "enable_nanoda": True}
     (OUT / (name + ".comparator.json")).write_text(json.dumps(config, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(name, len(challenge.splitlines()), len(challenge.encode()), "bytes", len(names), "theorems")
+
+# One canonical comparison for the assembled project. Keep the three narrower
+# historical profiles unchanged; shared vocabulary is copied only once.
+assert survey.startswith(basic + degrees + absorbers + designs)
+assert note.startswith(basic + degrees + designs)
+unified_body = (article + designs +
+                survey[len(basic + degrees + absorbers + designs):] +
+                note[len(basic + degrees + designs):])
+unified_names = [name for _, names in projects.values() for name in names]
+assert len(unified_names) == len(set(unified_names)) == 18
+unified_challenge = header + unified_body
+assert len(unified_challenge.splitlines()) <= 1000
+assert len(unified_challenge.encode()) <= 102400
+(OUT / "UnifiedChallenge.lean").write_text(unified_challenge, encoding="utf-8", newline="\n")
+unified_config = {
+    "challenge_module": "Palomar.UnifiedChallenge",
+    "solution_module": "RefinedAbsorption",
+    "theorem_names": unified_names,
+    "definition_names": [],
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": True,
+}
+(OUT / "Unified.comparator.json").write_text(
+    json.dumps(unified_config, indent=2) + "\n", encoding="utf-8", newline="\n")
+print("Unified", len(unified_challenge.splitlines()), len(unified_challenge.encode()),
+      "bytes", len(unified_names), "theorems; Solution is the existing aggregate root")
 (ROOT / "provenance/palomar-extractions.json").write_text(json.dumps(spans, indent=2) + "\n", encoding="utf-8", newline="\n")

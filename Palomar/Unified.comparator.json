@@ -1,0 +1,31 @@
+{
+  "challenge_module": "Palomar.UnifiedChallenge",
+  "solution_module": "RefinedAbsorption",
+  "theorem_names": [
+    "RefinedAbsorption.Faithful2024.theorem_1_7",
+    "RefinedAbsorption.Faithful2024.theorem_1_11",
+    "RefinedAbsorption.Original2024.theorem_6_1",
+    "RefinedAbsorption.Pending.theorem_2_8",
+    "RefinedAbsorption.Faithful2024.theorem_6_2_ambient",
+    "RefinedAbsorption.Pending.theorem_6_3",
+    "RefinedAbsorption.Final.theorem_1_10",
+    "RefinedAbsorption.existenceConjecture_proved",
+    "RefinedAbsorption.Final.existenceConjecture_steiner",
+    "RefinedAbsorption.FaithfulSurvey2025.not_generalEmbeddingLemmaLiteral",
+    "RefinedAbsorption.FaithfulSurvey2025.generalEmbedding_piecewise",
+    "RefinedAbsorption.Extensions.steiner_completion_avoiding",
+    "RefinedAbsorption.Extensions.steiner_intersection_prescribed",
+    "RefinedAbsorption.Extensions.partialSteiner_intersection_embedding",
+    "RefinedAbsorption.Extensions.steiner_intersection_spectrum_poly",
+    "RefinedAbsorption.Assembly.steiner_quantitatively_almost_resolvable",
+    "RefinedAbsorption.Assembly.exists_quantitatively_almost_resolvable_steiner",
+    "RefinedAbsorption.Assembly.nash_williams_scheduled_decomposition"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

@@ -1,4 +1,4 @@
-"""Write the three scoped metadata files after the formal freeze and DOI reservation."""
+"""Write the canonical joint metadata and retained narrower profiles."""
 from copy import deepcopy
 from pathlib import Path
 import json
@@ -67,6 +67,21 @@ profiles = {
                     {"title": "Steiner triple systems having a prescribed number of triples in common (corrigendum)", "authors": ["C. C. Lindner", "A. Rosa"], "id": "doi:10.4153/CJM-1978-077-9", "type": "paper", "relationship": "background", "location": "Canadian Journal of Mathematics 30 (1978), p. 896"}],
         "fidelity": "Completion sparsity concerns the maximum (r−1)-degree of the covered r-edges; the forbidden partial system need not be sparse. The additional crossing guarantee in completion is restricted to forbidden blocks whose r-edges avoid the prescribed covered edges. The spectrum chooses both systems and supplies an initial interval k ≤ c n^r, not a complete spectrum. Disjoint mates have no common blocks; classical orthogonality is not asserted. Polynomial error bounds count partial parallel classes or schedule rounds, and do not assert perfect classes or a deficit bound for every round. The external polynomial colouring theorem assumes a maximum-degree bound, a polynomial codegree bound and an exponential edge-count cap; all are verified before application. The closed endpoints have no external theorem hypotheses. The original conditional consumers remain unchanged."},
 }
+profiles["Unified"] = {
+    "title": "Formalizing refined absorption: proof interfaces and consequences",
+    "description": "One assembled Lean formalization of principal refined absorption results and their consequences. The selected results include refined omni-absorbers and refiners, labelled reserve matchings, dense compatible decompositions, an additive compatible-absorber interface retaining independence of the entire old ambient vertex set, and existence of simple designs for every fixed q > r ≥ 2 and index λ ≥ 1 at all sufficiently large admissible orders. The literal global embedding conclusion of the survey is refuted separately from a proved piecewise replacement. The research-note endpoints give completion avoiding an arbitrary forbidden partial Steiner system, sparse prescribed and finite embedded exact intersections, an initial polynomial intersection interval, and polynomial excess in partial parallel classes and Nash–Williams schedule rounds. Both external inputs are supplied by pinned proved theorems. The single comparison selects eighteen declarations from the existing aggregate proof root.",
+    "sources": [article, survey, note] +
+               deepcopy(profiles["ResearchNote"]["sources"][3:]) +
+               [deepcopy(profiles["Survey2025"]["sources"][-1])],
+    "fidelity": ("The canonical submission uses Palomar/Unified.comparator.json, "
+                 "a standalone Mathlib-only Challenge and the existing "
+                 "RefinedAbsorption aggregate root as its Solution. It compares "
+                 "all eighteen selected declarations in one entry. The three "
+                 "narrower configurations are retained as historical/optional "
+                 "views, not three intended submissions. " +
+                 " ".join(profiles[key]["fidelity"]
+                          for key in ("Article2024", "Survey2025", "ResearchNote"))),
+}
 locations = {
     "RefinedAbsorption.Faithful2024.theorem_1_7": "Delcourt–Postle, arXiv:2402.17855v1, Theorem 1.7 (refined omni-absorber).",
     "RefinedAbsorption.Faithful2024.theorem_1_11": "Delcourt–Postle, arXiv:2402.17855v1, Theorem 1.11 (refiner, including the family refinement-degree bound).",
@@ -94,7 +109,7 @@ for name, profile in profiles.items():
     metadata["fidelity"] = {"divergences": profile["fidelity"]}
     config = json.loads((ROOT / "Palomar" / (name + ".comparator.json")).read_text())
     metadata["alignment"] = {"statements": [{"source": locations[theorem], "lean": theorem, "module": config["challenge_module"], "status": "proved"} for theorem in config["theorem_names"]]}
-    if name == "ResearchNote":
+    if name in {"ResearchNote", "Unified"}:
         metadata["related_formalizations"] = [
             {"id": "https://github.com/jtraverso/pippenger-spencer/tree/b19273396d369332fb489fe07e61e27c9e7f9233", "relationship": "builds-on", "note": "Pinned three-file polynomial-colouring proof cut, sharing nineteen source-identical matching modules with the Nash–Williams dependency."},
             {"id": "https://github.com/jtraverso/nash-williams-lean/tree/2603197abdbf0a600ec663f6f046f70fbd209d4a", "relationship": "builds-on", "note": "The proved large-order decomposition endpoint via Papers I–II; source graph theorem remains attributed to Delcourt–Postle."}]
