@@ -1,0 +1,16 @@
+{
+  "status": "PASS_PORTABLE_GIT_SNAPSHOT_INTEGRITY",
+  "release_draft_commit": "79a696a7ab87b760988a9870b7bd3e2f4b7903f7",
+  "formal_freeze": {
+    "status": "PASS_RECORDED_FREEZE_INTEGRITY",
+    "source_commit": "5428ee9b772e67dd7ec6da443199b36a003b72d4",
+    "local_lean_sources": 316,
+    "axiom_queries": 360,
+    "original_sources": 300,
+    "lean_executed": false,
+    "scope": "Recorded evidence, archived source bytes and current source correspondence; not independent proof replay."
+  },
+  "document_files_checked": 55,
+  "document_archive_verified": true,
+  "lean_executed": false
+}
