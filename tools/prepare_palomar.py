@@ -44,7 +44,12 @@ def theorem(path, name):
     match = re.search(r"^theorem " + re.escape(name) + r"\b", source, re.M)
     assert match, (path, name)
     end = source.index(":=", match.start())
-    return source[match.start():end].rstrip() + " := by sorry\n"
+    header = source[match.start():end].rstrip()
+    spans.append({"source": path, "declaration": name, "kind": "theorem_header",
+                  "start_line": source[:match.start()].count("\n") + 1,
+                  "end_line": source[:end].count("\n") + 1,
+                  "sha256": hashlib.sha256(header.encode()).hexdigest()})
+    return header + " := by sorry\n"
 
 
 def namespace(name, body):
@@ -84,13 +89,13 @@ article += namespace("RefinedAbsorption.Faithful2024", "open Finset\n" +
     definition("RefinedAbsorption/Faithful2024/Defs.lean", "budget") +
     take("RefinedAbsorption/Faithful2024/Defs.lean", "structure HGraph", "end RefinedAbsorption.Faithful2024") +
     take("RefinedAbsorption/Faithful2024/Section2.lean", "variable {V E", "end RefinedAbsorption.Faithful2024") +
-    definition("RefinedAbsorption/Faithful2024/Section6.lean", "Theorem_6_2") +
+    definition("RefinedAbsorption/Faithful2024/Theorem62Ambient.lean", "Theorem_6_2_ambient") +
     definition("RefinedAbsorption/Faithful2024/Section6.lean", "Theorem_6_3") +
     theorem("RefinedAbsorption/Faithful2024/Section1.lean", "theorem_1_7") +
-    theorem("RefinedAbsorption/Faithful2024/Section1.lean", "theorem_1_11"))
+    theorem("RefinedAbsorption/Faithful2024/Section1.lean", "theorem_1_11") +
+    theorem("RefinedAbsorption/Faithful2024/Theorem62Ambient.lean", "theorem_6_2_ambient"))
 article += namespace("RefinedAbsorption.Pending",
     theorem("RefinedAbsorption/Pending/Theorem28.lean", "theorem_2_8") +
-    theorem("RefinedAbsorption/Pending/Theorem62.lean", "theorem_6_2") +
     theorem("RefinedAbsorption/Pending/Theorem63Final.lean", "theorem_6_3"))
 
 survey = basic + degrees + absorbers + designs
@@ -128,12 +133,12 @@ note += namespace("RefinedAbsorption.Assembly", "open Finset RefinedAbsorption.E
              "nash_williams_scheduled_decomposition"]))
 
 projects = {
-    "Article2024": (article, ["RefinedAbsorption.Faithful2024.theorem_1_7", "RefinedAbsorption.Faithful2024.theorem_1_11", "RefinedAbsorption.Original2024.theorem_6_1", "RefinedAbsorption.Pending.theorem_2_8", "RefinedAbsorption.Pending.theorem_6_2", "RefinedAbsorption.Pending.theorem_6_3"]),
+    "Article2024": (article, ["RefinedAbsorption.Faithful2024.theorem_1_7", "RefinedAbsorption.Faithful2024.theorem_1_11", "RefinedAbsorption.Original2024.theorem_6_1", "RefinedAbsorption.Pending.theorem_2_8", "RefinedAbsorption.Faithful2024.theorem_6_2_ambient", "RefinedAbsorption.Pending.theorem_6_3"]),
     "Survey2025": (survey, ["RefinedAbsorption.Final.theorem_1_10", "RefinedAbsorption.existenceConjecture_proved", "RefinedAbsorption.Final.existenceConjecture_steiner", "RefinedAbsorption.FaithfulSurvey2025.not_generalEmbeddingLemmaLiteral", "RefinedAbsorption.FaithfulSurvey2025.generalEmbedding_piecewise"]),
     "ResearchNote": (note, ["RefinedAbsorption.Extensions." + name for name in ["steiner_completion_avoiding", "steiner_intersection_prescribed", "partialSteiner_intersection_embedding", "steiner_intersection_spectrum_poly"]] + ["RefinedAbsorption.Assembly." + name for name in ["steiner_quantitatively_almost_resolvable", "exists_quantitatively_almost_resolvable_steiner", "nash_williams_scheduled_decomposition"]]),
 }
 solution_imports = {
-    "Article2024": ["Faithful2024.Section1", "Original2024.MinDegree", "Pending.Theorem28", "Pending.Theorem62"],
+    "Article2024": ["Faithful2024.Section1", "Original2024.MinDegree", "Pending.Theorem28", "Faithful2024.Theorem62Ambient"],
     "Survey2025": ["Multigraph.Existence", "FaithfulSurvey2025.Embedding"],
     "ResearchNote": ["Extensions.Intersection", "Assembly"],
 }

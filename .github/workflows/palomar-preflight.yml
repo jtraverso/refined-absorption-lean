@@ -1,0 +1,30 @@
+name: Palomar mechanical preflight
+
+on:
+  workflow_dispatch:
+    inputs:
+      entry:
+        description: Statement interface to compare
+        required: true
+        type: choice
+        default: Article2024
+        options:
+          - Article2024
+          - Survey2025
+          - ResearchNote
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@c02bbeaed888df45c4e28c4e99dba540ad21552a
+    with:
+      repository: ${{ github.repository }}
+      commit: ${{ github.sha }}
+      pipeline_commit: c02bbeaed888df45c4e28c4e99dba540ad21552a
+      request_id: preflight001
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: >-
+        {"comparator_config_path":"Palomar/${{ inputs.entry }}.comparator.json","formalization_metadata_path":"Palomar/${{ inputs.entry }}/formalization.yaml","authorization_relationship":"I am a responsible author or maintainer"}

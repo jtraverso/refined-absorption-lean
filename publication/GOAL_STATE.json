@@ -29,6 +29,16 @@
   "authorization": "User explicitly authorized publication and registration after the technical and editorial gates pass.",
   "source_dois": [
     "10.48550/arXiv.2402.17855",
-    "10.48550/arXiv.2510.19978"
-  ]
+    "10.1137/25M1805977"
+  ],
+  "source_versions": {
+    "article": "arXiv:2402.17855v1",
+    "survey_statement_baseline": "arXiv:2510.19978v1",
+    "survey_published_edition": "ICM 2026, Volume 6, pages 212-231"
+  },
+  "external_pending": {
+    "zenodo": "Chrome automation reported an open extension UI; a request to close it is pending with the user. No reservation has been made.",
+    "github": "Authenticated gh is available outside the network sandbox. No public repository has been created.",
+    "palomar": "Three scoped interfaces prepared. Syntax is checked locally; Comparator, official preflight, submission and registration remain pending."
+  }
 }

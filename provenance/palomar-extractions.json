@@ -66,6 +66,14 @@
     "sha256": "569950adccf3b06ea7bc8973061f55780a2c4da47bfdc3a96f5b334ce63fe7a2"
   },
   {
+    "source": "RefinedAbsorption/Original2024/MinDegree.lean",
+    "declaration": "theorem_6_1",
+    "kind": "theorem_header",
+    "start_line": 159,
+    "end_line": 159,
+    "sha256": "a967828f2bd4e7008aac38311ca376a513553288b2ae65445a2b956ef53262bc"
+  },
+  {
     "source": "RefinedAbsorption/Faithful2024/Defs.lean",
     "start_line": 129,
     "end_line": 129,
@@ -84,16 +92,56 @@
     "sha256": "f2e0d7feec6ef8a72c7c4e2d2ad734c473db0ff3fefc831372f0ff4027cba2bf"
   },
   {
-    "source": "RefinedAbsorption/Faithful2024/Section6.lean",
-    "start_line": 36,
-    "end_line": 42,
-    "sha256": "c3b14f7433255ced2fdfc7526ff8eb8d0f8fc9cb3bef1db6c42f5d14f807594a"
+    "source": "RefinedAbsorption/Faithful2024/Theorem62Ambient.lean",
+    "start_line": 22,
+    "end_line": 29,
+    "sha256": "dda6c51d02cb949e96b733074948e75ef186b71a6c8f794257d3b12de282d4be"
   },
   {
     "source": "RefinedAbsorption/Faithful2024/Section6.lean",
     "start_line": 48,
     "end_line": 53,
     "sha256": "f133d168e47a74cdb7157eeca8ca291b9cff6129c65c24edec465ac0c07c0d4a"
+  },
+  {
+    "source": "RefinedAbsorption/Faithful2024/Section1.lean",
+    "declaration": "theorem_1_7",
+    "kind": "theorem_header",
+    "start_line": 205,
+    "end_line": 205,
+    "sha256": "8211ac7d1386a0ebdbc301e147e8fd1f2629dbaa1b589ee786a39b0d446c3bba"
+  },
+  {
+    "source": "RefinedAbsorption/Faithful2024/Section1.lean",
+    "declaration": "theorem_1_11",
+    "kind": "theorem_header",
+    "start_line": 233,
+    "end_line": 233,
+    "sha256": "7eaae1a46d62465f7334191fe1fcf02c3a014f736b5ac68814bc7d851de71e82"
+  },
+  {
+    "source": "RefinedAbsorption/Faithful2024/Theorem62Ambient.lean",
+    "declaration": "theorem_6_2_ambient",
+    "kind": "theorem_header",
+    "start_line": 32,
+    "end_line": 32,
+    "sha256": "c1fff5594ba02f9f737bfe57564922431c6019918b93cb95309ddf927754ba7a"
+  },
+  {
+    "source": "RefinedAbsorption/Pending/Theorem28.lean",
+    "declaration": "theorem_2_8",
+    "kind": "theorem_header",
+    "start_line": 236,
+    "end_line": 236,
+    "sha256": "d0579380c6f25628097aa0cafcd79e9c3134dbca3a7cccd2dc5fdc109c03e903"
+  },
+  {
+    "source": "RefinedAbsorption/Pending/Theorem63Final.lean",
+    "declaration": "theorem_6_3",
+    "kind": "theorem_header",
+    "start_line": 17,
+    "end_line": 17,
+    "sha256": "848846994ab8394902878e12780b871f3a9730c9945e98496e149b236dbc4830"
   },
   {
     "source": "RefinedAbsorption/Statements.lean",
@@ -108,10 +156,34 @@
     "sha256": "234d560f3ce85221338aae4c5022c2762582f42bc31e987f36dd083be5ead92e"
   },
   {
+    "source": "RefinedAbsorption/Multigraph/Existence.lean",
+    "declaration": "existenceConjecture_proved",
+    "kind": "theorem_header",
+    "start_line": 226,
+    "end_line": 226,
+    "sha256": "24a086032b71249b2e35cdd5dcf012fc3db68029977aef5518fa7210c9b8a84a"
+  },
+  {
     "source": "RefinedAbsorption/ExistenceProof.lean",
     "start_line": 68,
     "end_line": 70,
     "sha256": "d560986a2848b62eb8c46b4bb409c6fc735221b002dc81365bf3ca594a292d38"
+  },
+  {
+    "source": "RefinedAbsorption/Final.lean",
+    "declaration": "theorem_1_10",
+    "kind": "theorem_header",
+    "start_line": 37,
+    "end_line": 37,
+    "sha256": "826bcb8d73a1e9a4e093a0d1cb05699e591403a18f926296e29b8d39f6903f80"
+  },
+  {
+    "source": "RefinedAbsorption/Final.lean",
+    "declaration": "existenceConjecture_steiner",
+    "kind": "theorem_header",
+    "start_line": 51,
+    "end_line": 51,
+    "sha256": "0d0b3078c1507308a396784cac01dd11b16be105333da79a7343019fa144b055"
   },
   {
     "source": "RefinedAbsorption/GeneralEmbedding/Defs.lean",
@@ -144,15 +216,87 @@
     "sha256": "81d257170d97fc1f1b5713da10a7f613f55fde2aeb2cff3cb68af6d815c8cff5"
   },
   {
+    "source": "RefinedAbsorption/FaithfulSurvey2025/Embedding.lean",
+    "declaration": "not_generalEmbeddingLemmaLiteral",
+    "kind": "theorem_header",
+    "start_line": 223,
+    "end_line": 223,
+    "sha256": "19eb6fbfc97c47e00f56fed8d80d3495b6b61933a917f27a28bb3db3b525981f"
+  },
+  {
+    "source": "RefinedAbsorption/FaithfulSurvey2025/Embedding.lean",
+    "declaration": "generalEmbedding_piecewise",
+    "kind": "theorem_header",
+    "start_line": 393,
+    "end_line": 393,
+    "sha256": "43bbe152e6e17833d06ca33866a75537eb1582f699364845c7fd8ce2581e1487"
+  },
+  {
     "source": "RefinedAbsorption/Extensions/Partial.lean",
     "start_line": 25,
     "end_line": 26,
     "sha256": "7d764932fe5438442803ae8c625f6d6a181163cde4a167e1120790037bb722e0"
   },
   {
+    "source": "RefinedAbsorption/Extensions/Intersection.lean",
+    "declaration": "steiner_completion_avoiding",
+    "kind": "theorem_header",
+    "start_line": 67,
+    "end_line": 73,
+    "sha256": "9c6de310735f96498eb004d4786a47f14a716caf6b16b73c3eadd7690ecfd327"
+  },
+  {
+    "source": "RefinedAbsorption/Extensions/Intersection.lean",
+    "declaration": "steiner_intersection_prescribed",
+    "kind": "theorem_header",
+    "start_line": 178,
+    "end_line": 182,
+    "sha256": "03d79183b45f3105e2bb12534b0df33146472a15df2b65deff721a4908054aa9"
+  },
+  {
+    "source": "RefinedAbsorption/Extensions/Intersection.lean",
+    "declaration": "partialSteiner_intersection_embedding",
+    "kind": "theorem_header",
+    "start_line": 400,
+    "end_line": 405,
+    "sha256": "60f5fb0ac6c7879edbb0f2e3953e47bf0d80894db942164265fff9964034f2b4"
+  },
+  {
+    "source": "RefinedAbsorption/Extensions/Intersection.lean",
+    "declaration": "steiner_intersection_spectrum_poly",
+    "kind": "theorem_header",
+    "start_line": 275,
+    "end_line": 279,
+    "sha256": "3106064605a5c1de99f1c95ea349d16f18edc2c1fecf6ea9edad882ca0119105"
+  },
+  {
     "source": "RefinedAbsorption/Extensions/PolynomialExternal.lean",
     "start_line": 29,
     "end_line": 103,
     "sha256": "b29b09bd5abd40188068e24871cc77b76fa78aad4bc8f814c6cc3965159efa93"
+  },
+  {
+    "source": "RefinedAbsorption/Assembly.lean",
+    "declaration": "steiner_quantitatively_almost_resolvable",
+    "kind": "theorem_header",
+    "start_line": 15,
+    "end_line": 23,
+    "sha256": "a07e858b8e3279a15c16e3db03c3d4247694f73154d99a7496517816942d8389"
+  },
+  {
+    "source": "RefinedAbsorption/Assembly.lean",
+    "declaration": "exists_quantitatively_almost_resolvable_steiner",
+    "kind": "theorem_header",
+    "start_line": 26,
+    "end_line": 34,
+    "sha256": "72c315b342f21a4078977ebabe0233d86cc43b7d913d7edfc527405a8dabb352"
+  },
+  {
+    "source": "RefinedAbsorption/Assembly.lean",
+    "declaration": "nash_williams_scheduled_decomposition",
+    "kind": "theorem_header",
+    "start_line": 37,
+    "end_line": 44,
+    "sha256": "5be09f73a16fe158ae4e809ce7f032581e92dae644f54f6040647c990a8e311e"
   }
 ]

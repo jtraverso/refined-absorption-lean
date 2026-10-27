@@ -315,13 +315,14 @@ def Theorem_2_8 : Prop :=
       (∀ v ∈ V₁, (vdeg ends G₁ v : ℝ) ≤ D) →
       (∀ a ∈ A, D * (1 - D ^ (-β)) ≤ (vdeg ends G₁ a : ℝ)) →
       ∃ M : Finset E, IsAPerfectMatching ends (G₁ ∪ G₂) M A
-def Theorem_6_2 : Prop :=
-  ∀ q r : ℕ, 1 ≤ r → r < q → ∀ (m : ℕ) (L : Finset (Finset (Fin m))), IsRGraph r L →
+def Theorem_6_2_ambient : Prop :=
+∀ q r : ℕ, 1 ≤ r → r < q → ∀ (m : ℕ) (L : Finset (Finset (Fin m))), IsRGraph r L →
     IsDivisible q r L → ∃ (h : ℕ) (A Q₁ Q₂ : Finset (Finset (Fin m ⊕ Fin h))),
       IsAbsorber q r (RefinedAbsorption.gmap Function.Embedding.inl L) A ∧
       IsDecomposition q r A Q₁ ∧
       IsDecomposition q r (A ∪ RefinedAbsorption.gmap Function.Embedding.inl L) Q₂ ∧
-      ∀ P₁ ∈ Q₁, ∀ P₂ ∈ Q₂, (P₁ ∩ P₂).card ≤ r
+      (∀ P₁ ∈ Q₁, ∀ P₂ ∈ Q₂, (P₁ ∩ P₂).card ≤ r) ∧
+      ∀ t ∈ A, ¬ t ⊆ (univ : Finset (Fin m)).map Function.Embedding.inl
 def Theorem_6_3 : Prop :=
   ∀ q r : ℕ, 1 ≤ r → r < q → ∃ (n₀ : ℕ) (ε : ℝ), 0 < ε ∧ ∀ n ≥ n₀,
     ∀ G : Finset (Finset (Fin n)), IsRGraph r G → IsDivisible q r G →
@@ -330,9 +331,9 @@ def Theorem_6_3 : Prop :=
           ∀ P₁ ∈ Q₁, ∀ P₂ ∈ Q₂, (P₁ ∩ P₂).card ≤ r
 theorem theorem_1_7 : Theorem_1_7 := by sorry
 theorem theorem_1_11 : Theorem_1_11 := by sorry
+theorem theorem_6_2_ambient : Theorem_6_2_ambient := by sorry
 end RefinedAbsorption.Faithful2024
 namespace RefinedAbsorption.Pending
 theorem theorem_2_8 : RefinedAbsorption.Faithful2024.Theorem_2_8 := by sorry
-theorem theorem_6_2 : RefinedAbsorption.Faithful2024.Theorem_6_2 := by sorry
 theorem theorem_6_3 : RefinedAbsorption.Faithful2024.Theorem_6_3 := by sorry
 end RefinedAbsorption.Pending

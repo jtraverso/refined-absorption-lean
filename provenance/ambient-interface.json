@@ -1,0 +1,24 @@
+{
+  "checked_utc": "2026-10-27T04:20:54.529865+00:00",
+  "old_endpoint": "RefinedAbsorption.Pending.theorem_6_2",
+  "old_source": "RefinedAbsorption/Pending/Theorem62.lean",
+  "old_source_sha256": "f183bcb6d1ff634fc5baa7c525e0d95e18122948d77ecf437505d45531a453ac",
+  "new_endpoint": "RefinedAbsorption.Faithful2024.theorem_6_2_ambient",
+  "new_source": "RefinedAbsorption/Faithful2024/Theorem62Ambient.lean",
+  "new_source_sha256": "e41e44404374ee609a91c4af77924a2b3b4f7b94b5992dec6e2dd5e4ed756a8c",
+  "change": "Additive interface. The existing construction and cross-intersection conclusion are retained; the output explicitly forbids absorber edges contained in the entire old ambient vertex set, including isolated old labels.",
+  "proof_dependencies": [
+    "RefinedAbsorption.Original2024.theorem_6_1",
+    "RefinedAbsorption.Pending.theorem_6_3"
+  ],
+  "development_probe": {
+    "exit_code": 0,
+    "environment": "Previously verified rc3 migration artifacts, with only the import module route changed in the temporary trial. This is a development check, not the final clean Lake certificate.",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "clean_lake_validation": "PENDING; recorded in publication/assembly/VALIDATION.json when the complete build passes."
+}

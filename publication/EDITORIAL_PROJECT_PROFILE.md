@@ -20,8 +20,8 @@ Abstract limit: Approximately 180 words in English; mathematically identical Spa
 Length constraints: Aim for 12–16 pages for the note; companion length determined by reproducibility needs. Clarity takes priority over an arbitrary page target.
 Protected elements: Existing Lean definitions, statements and proofs; exact external contracts; quantifier ranges; divisibility conditions; thresholds; the distinction between partial parallel classes and a resolution; the distinction between global and piecewise embeddings.
 Permitted structural changes: Group corollaries around the completion-avoiding theorem; move module names, full endpoint maps, execution records and hashes into the companion.
-Formal aggregate root: RefinedAbsorption.lean, covering all 299 library modules at the assembly stage.
-Formal canonical/public entry points: Original article endpoints in Faithful2024, Original2024 and Pending; survey endpoints in Final and FaithfulSurvey2025; intersection consequences in Extensions.Intersection; three closed quantitative endpoints in Assembly.
+Formal aggregate root: RefinedAbsorption.lean, covering all 300 library modules after adding the ambient-vertex interface for 6.2.
+Formal canonical/public entry points: Original article endpoints in Faithful2024, Original2024 and Pending, including the additive theorem_6_2_ambient; survey endpoints in Final, Multigraph.Existence and FaithfulSurvey2025; intersection consequences in Extensions.Intersection; three closed quantitative endpoints in Assembly.
 Recorded build target list: All local library and check modules, followed by the default Lake build; standalone Palomar interfaces checked separately. Exact counts and logs belong to the final validation record.
 Lean audit mode: Rerun with a clean project build directory and pinned cached dependencies; fresh endpoint axiom checks. Palomar preflight is a further independent mechanical gate.
 Artifact package boundary: preprints/RESEARCH_NOTE/{01_manuscript,02_validation,03_reproducibility,04_integrity,05_formalization}, plus the actual Lean library, provenance, publication receipts and scripts in the repository.
