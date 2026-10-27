@@ -1,0 +1,72 @@
+{
+  "status": "PASS_PUBLIC_RELEASE_ASSET_INTEGRITY",
+  "repository": "jtraverso/refined-absorption-lean",
+  "visibility": "public",
+  "tag": "preprint-v1.0",
+  "target_commit": "ab62cca3d797a939466c76f7ed302b20e8a422be",
+  "url": "https://github.com/jtraverso/refined-absorption-lean/releases/tag/preprint-v1.0",
+  "published_at": "2026-10-27T08:36:59Z",
+  "draft": false,
+  "assets": [
+    {
+      "name": "DOCUMENT_MANIFEST.json",
+      "sha256": "6c795b0a99bd6c878b92839ead50642b6956e7674091d6e7d3c92cfc46b5c70b",
+      "bytes": 11998,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/DOCUMENT_MANIFEST.json"
+    },
+    {
+      "name": "formal-v1.0-5428ee9b772e.tar.gz",
+      "sha256": "e9bb21b17a110a392a7751afefb9a2e9d6bf218c7e6dac788006234f3af09c05",
+      "bytes": 2912587,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/formal-v1.0-5428ee9b772e.tar.gz"
+    },
+    {
+      "name": "formal-v1.0-5428ee9b772e.tar.gz.sha256",
+      "sha256": "ad4e94a5991dc054cc9b8cc5245a67a2a61af8e6abfa32d813be2dfb8c843944",
+      "bytes": 98,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/formal-v1.0-5428ee9b772e.tar.gz.sha256"
+    },
+    {
+      "name": "FORMALIZATION_COMPANION_preprint_v1.0_en.pdf",
+      "sha256": "1c7b98bcbc2d0bb15bf0e8f5c1e8750ac5c9d62ddb7191f4d8eb0a6f278f4bb3",
+      "bytes": 64842,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/FORMALIZATION_COMPANION_preprint_v1.0_en.pdf"
+    },
+    {
+      "name": "FORMALIZATION_COMPANION_preprint_v1.0_es.pdf",
+      "sha256": "7157fe256212278639c11e6097b16057cdb66bae7a904d56d382779431408727",
+      "bytes": 65733,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/FORMALIZATION_COMPANION_preprint_v1.0_es.pdf"
+    },
+    {
+      "name": "research-note-preprint-v1.0.zip",
+      "sha256": "cbbcdb77a8ff83abec55f6f8c045ec80fa98777ebd4763bdfb86596e202fc8bc",
+      "bytes": 518139,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/research-note-preprint-v1.0.zip"
+    },
+    {
+      "name": "research-note-preprint-v1.0.zip.sha256",
+      "sha256": "241dd21aa72e00a83b640f91aca54faf943cee75e25799adb8fbfa7c2ea53a77",
+      "bytes": 98,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/research-note-preprint-v1.0.zip.sha256"
+    },
+    {
+      "name": "RESEARCH_NOTE_preprint_v1.0_en.pdf",
+      "sha256": "9c331b8966a5c002352531bb93a9e78a6c0c228e838a674a168afcf477d62d14",
+      "bytes": 97236,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/RESEARCH_NOTE_preprint_v1.0_en.pdf"
+    },
+    {
+      "name": "RESEARCH_NOTE_preprint_v1.0_es.pdf",
+      "sha256": "ba6e848f0aa222659f44c830a72808bb6d63da5e3440e027fb06c7778a4e9152",
+      "bytes": 99550,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/RESEARCH_NOTE_preprint_v1.0_es.pdf"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "sha256": "68b21174fed20bca81b93ab835fce29e655662b4a52dbc774299e8f8fc856f08",
+      "bytes": 7812,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/SHA256SUMS.txt"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "status": "RUNNING_OFFICIAL_PREFLIGHTS",
+  "repository": "jtraverso/refined-absorption-lean",
+  "source_commit": "ab62cca3d797a939466c76f7ed302b20e8a422be",
+  "pipeline_commit": "c02bbeaed888df45c4e28c4e99dba540ad21552a",
+  "mode": "full",
+  "execution_profile": "palomar-standard-v1",
+  "runs": [
+    {
+      "entry": "Article2024",
+      "run_id": 40474878363,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/actions/runs/40474878363",
+      "comparator_config_path": "Palomar/Article2024.comparator.json",
+      "formalization_metadata_path": "Palomar/Article2024/formalization.yaml",
+      "observed_jobs": [
+        {
+          "id": 122090553011,
+          "name": "preflight / profile",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 122090593471,
+          "name": "preflight / verify",
+          "status": "in_progress",
+          "conclusion": null
+        }
+      ]
+    },
+    {
+      "entry": "Survey2025",
+      "run_id": 40474931160,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/actions/runs/40474931160",
+      "comparator_config_path": "Palomar/Survey2025.comparator.json",
+      "formalization_metadata_path": "Palomar/Survey2025/formalization.yaml",
+      "observed_jobs": [
+        {
+          "id": 122090719743,
+          "name": "preflight / profile",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 122090757616,
+          "name": "preflight / verify",
+          "status": "in_progress",
+          "conclusion": null
+        }
+      ]
+    },
+    {
+      "entry": "ResearchNote",
+      "run_id": 40474940957,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/actions/runs/40474940957",
+      "comparator_config_path": "Palomar/ResearchNote.comparator.json",
+      "formalization_metadata_path": "Palomar/ResearchNote/formalization.yaml",
+      "observed_jobs": [
+        {
+          "id": 122090751699,
+          "name": "preflight / profile",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 122090787478,
+          "name": "preflight / verify",
+          "status": "in_progress",
+          "conclusion": null
+        }
+      ]
+    }
+  ],
+  "scope": "Actual reusable-workflow dispatches on the released source commit. Running status is not a pass or a registry submission."
+}

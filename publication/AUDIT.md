@@ -13,9 +13,10 @@ Audit owner: Codex acting under Juan Pablo Traverso Gianini's direction. Self-as
 | Final TeX/PDF and rendered-page QA | PASS | Actual DOI inserted; four final TeX/PDF pairs; all 35 current pages inspected after the last layout correction |
 | Final document integrity package | PASS | `document-release/RECEIPT.json` binds the final 57-file package, sealed after final QA |
 | Zenodo DOI reservation | PASS | Actual saved draft 23685654: `10.5281/zenodo.23685654`, `zenodo/note-reservation.json` |
-| Zenodo public deposit publication | PENDING | Metadata entered; four final PDF uploads and publication receipt are next |
-| Public GitHub release | PENDING | To follow the required local gates and prior DOI reservation |
-| Official Palomar preflight, review and registration | PENDING | Separate exact-commit service workflow |
+| Zenodo public deposit publication | PENDING | Saved metadata and DOI; PDF upload awaits the explicit choice about Chrome's file-URL access |
+| Public GitHub release | PASS | Actual public `preprint-v1.0` release; all ten asset digests verified in `github/RELEASE.json` |
+| Official Palomar preflight | RUNNING | Three complete official reusable-workflow dispatches at source commit `ab62cca3d797a939466c76f7ed302b20e8a422be`; `palomar/PREFLIGHT_RUNS.json` |
+| Palomar intake, review and registration | PENDING | Require passing preflights, source/relationship agreement and a later decision on each actual private review |
 
 Current editorial verdict: `EDITORIALLY_READY`.
 

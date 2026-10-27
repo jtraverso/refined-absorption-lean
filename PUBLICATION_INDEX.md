@@ -14,3 +14,5 @@ The two mathematical source works are:
 The note's quantitative application reuses the proof documented in the author's Nash–Williams [Paper I](https://doi.org/10.5281/zenodo.23428173) and [Paper II](https://doi.org/10.5281/zenodo.23502224). Those papers remain in their existing publication repository.
 
 Three scoped Palomar entries are prepared: `Article2024` (six endpoints), `Survey2025` (five endpoints) and `ResearchNote` (seven endpoints). The note's reserved DOI is 10.5281/zenodo.23685654 and is included in all three metadata files. Official preflight, submission, review and registration have not occurred. Current local proof evidence is not presented as any of those receipts.
+
+The [public preprint 1.0 release](https://github.com/jtraverso/refined-absorption-lean/releases/tag/preprint-v1.0) contains the four final PDFs, document and formal archives, and checksums. All ten uploaded assets match their local SHA-256 digests; see [the release receipt](publication/github/RELEASE.json). The three official preflights are tracked in [PREFLIGHT_RUNS.json](publication/palomar/PREFLIGHT_RUNS.json).

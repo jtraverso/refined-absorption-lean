@@ -1,0 +1,17 @@
+{
+  "status": "PASS_FINAL_PUBLICATION_SNAPSHOT",
+  "publication_source_commit": "ab62cca3d797a939466c76f7ed302b20e8a422be",
+  "formal_validation": {
+    "status": "PASS_RECORDED_FREEZE_INTEGRITY",
+    "source_commit": "5428ee9b772e67dd7ec6da443199b36a003b72d4",
+    "local_lean_sources": 316,
+    "axiom_queries": 360,
+    "original_sources": 300,
+    "lean_executed": false,
+    "scope": "Recorded evidence, archived source bytes and current source correspondence; not independent proof replay."
+  },
+  "manifested_files": 55,
+  "document_archive_sha256": "cbbcdb77a8ff83abec55f6f8c045ec80fa98777ebd4763bdfb86596e202fc8bc",
+  "doi": "10.5281/zenodo.23685654",
+  "lean_executed": false
+}

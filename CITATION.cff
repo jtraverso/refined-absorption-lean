@@ -10,3 +10,4 @@ version: "1.0"
 doi: "10.5281/zenodo.23685654"
 license: CC-BY-4.0
 abstract: "A research note on proof interfaces and consequences of the Lean formalization of refined absorption, with a separate formalization and reproducibility companion."
+repository-code: "https://github.com/jtraverso/refined-absorption-lean"
