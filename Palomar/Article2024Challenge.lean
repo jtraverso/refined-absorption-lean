@@ -93,8 +93,10 @@ def completeRGraph (V : Type*) [Fintype V] (r : ℕ) : Finset (Finset V) :=
 end RefinedAbsorption
 namespace RefinedAbsorption
 open Finset
+/-- `Δ_{r-1}(X) ≤ D`: every `(r-1)`-set lies in at most `D` edges of `X`. -/
 def MaxDegLE {n : ℕ} (r : ℕ) (X : Finset (Finset (Fin n))) (D : ℝ) : Prop :=
   ∀ S : Finset (Fin n), S.card + 1 = r → (deg X S : ℝ) ≤ D
+/-- `δ_{r-1}(J) ≥ D`: every `(r-1)`-set lies in at least `D` edges of `J`. -/
 def MinDegGE {n : ℕ} (r : ℕ) (J : Finset (Finset (Fin n))) (D : ℝ) : Prop :=
   ∀ S : Finset (Fin n), S.card + 1 = r → D ≤ (deg J S : ℝ)
 end RefinedAbsorption
@@ -125,19 +127,27 @@ end RefinedAbsorption
 namespace RefinedAbsorption
 open Finset
 variable {U V : Type*} [DecidableEq U] [DecidableEq V]
+/-- The image of a hypergraph (or clique family) under an injective vertex map. -/
 def gmap (f : U ↪ V) (G : Finset (Finset U)) : Finset (Finset V) :=
   G.map (mapEmbedding f).toEmbedding
 end RefinedAbsorption
 namespace RefinedAbsorption.Original2024
+/-- The degree budget `n^{1-1/r} log n` of the article. -/
 noncomputable def budget (n r : ℕ) : ℝ := (n : ℝ) ^ (1 - 1 / (r : ℝ)) * Real.log n
+/-- **Theorem 6.1 (minimum degree version of the Existence Conjecture, `λ = 1`)** for fixed
+`q, r`: there are `ε > 0` and `n₀` such that every `K_q^r`-divisible `r`-graph `G` on `n ≥ n₀`
+vertices with `δ_{r-1}(G) ≥ (1-ε) n` has a `K_q^r`-decomposition. -/
 def Theorem_6_1_for (q r : ℕ) : Prop :=
   ∃ ε : ℝ, 0 < ε ∧ ∃ n₀ : ℕ, ∀ n ≥ n₀, ∀ G : Finset (Finset (Fin n)),
     IsRGraph r G → MinDegGE r G ((1 - ε) * n) → IsDivisible q r G → HasDecomposition q r G
+/-- **Theorem 6.1**, for all `q > r ≥ 1`. -/
 def Theorem_6_1 : Prop := ∀ q r : ℕ, 1 ≤ r → r < q → Theorem_6_1_for q r
+/-- **Theorem 6.1** for all `q > r ≥ 1`. -/
 theorem theorem_6_1 : Theorem_6_1 := by sorry
 end RefinedAbsorption.Original2024
 namespace RefinedAbsorption.Faithful2024
 open Finset
+/-- The degree budget `n^{1-1/r} log n` (same as `Original2024.budget`). -/
 noncomputable abbrev budget (n r : ℕ) : ℝ := Original2024.budget n r
 structure HGraph (α : Type*) where
   verts : Finset α
@@ -315,6 +325,9 @@ def Theorem_2_8 : Prop :=
       (∀ v ∈ V₁, (vdeg ends G₁ v : ℝ) ≤ D) →
       (∀ a ∈ A, D * (1 - D ^ (-β)) ≤ (vdeg ends G₁ a : ℝ)) →
       ∃ M : Finset E, IsAPerfectMatching ends (G₁ ∪ G₂) M A
+/-- The source article's Theorem 6.2, with independence of the whole old
+ambient vertex set written explicitly in addition to the support-based
+IsAbsorber contract. -/
 def Theorem_6_2_ambient : Prop :=
 ∀ q r : ℕ, 1 ≤ r → r < q → ∀ (m : ℕ) (L : Finset (Finset (Fin m))), IsRGraph r L →
     IsDivisible q r L → ∃ (h : ℕ) (A Q₁ Q₂ : Finset (Finset (Fin m ⊕ Fin h))),
@@ -323,17 +336,27 @@ def Theorem_6_2_ambient : Prop :=
       IsDecomposition q r (A ∪ RefinedAbsorption.gmap Function.Embedding.inl L) Q₂ ∧
       (∀ P₁ ∈ Q₁, ∀ P₂ ∈ Q₂, (P₁ ∩ P₂).card ≤ r) ∧
       ∀ t ∈ A, ¬ t ⊆ (univ : Finset (Fin m)).map Function.Embedding.inl
+/-- **Theorem 6.3 of arXiv:2402.17855v1** (statement).  For `q > r ≥ 1` there are `n₀` and
+`ε > 0` such that every `K_q^r`-divisible `r`-graph `G` on `v(G) = n ≥ n₀` vertices with
+`δ(G) ≥ (1 - ε) n`, and every `K_q^r`-packing `Q₁` of `G`, admit a `K_q^r`-decomposition `Q₂` of `G`
+with `|V(Q₁) ∩ V(Q₂)| ≤ r` for all `Q₁ ∈ Q₁`, `Q₂ ∈ Q₂`. -/
 def Theorem_6_3 : Prop :=
   ∀ q r : ℕ, 1 ≤ r → r < q → ∃ (n₀ : ℕ) (ε : ℝ), 0 < ε ∧ ∀ n ≥ n₀,
     ∀ G : Finset (Finset (Fin n)), IsRGraph r G → IsDivisible q r G →
       MinDegGE r G ((1 - ε) * n) → ∀ Q₁ : Finset (Finset (Fin n)), IsPacking q r G Q₁ →
         ∃ Q₂ : Finset (Finset (Fin n)), IsDecomposition q r G Q₂ ∧
           ∀ P₁ ∈ Q₁, ∀ P₂ ∈ Q₂, (P₁ ∩ P₂).card ≤ r
+/-- **Theorem 1.7 of arXiv:2402.17855v1 (Refined Omni-Absorber Theorem)**, faithful form. -/
 theorem theorem_1_7 : Theorem_1_7 := by sorry
+/-- **Theorem 1.11 of arXiv:2402.17855v1 (Refiner Theorem)**, faithful form: the bound is on the
+refinement degree `Δ(𝓗)` of the family. -/
 theorem theorem_1_11 : Theorem_1_11 := by sorry
+/-- The same construction as Pending.theorem_6_2 exposes ambient independence. -/
 theorem theorem_6_2_ambient : Theorem_6_2_ambient := by sorry
 end RefinedAbsorption.Faithful2024
 namespace RefinedAbsorption.Pending
+/-- **Theorem 2.8 of arXiv:2402.17855v1 (Nibble with Reserves).** -/
 theorem theorem_2_8 : RefinedAbsorption.Faithful2024.Theorem_2_8 := by sorry
+/-- **Theorem 6.3 of arXiv:2402.17855v1** (proved). -/
 theorem theorem_6_3 : RefinedAbsorption.Faithful2024.Theorem_6_3 := by sorry
 end RefinedAbsorption.Pending

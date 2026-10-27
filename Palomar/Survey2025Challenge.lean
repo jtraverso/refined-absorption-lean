@@ -93,8 +93,10 @@ def completeRGraph (V : Type*) [Fintype V] (r : ℕ) : Finset (Finset V) :=
 end RefinedAbsorption
 namespace RefinedAbsorption
 open Finset
+/-- `Δ_{r-1}(X) ≤ D`: every `(r-1)`-set lies in at most `D` edges of `X`. -/
 def MaxDegLE {n : ℕ} (r : ℕ) (X : Finset (Finset (Fin n))) (D : ℝ) : Prop :=
   ∀ S : Finset (Fin n), S.card + 1 = r → (deg X S : ℝ) ≤ D
+/-- `δ_{r-1}(J) ≥ D`: every `(r-1)`-set lies in at least `D` edges of `J`. -/
 def MinDegGE {n : ℕ} (r : ℕ) (J : Finset (Finset (Fin n))) (D : ℝ) : Prop :=
   ∀ S : Finset (Fin n), S.card + 1 = r → D ≤ (deg J S : ℝ)
 end RefinedAbsorption
@@ -124,31 +126,53 @@ def IsCRefined (C : ℕ) (X A F : Finset (Finset V)) : Prop :=
 end RefinedAbsorption
 namespace RefinedAbsorption
 variable {V : Type*} [DecidableEq V] [Fintype V]
+/-- A design with parameters `(|V|, q, r, l)`: a set of `q`-subsets of `V` such that every
+`r`-subset of `V` lies in exactly `l` of them. -/
 structure IsDesign (q r l : ℕ) (𝒟 : Finset (Finset V)) : Prop where
   card_eq : ∀ B ∈ 𝒟, B.card = q
   mult_eq : ∀ T : Finset V, T.card = r → cliqueMult 𝒟 T = l
+/-- A `(|V|, q, r)`-Steiner system: every `r`-subset lies in exactly one block. -/
 abbrev IsSteinerSystem (q r : ℕ) (𝒮 : Finset (Finset V)) : Prop := IsDesign q r 1 𝒮
+/-- The divisibility conditions for designs with parameters `(n, q, r, l)`:
+`binom(q-i, r-i) ∣ l · binom(n-i, r-i)` for all `0 ≤ i ≤ r-1`. -/
 def DesignDivisibility (n q r l : ℕ) : Prop :=
   ∀ i < r, (q - i).choose (r - i) ∣ l * (n - i).choose (r - i)
 end RefinedAbsorption
 namespace RefinedAbsorption
+/-- **Theorem 1.10 (Refined efficient omni-absorber, Delcourt–Postle).**  For `q > r ≥ 1`
+there is `C ≥ 1` such that: if `X ⊆ K_n^r` has `Δ_{r-1}(X) ≤ D ≤ n / C`, then there is a
+`C`-refined `K_q^r`-omni-absorber `A` for `X` with
+`Δ_{r-1}(A) ≤ C · max(D, n^{1-1/r} log n)`.  (Theorem 1.8 is the same statement without
+refinedness.)  Not proved here; `RequestProject/OmniFromRefiner.lean` derives it from refined
+refiners with attached absorbers (`refinedEfficientOmniAbsorber_of_refinerWithAbsorbers`). -/
 def RefinedEfficientOmniAbsorber : Prop :=
   ∀ q r : ℕ, 1 ≤ r → r < q → ∃ C : ℕ, 1 ≤ C ∧ ∀ n : ℕ, ∀ X : Finset (Finset (Fin n)),
     ∀ D : ℝ, IsRGraph r X → MaxDegLE r X D → D ≤ n / C →
       ∃ A F : Finset (Finset (Fin n)), ∃ QA : Finset (Finset (Fin n)) → Finset (Finset (Fin n)),
         IsOmniAbsorber q r X A F QA ∧ IsCRefined C X A F ∧
           MaxDegLE r A (C * max D ((n : ℝ) ^ (1 - 1 / (r : ℝ)) * Real.log n))
+/-- **Conjecture 1.1 (Existence Conjecture)**, proved by Keevash (Theorem 1.2), and again by
+Glock–Kühn–Lo–Osthus and by Delcourt–Postle via refined absorption.  For `q > r ≥ 2` and
+`λ ≥ 1`, if `n` is large enough and `binom(q-i, r-i) ∣ λ binom(n-i, r-i)` for all
+`0 ≤ i ≤ r-1`, then a design with parameters `(n, q, r, λ)` exists. -/
 def ExistenceConjecture : Prop :=
   ∀ q r l : ℕ, 2 ≤ r → r < q → 1 ≤ l → ∃ n₀, ∀ n ≥ n₀, DesignDivisibility n q r l →
     ∃ 𝒟 : Finset (Finset (Fin n)), IsDesign q r l 𝒟
+/-- **The Existence Conjecture (Conjecture 1.1, Keevash's theorem) for every `λ ≥ 1`**, with
+simple designs, proved by refined absorption. -/
 theorem existenceConjecture_proved : ExistenceConjecture := by sorry
+/-- **The Existence Conjecture for Steiner systems** (`λ = 1`): for `q > r ≥ 2` and `n` large
+enough satisfying the divisibility conditions, an `(n, q, r)`-Steiner system exists. -/
 def SteinerExistenceConjecture : Prop :=
   ∀ q r : ℕ, 2 ≤ r → r < q → ∃ n₀, ∀ n ≥ n₀, DesignDivisibility n q r 1 →
     ∃ 𝒮 : Finset (Finset (Fin n)), IsSteinerSystem q r 𝒮
 end RefinedAbsorption
 namespace RefinedAbsorption.Final
 open RefinedAbsorption
+/-- **Theorem 1.10 (Refined efficient omni-absorber, Delcourt–Postle).** -/
 theorem theorem_1_10 : RefinedEfficientOmniAbsorber := by sorry
+/-- **The Existence Conjecture for Steiner systems** (`λ = 1`), via the refined absorption proof
+of Section 2 of the survey: Theorem 1.10 together with Corollary 2.4. -/
 theorem existenceConjecture_steiner : SteinerExistenceConjecture := by sorry
 end RefinedAbsorption.Final
 namespace RefinedAbsorption
@@ -243,10 +267,19 @@ def NewEdgesDistinct (ℋ : Finset (Finset ι)) (m : Finset ι → ℕ)
   ∀ H₁ ∈ ℋ, ∀ H₂ ∈ ℋ, H₁ ≠ H₂ → ∀ e₁ ∈ W H₁, ∀ e₂ ∈ W H₂,
     e₁.toRight.Nonempty → e₂.toRight.Nonempty → embedEdge (φ H₁) e₁ ≠ embedEdge (φ H₂) e₂
 open Classical in
+/-- `Δ_{r-1}(J)` of the multi-`r`-graph `J` (all copies of the finite label type, counted with
+multiplicity). -/
 noncomputable def jMaxDeg (r : ℕ) {ι : Type*} [Fintype ι] (ends : ι → Finset (Fin n)) : ℕ :=
   ((univ : Finset (Finset (Fin n))).filter fun S => S.card + 1 = r).sup fun S =>
     (univ.filter fun x => S ⊆ ends x).card
 open Classical in
+/-- **Lemma 3.8 of the survey, read literally** (with Definition 3.7 as printed: one map
+`φ : V(⋃𝒲) ↪ V(G)` fixing `V(J)`): `∀ C > r ≥ 1, γ ∈ (0,1] ∃ C' ≥ 1`: for `G ⊆ K_n^r`, a
+multi-`r`-graph `J` with `Simple(J) ⊆ G` and `Δ(J) ≤ n/C'`, a `C`-refined family `ℋ` of subgraphs of
+`J` and a `C`-bounded edge-intersecting supergraph system `𝒲` for `ℋ` such that every `W_H` has at
+least `γ n^{|V(W_H) ∖ V(H)|}` embeddings into `G ∖ (E(J) ∖ E(H))`, there is an embedding `φ` of `𝒲`
+into `G` with `Δ_{r-1}(φ(𝒲)) ≤ C' Δ_{r-1}(J)`.  **This statement is false**
+(`not_generalEmbeddingLemmaLiteral`). -/
 def GeneralEmbeddingLemmaLiteral : Prop :=
   ∀ (C r : ℕ), 1 ≤ r → r < C → ∀ γ : ℝ, 0 < γ → γ ≤ 1 → ∃ C' : ℝ, 1 ≤ C' ∧
     ∀ (n : ℕ) (G : Finset (Finset (Fin n))) (ι : Type) [Fintype ι] [DecidableEq ι]
@@ -263,6 +296,10 @@ def GeneralEmbeddingLemmaLiteral : Prop :=
         ∀ S : Finset (Fin n), S.card + 1 = r →
           (((systemImage ℋ m W Ψ).filter (fun f => S ⊆ f)).card : ℝ) ≤ C' * jMaxDeg r ends
 open Classical in
+/-- **Lemma 3.8 of the survey, per-piece variant** (the notion of the project, restated with the
+names of this file): the conclusion asks for per-piece embeddings (each `φ H` injective, avoiding
+`V(H)` and `E(J) ∖ E(H)`) with distinct images of the new edges of different supergraphs, instead
+of the global injectivity of the printed Definition 3.7. -/
 def GeneralEmbeddingLemmaPiecewise : Prop :=
   ∀ (C r : ℕ), 1 ≤ r → r < C → ∀ γ : ℝ, 0 < γ → γ ≤ 1 → ∃ C' : ℝ, 1 ≤ C' ∧
     ∀ (n : ℕ) (G : Finset (Finset (Fin n))) (ι : Type) [Fintype ι] [DecidableEq ι]
@@ -280,6 +317,13 @@ def GeneralEmbeddingLemmaPiecewise : Prop :=
         IsPiecewiseHostEmbedding G ends ℋ m W φ ∧ NewEdgesDistinct ℋ m W φ ∧
         ∀ S : Finset (Fin n), S.card + 1 = r →
           (((systemImage ℋ m W φ).filter (fun f => S ⊆ f)).card : ℝ) ≤ C' * D
+/-- **The literal reading of Lemma 3.8 of the survey is false.**  Take `C = 3`, `r = 2`,
+`γ = 1/2`.  For any `C'`, let `k = ⌈C'⌉ + 2`, `n = 2k`, `G = K_n^2`, `J` the perfect matching,
+`ℋ` the single edges of `J` and `W_H` the triangle on `H` with one new vertex.  All hypotheses
+hold (`Δ(J) = 1 ≤ n/C'`, each `W_H` has `n - 2 ≥ n/2` embeddings into `G ∖ (E(J) ∖ E(H))`), but an
+injective map on `V(⋃𝒲) ⊇ V(J) = Fin n` fixing `V(J)` has no room for any new vertex. -/
 theorem not_generalEmbeddingLemmaLiteral : ¬ GeneralEmbeddingLemmaLiteral := by sorry
+/-- **Lemma 3.8 of the survey, per-piece variant: proved** (adapter from the existing
+`RefinedAbsorption.generalEmbeddingLemma`). -/
 theorem generalEmbedding_piecewise : GeneralEmbeddingLemmaPiecewise := by sorry
 end RefinedAbsorption.FaithfulSurvey2025

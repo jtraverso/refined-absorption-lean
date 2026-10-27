@@ -93,8 +93,8 @@
   },
   {
     "source": "RefinedAbsorption/Faithful2024/Theorem62Ambient.lean",
-    "start_line": 22,
-    "end_line": 29,
+    "start_line": 23,
+    "end_line": 30,
     "sha256": "dda6c51d02cb949e96b733074948e75ef186b71a6c8f794257d3b12de282d4be"
   },
   {
@@ -123,8 +123,8 @@
     "source": "RefinedAbsorption/Faithful2024/Theorem62Ambient.lean",
     "declaration": "theorem_6_2_ambient",
     "kind": "theorem_header",
-    "start_line": 32,
-    "end_line": 32,
+    "start_line": 33,
+    "end_line": 33,
     "sha256": "c1fff5594ba02f9f737bfe57564922431c6019918b93cb95309ddf927754ba7a"
   },
   {
@@ -279,24 +279,24 @@
     "source": "RefinedAbsorption/Assembly.lean",
     "declaration": "steiner_quantitatively_almost_resolvable",
     "kind": "theorem_header",
-    "start_line": 15,
-    "end_line": 23,
+    "start_line": 19,
+    "end_line": 27,
     "sha256": "a07e858b8e3279a15c16e3db03c3d4247694f73154d99a7496517816942d8389"
   },
   {
     "source": "RefinedAbsorption/Assembly.lean",
     "declaration": "exists_quantitatively_almost_resolvable_steiner",
     "kind": "theorem_header",
-    "start_line": 26,
-    "end_line": 34,
+    "start_line": 33,
+    "end_line": 41,
     "sha256": "72c315b342f21a4078977ebabe0233d86cc43b7d913d7edfc527405a8dabb352"
   },
   {
     "source": "RefinedAbsorption/Assembly.lean",
     "declaration": "nash_williams_scheduled_decomposition",
     "kind": "theorem_header",
-    "start_line": 37,
-    "end_line": 44,
+    "start_line": 49,
+    "end_line": 56,
     "sha256": "5be09f73a16fe158ae4e809ce7f032581e92dae644f54f6040647c990a8e311e"
   }
 ]

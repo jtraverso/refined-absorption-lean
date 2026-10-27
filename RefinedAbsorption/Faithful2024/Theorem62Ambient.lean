@@ -5,8 +5,9 @@ public import RefinedAbsorption.Pending.Theorem62
 # Theorem 6.2 with an explicit ambient-vertex contract
 
 The existing Theorem_6_2 and Pending.theorem_6_2 are retained unchanged.
-This additive interface records that every old vertex, including an isolated
-label of L, is independent in the absorber. Its construction is the same
+This additive interface records that the whole set of old vertices, including
+isolated labels of L, is independent in the absorber: no absorber edge is
+contained in that set. Its construction is the same
 admissible-host construction used by Pending.theorem_6_2. No stronger
 cross-intersection bound or new existence hypothesis is asserted.
 -/

@@ -18,6 +18,14 @@ def read(path):
     return (ROOT / path).read_text(encoding="utf-8")
 
 
+def preceding_doc(source, start):
+    prefix = source[:start].rstrip()
+    comment = prefix.rfind("/-")
+    if prefix.endswith("-/") and comment >= 0 and prefix[comment:].startswith("/--"):
+        return prefix[comment:] + "\n"
+    return ""
+
+
 def take(path, start, end):
     source = read(path)
     a = source.index(start)
@@ -36,7 +44,7 @@ def definition(path, name):
     end = source.find("\n\n", match.start())
     assert end > match.start()
     first_line = source[match.start():source.index("\n", match.start())]
-    return take(path, first_line, source[end:end+20])
+    return preceding_doc(source, match.start()) + take(path, first_line, source[end:end+20])
 
 
 def theorem(path, name):
@@ -49,7 +57,7 @@ def theorem(path, name):
                   "start_line": source[:match.start()].count("\n") + 1,
                   "end_line": source[:end].count("\n") + 1,
                   "sha256": hashlib.sha256(header.encode()).hexdigest()})
-    return header + " := by sorry\n"
+    return preceding_doc(source, match.start()) + header + " := by sorry\n"
 
 
 def namespace(name, body):

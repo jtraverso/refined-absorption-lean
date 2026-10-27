@@ -5,7 +5,7 @@
   "old_source_sha256": "f183bcb6d1ff634fc5baa7c525e0d95e18122948d77ecf437505d45531a453ac",
   "new_endpoint": "RefinedAbsorption.Faithful2024.theorem_6_2_ambient",
   "new_source": "RefinedAbsorption/Faithful2024/Theorem62Ambient.lean",
-  "new_source_sha256": "e41e44404374ee609a91c4af77924a2b3b4f7b94b5992dec6e2dd5e4ed756a8c",
+  "new_source_sha256": "7f2cdba85954fcc4536e26ab0cc9e12af3e3dfb8e3323db37c5c8ae1f4c1d042",
   "change": "Additive interface. The existing construction and cross-intersection conclusion are retained; the output explicitly forbids absorber edges contained in the entire old ambient vertex set, including isolated old labels.",
   "proof_dependencies": [
     "RefinedAbsorption.Original2024.theorem_6_1",
@@ -18,7 +18,10 @@
       "propext",
       "Classical.choice",
       "Quot.sound"
-    ]
+    ],
+    "source_sha256": "e41e44404374ee609a91c4af77924a2b3b4f7b94b5992dec6e2dd5e4ed756a8c",
+    "source_commit": "d54f635ec968cd451bf4f2bcf388606389d94b79",
+    "subsequent_change": "Module documentation clarified set independence; the statement and proof script are unchanged."
   },
   "clean_lake_validation": "PENDING; recorded in publication/assembly/VALIDATION.json when the complete build passes."
 }

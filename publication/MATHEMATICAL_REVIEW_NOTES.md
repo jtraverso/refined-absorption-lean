@@ -34,6 +34,8 @@ Use source-qualified theorem numbers. The survey's Lemma 3.8 is unrelated to the
 
 The counterexample takes r=2, C=3, γ=1/2, a perfect matching spanning an even n-vertex complete graph, and a privately extended triangle for each matching edge. Each piece has n−2 ≥ n/2 rooted embeddings when n ≥ 4; the matching has degree 1, so any prescribed sparsity constant is met by taking n large. All old vertices are fixed, leaving no host vertex for a new vertex under a global injection. The cited Appendix B proof is available; the issue is the global conclusion, not a missing reference. The piecewise theorem is a proved variant and must be identified as such.
 
+The coded global domain uses old vertices occurring in the indexed pieces. In the counterexample those pieces cover every vertex of J, so this domain convention agrees with the full old vertex set on the witness. The refutation does not depend on how unused or isolated old vertices are added to a general system's domain. Avoid claiming a generic definitional identity across every ambient-vertex convention merely from this counterexample.
+
 ## Completion and intersections
 
 Write H(P) for the covered r-edges of a partial Steiner system. Sparsity is a bound on Δ_(r−1)(H(P)), not on the point degrees of the block family. The forbidden partial system F is arbitrary and need not be sparse.

@@ -93,28 +93,38 @@ def completeRGraph (V : Type*) [Fintype V] (r : ℕ) : Finset (Finset V) :=
 end RefinedAbsorption
 namespace RefinedAbsorption
 open Finset
+/-- `Δ_{r-1}(X) ≤ D`: every `(r-1)`-set lies in at most `D` edges of `X`. -/
 def MaxDegLE {n : ℕ} (r : ℕ) (X : Finset (Finset (Fin n))) (D : ℝ) : Prop :=
   ∀ S : Finset (Fin n), S.card + 1 = r → (deg X S : ℝ) ≤ D
+/-- `δ_{r-1}(J) ≥ D`: every `(r-1)`-set lies in at least `D` edges of `J`. -/
 def MinDegGE {n : ℕ} (r : ℕ) (J : Finset (Finset (Fin n))) (D : ℝ) : Prop :=
   ∀ S : Finset (Fin n), S.card + 1 = r → D ≤ (deg J S : ℝ)
 end RefinedAbsorption
 namespace RefinedAbsorption
 variable {V : Type*} [DecidableEq V] [Fintype V]
+/-- A design with parameters `(|V|, q, r, l)`: a set of `q`-subsets of `V` such that every
+`r`-subset of `V` lies in exactly `l` of them. -/
 structure IsDesign (q r l : ℕ) (𝒟 : Finset (Finset V)) : Prop where
   card_eq : ∀ B ∈ 𝒟, B.card = q
   mult_eq : ∀ T : Finset V, T.card = r → cliqueMult 𝒟 T = l
+/-- A `(|V|, q, r)`-Steiner system: every `r`-subset lies in exactly one block. -/
 abbrev IsSteinerSystem (q r : ℕ) (𝒮 : Finset (Finset V)) : Prop := IsDesign q r 1 𝒮
+/-- The divisibility conditions for designs with parameters `(n, q, r, l)`:
+`binom(q-i, r-i) ∣ l · binom(n-i, r-i)` for all `0 ≤ i ≤ r-1`. -/
 def DesignDivisibility (n q r l : ℕ) : Prop :=
   ∀ i < r, (q - i).choose (r - i) ∣ l * (n - i).choose (r - i)
 end RefinedAbsorption
 namespace RefinedAbsorption.Extensions
 open Finset
 variable {V : Type*} [DecidableEq V]
+/-- A **partial Steiner system** with parameters `(q, r)`: a family of `q`-sets such that every
+`r`-set lies in at most one of them. -/
 def IsPartialSteinerSystem (q r : ℕ) (P : Finset (Finset V)) : Prop :=
   (∀ Q ∈ P, Q.card = q) ∧ ∀ T : Finset V, T.card = r → cliqueMult P T ≤ 1
 end RefinedAbsorption.Extensions
 namespace RefinedAbsorption.Extensions
 open Finset
+/-- **Completion avoiding a partial Steiner system.** -/
 theorem steiner_completion_avoiding {q r : ℕ} (hr : 1 ≤ r) (hrq : r < q) :
     ∃ ε : ℝ, 0 < ε ∧ ∃ n₀ : ℕ, ∀ n ≥ n₀, DesignDivisibility n q r 1 →
       ∀ P F : Finset (Finset (Fin n)), IsPartialSteinerSystem q r P →
@@ -122,17 +132,30 @@ theorem steiner_completion_avoiding {q r : ℕ} (hr : 1 ≤ r) (hrq : r < q) :
         ∃ 𝒮 : Finset (Finset (Fin n)), IsSteinerSystem q r 𝒮 ∧ P ⊆ 𝒮 ∧ 𝒮 ∩ F = P ∩ F ∧
           ∀ B₁ ∈ F, Disjoint (cliqueEdges r B₁) (coveredEdges r P) →
             ∀ B₂ ∈ 𝒮 \ P, (B₁ ∩ B₂).card ≤ r := by sorry
+/-- **Prescribed intersection with a given Steiner system.**  For `q > r ≥ 1` there are `ε > 0`
+and `n₀` such that for every `n ≥ n₀`, every `(n, q, r)`-Steiner system `𝒮₁` and every subfamily
+`P ⊆ 𝒮₁` whose covered `r`-graph has maximum `(r-1)`-degree at most `ε n`, there is a Steiner
+system `𝒮₂` whose blocks in common with `𝒮₁` are exactly those of `P`; moreover a block of
+`𝒮₁ \ P` and a block of `𝒮₂ \ P` always share at most `r` points. -/
 theorem steiner_intersection_prescribed {q r : ℕ} (hr : 1 ≤ r) (hrq : r < q) :
     ∃ ε : ℝ, 0 < ε ∧ ∃ n₀ : ℕ, ∀ n ≥ n₀, ∀ 𝒮₁ : Finset (Finset (Fin n)),
       IsSteinerSystem q r 𝒮₁ → ∀ P ⊆ 𝒮₁, MaxDegLE r (coveredEdges r P) (ε * n) →
         ∃ 𝒮₂ : Finset (Finset (Fin n)), IsSteinerSystem q r 𝒮₂ ∧ 𝒮₁ ∩ 𝒮₂ = P ∧
           ∀ B₁ ∈ 𝒮₁ \ P, ∀ B₂ ∈ 𝒮₂ \ P, (B₁ ∩ B₂).card ≤ r := by sorry
+/-- **Every finite partial Steiner system is the exact intersection of two Steiner systems.**
+Let `q > r ≥ 1` and let `P` be a partial Steiner system on a finite set `α`.  For every
+sufficiently large admissible `N` there are an injection `f : α ↪ Fin N` and two
+`(N, q, r)`-Steiner systems whose common blocks are exactly the images of the blocks of `P`. -/
 theorem partialSteiner_intersection_embedding {q r : ℕ} (hr : 1 ≤ r) (hrq : r < q) {α : Type*}
     [Fintype α] [DecidableEq α] (P : Finset (Finset α)) (hP : IsPartialSteinerSystem q r P) :
     ∃ N₀ : ℕ, ∀ N ≥ N₀, DesignDivisibility N q r 1 →
       ∃ (f : α ↪ Fin N) (𝒮₁ 𝒮₂ : Finset (Finset (Fin N))),
         IsSteinerSystem q r 𝒮₁ ∧ IsSteinerSystem q r 𝒮₂ ∧
           𝒮₁ ∩ 𝒮₂ = P.map (mapEmbedding f).toEmbedding := by sorry
+/-- **Polynomial form of the intersection spectrum.**  For `q > r ≥ 1` there are `c > 0` and `n₀`
+such that for every admissible `n ≥ n₀` and every `k ≤ c n^r` there are two
+`(n, q, r)`-Steiner systems with exactly `k` blocks in common.  (Every Steiner system has
+`binom(n,r)/binom(q,r) = Θ(n^r)` blocks, so this is the right order of magnitude.) -/
 theorem steiner_intersection_spectrum_poly {q r : ℕ} (hr : 1 ≤ r) (hrq : r < q) :
     ∃ c : ℝ, 0 < c ∧ ∃ n₀ : ℕ, ∀ n ≥ n₀, DesignDivisibility n q r 1 →
       ∀ k : ℕ, (k : ℝ) ≤ c * (n : ℝ) ^ r →
@@ -218,6 +241,10 @@ open Finset RefinedAbsorption.Extensions
 open RefinedAbsorption.External RefinedAbsorption.External.NashWilliams
 open RefinedAbsorption.External.PippengerSpencer
 variable {q r : ℕ}
+/-- Every sufficiently large Steiner system has a block colouring with
+`R ≤ m ≤ R + R^(1-γ)`, where `R` is its point degree and `0 < γ < 1`.
+Blocks of one colour form a partial parallel class. The external colouring
+contract is discharged by `pippengerSpencerPolynomial`. -/
 theorem steiner_quantitatively_almost_resolvable
     (hr : 2 ≤ r) (hrq : r < q) :
     ∃ γ : ℝ, 0 < γ ∧ γ < 1 ∧ ∃ n₀ : ℕ, ∀ n ≥ n₀, ∀ 𝒮 : Finset (Finset (Fin n)),
@@ -227,6 +254,9 @@ theorem steiner_quantitatively_almost_resolvable
         (m : ℝ) ≤ (((n - 1).choose (r - 1) : ℕ) / ((q - 1).choose (r - 1) : ℕ) : ℝ) +
           (((n - 1).choose (r - 1) : ℕ) / ((q - 1).choose (r - 1) : ℕ) : ℝ) ^ (1 - γ) ∧
         ∀ B ∈ 𝒮, ∀ B' ∈ 𝒮, B ≠ B' → c B = c B' → Disjoint B B' := by sorry
+/-- Such a coloured Steiner system exists at every sufficiently large
+admissible order. The design existence theorem and the external colouring
+theorem are both proved inputs in the assembled library. -/
 theorem exists_quantitatively_almost_resolvable_steiner
     (hr : 2 ≤ r) (hrq : r < q) :
     ∃ γ : ℝ, 0 < γ ∧ γ < 1 ∧ ∃ n₀ : ℕ, ∀ n ≥ n₀, DesignDivisibility n q r 1 →
@@ -236,6 +266,11 @@ theorem exists_quantitatively_almost_resolvable_steiner
         (m : ℝ) ≤ (((n - 1).choose (r - 1) : ℕ) / ((q - 1).choose (r - 1) : ℕ) : ℝ) +
           (((n - 1).choose (r - 1) : ℕ) / ((q - 1).choose (r - 1) : ℕ) : ℝ) ^ (1 - γ) ∧
         ∀ B ∈ 𝒮, ∀ B' ∈ 𝒮, B ≠ B' → c B = c B' → Disjoint B B' := by sorry
+/-- A sufficiently large triangle-divisible graph at the exact Nash–Williams
+threshold admits a triangle decomposition scheduled in at most
+`Δ(G)/2 + (Δ(G)/2)^(1-γ)` rounds. Triangles in each round are vertex-disjoint;
+the rounds need not be spanning triangle factors. Both external contracts
+are discharged by their pinned proofs. -/
 theorem nash_williams_scheduled_decomposition :
     ∃ γ : ℝ, 0 < γ ∧ γ < 1 ∧ ∃ n₀ : ℕ, ∀ (V : Type) [Fintype V] [DecidableEq V]
       (G : SimpleGraph V) [DecidableRel G.Adj],

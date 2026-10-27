@@ -12,6 +12,10 @@ open RefinedAbsorption.External.PippengerSpencer
 
 variable {q r : ℕ}
 
+/-- Every sufficiently large Steiner system has a block colouring with
+`R ≤ m ≤ R + R^(1-γ)`, where `R` is its point degree and `0 < γ < 1`.
+Blocks of one colour form a partial parallel class. The external colouring
+contract is discharged by `pippengerSpencerPolynomial`. -/
 theorem steiner_quantitatively_almost_resolvable
     (hr : 2 ≤ r) (hrq : r < q) :
     ∃ γ : ℝ, 0 < γ ∧ γ < 1 ∧ ∃ n₀ : ℕ, ∀ n ≥ n₀, ∀ 𝒮 : Finset (Finset (Fin n)),
@@ -23,6 +27,9 @@ theorem steiner_quantitatively_almost_resolvable
         ∀ B ∈ 𝒮, ∀ B' ∈ 𝒮, B ≠ B' → c B = c B' → Disjoint B B' :=
   RefinedAbsorption.Extensions.steiner_quantitatively_almost_resolvable pippengerSpencerPolynomial hr hrq
 
+/-- Such a coloured Steiner system exists at every sufficiently large
+admissible order. The design existence theorem and the external colouring
+theorem are both proved inputs in the assembled library. -/
 theorem exists_quantitatively_almost_resolvable_steiner
     (hr : 2 ≤ r) (hrq : r < q) :
     ∃ γ : ℝ, 0 < γ ∧ γ < 1 ∧ ∃ n₀ : ℕ, ∀ n ≥ n₀, DesignDivisibility n q r 1 →
@@ -34,6 +41,11 @@ theorem exists_quantitatively_almost_resolvable_steiner
         ∀ B ∈ 𝒮, ∀ B' ∈ 𝒮, B ≠ B' → c B = c B' → Disjoint B B' :=
   RefinedAbsorption.Extensions.exists_quantitatively_almost_resolvable_steiner pippengerSpencerPolynomial hr hrq
 
+/-- A sufficiently large triangle-divisible graph at the exact Nash–Williams
+threshold admits a triangle decomposition scheduled in at most
+`Δ(G)/2 + (Δ(G)/2)^(1-γ)` rounds. Triangles in each round are vertex-disjoint;
+the rounds need not be spanning triangle factors. Both external contracts
+are discharged by their pinned proofs. -/
 theorem nash_williams_scheduled_decomposition :
     ∃ γ : ℝ, 0 < γ ∧ γ < 1 ∧ ∃ n₀ : ℕ, ∀ (V : Type) [Fintype V] [DecidableEq V]
       (G : SimpleGraph V) [DecidableRel G.Adj],

@@ -7,3 +7,4 @@ migration/local-environment.json
 *.ilean
 *.ir
 .private/
+preprints/RESEARCH_NOTE/02_validation/_render/
