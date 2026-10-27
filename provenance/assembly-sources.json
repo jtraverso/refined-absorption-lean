@@ -1,0 +1,148 @@
+{
+  "pippenger_spencer": {
+    "repository": "https://github.com/jtraverso/pippenger-spencer",
+    "commit": "b19273396d369332fb489fe07e61e27c9e7f9233"
+  },
+  "nash_williams": {
+    "repository": "https://github.com/jtraverso/nash-williams-lean",
+    "commit": "2603197abdbf0a600ec663f6f046f70fbd209d4a"
+  },
+  "shared_sources": [
+    {
+      "source": "PseudorandomLib/Assembly12.lean",
+      "source_sha256": "aaaf494b702d18be2dc4f49fcf99f6c4301fa8c273edc15fb9552ffea48c333d",
+      "reused": "RequestProject/Pseudorandom/Assembly12.lean",
+      "reused_sha256": "6bb2753f45abd6bbb427e7e99da78736104e124de6d9dda59af771fbf00d8068"
+    },
+    {
+      "source": "PseudorandomLib/Asymptotics.lean",
+      "source_sha256": "ddba964ef02dbbb66728a1fa9e0c6fdf34d4bf954f113710ec5a6dd408176838",
+      "reused": "RequestProject/Pseudorandom/Asymptotics.lean",
+      "reused_sha256": "ddba964ef02dbbb66728a1fa9e0c6fdf34d4bf954f113710ec5a6dd408176838"
+    },
+    {
+      "source": "PseudorandomLib/Bernstein.lean",
+      "source_sha256": "dded2ea5ca179c870c1dd5d95d0ae60c8dab6453023008442692782f3749423a",
+      "reused": "RequestProject/Pseudorandom/Bernstein.lean",
+      "reused_sha256": "cf9351759bd25e1b6dad56ad2aec3526f6f7f8f83982ba12b4ee12bcb96d7cb9"
+    },
+    {
+      "source": "PseudorandomLib/Counting.lean",
+      "source_sha256": "1f4a060844583a3cecc563551c660941773bed990c5a8e7cf4a2dbd82a294691",
+      "reused": "RequestProject/Pseudorandom/Counting.lean",
+      "reused_sha256": "675e12d9d30619ff128f8d6cc35f4c85624a4b353ea1c39eb1a08d7cd0496aad"
+    },
+    {
+      "source": "PseudorandomLib/Cylinder.lean",
+      "source_sha256": "b8f03aeeac3b611dbaeecd74eaeb31c809db19fb07d4752ba3c835f3c634077f",
+      "reused": "RequestProject/Pseudorandom/Cylinder.lean",
+      "reused_sha256": "1b0839e2056531498157ea26948d9781b79f7fb0c914dcdf7f3c169ccbd273cd"
+    },
+    {
+      "source": "PseudorandomLib/Defs.lean",
+      "source_sha256": "858ef77e3ea0d2495712277dc8971c2d5c008152bca702b750362618f493f8d6",
+      "reused": "RequestProject/Pseudorandom/Defs.lean",
+      "reused_sha256": "858ef77e3ea0d2495712277dc8971c2d5c008152bca702b750362618f493f8d6"
+    },
+    {
+      "source": "PseudorandomLib/EdgePartition.lean",
+      "source_sha256": "eed7773c4d8d2584fa2addc5b463c6fb22487906a6e542162c2b80f29ebeb364",
+      "reused": "RequestProject/Pseudorandom/EdgePartition.lean",
+      "reused_sha256": "f6b98c1221ffbd1fd740e868c3423dba3ee042d1ba0d982764b2a890ce48a07d"
+    },
+    {
+      "source": "PseudorandomLib/Eventually12.lean",
+      "source_sha256": "2efdc88dc3694e338c3623dae5fd14f60b8a58cec55d61daf22cacc49449c080",
+      "reused": "RequestProject/Pseudorandom/Eventually12.lean",
+      "reused_sha256": "ee29de51ae40c236bbdb97adabb4ec333cfe5c5eb52ba32b27893b1f172310f5"
+    },
+    {
+      "source": "PseudorandomLib/FiniteProb.lean",
+      "source_sha256": "885b4f484fa11039a8462ccd918ed36eb71c91abcf3f374922e39d210b0179de",
+      "reused": "RequestProject/Pseudorandom/FiniteProb.lean",
+      "reused_sha256": "885b4f484fa11039a8462ccd918ed36eb71c91abcf3f374922e39d210b0179de"
+    },
+    {
+      "source": "PseudorandomLib/Freedman.lean",
+      "source_sha256": "fe9af134c09fe3e13ade93aca2d01aa3a7fd02a7d77c82212d380d7b09c4656a",
+      "reused": "RequestProject/Pseudorandom/Freedman.lean",
+      "reused_sha256": "82122f3d5d4a15ce7527d05f042d7eb0b13c51dc63786c0fc558e8cf9edb73ff"
+    },
+    {
+      "source": "PseudorandomLib/NibbleDegree.lean",
+      "source_sha256": "3a74468956200d4fea6bd7584e0a093000526e40cf697c8a715e6baff3644d8e",
+      "reused": "RequestProject/Pseudorandom/NibbleDegree.lean",
+      "reused_sha256": "36d885626091f3b2ad75615ec511e4d4704bcf57bd348bbb03a98f60b98d7192"
+    },
+    {
+      "source": "PseudorandomLib/NibbleIterate.lean",
+      "source_sha256": "8d9f0cdce886740c95edb42d50921aa8258e73782a74cf871e41b0c9c5d158e1",
+      "reused": "RequestProject/Pseudorandom/NibbleIterate.lean",
+      "reused_sha256": "2da85cc23fa1992c9c8109ea91a7f96af327411e82f0266c646d403709a5fc89"
+    },
+    {
+      "source": "PseudorandomLib/NibbleMarginal.lean",
+      "source_sha256": "9a2d7e8856956bf2ed970c26c8a336fe5dfae71d2f40ce2bd684fa90a5d7db8e",
+      "reused": "RequestProject/Pseudorandom/NibbleMarginal.lean",
+      "reused_sha256": "3faf1792564007dc9ce3f68ecfca6626b2cfa8a01a08cd07d3bf785a410ac137"
+    },
+    {
+      "source": "PseudorandomLib/NibbleRound.lean",
+      "source_sha256": "230e9433588cc04019d8d601ef98d7f3f4049eeb4597ab59d589f23918c5bbff",
+      "reused": "RequestProject/Pseudorandom/NibbleRound.lean",
+      "reused_sha256": "e8a157c1ac4283043444b88bd182f71f1aa167787aaf6978a8afdee0222c7fab"
+    },
+    {
+      "source": "PseudorandomLib/Numerics12.lean",
+      "source_sha256": "09bbd0d4d58e980df23e1b11da0c82fbdedf77ee060a29754b19997b94fbb653",
+      "reused": "RequestProject/Pseudorandom/Numerics12.lean",
+      "reused_sha256": "09bbd0d4d58e980df23e1b11da0c82fbdedf77ee060a29754b19997b94fbb653"
+    },
+    {
+      "source": "PseudorandomLib/RandomMatching.lean",
+      "source_sha256": "982e2027daa81d2e5ad93ed69bc9d75a03f20d31bb0b6bc8e1fe2b0e71cac1e2",
+      "reused": "RequestProject/Pseudorandom/RandomMatching.lean",
+      "reused_sha256": "33b9e9cd0755ee7625ed3985802f2152303abbd6111bf1ab5fa43c8daaebf9dc"
+    },
+    {
+      "source": "PseudorandomLib/Theorem12.lean",
+      "source_sha256": "ea59b3b5e97e3363ca48954bcd3c814f8e6724653cb87b64889200d1e089c9b9",
+      "reused": "RequestProject/Pseudorandom/Theorem12.lean",
+      "reused_sha256": "75e9c3a8a776e36c4ddbafe9b031cd1fa6a58126141cfb1cbd1ba15ea758bde1"
+    },
+    {
+      "source": "PseudorandomLib/Thinning.lean",
+      "source_sha256": "e4cfe3ef4f6015403a9c06d95dfac6a42f315007fba66176a656559f85451429",
+      "reused": "RequestProject/Pseudorandom/Thinning.lean",
+      "reused_sha256": "8268cff34e35b7115d2f23c816da5913d80418c0c128fec76d0b4e6cf8ec8c64"
+    },
+    {
+      "source": "PseudorandomLib/VertexPartition.lean",
+      "source_sha256": "45a0b16b2d1af0531597d871b9603f428ac90589afc950ad5c1d5e66ea1c3c55",
+      "reused": "RequestProject/Pseudorandom/VertexPartition.lean",
+      "reused_sha256": "058f1c5414e9cb6fe08971ebebb2f4c911235aa34f19bde881fef4ac69a6f24a"
+    }
+  ],
+  "imported_source_cut": [
+    {
+      "source": "PseudorandomLib/PippengerSpencer/Basic.lean",
+      "source_sha256": "016cd76dd4cfc261bd796b3b8472501d01bcc931548345217d64a4b2beeb5f72",
+      "installed": "RefinedAbsorption/Upstream/PippengerSpencer/Basic.lean",
+      "installed_sha256": "e610867085cc2e4d8b52a96ace9607ac5c74b44a06ede9681a82bba4b2f782e6"
+    },
+    {
+      "source": "PseudorandomLib/PippengerSpencer/ColourHypergraph.lean",
+      "source_sha256": "2adde4f80336adb531b561ef29a639df66b72bbdbc2e41a53dddcfcb4d4e7acf",
+      "installed": "RefinedAbsorption/Upstream/PippengerSpencer/ColourHypergraph.lean",
+      "installed_sha256": "a15218915e9e355da4aca6030677955c01c758f2563bdf9c912c2f464f567c01"
+    },
+    {
+      "source": "PseudorandomLib/PippengerSpencer/Polynomial.lean",
+      "source_sha256": "4dc3e4606da92e93a071cb96eda09b51011959949a6c0e171b072fc2480e1a6c",
+      "installed": "RefinedAbsorption/Upstream/PippengerSpencer/Polynomial.lean",
+      "installed_sha256": "6a2f8012232ce8591b48c5b86403686652767f4c44a42a5a3dfc5123a9548dc8"
+    }
+  ],
+  "mathematical_code_change": "None: only import module paths changed in the three source-cut files.",
+  "refined_root_relocation": "RequestProject -> RefinedAbsorption; mathematical namespaces unchanged."
+}

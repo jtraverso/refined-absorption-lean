@@ -1,0 +1,19 @@
+{
+  "challenge_module": "Palomar.Article2024Challenge",
+  "solution_module": "Palomar.Article2024Solution",
+  "theorem_names": [
+    "RefinedAbsorption.Faithful2024.theorem_1_7",
+    "RefinedAbsorption.Faithful2024.theorem_1_11",
+    "RefinedAbsorption.Original2024.theorem_6_1",
+    "RefinedAbsorption.Pending.theorem_2_8",
+    "RefinedAbsorption.Pending.theorem_6_2",
+    "RefinedAbsorption.Pending.theorem_6_3"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

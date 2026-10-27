@@ -1,0 +1,7 @@
+module
+public import RefinedAbsorption.Assembly
+#print axioms RefinedAbsorption.Assembly.pippengerSpencerPolynomial
+#print axioms RefinedAbsorption.Assembly.nashWilliamsExternal
+#print axioms RefinedAbsorption.Assembly.steiner_quantitatively_almost_resolvable
+#print axioms RefinedAbsorption.Assembly.exists_quantitatively_almost_resolvable_steiner
+#print axioms RefinedAbsorption.Assembly.nash_williams_scheduled_decomposition

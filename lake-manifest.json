@@ -109,6 +109,18 @@
       "inputRev": "v4.35.0-rc3",
       "inherited": true,
       "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/jtraverso/nash-williams-lean",
+      "type": "git",
+      "subDir": null,
+      "scope": "",
+      "rev": "2603197abdbf0a600ec663f6f046f70fbd209d4a",
+      "name": "nash_williams_paper_i",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "2603197abdbf0a600ec663f6f046f70fbd209d4a",
+      "inherited": false,
+      "configFile": "lakefile.toml"
     }
   ],
   "name": "refined_absorption",

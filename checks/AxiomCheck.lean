@@ -1,9 +1,9 @@
 module
 
-public import RequestProject.Main
-public import RequestProject.Final
-public import RequestProject.Applications
-public import RequestProject.SurveyCorollaries
+public import RefinedAbsorption.Main
+public import RefinedAbsorption.Final
+public import RefinedAbsorption.Applications
+public import RefinedAbsorption.SurveyCorollaries
 open RefinedAbsorption
 #print axioms nibbleLeftoverDegree_of_egjWeightedMatching
 #print axioms nibbleWithReserves_of_egjWeightedMatching

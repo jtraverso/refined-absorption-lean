@@ -1,0 +1,34 @@
+{
+  "status": "ACTIVE",
+  "phases": [
+    {
+      "phase": "assembly_and_clean_lake_freeze",
+      "status": "IN_PROGRESS"
+    },
+    {
+      "phase": "note_and_companion_en_es",
+      "status": "PENDING"
+    },
+    {
+      "phase": "internal_audit_pass",
+      "status": "PENDING"
+    },
+    {
+      "phase": "zenodo_doi_reservation",
+      "status": "PENDING"
+    },
+    {
+      "phase": "public_github_release",
+      "status": "PENDING"
+    },
+    {
+      "phase": "palomar_submission_and_registration",
+      "status": "PENDING"
+    }
+  ],
+  "authorization": "User explicitly authorized publication and registration after the technical and editorial gates pass.",
+  "source_dois": [
+    "10.48550/arXiv.2402.17855",
+    "10.48550/arXiv.2510.19978"
+  ]
+}

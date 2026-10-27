@@ -9,6 +9,7 @@ import re
 ROOT=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser()
 parser.add_argument("--original",type=Path,default=Path(r"C:\nw\aristotle-refined-extension-return-review-20261026\source"))
+parser.add_argument("--output",type=Path,default=Path("migration/source-audit.json"))
 args=parser.parse_args()
 
 def strip(text):
@@ -48,27 +49,33 @@ def signatures(text):
 
 baseline=json.loads((ROOT/"provenance/source-baseline.json").read_text(encoding="utf-8"))
 changes=[];signature_diffs=[];deleted=[];flags=[]
-diffdir=ROOT/"migration/source-diffs";diffdir.mkdir(exist_ok=True)
+output=ROOT/args.output
+output.parent.mkdir(parents=True,exist_ok=True)
+diffdir=output.parent/"source-diffs";diffdir.mkdir(exist_ok=True)
+relocations=[]
 for rel,digest in baseline.items():
-    old=args.original/rel;new=ROOT/rel
+    old=args.original/rel
+    relocated=rel.replace("RequestProject/", "RefinedAbsorption/", 1) if rel.startswith("RequestProject/") else rel
+    if relocated!=rel:relocations.append(dict(original=rel,current=relocated))
+    new=ROOT/relocated
     assert hashlib.sha256(old.read_bytes()).hexdigest()==digest,rel
     if not new.exists():deleted.append(rel);continue
     before=old.read_text(encoding="utf-8");after=new.read_text(encoding="utf-8")
     current=hashlib.sha256(new.read_bytes()).hexdigest()
     if current!=digest:
-        changes.append(dict(file=rel,before=digest,after=current))
+        changes.append(dict(file=rel,current_file=relocated,before=digest,after=current))
         (diffdir/(rel.replace("/","_")+".diff")).write_text("".join(difflib.unified_diff(
-            before.splitlines(True),after.splitlines(True),fromfile="original/"+rel,tofile="rc3/"+rel)),encoding="utf-8")
+            before.splitlines(True),after.splitlines(True),fromfile="original/"+rel,tofile="current/"+relocated)),encoding="utf-8")
         if signatures(before)!=signatures(after):signature_diffs.append(rel)
-for top in ("RequestProject","checks"):
+for top in ("RefinedAbsorption","checks"):
     for path in (ROOT/top).rglob("*.lean"):
         code=strip(path.read_text(encoding="utf-8"))
         for i,line in enumerate(code.splitlines(),1):
             if re.search(r"\b(sorry|admit|axiom|native_decide|implemented_by|unsafe|extern)\b",line):
                 flags.append(dict(file=path.relative_to(ROOT).as_posix(),line=i,text=line.strip()))
-result=dict(original_lean_sources=len(baseline),deleted_original_sources=deleted,
+result=dict(original_lean_sources=len(baseline),deleted_original_sources=deleted,relocations=relocations,
     changed_sources=changes,signature_text_differences=signature_diffs,active_flags=flags,
     signature_audit_scope="Textual declaration-header comparison, not cross-version kernel equivalence.")
-(ROOT/"migration/source-audit.json").write_text(json.dumps(result,indent=2)+"\n",encoding="utf-8")
+output.write_text(json.dumps(result,indent=2)+"\n",encoding="utf-8")
 print(json.dumps(dict(original_sources=len(baseline),changed=len(changes),deleted=deleted,
                      signature_differences=signature_diffs,active_flags=flags)))

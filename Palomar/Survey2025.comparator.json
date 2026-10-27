@@ -1,0 +1,18 @@
+{
+  "challenge_module": "Palomar.Survey2025Challenge",
+  "solution_module": "Palomar.Survey2025Solution",
+  "theorem_names": [
+    "RefinedAbsorption.Final.theorem_1_10",
+    "RefinedAbsorption.existenceConjecture_proved",
+    "RefinedAbsorption.Final.existenceConjecture_steiner",
+    "RefinedAbsorption.FaithfulSurvey2025.not_generalEmbeddingLemmaLiteral",
+    "RefinedAbsorption.FaithfulSurvey2025.generalEmbedding_piecewise"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

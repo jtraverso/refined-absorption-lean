@@ -1,8 +1,8 @@
 module
 
-public import RequestProject.Original2024.Final
-public import RequestProject.Original2024.MinDegree
-public import RequestProject.Original2024.Corollaries
+public import RefinedAbsorption.Original2024.Final
+public import RefinedAbsorption.Original2024.MinDegree
+public import RefinedAbsorption.Original2024.Corollaries
 open RefinedAbsorption.Original2024
 #print axioms theorem_1_4
 #print axioms theorem_3_8

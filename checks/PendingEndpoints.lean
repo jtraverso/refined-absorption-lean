@@ -1,8 +1,8 @@
 module
 
-public import RequestProject.Pending.Theorem28
-public import RequestProject.Pending.Theorem63Final
-public import RequestProject.Pending.Theorem62
+public import RefinedAbsorption.Pending.Theorem28
+public import RefinedAbsorption.Pending.Theorem63Final
+public import RefinedAbsorption.Pending.Theorem62
 
 /-! Endpoint check for the three formerly pending results of arXiv:2402.17855v1. -/
 

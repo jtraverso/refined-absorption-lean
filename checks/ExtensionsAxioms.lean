@@ -1,8 +1,8 @@
 module
 
-public import RequestProject.Extensions.Count
-public import RequestProject.Extensions.Subsystem
-public import RequestProject.Extensions.AlmostResolvable
+public import RefinedAbsorption.Extensions.Count
+public import RefinedAbsorption.Extensions.Subsystem
+public import RefinedAbsorption.Extensions.AlmostResolvable
 
 open RefinedAbsorption.Extensions
 

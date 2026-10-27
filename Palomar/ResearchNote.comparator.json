@@ -1,0 +1,20 @@
+{
+  "challenge_module": "Palomar.ResearchNoteChallenge",
+  "solution_module": "Palomar.ResearchNoteSolution",
+  "theorem_names": [
+    "RefinedAbsorption.Extensions.steiner_completion_avoiding",
+    "RefinedAbsorption.Extensions.steiner_intersection_prescribed",
+    "RefinedAbsorption.Extensions.partialSteiner_intersection_embedding",
+    "RefinedAbsorption.Extensions.steiner_intersection_spectrum_poly",
+    "RefinedAbsorption.Assembly.steiner_quantitatively_almost_resolvable",
+    "RefinedAbsorption.Assembly.exists_quantitatively_almost_resolvable_steiner",
+    "RefinedAbsorption.Assembly.nash_williams_scheduled_decomposition"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

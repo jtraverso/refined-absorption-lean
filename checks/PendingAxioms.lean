@@ -1,7 +1,7 @@
 module
 
-public import RequestProject.NibbleDesigns
-public import RequestProject.GeneralEmbedding.Main
+public import RefinedAbsorption.NibbleDesigns
+public import RefinedAbsorption.GeneralEmbedding.Main
 open RefinedAbsorption
 #print axioms nibbleForDesigns
 #print axioms generalEmbeddingLemma

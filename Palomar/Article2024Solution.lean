@@ -1,0 +1,5 @@
+module
+public import RefinedAbsorption.Faithful2024.Section1
+public import RefinedAbsorption.Original2024.MinDegree
+public import RefinedAbsorption.Pending.Theorem28
+public import RefinedAbsorption.Pending.Theorem62

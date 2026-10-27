@@ -1,7 +1,7 @@
 module
 
-public import RequestProject.Extensions.PolynomialResolution
-public import RequestProject.Extensions.NashWilliamsSchedule
+public import RefinedAbsorption.Extensions.PolynomialResolution
+public import RefinedAbsorption.Extensions.NashWilliamsSchedule
 
 /-! Axiom and statement check for the quantitative extensions.
 

@@ -1,6 +1,6 @@
 module
 
-public import RequestProject.Extensions.Intersection
+public import RefinedAbsorption.Extensions.Intersection
 
 open RefinedAbsorption.Extensions
 

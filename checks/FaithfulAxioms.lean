@@ -1,10 +1,10 @@
 module
 
-public import RequestProject.Faithful2024.Section1
-public import RequestProject.Faithful2024.Theorem37
-public import RequestProject.Faithful2024.Section2
-public import RequestProject.Faithful2024.Section6
-public import RequestProject.FaithfulSurvey2025.Embedding
+public import RefinedAbsorption.Faithful2024.Section1
+public import RefinedAbsorption.Faithful2024.Theorem37
+public import RefinedAbsorption.Faithful2024.Section2
+public import RefinedAbsorption.Faithful2024.Section6
+public import RefinedAbsorption.FaithfulSurvey2025.Embedding
 
 /-! Axiom check for the faithful endpoints (arXiv:2402.17855v1 and arXiv:2510.19978v1). -/
 

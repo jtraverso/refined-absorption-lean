@@ -1,0 +1,158 @@
+[
+  {
+    "source": "RefinedAbsorption/Basic.lean",
+    "start_line": 17,
+    "end_line": 72,
+    "sha256": "f387760257233fc767c7bb37b3968c9298b2115ab0e453821a32efb303729743"
+  },
+  {
+    "source": "RefinedAbsorption/Statements.lean",
+    "start_line": 27,
+    "end_line": 28,
+    "sha256": "042402d752f3c824c04f2c5941c5cab5bfc7c17422eba888b0de8348cff051a3"
+  },
+  {
+    "source": "RefinedAbsorption/Statements.lean",
+    "start_line": 31,
+    "end_line": 32,
+    "sha256": "582f33692464e71b982e1d8f8ea85eae5bb03bf27dd7a9ae1c46886eb0d7f20b"
+  },
+  {
+    "source": "RefinedAbsorption/Absorbers.lean",
+    "start_line": 28,
+    "end_line": 50,
+    "sha256": "1d7cb1efa5a7c128bc1f262ef4176cfc8c9158978e1719b128c2e72a07658da9"
+  },
+  {
+    "source": "RefinedAbsorption/Designs.lean",
+    "start_line": 30,
+    "end_line": 32,
+    "sha256": "77ab9cc0501ee527e5b0c93c2f2489b25148596648b22fffce6c94c121e4679f"
+  },
+  {
+    "source": "RefinedAbsorption/Designs.lean",
+    "start_line": 35,
+    "end_line": 35,
+    "sha256": "346a3e965d69f19548b6b8c215a875db7ff129789bc1279caec1d948bd4920a5"
+  },
+  {
+    "source": "RefinedAbsorption/Designs.lean",
+    "start_line": 52,
+    "end_line": 53,
+    "sha256": "a3b6f2264d19c73f1d58761b6dd410fde7d59ae008c768309c3e46c36b5843c5"
+  },
+  {
+    "source": "RefinedAbsorption/Absorber17/Maps.lean",
+    "start_line": 21,
+    "end_line": 22,
+    "sha256": "c186dbd2094ce742cbf60d3b04be0f7e3e520e5eeb0e9d46cbd4c6d3833d667f"
+  },
+  {
+    "source": "RefinedAbsorption/Original2024/Defs.lean",
+    "start_line": 128,
+    "end_line": 128,
+    "sha256": "9983ab9cca471a8552c1fab9ec210369e6b9f43344b75f9ef4ae3e9ca55ca782"
+  },
+  {
+    "source": "RefinedAbsorption/Original2024/Defs.lean",
+    "start_line": 213,
+    "end_line": 215,
+    "sha256": "784fa9877936d3b4eb7ff57301325608ca2be65c99101405f30009b1b277809a"
+  },
+  {
+    "source": "RefinedAbsorption/Original2024/Defs.lean",
+    "start_line": 218,
+    "end_line": 218,
+    "sha256": "569950adccf3b06ea7bc8973061f55780a2c4da47bfdc3a96f5b334ce63fe7a2"
+  },
+  {
+    "source": "RefinedAbsorption/Faithful2024/Defs.lean",
+    "start_line": 129,
+    "end_line": 129,
+    "sha256": "edf69e46fd2636904a71c71a2b6357474136ef87a64bdb3f8c46bcaee540218f"
+  },
+  {
+    "source": "RefinedAbsorption/Faithful2024/Defs.lean",
+    "start_line": 185,
+    "end_line": 315,
+    "sha256": "0545968779056106a9a5522b980fd44b0ca2a3aa0c2c844ff723a452dd2c7a2e"
+  },
+  {
+    "source": "RefinedAbsorption/Faithful2024/Section2.lean",
+    "start_line": 29,
+    "end_line": 77,
+    "sha256": "f2e0d7feec6ef8a72c7c4e2d2ad734c473db0ff3fefc831372f0ff4027cba2bf"
+  },
+  {
+    "source": "RefinedAbsorption/Faithful2024/Section6.lean",
+    "start_line": 36,
+    "end_line": 42,
+    "sha256": "c3b14f7433255ced2fdfc7526ff8eb8d0f8fc9cb3bef1db6c42f5d14f807594a"
+  },
+  {
+    "source": "RefinedAbsorption/Faithful2024/Section6.lean",
+    "start_line": 48,
+    "end_line": 53,
+    "sha256": "f133d168e47a74cdb7157eeca8ca291b9cff6129c65c24edec465ac0c07c0d4a"
+  },
+  {
+    "source": "RefinedAbsorption/Statements.lean",
+    "start_line": 97,
+    "end_line": 102,
+    "sha256": "20bda6e11391245a2d071365a11ecdff1da824e3a3529f8fa7af4d48feb8cbf7"
+  },
+  {
+    "source": "RefinedAbsorption/Statements.lean",
+    "start_line": 59,
+    "end_line": 61,
+    "sha256": "234d560f3ce85221338aae4c5022c2762582f42bc31e987f36dd083be5ead92e"
+  },
+  {
+    "source": "RefinedAbsorption/ExistenceProof.lean",
+    "start_line": 68,
+    "end_line": 70,
+    "sha256": "d560986a2848b62eb8c46b4bb409c6fc735221b002dc81365bf3ca594a292d38"
+  },
+  {
+    "source": "RefinedAbsorption/GeneralEmbedding/Defs.lean",
+    "start_line": 24,
+    "end_line": 79,
+    "sha256": "a34058509e165178c294948c81cf071f1fe0ce912db4243aecca089390a6a5cf"
+  },
+  {
+    "source": "RefinedAbsorption/FaithfulSurvey2025/Embedding.lean",
+    "start_line": 55,
+    "end_line": 89,
+    "sha256": "e470e628fb2b761706414c6a0c5c64166757685f415fd6f9a4e6c28286205f27"
+  },
+  {
+    "source": "RefinedAbsorption/FaithfulSurvey2025/Embedding.lean",
+    "start_line": 160,
+    "end_line": 162,
+    "sha256": "3f71034165133b95595cfc49c82959985a25970f606cdc9f4aec5c51efffe492"
+  },
+  {
+    "source": "RefinedAbsorption/FaithfulSurvey2025/Embedding.lean",
+    "start_line": 172,
+    "end_line": 186,
+    "sha256": "1824724cd50f31c0b086edfd373e45a2464ac3199b4e3988e1a32f4c3ddd4a98"
+  },
+  {
+    "source": "RefinedAbsorption/FaithfulSurvey2025/Embedding.lean",
+    "start_line": 368,
+    "end_line": 384,
+    "sha256": "81d257170d97fc1f1b5713da10a7f613f55fde2aeb2cff3cb68af6d815c8cff5"
+  },
+  {
+    "source": "RefinedAbsorption/Extensions/Partial.lean",
+    "start_line": 25,
+    "end_line": 26,
+    "sha256": "7d764932fe5438442803ae8c625f6d6a181163cde4a167e1120790037bb722e0"
+  },
+  {
+    "source": "RefinedAbsorption/Extensions/PolynomialExternal.lean",
+    "start_line": 29,
+    "end_line": 103,
+    "sha256": "b29b09bd5abd40188068e24871cc77b76fa78aad4bc8f814c6cc3965159efa93"
+  }
+]
