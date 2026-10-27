@@ -1,0 +1,16 @@
+{
+  "status": "SUBMITTED_AND_WRITE_ACCESS_VERIFIED",
+  "submission_id": "jne18fh5pbug",
+  "source": {
+    "repository": "jtraverso/refined-absorption-lean",
+    "commit": "867d1e3d5e48ef20a8f1ae68237834eb06211cbc",
+    "comparator_config_path": "Palomar/Unified.comparator.json",
+    "formalization_metadata_path": "Palomar/Unified/formalization.yaml",
+    "authorization_relationship": "maintainer"
+  },
+  "preflight_report_sha256": "32f05c2a486a9190dd5dd37043d96ba03f03656f11e76382f1eb670abfe74873",
+  "preflight_workflow_url": "https://github.com/jtraverso/refined-absorption-lean/actions/runs/40478830948",
+  "temporary_proof_artifacts_removed": true,
+  "submitted_utc": "2026-10-27T11:58:43.223815+00:00",
+  "scope": "Ordinary intake and write-access proof only. Private token and review are not in this receipt. Registration requires the human decision on the actual review."
+}

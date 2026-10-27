@@ -1,0 +1,42 @@
+{
+  "status": "PASS_OFFICIAL_FULL_PREFLIGHT",
+  "source": {
+    "bytes": 25359131,
+    "commit": "867d1e3d5e48ef20a8f1ae68237834eb06211cbc",
+    "repository": "jtraverso/refined-absorption-lean",
+    "repository_url": "https://github.com/jtraverso/refined-absorption-lean",
+    "tree_url": "https://github.com/jtraverso/refined-absorption-lean/tree/867d1e3d5e48ef20a8f1ae68237834eb06211cbc"
+  },
+  "requested_paths": {
+    "comparator_config_path": "Palomar/Unified.comparator.json",
+    "formalization_metadata_path": "Palomar/Unified/formalization.yaml",
+    "project_path": ""
+  },
+  "report_path": "publication/palomar/official-preflight-40478830948/mechanical-report.json",
+  "report_sha256": "32f05c2a486a9190dd5dd37043d96ba03f03656f11e76382f1eb670abfe74873",
+  "workflow_url": "https://github.com/jtraverso/refined-absorption-lean/actions/runs/40478830948",
+  "workflow_run_id": 40478830948,
+  "artifact_id": 12726180072,
+  "artifact_zip_digest_reported_by_github": "sha256:ad0467004c6c1324fb9896d10b4662d0220c68e89408d6d9794c981353cc0ca7",
+  "mode": "full",
+  "execution_profile": "palomar-standard-v1",
+  "pipeline_commit": "c02bbeaed888df45c4e28c4e99dba540ad21552a",
+  "selected_theorems": 18,
+  "source_requirements": {
+    "files_checked": 317,
+    "header_parser": "lean --deps-json",
+    "maximum_lines": 10000,
+    "module_required": true,
+    "schema_version": 1
+  },
+  "independent_kernels": [
+    "nanoda",
+    "con-ron"
+  ],
+  "warnings": [
+    "configured Challenge source exceeds the preferred 32 KiB / 300-line review surface"
+  ],
+  "errors": [],
+  "checked_at": "2026-10-27T10:18:43Z",
+  "scope": "Official reusable full workflow artifact. Advisory preflight, distinct from the service-dispatched submission verification and its later private editorial review or registration."
+}

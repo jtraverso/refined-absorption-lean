@@ -1,0 +1,21 @@
+{
+  "submission_id": "jne18fh5pbug",
+  "status": "verifying",
+  "source": {
+    "repository": "jtraverso/refined-absorption-lean",
+    "commit": "867d1e3d5e48ef20a8f1ae68237834eb06211cbc",
+    "comparator_config_path": "Palomar/Unified.comparator.json",
+    "formalization_metadata_path": "Palomar/Unified/formalization.yaml",
+    "authorization_relationship": "maintainer"
+  },
+  "checked_utc": "2026-10-27T11:59:43.975324+00:00",
+  "review_service_issue": null,
+  "registered": false,
+  "scope": "Publicly shareable intake status only. Private credentials, links and editorial review remain excluded.",
+  "verification_run": {
+    "id": 40500171371,
+    "status": "queued",
+    "conclusion": null,
+    "url": "https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/40500171371"
+  }
+}

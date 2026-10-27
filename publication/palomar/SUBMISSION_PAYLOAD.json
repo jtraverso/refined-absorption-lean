@@ -1,0 +1,7 @@
+{
+  "repository": "jtraverso/refined-absorption-lean",
+  "commit": "867d1e3d5e48ef20a8f1ae68237834eb06211cbc",
+  "comparator_config_path": "Palomar/Unified.comparator.json",
+  "formalization_metadata_path": "Palomar/Unified/formalization.yaml",
+  "authorization_relationship": "maintainer"
+}

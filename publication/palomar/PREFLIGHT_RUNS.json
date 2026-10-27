@@ -82,13 +82,13 @@
     "url": "https://github.com/jtraverso/refined-absorption-lean/actions/runs/40478830948",
     "comparator_config_path": "Palomar/Unified.comparator.json",
     "formalization_metadata_path": "Palomar/Unified/formalization.yaml",
-    "observed_status": "in_progress",
+    "observed_status": "completed",
     "profile_conclusion": "success",
     "verify_job_id": 122103758256,
-    "verify_conclusion": null,
-    "observation_scope": "Dispatch and source SHA confirmed through GitHub. No full mechanical PASS or Palomar registration claimed.",
-    "observed_conclusion": null,
-    "observed_utc": "2026-10-27T09:52:16.379933+00:00",
+    "verify_conclusion": "success",
+    "observation_scope": "Complete official workflow succeeded; downloaded authoritative mechanical report says pass. No editorial or registration PASS inferred.",
+    "observed_conclusion": "success",
+    "observed_utc": "2026-10-27T11:59:43.975324+00:00",
     "observed_jobs": [
       {
         "databaseId": 122103698921,
@@ -99,9 +99,12 @@
       {
         "databaseId": 122103758256,
         "name": "preflight / verify",
-        "status": "in_progress",
-        "conclusion": ""
+        "status": "completed",
+        "conclusion": "success"
       }
-    ]
+    ],
+    "mechanical_report_status": "pass",
+    "mechanical_report_path": "publication/palomar/official-preflight-40478830948/mechanical-report.json",
+    "mechanical_report_sha256": "32f05c2a486a9190dd5dd37043d96ba03f03656f11e76382f1eb670abfe74873"
   }
 }
