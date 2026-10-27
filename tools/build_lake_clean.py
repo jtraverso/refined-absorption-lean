@@ -17,6 +17,7 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
 parser.add_argument("--jobs", type=int, default=3)
+parser.add_argument("--resume", action="store_true", help="Continue the same clean run, checking saved source hashes.")
 args = parser.parse_args()
 evidence = ROOT / "publication/assembly"
 start = json.loads((evidence / "clean-build-start.json").read_text())
@@ -37,16 +38,41 @@ state = dict(status="RUNNING", required=len(sources), started_utc=datetime.now(t
 pending = set(sources)
 done = set()
 running = {}
+if args.resume:
+    previous = json.loads((evidence / "lake-state.json").read_text())
+    state.update(started_utc=previous["started_utc"], resumed_from=previous["run"],
+                 initial_required=previous.get("initial_required", previous["required"]))
+    for record in previous["compiled"]:
+        name = record["module"]
+        assert name in sources and sha(sources[name]) == record["source_sha256"], name
+        trace = ROOT / ".lake/build/lib/lean" / (name.replace(".", "/") + ".trace")
+        assert trace.is_file() and not json.loads(trace.read_text())["synthetic"], name
+        done.add(name); pending.remove(name); state["compiled"].append(record)
+
+def chain_from(name):
+    # A chain has width one: Lake can only elaborate its modules sequentially.
+    # Three chains therefore keep at most three local elaborations active.
+    chain = [name]
+    if heavy(name):
+        return chain
+    while len(chain) < 8:
+        candidates = [n for n in sorted(pending - set(chain)) if not heavy(n)
+                      and chain[-1] in deps[n] and all(d in done or d in chain for d in deps[n])]
+        if not candidates:
+            break
+        chain.append(candidates[0])
+    return chain
 
 def save():
     state["checked"] = len(done)
-    state["current"] = sorted(running.values())
+    state["current"] = sorted(chain[-1] for chain in running.values())
+    state["current_batches"] = list(running.values())
     state["updated_utc"] = datetime.now(timezone.utc).isoformat()
     (evidence / "lake-state.json").write_text(json.dumps(state, indent=2) + "\n", encoding="utf-8", newline="\n")
 
-def build(name):
-    path = sources[name]
-    digest = sha(path)
+def build(chain):
+    name = chain[-1]
+    hashes = {n: sha(sources[n]) for n in chain}
     command = ["lake", "--quiet", "--packages=.lake/local-packages.json", "build", "+" + name + ":olean"]
     log = run / (name + ".log")
     clock = time.monotonic()
@@ -57,20 +83,26 @@ def build(name):
             code = result.returncode
         except subprocess.TimeoutExpired:
             output.write("\nTIMEOUT after 2400 seconds\n"); code = 124
-    assert sha(path) == digest, "Source changed during Lake build: " + name
-    return dict(module=name, source_sha256=digest, exit_code=code, seconds=round(time.monotonic()-clock, 2), log=log.relative_to(ROOT).as_posix())
+    for n, digest in hashes.items():
+        assert sha(sources[n]) == digest, "Source changed during Lake build: " + n
+    return [dict(module=n, source_sha256=digest, exit_code=code,
+                 batch_seconds=round(time.monotonic()-clock, 2), batch_target=name,
+                 log=log.relative_to(ROOT).as_posix()) for n, digest in hashes.items()]
 
 with ThreadPoolExecutor(max_workers=args.jobs) as pool:
     while pending or running:
         for name in sorted(pending):
-            if len(running) >= args.jobs or any(heavy(item) for item in running.values()):
+            if name not in pending:
+                continue
+            if len(running) >= args.jobs or any(heavy(chain[-1]) for chain in running.values()):
                 break
             if not all(item in done for item in deps[name]):
                 continue
             if heavy(name) and running:
                 continue
-            pending.remove(name)
-            running[pool.submit(build, name)] = name
+            chain = chain_from(name)
+            pending.difference_update(chain)
+            running[pool.submit(build, chain)] = chain
             if heavy(name):
                 break
         save()
@@ -78,13 +110,16 @@ with ThreadPoolExecutor(max_workers=args.jobs) as pool:
             raise RuntimeError("Blocked local import graph: " + repr(sorted(pending)))
         completed, _ = wait(running, timeout=10, return_when=FIRST_COMPLETED)
         for future in completed:
-            name = running.pop(future)
-            record = future.result()
-            if record["exit_code"]:
-                state["failed"][name] = record
-            else:
-                done.add(name); state["compiled"].append(record)
-            print(json.dumps(record), flush=True)
+            chain = running.pop(future)
+            records = future.result()
+            for record in records:
+                name = record["module"]
+                if record["exit_code"]:
+                    state["failed"][name] = record
+                else:
+                    done.add(name); state["compiled"].append(record)
+            print(json.dumps(dict(modules=chain, exit_code=records[0]["exit_code"],
+                                  batch_seconds=records[0]["batch_seconds"])), flush=True)
         save()
         if state["failed"]:
             state["status"] = "FAILED"; save()

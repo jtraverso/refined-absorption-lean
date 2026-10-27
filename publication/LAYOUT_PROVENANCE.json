@@ -1,0 +1,10 @@
+{
+  "source_repository": "https://github.com/jtraverso/nash-williams-triangle-decompositions-release",
+  "source_commit": "02091ea3acb0c0ea74a89875313ab1d26a4f9124",
+  "source_path": "scripts/series_template.tex",
+  "source_sha256": "e9deeb8ccbfddf9a26be47898932465a4976c873d7f734eb787f198a5068e38f",
+  "target": "scripts/series_template.tex",
+  "target_sha256": "e9deeb8ccbfddf9a26be47898932465a4976c873d7f734eb787f198a5068e38f",
+  "role": "Layout authority only. Manuscript Markdown remains semantic authority.",
+  "adaptation": "Exact template copy at preparation; later formatting changes, if any, must be recorded."
+}

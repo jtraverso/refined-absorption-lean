@@ -26,6 +26,8 @@ In Section 6.3 of arXiv:2402.17855v1, the discussion following Lemma 6.4 describ
 
 The deduction of Theorem 6.2 from 6.3 is made explicit in the library by deleting a complete graph on an admissible old vertex set from a much larger admissible complete graph, then applying 6.1 and 6.3. The deduction and its elementary construction may be explained without reproducing the main absorption proof.
 
+An additive interface, Faithful2024.theorem_6_2_ambient, records independence of the entire old vertex set, including isolated labels. The original Pending.theorem_6_2 and its support-based IsAbsorber contract remain unchanged. The added clause is obtained from the same admissible-host construction; it is an interface clarification rather than a new absorber existence theorem. Its development probe passed, and its clean Lake check is part of the pending final freeze.
+
 ## External proved inputs for scheduling
 
 - Nicholas Pippenger and Joel Spencer, *Asymptotic behavior of the chromatic index for hypergraphs*, Journal of Combinatorial Theory, Series A 51 (1989), pp. 24–42. DOI [10.1016/0097-3165(89)90074-5](https://doi.org/10.1016/0097-3165(89)90074-5). This is the classical colouring result and context, not a claim that its printed theorem has the exact polynomial contract used here.
