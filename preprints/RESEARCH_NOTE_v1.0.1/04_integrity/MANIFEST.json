@@ -1,0 +1,285 @@
+{
+  "version": "1.0.1",
+  "files": [
+    {
+      "path": "01_manuscript/RESEARCH_NOTE_preprint_v1.0.1_en.md",
+      "sha256": "27901b3f8c0620d1917f51629049d6e4d3f96d3e23b531c865b68cc66c5ae883",
+      "bytes": 38804
+    },
+    {
+      "path": "01_manuscript/RESEARCH_NOTE_preprint_v1.0.1_en.pdf",
+      "sha256": "18aed4583c35247b40f7136f4b18c4ba0ee7699d2b90897b7e56f2fe00136c49",
+      "bytes": 115081
+    },
+    {
+      "path": "01_manuscript/RESEARCH_NOTE_preprint_v1.0.1_en.tex",
+      "sha256": "3e683fd3e4f798154a499d52de0ec66cec5adb5ea20dabebc010a1b543ad65bc",
+      "bytes": 44631
+    },
+    {
+      "path": "01_manuscript/RESEARCH_NOTE_preprint_v1.0.1_es.md",
+      "sha256": "70e38fb039a179f7c419db552e30c5fb31786f7849889898d4632cffa3ac3143",
+      "bytes": 43469
+    },
+    {
+      "path": "01_manuscript/RESEARCH_NOTE_preprint_v1.0.1_es.pdf",
+      "sha256": "50bfa17c226c81f80af0009553f333f2453154fddb1ccbd40461dbe1ba400195",
+      "bytes": 118034
+    },
+    {
+      "path": "01_manuscript/RESEARCH_NOTE_preprint_v1.0.1_es.tex",
+      "sha256": "8f5686e445bbfb48323d34744e88dd9259c86c7483124722b9ab97c356f1ec9d",
+      "bytes": 49496
+    },
+    {
+      "path": "02_validation/AUDIT_RESULT.json",
+      "sha256": "a3e91f33166a2aa78445bebb0e9b5f23e47c83a8056d4f27f3c18cfec8885b59",
+      "bytes": 3420
+    },
+    {
+      "path": "02_validation/baseline/FORMALIZATION_COMPANION_preprint_v1.0.1_en.md",
+      "sha256": "647e18c3c99aaeddff95e545ba7a7b734674dc9f98983c5b99a9d53c3f865c44",
+      "bytes": 26271
+    },
+    {
+      "path": "02_validation/baseline/FORMALIZATION_COMPANION_preprint_v1.0.1_es.md",
+      "sha256": "628defa8ae75239bb2b7dea114b220185d1c01971ea60e016f94d47616612b5e",
+      "bytes": 28747
+    },
+    {
+      "path": "02_validation/baseline/RESEARCH_NOTE_preprint_v1.0.1_en.md",
+      "sha256": "694eb33ae606679660890cdb5f5ce20d68952bcac9c5a8b58a7eff54022cab61",
+      "bytes": 38698
+    },
+    {
+      "path": "02_validation/baseline/RESEARCH_NOTE_preprint_v1.0.1_es.md",
+      "sha256": "8227a18a27a22bd56f135151f410d8abd4ca7a30240f80c1f1b2a517a41aae00",
+      "bytes": 43336
+    },
+    {
+      "path": "02_validation/BASELINE.json",
+      "sha256": "52704821b6c3396147f0d0af73b0536ef85a369150e73028107d24f7d84d1715",
+      "bytes": 181023
+    },
+    {
+      "path": "02_validation/FORMAL_PRESERVATION.json",
+      "sha256": "9aa726b549b26ad16497cd3ce43151aa381f1dcd695c9bc7c2c85223c4963a6e",
+      "bytes": 883
+    },
+    {
+      "path": "02_validation/LAYOUT_PROVENANCE.json",
+      "sha256": "6225a316175afade31f907e1997abeaf5bb3ebef6e3a4ff0fe6ead980b22c48e",
+      "bytes": 1447
+    },
+    {
+      "path": "02_validation/PAGE_COMPARISON.json",
+      "sha256": "ca2125e094e9d2efdba996584b552303e45b5b04e9f8a5b47b8434a563ae3146",
+      "bytes": 1509
+    },
+    {
+      "path": "02_validation/PROTECTED_ELEMENT_INDEX.json",
+      "sha256": "43e58f938fbf51a6d42e942882e659a188201fefec3861853d03ff0aad84aa07",
+      "bytes": 210051
+    },
+    {
+      "path": "02_validation/RELEASE_AUDIT.json",
+      "sha256": "8613e5575ffda6a9ceae3859911ce182e861f8c978ac3736bbfab8d6b5caa54d",
+      "bytes": 3139
+    },
+    {
+      "path": "02_validation/RELEASE_AUDIT.md",
+      "sha256": "4814ab5d49715cc26ca0a9f504ba91c2f232dbe7ee87cc3d7acdfdf280f12ef3",
+      "bytes": 3653
+    },
+    {
+      "path": "02_validation/RELEASE_CHANGES.json",
+      "sha256": "ff3587a30d8ee626920eaf2cd18d0670083101a25a0c4dc73cd71dd4b321adc5",
+      "bytes": 2767
+    },
+    {
+      "path": "02_validation/RENDER_INDEX.json",
+      "sha256": "7e4cdd6bb48f251a829174c1709170f02611839fc3ddf37205eb45b5e8e42a40",
+      "bytes": 14505
+    },
+    {
+      "path": "02_validation/SEMANTIC_INTEGRITY.json",
+      "sha256": "b5cd5cdaf726f47ea6d1ee81d1080433d22aea1ed10cbde320c6bc8570b4c1ab",
+      "bytes": 10401
+    },
+    {
+      "path": "02_validation/SEMANTIC_INTEGRITY.md",
+      "sha256": "143eb8340440fb2cfb1e8503a372e3a39c58ad6cb13bacfb7c5a50d2eccd6b95",
+      "bytes": 4121
+    },
+    {
+      "path": "02_validation/SOURCE_AND_LITERATURE_DOSSIER.md",
+      "sha256": "cee0046b3230f22bc3f30b424397145f64b1759230cf8106c2851dd9ed572ddd",
+      "bytes": 5770
+    },
+    {
+      "path": "02_validation/typeset/artifact_build.json",
+      "sha256": "6653e890b50d397f5753531a0df051d24f096e32897776bcb9887734280a01aa",
+      "bytes": 2801
+    },
+    {
+      "path": "02_validation/typeset/fonts.conf",
+      "sha256": "35140500161e2b6f2a0f95efe96f0896e1b2a8138a5d1aaf0278e49ce899e340",
+      "bytes": 157
+    },
+    {
+      "path": "02_validation/typeset/FORMALIZATION_COMPANION_preprint_v1.0.1_en_pass1.txt",
+      "sha256": "0ca970d3b7f8761ab24b6b6e8bf23836eea60a6d39ab58915ae504afd3e3fe66",
+      "bytes": 1134
+    },
+    {
+      "path": "02_validation/typeset/FORMALIZATION_COMPANION_preprint_v1.0.1_en_pass2.txt",
+      "sha256": "8d5217b16d4e8f8eb680025eae1d53ce994fb6305af52d351239c3ec1ed758d0",
+      "bytes": 798
+    },
+    {
+      "path": "02_validation/typeset/FORMALIZATION_COMPANION_preprint_v1.0.1_en_pass3.txt",
+      "sha256": "7b5e4bfe1db85aaa81b983f65fe5248d8f5a3510fe80265021189d0adf4f198e",
+      "bytes": 798
+    },
+    {
+      "path": "02_validation/typeset/FORMALIZATION_COMPANION_preprint_v1.0.1_en_texlog.txt",
+      "sha256": "0dc8c8c2f5dd5f6821a5ffa2364d7202339854854c6b82ebd665bdad0ae0492b",
+      "bytes": 25684
+    },
+    {
+      "path": "02_validation/typeset/FORMALIZATION_COMPANION_preprint_v1.0.1_es_pass1.txt",
+      "sha256": "3193229cb352a39f6545bde62d20a7b58203f9158bb1c7b918845d013ba8746e",
+      "bytes": 1381
+    },
+    {
+      "path": "02_validation/typeset/FORMALIZATION_COMPANION_preprint_v1.0.1_es_pass2.txt",
+      "sha256": "7db6c6f33eb06e27e971be6fcfdeb00fb6052e65a4f6b1688889afcdde0cb37f",
+      "bytes": 923
+    },
+    {
+      "path": "02_validation/typeset/FORMALIZATION_COMPANION_preprint_v1.0.1_es_pass3.txt",
+      "sha256": "53273596769752e6d12f3c8376a3b33899287a1b1aa02ae64775a0983a51a3e1",
+      "bytes": 923
+    },
+    {
+      "path": "02_validation/typeset/FORMALIZATION_COMPANION_preprint_v1.0.1_es_texlog.txt",
+      "sha256": "fcd55e28a116f01430e70b7798b4b5d122fa6fbc8d2a6cfb1a8f99b8d9f3c80d",
+      "bytes": 25954
+    },
+    {
+      "path": "02_validation/typeset/RESEARCH_NOTE_preprint_v1.0.1_en_pass1.txt",
+      "sha256": "9e50f1fcf3868ce1ba1c6f5e5ed3c96f1cd78ca66d0d8b7f8050c95a28f8db0b",
+      "bytes": 1275
+    },
+    {
+      "path": "02_validation/typeset/RESEARCH_NOTE_preprint_v1.0.1_en_pass2.txt",
+      "sha256": "2bf76ee94ad7eecf57b3ca114f17017dc48e3cc39e617661432b99dde1f46513",
+      "bytes": 857
+    },
+    {
+      "path": "02_validation/typeset/RESEARCH_NOTE_preprint_v1.0.1_en_pass3.txt",
+      "sha256": "697c87ccc7b4a63b15029cf0ee950d5b4c41beb279547a965c3766a04a3afeae",
+      "bytes": 857
+    },
+    {
+      "path": "02_validation/typeset/RESEARCH_NOTE_preprint_v1.0.1_en_texlog.txt",
+      "sha256": "ef3ff9a7cd7fdcc47514fe4fb0969443d9688d4ede82144f5dad09c6023f361d",
+      "bytes": 25725
+    },
+    {
+      "path": "02_validation/typeset/RESEARCH_NOTE_preprint_v1.0.1_es_pass1.txt",
+      "sha256": "747c16fd61dea2bed501cfdd345fd089495de3e34d4ccebc05d667cb34d42881",
+      "bytes": 1048
+    },
+    {
+      "path": "02_validation/typeset/RESEARCH_NOTE_preprint_v1.0.1_es_pass2.txt",
+      "sha256": "8c73ab53f638a6d040306ebcf660b63fb6d4a92f0abfdc9d36ec74ec93c5e678",
+      "bytes": 743
+    },
+    {
+      "path": "02_validation/typeset/RESEARCH_NOTE_preprint_v1.0.1_es_pass3.txt",
+      "sha256": "d5fa74485cfa039227c04cf837a47636928375db341f851742ab2908cf28a48b",
+      "bytes": 743
+    },
+    {
+      "path": "02_validation/typeset/RESEARCH_NOTE_preprint_v1.0.1_es_texlog.txt",
+      "sha256": "ffdc5411c646b25fa43981e96333f69405be98dd161fe13a25a1f4570b472b32",
+      "bytes": 25877
+    },
+    {
+      "path": "02_validation/VISUAL_QA.json",
+      "sha256": "82fcfade7cabb78e5601d2a39f1cfb06adac7286a8f3abf21a0161b700d3eee0",
+      "bytes": 1894
+    },
+    {
+      "path": "03_reproducibility/audit_preprints.py",
+      "sha256": "a58302e7d004641e32e77c033b3505cf86203ee2ce8006f290fd5a74e6cd3c27",
+      "bytes": 6210
+    },
+    {
+      "path": "03_reproducibility/audit_release.py",
+      "sha256": "d49cfdde2f07608b049dce736d6eebabd693b3af47ed106e78c969ec51e53d7e",
+      "bytes": 5996
+    },
+    {
+      "path": "03_reproducibility/build_preprints.py",
+      "sha256": "78bb3311a9702f966ae6bcf77df30db246c447a76c439817f37b206558b90db9",
+      "bytes": 7808
+    },
+    {
+      "path": "03_reproducibility/README.md",
+      "sha256": "83caccfd76ea107e39efbfadfe99230a13d001e9f117775a44a8b94f62d20aa1",
+      "bytes": 1401
+    },
+    {
+      "path": "03_reproducibility/render_preprints.py",
+      "sha256": "917ef313ec3b239a728d74b0ebe3fb1a63a2ba6a63edb39f972d2e3beb7cc815",
+      "bytes": 2273
+    },
+    {
+      "path": "03_reproducibility/seal_release.py",
+      "sha256": "fef190dcb48086b7c00d5d3ebe518bae837930403ad4f952428997a0e00725cc",
+      "bytes": 2483
+    },
+    {
+      "path": "03_reproducibility/series_template.tex",
+      "sha256": "2011d077bbe3be140e5c77539dee838dbae62acb9baf842a920aa2697581eb62",
+      "bytes": 1664
+    },
+    {
+      "path": "05_formalization/FORMALIZATION_COMPANION_preprint_v1.0.1_en.md",
+      "sha256": "77dcd91b3999e0486ed75a09d5768854691597b4262440c77a412aad1afc947f",
+      "bytes": 26214
+    },
+    {
+      "path": "05_formalization/FORMALIZATION_COMPANION_preprint_v1.0.1_en.pdf",
+      "sha256": "181fda5fb4f276d16d1de7d787ff7c98b45173763b4a6e13c50b9ed50f50a6ec",
+      "bytes": 76456
+    },
+    {
+      "path": "05_formalization/FORMALIZATION_COMPANION_preprint_v1.0.1_en.tex",
+      "sha256": "386e9f39ac717e2f2a3ef99580f1f9dfba212d151f6f0c280e64c431ae335ae4",
+      "bytes": 34612
+    },
+    {
+      "path": "05_formalization/FORMALIZATION_COMPANION_preprint_v1.0.1_es.md",
+      "sha256": "0f8cee3272ed3436e9df9580f662ce7dd5a4d2e3933c3af68682bbd9ab75e01e",
+      "bytes": 28696
+    },
+    {
+      "path": "05_formalization/FORMALIZATION_COMPANION_preprint_v1.0.1_es.pdf",
+      "sha256": "25104efa861fad24b0616f31b776bc0b020a1ca72c7b196435b68bf4b5f347e9",
+      "bytes": 77018
+    },
+    {
+      "path": "05_formalization/FORMALIZATION_COMPANION_preprint_v1.0.1_es.tex",
+      "sha256": "d21a23e1691336fe856c836d52d61861c117f2799c49b9747bcf2f153f33c1c2",
+      "bytes": 37263
+    },
+    {
+      "path": "README.md",
+      "sha256": "a7d9cd1bbf328a19addaa5bebc4a7ce6680544500abf40b91a5ed6cd29a8b2de",
+      "bytes": 2041
+    }
+  ]
+}

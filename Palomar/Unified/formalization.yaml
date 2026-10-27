@@ -5,7 +5,7 @@ project:
   license: Apache-2.0
   responsible_maintainers:
   - Juan Pablo Traverso Gianini
-  name: 'Formalizing refined absorption: proof interfaces and consequences'
+  name: 'Formalizing Delcourt–Postle’s refined absorption in Lean'
   description: One assembled Lean formalization of principal refined absorption results and
     their consequences. The selected results include refined omni-absorbers and refiners,
     labelled reserve matchings, dense compatible decompositions, an additive compatible-absorber
@@ -81,13 +81,13 @@ sources:
     is distinguished from its proved piecewise variant and a counterexample to the literal
     global conclusion.
   author_endorsement: not-contacted
-- title: 'Formalizing refined absorption: proof interfaces and consequences'
+- title: 'Formalizing Delcourt–Postle’s refined absorption in Lean'
   authors:
   - Juan Pablo Traverso Gianini
-  id: doi:10.5281/zenodo.23685654
+  id: doi:10.5281/zenodo.23715622
   type: paper
   relationship: formalizes
-  location: Research note, version 1.0 (2026)
+  location: Research note, version 1.0.1 (2026); editorial update, unchanged proof sources
   note: Verified consequences and interface analysis; historical priority for every corollary
     is not claimed.
   license: CC-BY-4.0

@@ -1,0 +1,13 @@
+{
+  "status": "PASS_SEALED_DOCUMENT_PACKAGE",
+  "version": "1.0.1",
+  "doi": "10.5281/zenodo.23715622",
+  "sealed_utc": "2026-10-27T23:53:23.379394+00:00",
+  "archive": "publication/document-release/v1.0.1/refined-absorption-preprint-v1.0.1.zip",
+  "archive_sha256": "5936a14ea55e323dc53f2567ecfbfd7537431095e5a5f21121175b6f8835e3fa",
+  "files": 58,
+  "manifest_sha256": "e07705754adafeb257ccc3f045d662e38589713f1dbc76d928793864b1a3a566",
+  "audit_sha256": "8613e5575ffda6a9ceae3859911ce182e861f8c978ac3736bbfab8d6b5caa54d",
+  "formal_source_commit": "5428ee9b772e67dd7ec6da443199b36a003b72d4",
+  "scope": "Document package; public upload outcomes recorded separately."
+}

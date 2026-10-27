@@ -1,0 +1,34 @@
+[
+  {
+    "input": "preprints/RESEARCH_NOTE_v1.0.1/02_validation/baseline/RESEARCH_NOTE_preprint_v1.0.1_en.md",
+    "input_sha256": "694eb33ae606679660890cdb5f5ce20d68952bcac9c5a8b58a7eff54022cab61",
+    "output": "preprints/RESEARCH_NOTE_v1.0.1/01_manuscript/RESEARCH_NOTE_preprint_v1.0.1_en.md",
+    "output_sha256": "27901b3f8c0620d1917f51629049d6e4d3f96d3e23b531c865b68cc66c5ae883",
+    "allowed_changes": "Publication metadata and availability; two Spanish terminology translations in the companion. Mathematical content unchanged.",
+    "reviewed_input_original_path": "preprints/RESEARCH_NOTE_v1.0.1_round3b/01_manuscript/RESEARCH_NOTE_preprint_v1.0.1_r3b_en.md"
+  },
+  {
+    "input": "preprints/RESEARCH_NOTE_v1.0.1/02_validation/baseline/RESEARCH_NOTE_preprint_v1.0.1_es.md",
+    "input_sha256": "8227a18a27a22bd56f135151f410d8abd4ca7a30240f80c1f1b2a517a41aae00",
+    "output": "preprints/RESEARCH_NOTE_v1.0.1/01_manuscript/RESEARCH_NOTE_preprint_v1.0.1_es.md",
+    "output_sha256": "70e38fb039a179f7c419db552e30c5fb31786f7849889898d4632cffa3ac3143",
+    "allowed_changes": "Publication metadata and availability; two Spanish terminology translations in the companion. Mathematical content unchanged.",
+    "reviewed_input_original_path": "preprints/RESEARCH_NOTE_v1.0.1_round3b/01_manuscript/RESEARCH_NOTE_preprint_v1.0.1_r3b_es.md"
+  },
+  {
+    "input": "preprints/RESEARCH_NOTE_v1.0.1/02_validation/baseline/FORMALIZATION_COMPANION_preprint_v1.0.1_en.md",
+    "input_sha256": "647e18c3c99aaeddff95e545ba7a7b734674dc9f98983c5b99a9d53c3f865c44",
+    "output": "preprints/RESEARCH_NOTE_v1.0.1/05_formalization/FORMALIZATION_COMPANION_preprint_v1.0.1_en.md",
+    "output_sha256": "77dcd91b3999e0486ed75a09d5768854691597b4262440c77a412aad1afc947f",
+    "allowed_changes": "Publication metadata and availability; two Spanish terminology translations in the companion. Mathematical content unchanged.",
+    "reviewed_input_original_path": "preprints/RESEARCH_NOTE_v1.0.1_round3b/05_formalization/FORMALIZATION_COMPANION_preprint_v1.0.1_r3b_en.md"
+  },
+  {
+    "input": "preprints/RESEARCH_NOTE_v1.0.1/02_validation/baseline/FORMALIZATION_COMPANION_preprint_v1.0.1_es.md",
+    "input_sha256": "628defa8ae75239bb2b7dea114b220185d1c01971ea60e016f94d47616612b5e",
+    "output": "preprints/RESEARCH_NOTE_v1.0.1/05_formalization/FORMALIZATION_COMPANION_preprint_v1.0.1_es.md",
+    "output_sha256": "0f8cee3272ed3436e9df9580f662ce7dd5a4d2e3933c3af68682bbd9ab75e01e",
+    "allowed_changes": "Publication metadata and availability; two Spanish terminology translations in the companion. Mathematical content unchanged.",
+    "reviewed_input_original_path": "preprints/RESEARCH_NOTE_v1.0.1_round3b/05_formalization/FORMALIZATION_COMPANION_preprint_v1.0.1_r3b_es.md"
+  }
+]

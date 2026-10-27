@@ -1,0 +1,424 @@
+% Adapted from the author's public Erdos Paper IV v1.23 series_template.tex.
+% Layout provenance is recorded in 02_validation; the Markdown is semantic authority.
+\documentclass[spanish,11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\usepackage{amsmath,amssymb}
+\providecommand{\mathscr}{\mathcal}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\usepackage{microtype,parskip}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{xcolor,xurl}
+\usepackage{hyperref,bookmark}
+\usepackage{etoolbox,needspace}
+\setcounter{secnumdepth}{-\maxdimen}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}\small}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{11\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+\urlstyle{same}
+\hypersetup{pdftitle={Formalización en Lean de la absorción refinada de Delcourt–Postle},pdfauthor={Juan Pablo Traverso Gianini},
+pdflang={es-ES},colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\title{Formalización en Lean de la absorción refinada de Delcourt–Postle}
+\author{Juan Pablo Traverso Gianini\\
+\small Investigador independiente, Santiago, Chile\\
+\small \href{mailto:jtraverso@gmail.com}{jtraverso@gmail.com}\\
+\small ORCID: 0009-0003-6068-4096}
+\date{}
+\begin{document}
+\raggedbottom
+\clubpenalty=10000
+\widowpenalty=10000
+\makeatletter
+\@clubpenalty=10000
+\makeatother
+\maketitle
+\textbf{Nota de investigación --- prepublicación 1.0.1, 27 de octubre de 2026.}
+
+\textbf{DOI de la versión 1.0.1:} \href{https://doi.org/10.5281/zenodo.23715622}{10.5281/zenodo.23715622}.
+
+© 2026 Juan Pablo Traverso Gianini. Licencia \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.
+
+\subsection{Resumen}\label{resumen}
+
+Presentamos una formalización en Lean 4 de la demostración de la conjetura de existencia mediante absorción refinada de Delcourt y Postle, junto con resultados seleccionados de la exposición de Postle. La biblioteca demuestra teoremas de omni-absorbedores refinados y refinadores, resultados de descomposición densa y compatible, y existencia de diseños para \(\lambda\ge1\) y \(q>r\ge2\) fijos en órdenes admisibles suficientemente grandes. Explicamos tres interfaces que la formalización hizo explícitas: las cargas locales de una reserva, la evitación de bloques prescritos durante la absorción y los vértices que fija un encaje. Con las definiciones precisadas en la Sección 4.2, un contraejemplo finito descarta la conclusión de encaje global del Lema 3.8 de la exposición; una variante por piezas se demuestra por separado. Otras consecuencias incluyen la completación con intersecciones prescritas, el encaje de sistemas parciales finitos como intersecciones exactas y un intervalo inicial de tamaños de intersección de orden \(n^r\). Mediante pruebas formales de coloreo cuantitativo de hipergrafos y del teorema de Nash--Williams, obtenemos además a lo sumo \(R+R^{1-\gamma}\) clases paralelas parciales y \(D+D^{1-\gamma}\) rondas de triángulos disjuntos en vértices, donde \(R\) es el grado de un punto en un sistema de Steiner y \(D\) la mitad del grado máximo del grafo. Estas cotas se refieren al número de clases o rondas, no a los vértices sin cubrir dentro de ellas.
+
+\textbf{Palabras clave:} absorción refinada; diseños; formalización; sistemas de Steiner; intersecciones; coloreo de aristas de hipergrafos.
+
+\subsection{1. Alcance y contribuciones}\label{alcance-y-contribuciones}
+
+La prueba de Delcourt y Postle convierte una descomposición aproximada en una exacta mediante una reserva y un absorbedor. Al formalizarla, no basta con reconocer ese esquema: hay que comprobar que cada paso produce el objeto que necesita el siguiente. Una estimación del tamaño del residuo, por ejemplo, no siempre controla su concentración en un vértice de reserva. Esta nota se ocupa de esas comprobaciones y de algunas consecuencias que pudimos deducir una vez reunidas las pruebas.
+
+Trabajamos con \emph{Refined Absorption: A New Proof of the Existence Conjecture}, de Michelle Delcourt y Luke Postle {[}1{]}, y con la exposición general de Luke Postle {[}2{]}, que llamaremos simplemente la exposición de Postle. Las versiones de partida son arXiv:2402.17855v1 y arXiv:2510.19978v1, respectivamente. La segunda apareció en las actas del ICM 2026. También contrastamos las definiciones de encaje y el lema correspondiente con esa edición publicada. No identificamos por ello todas las versiones de ambos textos.
+
+Keevash {[}18{]} demostró la conjetura de existencia; posteriormente, Glock, Kühn, Lo y Osthus {[}19{]} dieron una prueba mediante absorción iterativa. La absorción refinada {[}1{]} proporciona otra demostración dentro de esa historia.
+
+La biblioteca demuestra los teoremas de omni-absorbedores refinados y refinadores de {[}1, Teoremas 1.7 y 1.11{]}, los resultados seleccionados de descomposición densa y compatibilidad, y el teorema de omni-absorbedores refinados eficientes de {[}2{]}. La existencia de diseños se obtiene para cada índice fijo \(\lambda\ge1\) y \(q>r\ge2\), con bloques sin repeticiones, en todo orden suficientemente grande que satisfaga la divisibilidad correspondiente. La demostración de existencia y el método de absorción pertenecen a los autores citados. Aquí remitimos a sus resultados principales y explicamos sólo los pasos que motivan las observaciones de la nota.
+
+{\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Parte del desarrollo
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Qué se certifica y qué se excluye
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Absorción y existencia & Pruebas en la biblioteca de los resultados seleccionados de {[}1,2{]}; no certificación de todos los enunciados de ambos textos. \\
+Encajes & Contraejemplo a la afirmación global con las definiciones precisadas en la Sección 4.2, y prueba separada de una variante por piezas. \\
+Completación e intersecciones & Consecuencias de la descomposición compatible; no espectro completo de intersecciones. \\
+Coloreo y Nash--Williams & Pruebas externas incorporadas mediante revisiones fijas; las aplicaciones finales no las dejan como hipótesis. \\
+Axiomas y comparación & Sólo los axiomas fundacionales declarados en las pruebas; los huecos de los enunciados se cuentan y explican en la Sección 7. \\
+Aplicaciones no cubiertas & Cintura alta general, una extensión general partite o particionada y los umbrales probabilísticos de diseños. \\
+Eficiencia & La cota es \(C\max\{\Delta_{r-1}(X),n^{1-1/r}\log n\}\); el Apéndice A del complemento da las hipótesis. \\
+\end{longtable}
+}
+
+Esta revisión intermedia documenta la formalización congelada que se identifica en la Sección 8. Se prevé una versión definitiva posterior que cubra los dos textos fuente completos, incluidas las pruebas de las que dependen sus resultados. Ese trabajo está en curso. La tabla de alcance describe lo que ya se certificó; no cuenta las formalizaciones previstas como pruebas terminadas.
+
+Las Secciones 3 y 4 explican las observaciones sobre reserva, compatibilidad y encajes. Las Secciones 5 y 6 presentan las consecuencias sobre intersecciones y sobre la organización de bloques en clases o rondas. El complemento permite localizar cada resultado en Lean y precisa la cota de eficiencia en su Apéndice A.
+
+Los problemas de intersección de sistemas triples de Steiner son clásicos; las contribuciones de Lindner y Rosa {[}10,11{]} anteceden a este trabajo. Tampoco la aplicación a rondas mejora el umbral de Nash--Williams: utiliza la prueba formal documentada en nuestros artículos I y II {[}8,9{]}. Escribimos una nota sobre el proceso de formalización, las distinciones que hizo necesarias y las deducciones que permite reutilizar. No ofrecemos una nueva prueba independiente de la conjetura de existencia.
+
+\subsection{2. Un marco mínimo}\label{un-marco-muxednimo}
+
+Todos los objetos son finitos. Fijamos enteros \(q>r\ge1\), salvo cuando se indica una cota inferior más fuerte para \(r\). Un \(r\)-grafo es un conjunto de aristas de \(r\) elementos. Escribimos \(K_V^r\) para el \(r\)-grafo completo sobre \(V\). Para un \(r\)-grafo \(G\) y un conjunto \(S\) de tamaño \((r-1)\), sea \[d_G(S)=|\{e\in G:S\subseteq e\}|.\] El mínimo y el máximo de estos grados se denotan por \(\delta_{r-1}(G)\) y \(\Delta_{r-1}(G)\). Para grafos ordinarios son los grados usuales de los vértices.
+
+Una \(K_q^r\)-descomposición de \(G\) es una familia de conjuntos de \(q\) elementos cuyos subconjuntos de tamaño \(r\) particionan \(G\). Un empaquetamiento (\emph{packing}) cubre cada arista a lo sumo una vez. Un sistema parcial de Steiner es una familia de conjuntos de \(q\) elementos en la que cada conjunto de \(r\) elementos aparece a lo sumo una vez; un sistema de Steiner cubre cada conjunto de \(r\) elementos exactamente una vez. Para una familia de bloques \(P\), escribimos \[H(P)=\bigcup_{B\in P}\binom{B}{r}.
+\tag{2.1}\] Así, \(H(P)\) es un \(r\)-grafo, mientras que \(P\) es una familia de conjuntos de \(q\) elementos. Distinguir ambos niveles será importante en la hipótesis de dispersión de la Sección 5.
+
+La condición usual de divisibilidad para un diseño simple de índice \(\lambda\) es \[\binom{q-i}{r-i}\mid\lambda\binom{n-i}{r-i}
+\qquad(0\le i<r).
+\tag{2.2}\] Llamamos admisible a \(n\) cuando (2.2) se cumple con \(\lambda=1\). Para un grafo ambiente general \(G\), la divisibilidad exige que \(\binom{q-i}{r-i}\) divida el número de aristas de \(G\) que contienen cada conjunto de tamaño \(i\). Restar las aristas de una descomposición conserva estas condiciones.
+
+El resultado de descomposición densa es {[}1, Teorema 6.1{]}. Su forma compatible, {[}1, Teorema 6.3{]}, afirma que, para \(q>r\ge1\) fijos, un grafo ambiente divisible suficientemente grande con grado mínimo de conjuntos de tamaño \((r-1)\) al menos \((1-\varepsilon)n\) admite una descomposición compatible con cualquier empaquetamiento prescrito \(Q_1\): la salida \(Q_2\) satisface \[|B_1\cap B_2|\le r
+\qquad(B_1\in Q_1,\ B_2\in Q_2).
+\tag{2.3}\] La constante positiva \(\varepsilon\) y el umbral de orden dependen sólo de \(q,r\). En particular, el empaquetamiento prescrito no tiene que ser disperso. La ecuación (2.3) excluye un bloque común porque \(q>r\).
+
+\subsection{3. Tres interfaces de la demostración}\label{tres-interfaces-de-la-demostraciuxf3n}
+
+
+\Needspace{7\baselineskip}
+\subsubsection{3.1. Emparejamiento con reserva y conjuntos de prueba}\label{emparejamiento-con-reserva-y-conjuntos-de-prueba}
+
+El enunciado de emparejamiento con reserva es {[}1, Teorema 2.8{]}, cuyos antecedentes de emparejamiento están en {[}3{]}. Fijamos \(s\ge2\) y \(0<\beta<1\), y escribimos \(s\) para la uniformidad de su multi-hipergrafo auxiliar; ese parámetro se llama \(r\) en el teorema citado. Las aristas tienen etiquetas, de modo que distintas copias pueden tener los mismos extremos. La parte principal \(G_1\) tiene grados a lo sumo \(D\) y grados al menos \(D(1-D^{-\beta})\) en un conjunto designado \(A\). Una segunda parte \(G_2\) proporciona muchas opciones por cada punto de \(A\), con exactamente uno de esos puntos por arista. Sus otros vértices tienen grado a lo sumo \(D\), y los dos conjuntos de vértices se intersectan exactamente en \(A\). Los cogrados están acotados por \(D^{1-\beta}\).
+
+La conclusión es un emparejamiento que cubre \(A\). La casi regularidad se exige en \(A\) dentro de la parte principal; no es una hipótesis sobre cada vértice de todo el multi-hipergrafo. La formalización conserva las etiquetas de las copias y el enunciado completo de reserva, con sus hipótesis y conclusión.
+
+El paso del nibble a la reserva es el siguiente. Retenemos \[t=\lceil D^{1-\alpha}\rceil\] opciones de reserva por cada raíz \(a\in A\), donde \(\alpha>0\) se elegirá más adelante. Para un vértice de reserva \(b\notin A\), sea \(w_b(a)\) el número de opciones retenidas que pasan por \(a\) y \(b\). Las cotas de grados y cogrados dan \[\sum_{a\in A}w_b(a)\le D,
+\qquad
+0\le w_b(a)\le\lfloor D^{1-\beta}\rfloor.
+\tag{3.1}\] Si el nibble deja sin cubrir \(U\subseteq A\), la carga todavía visible en \(b\) es \(\sum_{a\in U}w_b(a)\). Una cota sobre \(|U|\) por sí sola no controlaría esa suma: las raíces sin cubrir podrían concentrarse en las opciones que utilizan un mismo vértice.
+
+Usamos los conjuntos de nivel \[T_{b,j}=\{a\in A:w_b(a)\ge j\}.\] El nibble se aplica con conjuntos de prueba tomados de esos niveles. Cada conjunto de nivel tiene a lo sumo \(D\) raíces por (3.1). Una raíz fija utiliza a lo sumo \(s t\) vértices de reserva, y cada uno contribuye a lo sumo \(\lfloor D^{1-\beta}\rfloor\) niveles. Estas estimaciones dan cotas polinómicas en \(D\) para el tamaño de un conjunto de prueba y el número que pasa por un vértice. Esta interfaz no impone una cota sobre el número total de conjuntos de prueba ni sobre el número total de aristas del multi-hipergrafo ambiente. Los niveles pequeños se controlan por su tamaño; el nibble controla los mayores.
+
+El nibble local proporciona una constante \(c>0\). Ponemos \(D_0=\lfloor D\rfloor\). Las cotas resultantes, escritas en la forma común \[|U\cap T_{b,j}|
+\le D_0^{-c}|T_{b,j}|+D_0^{\beta/2},\] se pueden sumar sobre los niveles enteros. En efecto, contar cada raíz una vez por cada nivel inferior a su peso da \[\begin{aligned}
+\sum_{a\in U}w_b(a)
+&=\sum_{j=1}^{\lfloor D^{1-\beta}\rfloor}|U\cap T_{b,j}|\\
+&\le D_0^{-c}D+
+ \lfloor D^{1-\beta}\rfloor D_0^{\beta/2}.
+\end{aligned}
+\tag{3.2}\] Esta es la estimación de carga que necesita el argumento de reserva. Explica por qué sirve una interfaz con conjuntos de prueba locales aun cuando ya se dispone de una estimación global del residuo.
+
+Elegimos los parámetros como sigue. Ponemos \[c'=\min\{c,\beta/2\},\qquad
+\alpha=c'/8,\qquad p=D^\alpha/t.
+\tag{3.3}\] Seleccionamos opciones de reserva independientemente con probabilidad \(p\). Los eventos malos son que una raíz no reciba ninguna opción o que se seleccionen dos opciones que se intersectan. Sus probabilidades se acotan por \(e^{-D^\alpha}\) y \(p^2\), respectivamente. La ecuación (3.2) acota los grados de reserva pertinentes por \(O(D^{1-c'})\) y con ello controla las dependencias locales. Un evento de raíz tiene \(O(t s D^{1-c'})\) eventos de colisión vecinos, cada uno con peso de orden \(p^2\) en el lema local. Su peso total es \(O(t s D^{1-c'}p^2)=O(D^{3\alpha-c'})\), que tiende a cero por (3.3); la probabilidad exponencial de un evento de raíz también domina su cota polinómica de dependencias. El lema local asimétrico proporciona entonces un emparejamiento que cubre las raíces pendientes.
+
+Su unión con el emparejamiento del nibble sigue siendo un emparejamiento. Los vértices de reserva fuera de \(A\) no pertenecen al conjunto principal de vértices, y sus raíces en \(U\) estaban sin cubrir. Esta última observación explica la necesidad de conservar la intersección exacta de conjuntos de vértices en la interfaz. La prueba formal comprueba también las partes enteras, los redondeos hacia arriba y las desigualdades a partir del umbral requerido; estos detalles no alteran la división del argumento.
+
+
+\Needspace{7\baselineskip}
+\subsubsection{3.2. La evitación debe conservarse al absorber}\label{la-evitaciuxf3n-debe-conservarse-al-absorber}
+
+Para {[}1, Teorema 6.3{]}, fijamos un empaquetamiento \(Q_1\) y llamamos \(\mathcal D\) a la familia de conjuntos peligrosos de tamaño \(q\): los que intersectan un bloque de \(Q_1\) en al menos \(r+1\) vértices. El lema formal de conteo da, a través de cada \(r\)-arista fija \(e\), \[|\{Q\in\mathcal D:e\subseteq Q\}|
+\le 2^r q\,n^{q-r-1}.
+\tag{3.4}\] Este exponente es una unidad menor que el orden \(n^{q-r}\) de los cliques disponibles a través de una arista.
+
+Para ver esa ganancia, sea \(P\in Q_1\) un testigo de que \(Q\) es peligroso y pongamos \(I=e\cap P\). Elegimos \(B\subseteq(Q\cap P)\setminus e\) de modo que \(|I\cup B|=r\), y después un punto adicional \(y\in(Q\cap P)\setminus(I\cup B)\). El conjunto de tamaño \(r\) dado por \(I\cup B\) determina a lo sumo un bloque \(P\), porque \(Q_1\) es un empaquetamiento. Hay a lo sumo \(2^r\) elecciones de \(I\), a lo sumo \(n^{r-|I|}\) de \(B\) y a lo sumo \(q\) de \(y\) una vez determinado \(P\). Los puntos restantes de \(Q\) contribuyen a lo sumo \(n^{q-2r+|I|-1}\). Si el conjunto forzado es demasiado grande, no hay tal \(Q\). En caso contrario, los exponentes suman \(q-r-1\), lo que da (3.4).
+
+En {[}1, p.~38, Sección 6.3{]}, el párrafo que describe la segunda modificación para el Teorema 6.3 acota los conjuntos descritos como «such \(q\)-sets containing a fixed edge of \(J\)» por \(O(v(X)^{q-r+1})\), inmediatamente antes de la Observación 6.5. Cuenta la misma cantidad local, a través de una \(r\)-arista fija; \(v(X)=n\) porque la reserva abarca todos los vértices. Esa cota superior por sí sola no da una ganancia respecto de \(n^{q-r}\). La ecuación (3.4) proporciona la cota menor que necesita el paso de eliminación.
+
+La evitación debe imponerse en dos lugares. Primero, el catálogo de bloques disponibles para el omni-absorbedor debe ser seguro frente a \(Q_1\). Segundo, el nibble y su completación con reserva deben utilizar bloques seguros. Restringir solamente el empaquetamiento aproximado final dejaría sin controlar la descomposición seleccionada por el absorbedor.
+
+Una vez elegido el absorbedor seguro, se lo retira junto con la reserva del grafo de trabajo. El refuerzo de regularidad proporciona la familia de cliques para la cobertura principal. El presupuesto de eliminación de (3.4) es suficientemente pequeño para conservar la oferta requerida, y el nibble seguro deja un residuo divisible en la reserva. El absorbedor trata después ese residuo utilizando su catálogo, ya seguro. Las dos familias de bloques de la unión final satisfacen (2.3), por lo que también la satisface la unión. La biblioteca trata \(r=1\) por separado; la discusión anterior del nibble corresponde a \(r\ge2\).
+
+
+\Needspace{7\baselineskip}
+\subsubsection{3.3. Absorbedores compatibles a partir de descomposiciones compatibles}\label{absorbedores-compatibles-a-partir-de-descomposiciones-compatibles}
+
+La deducción de {[}1, Teorema 6.2{]} puede expresarse sin otra construcción de absorción. Sea \(L\) el \(r\)-grafo divisible dado sobre su conjunto de vértices antiguos. Elegimos un conjunto admisible \(U\) que contenga todos los vértices antiguos, y después un conjunto admisible mucho mayor \(W\supseteq U\). Ponemos \[A_0=K_W^r\setminus K_U^r.
+\tag{3.5}\] Los dos grafos completos son divisibles, por lo que \(A_0\) también lo es. Tomar \(W\) suficientemente grande respecto de \(U\) hace que \(A_0\), y también \(A_0\cup L\), tengan la densidad requerida por los dos resultados de descomposición.
+
+Aplicamos {[}1, Teorema 6.1{]} para obtener una descomposición \(Q_1\) de \(A_0\). Es un empaquetamiento en \(A_0\cup L\). Aplicamos {[}1, Teorema 6.3{]} a ese grafo mayor con empaquetamiento prescrito \(Q_1\), y obtenemos una descomposición \(Q_2\) que satisface (2.3). Así, \(A_0\) y \(A_0\cup L\) tienen descomposiciones compatibles.
+
+Toda arista de \(A_0\) usa un vértice fuera de \(U\). Por tanto, el conjunto completo de vértices antiguos es independiente en \(A_0\). Reetiquetar los vértices añadidos fijando los antiguos da el absorbedor buscado. La construcción separa tres obligaciones: divisibilidad por sustracción, densidad por ampliación y compatibilidad por el teorema del empaquetamiento prescrito. Además, explicita la condición sobre vértices ambientes que discutimos a continuación.
+
+\subsection{4. Dos distinciones al interpretar los enunciados}\label{dos-distinciones-al-interpretar-los-enunciados}
+
+
+\Needspace{7\baselineskip}
+\subsubsection{4.1. Vértices antiguos y soporte de aristas}\label{vuxe9rtices-antiguos-y-soporte-de-aristas}
+
+Una representación por conjuntos de aristas recuerda los vértices que aparecen en ellas. Un hipergrafo con conjunto ambiente explícito también puede tener vértices aislados. Estas convenciones son intercambiables en muchos enunciados de conteo de aristas, pero la frase «los vértices antiguos son independientes» exige identificar el conjunto antiguo.
+
+El predicado de absorbedor conservado usa el soporte de \(L\). La interfaz añadida para el Teorema 6.2 del artículo también afirma que ninguna arista del absorbedor está completamente contenida en el conjunto ambiente antiguo, incluidas las etiquetas aisladas. La construcción (3.5) lo demuestra directamente porque todos los vértices antiguos se incluyeron en \(U\). Se permiten aristas mixtas que contengan vértices antiguos y nuevos.
+
+Se conserva el resultado anterior. La cláusula añadida registra información que ya proporciona la misma construcción; no se presenta como un nuevo teorema de existencia de absorbedores. La cláusula añadida fortalece la interfaz enunciada sin cambiar la construcción.
+
+
+\Needspace{7\baselineskip}
+\subsubsection{4.2. Encajes globales y por piezas}\label{encajes-globales-y-por-piezas}
+
+La Definición 3.7 de {[}2{]} exige una sola aplicación inyectiva de los vértices de la unión de un sistema de supergrafos al grafo ambiente, que fije los vértices antiguos. Antes de examinar el Lema 3.8, precisamos sus demás hipótesis. Usamos la definición de familia \(C\)-refinada de {[}1, Definición 1.9{]}: cada arista de \(J\) pertenece a lo sumo a \(C\) miembros, y cada miembro \(H\) tiene a lo sumo \(C\) vértices y a lo sumo \(C\) aristas. Para la condición de intersección en aristas usamos {[}4, Definición B.1{]}: para cada arista nueva \(f\) de una pieza, \(f\cap V(J)\) está contenido en una arista de \(J\). El predicado formal exige, además, que esa arista pertenezca a la raíz \(H\) de la pieza. El ejemplo siguiente cumple ambas condiciones. Así, el contraejemplo tiene hipótesis explícitas y no depende de un significado tácito de esos términos.
+
+Sea \(G=K_n\) con \(n\) par, sea \(J\) un emparejamiento perfecto que abarque todos los vértices, y sea \(\mathcal H\) la familia de sus subgrafos de una sola arista. Por cada \(H\in\mathcal H\), añadimos un vértice privado para formar un triángulo \(W_H\). Fijamos los parámetros de {[}2, Lema 3.8{]} como \[r=2,\qquad C=3,\qquad \gamma=1/2.
+\tag{4.1}\] Aquí \(\gamma\) es el parámetro de conteo local de encajes de la exposición de Postle. Las hipótesis se comprueban como sigue.
+
+{\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Hipótesis
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Comprobación en el ejemplo
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Parámetros & \(C=3>r=2\ge1\) y \(0<\gamma=1/2\le1\). \\
+Grafo ambiente y subgrafo & \(J\subseteq G=K_n\); cada arista tiene dos vértices. \\
+Familia \(C\)-refinada & Cada arista pertenece a un miembro de \(\mathcal H\); cada miembro tiene dos vértices y una arista, cantidades acotadas por \(C=3\). \\
+Sistema de supergrafos & Cada triángulo contiene su arista raíz; su vértice privado está fuera de \(V(J)\) y es distinto de los vértices privados de las otras piezas. \\
+Piezas \(C\)-acotadas & Cada triángulo tiene tres vértices y tres aristas. \\
+Intersección en aristas & Los vértices antiguos de cada arista del triángulo están en su arista raíz \(H\). Esto también comprueba la Definición B.1 de {[}4{]}. \\
+Conteo local de encajes & El vértice privado tiene \(n-2\ge n/2=\gamma n\) opciones para \(n\ge4\). Sus dos aristas incidentes no son otras aristas del emparejamiento, por lo que evitan \(E(J)\setminus E(H)\). \\
+Dispersión & \(\Delta(J)=1\le n/C'\) para cualquier \(C'\ge1\) propuesto, eligiendo \(n\ge\max\{4,C'\}\) par. \\
+\end{longtable}
+}
+
+La unión tiene \(n+n/2>n\) vértices. Por el principio del palomar, no existe una inyección global en \(V(G)\). En particular, fijar todos los vértices antiguos no deja imagen disponible para un vértice privado nuevo. Como el emparejamiento abarca todo el grafo, la misma obstrucción vale tanto si el dominio global incluye todas las etiquetas antiguas como si incluye sólo las que aparecen en las piezas.
+
+La negación formal es \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Faithful\allowbreak{}Survey2025.\allowbreak{}not\_\allowbreak{}general\allowbreak{}Embedding\allowbreak{}Lemma\allowbreak{}Literal}. Su predicado de familia registra la cota de incidencias por arista; las condiciones de tamaño se deducen de las hipótesis de sistema de supergrafos y piezas acotadas. Las comprobaciones anteriores también verifican la definición completa de familia de {[}1{]}.
+
+La edición del ICM de {[}2{]} conserva la inyección global de la Definición 3.7 y la conclusión del Lema 3.8. El Apéndice B citado de {[}4{]} contiene una prueba y también enuncia una inyección global en la Definición B.2. Sus controles de cargas locales y colisiones de aristas nuevas no eliminan la obstrucción de cardinalidad. Esta observación se refiere a la conclusión global enunciada, con las definiciones que acabamos de precisar.
+
+El reemplazo demostrado, \texttt{Refined\allowbreak{}Absorption.\allowbreak{}Faithful\allowbreak{}Survey2025.\allowbreak{}general\allowbreak{}Embedding\_\allowbreak{}piecewise}, usa una aplicación inyectiva en cada pieza e imágenes distintas de aristas nuevas. Las imágenes de vértices de piezas diferentes pueden coincidir cuando esas condiciones lo permiten. Es una afirmación distinta de la inyectividad global.
+
+\subsection{5. Completación e intersecciones exactas}\label{completaciuxf3n-e-intersecciones-exactas}
+
+El teorema de descomposición compatible permite completar un sistema parcial y controlar qué bloques comparte con otro. La condición de dispersión recae sobre las aristas ya cubiertas.
+
+\par
+\begin{samepage}
+\paragraph{Teorema 5.1}\label{teorema-5.1}
+
+Para \(q>r\ge1\) fijos existen \(\varepsilon>0\) y \(n_0\) tales que lo siguiente se cumple para todo \(n\ge n_0\) admisible. Sean \(P,F\) sistemas parciales de Steiner sobre los mismos \(n\) puntos. Si \[\Delta_{r-1}(H(P))\le\varepsilon n,
+\tag{5.1}\] existe un sistema de Steiner \(\mathcal S\) con \[P\subseteq\mathcal S,\qquad
+\mathcal S\cap F=P\cap F.
+\tag{5.2}\] Además, si \(B\in F\) no tiene ninguna \(r\)-arista en \(H(P)\), entonces \[|B\cap B'|\le r
+\qquad(B'\in\mathcal S\setminus P).
+\tag{5.3}\] No se impone dispersión a \(F\).
+
+\end{samepage}
+\emph{Demostración.} Retiramos \(H(P)\) del \(r\)-grafo completo y llamamos \(G\) al grafo residual. La familia \(P\) descompone las aristas retiradas. Por tanto, la divisibilidad pasa de \(K_n^r\) a \(G\). La condición (5.1) retira a lo sumo \(\varepsilon n\) extensiones de cada conjunto de tamaño \((r-1)\); eligiendo \(\varepsilon\) suficientemente pequeño y \(n_0\) suficientemente grande, \(G\) cumple la hipótesis de grado mínimo del Teorema 6.3 del artículo.
+
+Sea \(F_0\) la familia de bloques de \(F\) cuyos subconjuntos de tamaño \(r\) están todos en \(G\). Es un empaquetamiento en \(G\). Aplicamos {[}1, Teorema 6.3{]} con empaquetamiento prescrito \(F_0\) y llamamos \(Q\) a la descomposición resultante de \(G\). Ningún bloque de \(Q\) pertenece a \(F_0\): un bloque común tendría intersección de tamaño \(q>r\) consigo mismo. Tampoco puede pertenecer a \(Q\) un bloque de \(F\setminus F_0\), porque alguna de sus \(r\)-aristas fue retirada.
+
+Se sigue que \(Q\cap F=\varnothing\). La familia \(\mathcal S=P\cup Q\) descompone el \(r\)-grafo completo y satisface (5.2). Si \(B\) cumple la condición adicional del teorema, entonces \(B\in F_0\). La conclusión de cruce de {[}1, Teorema 6.3{]} da (5.3) para los bloques nuevos. \(\square\)
+
+La dispersión de (5.1) mide las \(r\)-aristas cubiertas a través de un conjunto de tamaño \((r-1)\). No está enunciada como una cota de grados de puntos en la familia de bloques de tamaño \(q\). La restricción que precede a (5.3) también importa: el teorema no hace esa afirmación de cruce para un bloque prohibido que use una arista ya cubierta por \(P\).
+
+\par
+\begin{samepage}
+\paragraph{Corolario 5.2}\label{corolario-5.2}
+
+Para \(q>r\ge1\) fijos se cumplen las siguientes afirmaciones.
+
+\begin{enumerate}
+\def\labelenumi{(\roman{enumi})}
+\item
+  Existen \(\varepsilon>0\) y \(n_0\) tales que, para todo \(n\ge n_0\), todo sistema de Steiner \(\mathcal S_1\) sobre \(n\) puntos y toda subfamilia \(P\subseteq\mathcal S_1\) que satisfaga (5.1) admiten un sistema de Steiner \(\mathcal S_2\) con \[\mathcal S_1\cap\mathcal S_2=P.
+  \tag{5.4}\] Los bloques de \(\mathcal S_1\setminus P\) y de \(\mathcal S_2\setminus P\) tienen intersección de tamaño a lo sumo \(r\).
+\item
+  Todo sistema parcial finito de Steiner aparece, tras una inyección de su conjunto de vértices, como la familia exacta de bloques comunes de dos sistemas de Steiner en todo orden admisible suficientemente grande.
+\end{enumerate}
+
+\end{samepage}
+\emph{Demostración.} Para (i), usamos \(F=\mathcal S_1\) en el Teorema 5.1. La existencia de \(\mathcal S_1\) proporciona la admisibilidad. Un bloque de \(\mathcal S_1\setminus P\) no tiene ninguna \(r\)-arista en \(H(P)\), pues de lo contrario esa arista estaría en dos bloques de \(\mathcal S_1\). Por tanto, la última afirmación se sigue de (5.3).
+
+Para (ii), primero usamos el Teorema 5.1 con \(F=\varnothing\) para extender un sistema parcial disperso a \(\mathcal S_1\), y después aplicamos (i). Se pueden reducir las constantes de dispersión para que se apliquen ambos pasos. Para un sistema finito fijo sobre un conjunto de vértices de tamaño \(u\), encajamos ese conjunto en otro mayor de tamaño \(N\). Su \(r\)-grafo cubierto tiene grado máximo de conjuntos de tamaño \((r-1)\) a lo sumo \(u\): cada extensión elige un punto del conjunto encajado. Por tanto, el grado es a lo sumo \(\varepsilon N\) para todo \(N\) suficientemente grande. Elegimos \(N\) por encima de ambos umbrales de completación e imponemos admisibilidad. La construcción elige conjuntamente una inyección y los dos sistemas. \(\square\)
+
+Tomar \(P=\varnothing\) en el Teorema 5.1 proporciona un sistema de Steiner sin bloques comunes con un sistema parcial prescrito arbitrario, y con la cota de cruce (5.3). En particular, todo sistema de Steiner suficientemente grande tiene un compañero disjunto. «Disjuntos» se refiere a sus familias de bloques; ambos sistemas siguen cubriendo el mismo \(r\)-grafo completo.
+
+\par
+\begin{samepage}
+\paragraph{Proposición 5.3}\label{proposiciuxf3n-5.3}
+
+Para \(q>r\ge1\) fijos existen \(c>0\) y \(n_0\) tales que, para todo \(n\ge n_0\) admisible y todo entero \(0\le k\le c n^r\), hay dos sistemas de Steiner sobre \(n\) puntos con exactamente \(k\) bloques comunes.
+
+\end{samepage}
+\emph{Demostración.} Elegimos la constante de completación dispersa con \(0<\varepsilon\le1\) y reservamos un conjunto de \(u=\lfloor\varepsilon n\rfloor\) puntos. Un empaquetamiento voraz sobre ese conjunto puede tener \(k\) bloques siempre que \[2\binom qr^2 k\le\binom ur.
+\tag{5.5}\] Para ver el margen disponible, cada bloque seleccionado descarta a lo sumo \(\binom qr\binom{u-r}{q-r}\) bloques candidatos que contengan alguno de sus conjuntos de tamaño \(r\). Contar todos los candidatos mediante \(\binom uq\) da (5.5) como condición suficiente durante toda la construcción voraz.
+
+El \(r\)-grafo cubierto por ese sistema parcial tiene grado máximo de conjuntos de tamaño \((r-1)\) a lo sumo \(u\), por lo que el Teorema 5.1 con \(F=\varnothing\) lo completa a un primer sistema, y el Corolario 5.2(i) proporciona el segundo. Para todo \(n\) suficientemente grande, \[\binom{\lfloor\varepsilon n\rfloor}{r}
+\ge\frac{(\varepsilon n/2)^r}{r!}.\] Por tanto, se puede tomar \[c=\frac{(\varepsilon/2)^r}{2r!\binom qr^2},
+\tag{5.6}\] tras ampliar el umbral de orden. Los dos sistemas resultantes tienen en común precisamente los \(k\) bloques elegidos. \(\square\)
+
+La proposición elige ambos sistemas. No da el espectro completo ni prescribe \(k\) bloques comunes con cualquier primer sistema fijado. Su función aquí es mostrar cómo una completación exacta y un empaquetamiento de soporte pequeño producen un intervalo del mismo orden polinómico que el número total de bloques.
+
+\subsection{6. Clases paralelas parciales y rondas de triángulos}\label{clases-paralelas-parciales-y-rondas-de-triuxe1ngulos}
+
+
+\Needspace{7\baselineskip}
+\subsubsection{6.1. El resultado de coloreo}\label{el-resultado-de-coloreo}
+
+Una clase paralela parcial es una familia de bloques disjuntos en vértices dos a dos. Particionar una familia de bloques en esas clases equivale a colorear propiamente las aristas del hipergrafo cuyas aristas son los bloques.
+
+El resultado cuantitativo usado aquí está demostrado en el desarrollo de Pippenger--Spencer fijado por commit, a través del teorema de emparejamiento seudoaleatorio de Ehard, Glock y Joos {[}6, Teorema 1.2{]}. El contexto clásico es {[}5{]}. Las cotas polinómicas para el exceso de colores también anteceden a este trabajo: Molloy y Reed {[}20{]} las obtuvieron para hipergrafos uniformes lineales, incluido el coloreo por listas. Las aplicaciones siguientes no reivindican un nuevo exponente ni una mejora de la cota general de coloreo. Usamos la formulación exacta siguiente, demostrada en {[}16{]} a partir de {[}6{]}.
+
+\par
+\begin{samepage}
+\paragraph{Teorema 6.1}\label{teorema-6.1}
+
+Para \(k\ge2\) fijo y \(0<\eta<1\), existen \(\gamma_0>0\) y \(D_*\) tales que un hipergrafo \(k\)-uniforme de grado máximo a lo sumo \(D\ge D_*\), cogrados a lo sumo \(D^{1-\eta}\) y \[|E|\le\exp(D^{\gamma_0})
+\tag{6.1}\] admite un coloreo propio de aristas con a lo sumo \(D+D^{1-\gamma_0}\) colores. No hay hipótesis de grado mínimo. La cota sobre el número de aristas (6.1) forma parte del resultado de entrada y debe comprobarse.
+
+
+\Needspace{7\baselineskip}
+\end{samepage}
+\subsubsection{6.2. Sistemas de Steiner}\label{sistemas-de-steiner}
+
+\par
+\begin{samepage}
+\paragraph{Teorema 6.2}\label{teorema-6.2}
+
+Fijamos \(q>r\ge2\). Existen \(0<\gamma<1\) y \(n_0\) tales que todo sistema de Steiner sobre \(n\ge n_0\) puntos tiene una partición en clases paralelas parciales cuyo número es a lo sumo \[R+R^{1-\gamma},\qquad
+R=\frac{\binom{n-1}{r-1}}{\binom{q-1}{r-1}}.
+\tag{6.2}\] Tal sistema existe en todo orden admisible suficientemente grande. Toda partición en clases paralelas parciales requiere al menos \(R\) clases.
+
+\end{samepage}
+\emph{Demostración.} En el hipergrafo de bloques, que es \(q\)-uniforme, contar los conjuntos de tamaño \(r\) que pasan por un punto y por un par da \[d(v)=R,\qquad
+d(u,v)=R\frac{q-1}{n-1}\quad(u\ne v),\qquad
+q|\mathcal S|=nR.
+\tag{6.3}\] En particular, \(R\) es un entero. Usamos el resultado de coloreo con \(D=R\) y \(\eta=1/(2(r-1))\). La fórmula binomial da \(R\le(n-1)^{r-1}\), de donde \(R^\eta\le\sqrt{n-1}\). Para \(n\) grande también tenemos \(q-1\le\sqrt{n-1}\). La identidad de cogrados de (6.3) da entonces \(d(u,v)\le R^{1-\eta}\).
+
+Como \(n\ge r\ge2\), todo par se extiende a un conjunto de tamaño \(r\) y, por tanto, pertenece a un bloque, por lo que su cogrado es al menos uno. La ecuación (6.3) da \(n-1\le R(q-1)\); como \(R\ge1\), se sigue \(n\le qR\). Junto con la identidad de conteo de bloques, esto da en particular la cota polinómica \(|\mathcal S|\le R^2\). Como \(R\) tiende a infinito, esa cota implica (6.1) para el exponente \(\gamma_0\) que proporciona efectivamente el resultado de coloreo. Aplicamos primero ese resultado y después ponemos \(\gamma=\min\{\gamma_0,1/2\}\) para obtener (6.2). Los bloques de una clase de color son disjuntos en vértices. Los \(R\) bloques que pasan por un punto fijo necesitan colores distintos, lo que prueba la cota inferior. Finalmente, combinamos la afirmación con el teorema de existencia de sistemas de Steiner ya establecido. \(\square\)
+
+El error polinómico de (6.2) cuenta el exceso de clases. No da una cota para el número de vértices sin cubrir en cada clase individual, ni afirma una resolución en clases que abarquen todos los vértices. Los dos resultados formales separan el coloreo de todo sistema existente de la existencia en órdenes admisibles.
+
+
+\Needspace{7\baselineskip}
+\subsubsection{6.3. Rondas para descomposiciones de Nash--Williams}\label{rondas-para-descomposiciones-de-nashwilliams}
+
+Partimos del teorema de Nash--Williams para órdenes grandes de Delcourt y Postle {[}7{]}, cuya prueba formal está documentada en {[}8,9{]}. Una vez obtenida la descomposición, sólo queda organizar sus triángulos en rondas. El paso adicional es el coloreo; el umbral de descomposición se conserva.
+
+La divisibilidad en triángulos significa que todos los grados son pares y que \(3\) divide el número de aristas.
+
+\par
+\begin{samepage}
+\paragraph{Teorema 6.3}\label{teorema-6.3}
+
+Existen \(0<\gamma<1\) y \(n_0\) tales que todo grafo divisible en triángulos \(G\) sobre \(n\ge n_0\) vértices con \[3n\le4\delta(G)
+\tag{6.4}\] tiene una descomposición en triángulos cuyo número de rondas es a lo sumo \[D+D^{1-\gamma},\qquad D=\Delta(G)/2,
+\tag{6.5}\] con triángulos disjuntos en vértices en cada ronda. Toda organización en rondas de ese tipo necesita al menos \(D\) rondas.
+
+\end{samepage}
+\emph{Demostración.} El resultado demostrado de Nash--Williams proporciona una descomposición en triángulos \(T\) en el umbral exacto (6.4). Consideramos sus triángulos como un hipergrafo \(3\)-uniforme. Su grado en un vértice \(v\) es \(d_G(v)/2\), y un par tiene cogrado a lo sumo uno porque una arista de \(G\) pertenece a un solo triángulo. Por tanto, su grado máximo es \(D\).
+
+No es necesario que \(G\) sea casi regular: el resultado de coloreo sólo pide una cota superior de grados. Contar incidencias entre vértices y triángulos da \(3|T|\le nD\), mientras que (6.4) da \(D\ge3n/8\). En particular, \(|T|\le3D^2\). Con \(\eta=1/2\), las hipótesis de cogrados y número de aristas de la Sección 6.1 se cumplen para \(n\) suficientemente grande. Coloreamos el hipergrafo de triángulos y reducimos el exponente de salida a \(\gamma=\min\{\gamma_0,1/2\}\) como antes. Las clases de color dan las rondas requeridas. En un vértice de grado máximo, los \(D\) triángulos incidentes deben aparecer en rondas distintas, lo que prueba la cota inferior. \(\square\)
+
+Algunas etiquetas de color pueden no utilizarse; sólo se necesita la cota superior de rondas afirmada. Las rondas son familias de triángulos disjuntos en vértices, sin tener que ser factores de triángulos que abarquen todo el grafo. Las constantes y umbrales de ambas aplicaciones son existenciales y no se afirma que estén optimizados.
+
+\subsection{7. Reutilización de pruebas y comprobación formal}\label{reutilizaciuxf3n-de-pruebas-y-comprobaciuxf3n-formal}
+
+Las pruebas usan Lean 4 {[}12{]} y Mathlib {[}13{]}, con la versión \texttt{4.\allowbreak{}35.\allowbreak{}0-rc3}. El árbol actual tiene 317 fuentes Lean: 299 módulos de biblioteca, el módulo raíz, diez módulos de comprobación y siete archivos de comparación. La compilación congelada de 1.0 abarcó los primeros 316; la comparación unificada añadió la fuente restante. Esa compilación comenzó sin archivos compilados del propio proyecto y reutilizó las cachés de dependencias fijadas. Las 360 consultas de axiomas registraron sólo \texttt{propext}, \texttt{Classical.\allowbreak{}choice} y \texttt{Quot.\allowbreak{}sound}, o ningún axioma. Son consultas, no un recuento de teoremas distintos.
+
+Los cuatro archivos \texttt{Palomar/\allowbreak{}*Challenge.\allowbreak{}lean} contienen 36 huecos de prueba con \texttt{sorry} por diseño (40 apariciones textuales si se cuentan los comentarios). Expresan los enunciados que se comparan; los módulos Solution proporcionan las pruebas. Ningún módulo de biblioteca, comprobación o Solution contiene \texttt{sorry}, y las pruebas no importan los huecos de los Challenge. Por tanto, la compilación satisfactoria del paquete no significa que todos los archivos fuente del repositorio estén libres de \texttt{sorry}.
+
+Palomar {[}21{]} es un registro de resultados matemáticos formalizados. Su comparación comprueba un archivo de enunciados frente a la prueba entregada; un preflight es una verificación preliminar. La verificación preliminar completa del 27 de octubre de 2026 pasó para dieciocho declaraciones seleccionadas, incluidas comprobaciones con kernels independientes. El último recibo de envío conservado, de esa fecha, registra \texttt{verifying}, no el registro final. Esta revisión informa esos datos; no afirma una decisión posterior del registro. El complemento identifica los verificadores, las revisiones de fuentes y las rutas de la evidencia.
+
+El módulo raíz importa transitivamente todos los módulos de la biblioteca local. El ensamblaje usa la prueba cuantitativa de coloreo del repositorio Pippenger--Spencer {[}16{]}, basada en Ehard--Glock--Joos, y la prueba de Nash--Williams documentada en {[}8,9{]}. Sus hipótesis se comprueban en las aplicaciones finales de la Sección 6. Las contribuciones del autor a Lean Pool {[}17{]}, sobre el nibble finito y las desigualdades de concentración, fueron incorporadas al proyecto original y son antecedentes relacionados; Lean Pool no es una dependencia importada por esta biblioteca.
+
+\subsection{8. Disponibilidad del código y los datos}\label{disponibilidad-del-cuxf3digo-y-los-datos}
+
+Las fuentes, los registros de procedencia y los informes de verificación están disponibles en \url{https://github.com/jtraverso/refined-absorption-lean}. La publicación original lleva la etiqueta \texttt{preprint-v1.\allowbreak{}0} en el commit \texttt{ab62cca3\allowbreak{}d797a939\allowbreak{}466c76f7\allowbreak{}ed302b20\allowbreak{}e8a422be}; la comparación unificada está en \texttt{867d1e3d\allowbreak{}5e48ef20\allowbreak{}a8f1ae68\allowbreak{}237834eb\allowbreak{}06211cbc}. La fuente formal congelada corresponde a \texttt{5428ee9b\allowbreak{}772e67dd\allowbreak{}7ec6da44\allowbreak{}3199b36a\allowbreak{}003b72d4}. El complemento distingue estas versiones y da el hash del archivo y los comandos de reconstrucción. Esta revisión editorial lleva la etiqueta \texttt{preprint-v1.\allowbreak{}0.\allowbreak{}1}; el DOI de la primera página identifica sus cuatro documentos. La versión 1.0 sigue disponible bajo el DOI 10.5281/zenodo.23685654. Las fuentes de las pruebas y sus registros de verificación no cambian.
+
+\subsection{Agradecimientos}\label{agradecimientos}
+
+El autor agradece profundamente a su esposa María Paz y a sus hijos Lucas, Juan Cristóbal, Francisca, Raimundo y Benjamín su amor, paciencia y apoyo.
+
+\subsection{Uso de inteligencia artificial y herramientas computacionales}\label{uso-de-inteligencia-artificial-y-herramientas-computacionales}
+
+Claude, de Anthropic, y ChatGPT/Codex, de OpenAI, se utilizaron para explorar y comprobar argumentos y para preparar el manuscrito. Aristotle, de Harmonic, contribuyó a la exploración de enfoques, la búsqueda de contraejemplos, el desarrollo de demostraciones y su formalización y revisión en Lean. Su función no se limitó a traducir pruebas ya terminadas.
+
+Certo {[}14{]} y Jacobian {[}15{]} se utilizaron para explorar casos finitos, comprobar identidades y evaluar construcciones candidatas. Estos cálculos orientaron el desarrollo de los argumentos; las comprobaciones finitas no se trataron como pruebas de enunciados universales.
+
+El autor es responsable de los argumentos, las citas, el código y la exposición. Ningún sistema de IA figura como autor.
+
+\subsection{Referencias}\label{referencias}
+
+\begingroup\small\raggedright
+\setlength{\parskip}{0pt}
+
+{[}1{]} M. Delcourt and L. Postle, \emph{Refined Absorption: A New Proof of the Existence Conjecture}, arXiv:2402.17855v1 (2024). \url{https://doi.org/10.48550/arXiv.2402.17855}.
+
+{[}2{]} L. Postle, \emph{Refined Absorption: A New Proof of the Existence Conjecture and Its Applications to Extremal and Probabilistic Design Theory}, Proceedings of the International Congress of Mathematicians 2026, Volume 6, 212--231. \url{https://doi.org/10.1137/25M1805977}. Base de enunciados: arXiv:2510.19978v1 (2025), \url{https://doi.org/10.48550/arXiv.2510.19978}.
+
+{[}3{]} M. Delcourt and L. Postle, \emph{Finding an Almost Perfect Matching in a Hypergraph Avoiding Forbidden Submatchings}, arXiv:2204.08981 (2022). \url{https://doi.org/10.48550/arXiv.2204.08981}.
+
+{[}4{]} M. Delcourt, C. Henderson, T. Lesgourgues and L. Postle, \emph{Erdős meets Nash-Williams}, arXiv:2507.23624v1 (2025), Appendix B. \url{https://doi.org/10.48550/arXiv.2507.23624}.
+
+{[}5{]} N. Pippenger and J. Spencer, \emph{Asymptotic behavior of the chromatic index for hypergraphs}, Journal of Combinatorial Theory, Series A 51 (1989), 24--42. \url{https://doi.org/10.1016/0097-3165(89)90074-5}.
+
+{[}6{]} S. Ehard, S. Glock and F. Joos, \emph{Pseudorandom hypergraph matchings}, Combinatorics, Probability and Computing 29(6) (2020), 868--885. \url{https://doi.org/10.1017/S0963548320000280}.
+
+{[}7{]} M. Delcourt and L. Postle, \emph{A Proof of Nash-Williams' Conjecture}, arXiv:2606.11178v1 (2026). \url{https://doi.org/10.48550/arXiv.2606.11178}.
+
+{[}8{]} J. P. Traverso Gianini, \emph{Triangle decompositions I: Formalizing the Nash--Williams theorem in Lean}, preprint 1.0 (2026). \url{https://doi.org/10.5281/zenodo.23428173}.
+
+{[}9{]} J. P. Traverso Gianini, \emph{Triangle decompositions II: Robust absorption for typed triangles}, preprint 1.0 (2026). \url{https://doi.org/10.5281/zenodo.23502224}.
+
+{[}10{]} C. C. Lindner and A. Rosa, \emph{Steiner triple systems having a prescribed number of triples in common}, Canadian Journal of Mathematics 27(5) (1975), 1166--1175. \url{https://doi.org/10.4153/CJM-1975-122-4}.
+
+{[}11{]} C. C. Lindner and A. Rosa, \emph{Steiner triple systems having a prescribed number of triples in common (corrigendum)}, Canadian Journal of Mathematics 30(4) (1978), 896. \url{https://doi.org/10.4153/CJM-1978-077-9}.
+
+{[}12{]} L. de Moura and S. Ullrich, \emph{The Lean 4 Theorem Prover and Programming Language}, Automated Deduction --- CADE 28 (2021), 625--635. \url{https://doi.org/10.1007/978-3-030-79876-5_37}.
+
+{[}13{]} The mathlib Community, \emph{The Lean Mathematical Library}, Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (2020), 367--381. \url{https://doi.org/10.1145/3372885.3373824}.
+
+{[}14{]} J. P. Traverso Gianini, \emph{Certo: computational tools with verifiable certificates}. Repositorio de software (2026), \url{https://github.com/jtraverso/certo-math}. Consulta: 27 de octubre de 2026; no se registró la versión exploratoria utilizada.
+
+{[}15{]} Morluto and contributors, \emph{Jacobian: composable mathematical tools}. Repositorio de software, \url{https://github.com/morluto/jacobian}. Consulta: 27 de octubre de 2026; no se registró la versión exploratoria utilizada.
+
+{[}16{]} J. P. Traverso Gianini, \emph{The Pippenger--Spencer theorem in Lean 4}. Repositorio de software, \url{https://github.com/jtraverso/pippenger-spencer}. Commit \texttt{b1927339\allowbreak{}6d369332\allowbreak{}fb489fe0\allowbreak{}7e61e27c\allowbreak{}9e7f9233} (2026).
+
+{[}17{]} J. P. Traverso Gianini, \emph{Contributions to Lean Pool} (2026). \url{https://github.com/jtraverso/lean-pool}. Contribuciones relacionadas: \url{https://github.com/LeanPool/lean-pool/pull/471}, \url{https://github.com/LeanPool/lean-pool/pull/431}. Ambas incorporadas al proyecto original; comprobación: 27 de octubre de 2026.
+
+{[}18{]} P. Keevash, \emph{The existence of designs}, arXiv:1401.3665 (2014), version 4 (2024). \url{https://doi.org/10.48550/arXiv.1401.3665}.
+
+{[}19{]} S. Glock, D. Kühn, A. Lo and D. Osthus, \emph{The Existence of Designs via Iterative Absorption: Hypergraph F-Designs for Arbitrary F}, Memoirs of the American Mathematical Society 284, no. 1406 (2023). \url{https://doi.org/10.1090/memo/1406}.
+
+{[}20{]} M. Molloy and B. Reed, \emph{Near-optimal list colorings}, Random Structures \& Algorithms 17(3--4) (2000), 376--402. \url{https://doi.org/10.1002/1098-2418(200010/12)17:3/4\%3C376::AID-RSA10\%3E3.0.CO;2-0}.
+
+{[}21{]} Palomar Registry, \emph{About Palomar} (2026). \url{https://palomar-registry.org/about}.
+
+{[}22{]} NanoDa contributors, \emph{nanoda\_lib: external type checker for Lean 4}. \url{https://github.com/ammkrn/nanoda_lib}.
+
+{[}23{]} Lean contributors, \emph{con-ron}. \url{https://github.com/leanprover/con-ron}.
+
+\endgroup
+
+\end{document}

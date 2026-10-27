@@ -1,0 +1,420 @@
+---
+title: 'Formalizing Delcourt–Postle’s refined absorption in Lean'
+author: 'Juan Pablo Traverso Gianini'
+email: 'jtraverso@gmail.com'
+orcid: '0009-0003-6068-4096'
+date: '27 October 2026'
+---
+
+**Research note — preprint 1.0.1, 27 October 2026.**
+
+**Version 1.0.1 DOI:** [10.5281/zenodo.23715622](https://doi.org/10.5281/zenodo.23715622).
+
+© 2026 Juan Pablo Traverso Gianini. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+## Abstract
+
+We report on a Lean 4 formalization of Delcourt and Postle’s refined absorption proof of the Existence Conjecture, together with selected results of Postle’s survey. The library proves refined omni-absorber and refiner theorems, dense and compatible decomposition results, and design existence for fixed $\lambda\ge1$ and $q>r\ge2$ at sufficiently large admissible orders. We explain three interfaces made explicit by formalization: local reserve loads, avoidance of prescribed blocks through absorption, and the vertices fixed by an embedding. With the definitions specified in Section 4.2, a finite counterexample rules out the global embedding conclusion of the survey’s Lemma 3.8; a piecewise variant is proved separately. Further consequences include completion with prescribed intersections, embeddings of finite partial systems as exact intersections, and an initial interval of intersection sizes of order $n^r$. Using formal proofs of quantitative hypergraph colouring and the Nash–Williams theorem, we also obtain at most $R+R^{1-\gamma}$ partial parallel classes and $D+D^{1-\gamma}$ rounds of vertex-disjoint triangles, where $R$ is the point degree of a Steiner system and $D$ is half the maximum graph degree. These bounds concern the number of classes or rounds, not the vertices left uncovered within them.
+
+**Keywords:** refined absorption; designs; formalization; Steiner systems; intersections; hypergraph edge colouring.
+
+## 1. Scope and contributions
+
+Delcourt and Postle’s proof turns an approximate decomposition into an exact one using a reserve and an absorber. Formalizing it requires more than recognizing that scheme: each step must supply the object needed by the next. A bound on the size of a leftover, for example, need not control its concentration at a reserve vertex. This note concerns those checks and some consequences we could derive once the proofs were assembled.
+
+We work with Michelle Delcourt and Luke Postle’s *Refined Absorption: A New Proof of the Existence Conjecture* [1] and Luke Postle’s survey [2]. The starting versions are arXiv:2402.17855v1 and arXiv:2510.19978v1, respectively. The latter appeared in the ICM 2026 proceedings. We also checked the embedding definitions and the corresponding lemma against that published edition. This does not identify all versions of either text.
+
+The Existence Conjecture was proved by Keevash [18]; Glock, Kühn, Lo and Osthus [19] subsequently gave a proof by iterative absorption. Refined absorption [1] provides another proof within that history.
+
+The library proves the refined omni-absorber and refiner theorems of [1, Theorems 1.7 and 1.11], the selected dense decomposition and compatibility results, and the refined efficient omni-absorber theorem of [2]. Design existence holds for every fixed index $\lambda\ge1$ and $q>r\ge2$, with no repeated blocks, at every sufficiently large order satisfying the corresponding divisibility conditions. The existence proof and absorption method belong to the cited authors. We refer to their principal results and explain only the steps that motivate the observations in this note.
+
+| Part of the development | What is certified and what is excluded |
+| --- | --- |
+| Absorption and existence | Library proofs of the selected results of [1,2]; not certification of every statement in both texts. |
+| Embeddings | Counterexample to the global assertion with the definitions specified in Section 4.2, and a separate proof of a piecewise variant. |
+| Completion and intersections | Consequences of compatible decomposition; not a complete intersection spectrum. |
+| Colouring and Nash–Williams | External proofs incorporated at fixed revisions; the final applications do not leave them as hypotheses. |
+| Axioms and comparison | Only the stated foundational axioms in the proofs; statement placeholders are counted and explained in Section 7. |
+| Applications not covered | General high girth, a general partite or partitioned extension, and probabilistic thresholds for designs. |
+| Efficiency | The bound is $C\max\{\Delta_{r-1}(X),n^{1-1/r}\log n\}$; Appendix A of the companion states the hypotheses. |
+
+This intermediate revision documents the frozen formalization identified in Section 8. A later definitive version is planned to cover the two source texts in full, including the proof dependencies needed for their results. That work is in progress. The present scope table describes what is already certified; it does not count planned formalizations as completed proofs.
+
+Sections 3 and 4 explain the observations about reserves, compatibility and embeddings. Sections 5 and 6 give the consequences for intersections and for organizing blocks into classes or rounds. The companion locates each result in Lean and states the efficiency bound precisely in Appendix A.
+
+Intersection problems for Steiner triple systems are classical; Lindner and Rosa’s contributions [10,11] precede this work. The scheduling application does not change the Nash–Williams threshold: it applies the formal proof of [7] documented in our articles I and II [8,9]. We write about the formalization process, the distinctions it required, and the deductions it makes available for reuse. We do not offer a new independent proof of the Existence Conjecture.
+
+## 2. A minimal framework
+
+All objects are finite. Fix integers $q>r\ge1$, except where a stronger lower bound on $r$ is stated. An $r$-graph is a set of $r$-element edges. Write $K_V^r$ for the complete $r$-graph on $V$. For an $r$-graph $G$ and an $(r-1)$-set $S$, let
+$$
+d_G(S)=|\{e\in G:S\subseteq e\}|.
+$$
+The minimum and maximum of these degrees are denoted by $\delta_{r-1}(G)$ and $\Delta_{r-1}(G)$. For ordinary graphs these are the usual vertex degrees.
+
+A $K_q^r$-decomposition of $G$ is a family of $q$-sets whose $r$-subsets partition $G$. A packing covers each edge at most once. A partial Steiner system is a family of $q$-sets in which each $r$-set occurs at most once; a Steiner system covers every $r$-set exactly once. For a block family $P$, write
+$$
+H(P)=\bigcup_{B\in P}\binom{B}{r}.
+\tag{2.1}
+$$
+Thus $H(P)$ is an $r$-graph, while $P$ is a family of $q$-sets. Keeping those two levels separate will matter in the sparsity assumption in Section 5.
+
+The usual divisibility condition for a simple design of index $\lambda$ is
+$$
+\binom{q-i}{r-i}\mid\lambda\binom{n-i}{r-i}
+\qquad(0\le i<r).
+\tag{2.2}
+$$
+We call $n$ admissible when (2.2) holds with $\lambda=1$. For a general host $G$, divisibility requires $\binom{q-i}{r-i}$ to divide the number of edges of $G$ containing each $i$-set. Subtracting the edges of a decomposition preserves these conditions.
+
+The dense decomposition input is [1, Theorem 6.1]. Its compatible form, [1, Theorem 6.3], says that, for fixed $q>r\ge1$, a sufficiently large divisible host of minimum $(r-1)$-degree at least $(1-\varepsilon)n$ can be decomposed compatibly with any prescribed packing $Q_1$: its output $Q_2$ satisfies
+$$
+|B_1\cap B_2|\le r
+\qquad(B_1\in Q_1,\ B_2\in Q_2).
+\tag{2.3}
+$$
+The positive constant $\varepsilon$ and the order threshold depend only on $q,r$. In particular, the prescribed packing need not be sparse. Equation (2.3) excludes a common block because $q>r$.
+
+## 3. Three proof interfaces
+
+### 3.1. Reserve matching and local tests
+
+The reserve-matching statement is [1, Theorem 2.8], whose matching background is [3]. Fix $s\ge2$ and $0<\beta<1$, writing $s$ for the uniformity of its auxiliary multi-hypergraph; this parameter is called $r$ in that theorem. Edges have labels, so different copies may have the same endpoints. The main part $G_1$ has degrees at most $D$ and degrees at least $D(1-D^{-\beta})$ on a designated set $A$. A second part $G_2$ supplies many options through each point of $A$, with exactly one such point per edge. Its other vertices have degree at most $D$, and the two vertex sets meet exactly in $A$. Codegrees are bounded by $D^{1-\beta}$.
+
+The conclusion is a matching covering $A$. Near-regularity is required on $A$ in the main part; it is not an assumption on every vertex of the entire multi-hypergraph. The formal endpoint retains the labelled copies and the full reserve contract.
+
+We now pass from the nibble to the reserve. Keep
+$$
+t=\lceil D^{1-\alpha}\rceil
+$$
+reserve options at each root $a\in A$, where $\alpha>0$ will be chosen below. For a reserve vertex $b\notin A$, let $w_b(a)$ count the retained options through both $a$ and $b$. The degree and codegree bounds give
+$$
+\sum_{a\in A}w_b(a)\le D,
+\qquad
+0\le w_b(a)\le\lfloor D^{1-\beta}\rfloor.
+\tag{3.1}
+$$
+If $U\subseteq A$ is left uncovered by the nibble, the load still visible at $b$ is $\sum_{a\in U}w_b(a)$. A bound on $|U|$ alone would not control that sum: uncovered roots could be concentrated on the options using one vertex.
+
+Use instead the level sets
+$$
+T_{b,j}=\{a\in A:w_b(a)\ge j\}.
+$$
+The nibble is applied with local tests drawn from these sets. Each level set has at most $D$ roots by (3.1). A fixed root uses at most $s t$ reserve vertices, each contributing at most $\lfloor D^{1-\beta}\rfloor$ levels. These estimates give polynomial bounds in $D$ for the size of a test and the number through an individual vertex. No bound on the total number of tests, or on the total number of edges of the ambient multi-hypergraph, is inserted into this interface. Small level sets are handled by their size; the nibble controls the larger ones.
+
+The local nibble supplies a constant $c>0$. Put $D_0=\lfloor D\rfloor$. The resulting bounds, in the convenient common form
+$$
+|U\cap T_{b,j}|
+\le D_0^{-c}|T_{b,j}|+D_0^{\beta/2},
+$$
+can be summed over the integer levels. Indeed, counting each root once for every level below its weight gives
+$$
+\begin{aligned}
+\sum_{a\in U}w_b(a)
+&=\sum_{j=1}^{\lfloor D^{1-\beta}\rfloor}|U\cap T_{b,j}|\\
+&\le D_0^{-c}D+
+ \lfloor D^{1-\beta}\rfloor D_0^{\beta/2}.
+\end{aligned}
+\tag{3.2}
+$$
+This is the load estimate needed by the reserve argument. It explains why a local test-family interface is useful even when a global leftover estimate is already available.
+
+Choose the parameters as follows. Set
+$$
+c'=\min\{c,\beta/2\},\qquad
+\alpha=c'/8,\qquad p=D^\alpha/t.
+\tag{3.3}
+$$
+Select reserve options independently with probability $p$. The bad events are that a root gets no option, or that two intersecting options are both selected. Their probabilities are bounded by $e^{-D^\alpha}$ and $p^2$, respectively. Equation (3.2) bounds the relevant reserve degrees by $O(D^{1-c'})$, and hence bounds the local dependencies. A root event has $O(t s D^{1-c'})$ neighbouring collision events, each with local-lemma weight of order $p^2$. Their total weight is $O(t s D^{1-c'}p^2)=O(D^{3\alpha-c'})$, which tends to zero by (3.3); the exponential probability of a root event also beats its polynomial dependency bound. The asymmetric local lemma therefore supplies a matching covering the uncovered roots.
+
+Its union with the nibble matching is still a matching. Reserve vertices outside $A$ do not belong to the main vertex set, and its roots in $U$ were uncovered. This last observation is the reason for retaining the exact vertex-set intersection in the interface. Floors, ceilings and eventual inequalities are checked in the formal proof; they do not alter this division of the argument.
+
+### 3.2. Avoidance must survive absorption
+
+For [1, Theorem 6.3], fix a packing $Q_1$ and let $\mathcal D$ be the family of dangerous $q$-sets: those meeting a block of $Q_1$ in at least $r+1$ vertices. The formal counting lemma gives, through each fixed $r$-edge $e$,
+$$
+|\{Q\in\mathcal D:e\subseteq Q\}|
+\le 2^r q\,n^{q-r-1}.
+\tag{3.4}
+$$
+This is one power smaller than the order $n^{q-r}$ of the available cliques through an edge.
+
+To see the saving, let $P\in Q_1$ witness that $Q$ is dangerous and put $I=e\cap P$. Choose $B\subseteq(Q\cap P)\setminus e$ so that $|I\cup B|=r$, then choose one more point $y\in(Q\cap P)\setminus(I\cup B)$. The $r$-set $I\cup B$ determines at most one block $P$ because $Q_1$ is a packing. There are at most $2^r$ choices for $I$, at most $n^{r-|I|}$ choices for $B$, and at most $q$ choices for $y$ once $P$ is determined. The remaining points of $Q$ contribute at most $n^{q-2r+|I|-1}$. If the forced set is too large, there is no such $Q$. Otherwise the exponents sum to $q-r-1$, giving (3.4).
+
+In [1, p. 38, Section 6.3], the paragraph describing the second modification for Theorem 6.3 bounds “such $q$-sets containing a fixed edge of $J$” by $O(v(X)^{q-r+1})$, immediately before Remark 6.5. It counts the same local quantity, through a fixed $r$-edge; $v(X)=n$ for the spanning reserve. That upper bound alone does not provide a saving relative to $n^{q-r}$. Equation (3.4) gives the smaller bound needed for the deletion step.
+
+There are two places to impose avoidance. First, the catalogue of blocks available to the omni-absorber must be safe against $Q_1$. Second, the nibble and its reserve completion must use safe blocks. Restricting only the final approximate packing would leave the absorber's selected decomposition uncontrolled.
+
+After the safe absorber is chosen, remove it and the reserve from the working host. Regularity boosting supplies the clique family for the main covering step. The deletion budget in (3.4) is small enough to retain the required supply, and the safe nibble leaves a divisible remainder in the reserve. The absorber then handles that remainder using its already safe catalogue. Both block families in the final union satisfy (2.3), so the union does too. The library treats $r=1$ separately; the preceding nibble discussion concerns $r\ge2$.
+
+### 3.3. Compatible absorbers from compatible decompositions
+
+The deduction of [1, Theorem 6.2] can be expressed without another absorption construction. Let $L$ be the given divisible $r$-graph on its old vertex set. Choose an admissible set $U$ containing every old vertex, then a much larger admissible set $W\supseteq U$. Put
+$$
+A_0=K_W^r\setminus K_U^r.
+\tag{3.5}
+$$
+Both complete hosts are divisible, so $A_0$ is divisible. Taking $W$ sufficiently large relative to $U$ makes $A_0$, and also $A_0\cup L$, dense enough for the two decomposition inputs.
+
+Apply [1, Theorem 6.1] to obtain a decomposition $Q_1$ of $A_0$. It is a packing in $A_0\cup L$. Apply [1, Theorem 6.3] to that larger host with prescribed packing $Q_1$, obtaining a decomposition $Q_2$ satisfying (2.3). Thus $A_0$ and $A_0\cup L$ have compatible decompositions.
+
+Every edge of $A_0$ uses a vertex outside $U$. Consequently the entire old vertex set is independent in $A_0$. Relabelling the added vertices while fixing the old ones gives the desired absorber. The construction separates three obligations: divisibility by subtraction, density by enlargement, and compatibility by the prescribed-packing theorem. It also exposes the ambient-vertex condition discussed next.
+
+## 4. Two distinctions in reading the statements
+
+### 4.1. Old vertices and edge support
+
+An edge-set representation remembers the vertices occurring in edges. A hypergraph with an explicit ambient vertex set can also have isolated vertices. These conventions are interchangeable for many edge-counting statements, but the phrase “the old vertices are independent” requires the old set to be identified.
+
+The retained absorber predicate uses the support of $L$. The added interface for the article's Theorem 6.2 also states that no absorber edge is wholly contained in the full old ambient set, including isolated labels. Construction (3.5) proves this directly because all old vertices were included in $U$. Mixed edges containing old and new vertices are permitted.
+
+The old endpoint is retained. The added clause records information already supplied by the same construction; it is not presented as a new absorber existence theorem. The added clause strengthens the stated interface without changing the construction.
+
+### 4.2. Global and piecewise embeddings
+
+Definition 3.7 of [2] requires one injective map from the vertices of the union of a supergraph system into the host, fixing the old vertices. Before testing Lemma 3.8, we specify its other hypotheses. We use the definition of a $C$-refined family in [1, Definition 1.9]: each edge of $J$ belongs to at most $C$ members, and every member $H$ has at most $C$ vertices and at most $C$ edges. For edge-intersection we use [4, Definition B.1]: every new edge $f$ of a piece has $f\cap V(J)$ contained in an edge of $J$. The formal predicate uses the stronger requirement that this edge belong to the piece’s root $H$. The example below satisfies both requirements. Thus the counterexample has explicit hypotheses and does not rely on an unstated meaning of either term.
+
+Let $G=K_n$ for even $n$, let $J$ be a spanning perfect matching, and let $\mathcal H$ consist of its single-edge subgraphs. For each $H\in\mathcal H$, add one private vertex to form a triangle $W_H$. Set the parameters of [2, Lemma 3.8] to
+$$
+r=2,\qquad C=3,\qquad \gamma=1/2.
+\tag{4.1}
+$$
+Here $\gamma$ is the survey’s local-embedding parameter. The hypotheses are checked as follows.
+
+| Hypothesis | Verification in the example |
+| --- | --- |
+| Parameters | $C=3>r=2\ge1$ and $0<\gamma=1/2\le1$. |
+| Host and subgraph | $J\subseteq G=K_n$; every edge has two vertices. |
+| $C$-refined family | Each edge belongs to one member of $\mathcal H$; each member has two vertices and one edge, all bounded by $C=3$. |
+| Supergraph system | Each triangle contains its root edge; its private vertex is outside $V(J)$ and distinct from the private vertices of all other pieces. |
+| $C$-bounded pieces | Each triangle has three vertices and three edges. |
+| Edge-intersection | The old vertices of every triangle edge lie in its root edge $H$. This also verifies Definition B.1 of [4]. |
+| Local embedding count | The private vertex has $n-2\ge n/2=\gamma n$ choices for $n\ge4$. Its two incident edges are not other matching edges, so they avoid $E(J)\setminus E(H)$. |
+| Sparsity | $\Delta(J)=1\le n/C'$ for any proposed $C'\ge1$, on choosing even $n\ge\max\{4,C'\}$. |
+
+The union has $n+n/2>n$ vertices. A global injection into $V(G)$ is therefore impossible by the pigeonhole principle. In particular, fixing every old vertex leaves no image for a private new vertex. Since the matching spans the host, the same obstruction holds whether the global domain includes all old labels or just those occurring in the pieces.
+
+The formal negation is `RefinedAbsorption.FaithfulSurvey2025.not_generalEmbeddingLemmaLiteral`. Its family predicate records the edge-incidence bound; the bounded-size clauses follow from the supergraph-system and bounded-piece hypotheses. The explicit checks above also establish the full family definition of [1].
+
+The ICM edition of [2] retains the global injection in Definition 3.7 and the conclusion in Lemma 3.8. The cited Appendix B of [4] contains a proof and also states a global injection in Definition B.2. Its local load and new-edge collision controls do not remove the vertex-count obstruction. This observation concerns the stated global conclusion with the definitions just specified.
+
+The proved replacement, `RefinedAbsorption.FaithfulSurvey2025.generalEmbedding_piecewise`, uses an injective map on each piece and distinct images of new edges. Images of vertices from different pieces may coincide when those conditions allow it. That is a separate assertion from global injectivity.
+
+## 5. Completion and exact intersections
+
+Compatible decomposition lets us complete a partial system while controlling which blocks it shares with another. The sparsity condition concerns the edges already covered.
+
+#### Theorem 5.1
+
+For fixed $q>r\ge1$ there are $\varepsilon>0$ and $n_0$ such that the following holds for every admissible $n\ge n_0$. Let $P,F$ be partial Steiner systems on the same $n$ points. If
+$$
+\Delta_{r-1}(H(P))\le\varepsilon n,
+\tag{5.1}
+$$
+there is a Steiner system $\mathcal S$ with
+$$
+P\subseteq\mathcal S,\qquad
+\mathcal S\cap F=P\cap F.
+\tag{5.2}
+$$
+Furthermore, if $B\in F$ has no $r$-edge in $H(P)$, then
+$$
+|B\cap B'|\le r
+\qquad(B'\in\mathcal S\setminus P).
+\tag{5.3}
+$$
+No sparsity assumption is made on $F$.
+
+*Proof.* Remove $H(P)$ from the complete $r$-graph and call the residual host $G$. The family $P$ decomposes the removed edges. Divisibility therefore passes from $K_n^r$ to $G$. Condition (5.1) removes at most $\varepsilon n$ extensions of each $(r-1)$-set; after choosing $\varepsilon$ small enough and $n_0$ large enough, $G$ meets the minimum-degree hypothesis of the article's Theorem 6.3.
+
+Let $F_0$ consist of the blocks of $F$ all of whose $r$-subsets lie in $G$. It is a packing in $G$. Apply [1, Theorem 6.3] with prescribed packing $F_0$ and write $Q$ for the resulting decomposition of $G$. No block of $Q$ belongs to $F_0$: a common block would have intersection size $q>r$ with itself. A block of $F\setminus F_0$ cannot belong to $Q$ either, because one of its $r$-edges was removed.
+
+It follows that $Q\cap F=\varnothing$. The family $\mathcal S=P\cup Q$ decomposes the complete $r$-graph and satisfies (5.2). If $B$ obeys the additional condition in the theorem, then $B\in F_0$. The crossing conclusion from [1, Theorem 6.3] gives (5.3) for the new blocks. $\square$
+
+The sparsity in (5.1) measures the covered $r$-edges through an $(r-1)$-set. It is not stated as a point-degree bound on the family of $q$-blocks. The restriction preceding (5.3) also matters: the theorem makes no such crossing assertion for a forbidden block using an edge already covered by $P$.
+
+#### Corollary 5.2
+
+For fixed $q>r\ge1$, the following statements hold.
+
+(i) There are $\varepsilon>0$ and $n_0$ such that, for every $n\ge n_0$, every Steiner system $\mathcal S_1$ on $n$ points and every subfamily $P\subseteq\mathcal S_1$ satisfying (5.1) admit a Steiner system $\mathcal S_2$ with
+$$
+\mathcal S_1\cap\mathcal S_2=P.
+\tag{5.4}
+$$
+Blocks of $\mathcal S_1\setminus P$ and $\mathcal S_2\setminus P$ have intersection size at most $r$.
+
+(ii) Every finite partial Steiner system occurs, after an injection of its vertex set, as the exact common block family of two Steiner systems at every sufficiently large admissible order.
+
+*Proof.* For (i), use $F=\mathcal S_1$ in Theorem 5.1. The existence of $\mathcal S_1$ supplies admissibility. A block of $\mathcal S_1\setminus P$ has no $r$-edge in $H(P)$, since otherwise that edge would lie in two blocks of $\mathcal S_1$. Thus the last assertion follows from (5.3).
+
+For (ii), first use Theorem 5.1 with $F=\varnothing$ to extend a sparse partial system to $\mathcal S_1$, then apply (i). The sparsity constants can be reduced so that both steps apply. For a fixed finite system on a vertex set of size $u$, embed that vertex set into a larger set of size $N$. Its covered $r$-graph has maximum $(r-1)$-degree at most $u$: each extension chooses one point of the embedded set. Hence its degree is at most $\varepsilon N$ for every sufficiently large $N$. Choose $N$ above both completion thresholds and impose admissibility. The construction chooses an injection and the two systems together. $\square$
+
+Taking $P=\varnothing$ in Theorem 5.1 supplies a Steiner system with no common block with any prescribed partial system, and with the crossing bound (5.3). In particular every sufficiently large Steiner system has a disjoint mate. “Disjoint” concerns their block families; both systems still cover the same complete $r$-graph.
+
+#### Proposition 5.3
+
+For fixed $q>r\ge1$ there are $c>0$ and $n_0$ such that, for every admissible $n\ge n_0$ and every integer $0\le k\le c n^r$, there are two Steiner systems on $n$ points with exactly $k$ common blocks.
+
+*Proof.* Choose the sparse-completion constant with $0<\varepsilon\le1$, and reserve a set of $u=\lfloor\varepsilon n\rfloor$ points. A greedy packing on that set can have $k$ blocks whenever
+$$
+2\binom qr^2 k\le\binom ur.
+\tag{5.5}
+$$
+To see the available slack, each selected block rules out at most $\binom qr\binom{u-r}{q-r}$ candidate blocks containing one of its $r$-sets. Counting all candidates by $\binom uq$ gives (5.5) as a sufficient condition throughout the greedy construction.
+
+The covered $r$-graph of this partial system has maximum $(r-1)$-degree at most $u$, so Theorem 5.1 with $F=\varnothing$ completes it to a first system, and Corollary 5.2(i) supplies the second. For all sufficiently large $n$,
+$$
+\binom{\lfloor\varepsilon n\rfloor}{r}
+\ge\frac{(\varepsilon n/2)^r}{r!}.
+$$
+Thus one may take
+$$
+c=\frac{(\varepsilon/2)^r}{2r!\binom qr^2},
+\tag{5.6}
+$$
+after enlarging the order threshold. The resulting two systems have precisely the chosen $k$ blocks in common. $\square$
+
+The proposition chooses both systems. It does not give the full spectrum, or prescribe $k$ common blocks with every fixed first system. Its role here is to show how exact completion and a small-support packing yield an interval of the same polynomial order as the total number of blocks.
+
+## 6. Partial parallel classes and triangle rounds
+
+### 6.1. The colouring input
+
+A partial parallel class is a family of pairwise vertex-disjoint blocks. Partitioning a block family into such classes is proper edge colouring of the hypergraph whose edges are the blocks.
+
+The quantitative input used here is proved in the pinned Pippenger–Spencer development via the pseudorandom matching theorem of Ehard, Glock and Joos [6, Theorem 1.2]. The classical context is [5]. Polynomial bounds for the excess number of colours also precede this work: Molloy and Reed [20] obtained such bounds for linear uniform hypergraphs, including list colouring. The applications below do not claim a new exponent or an improved general colouring bound. We use the following exact formulation proved in [16] from [6].
+
+#### Theorem 6.1
+
+For fixed $k\ge2$ and $0<\eta<1$, there are $\gamma_0>0$ and $D_*$ such that a $k$-uniform hypergraph with maximum degree at most $D\ge D_*$, codegrees at most $D^{1-\eta}$, and
+$$
+|E|\le\exp(D^{\gamma_0})
+\tag{6.1}
+$$
+has a proper edge colouring using at most $D+D^{1-\gamma_0}$ colours. There is no minimum-degree assumption. The edge-count cap (6.1) is part of the input and must be checked.
+
+### 6.2. Steiner systems
+
+#### Theorem 6.2
+
+Fix $q>r\ge2$. There are $0<\gamma<1$ and $n_0$ such that every Steiner system on $n\ge n_0$ points has a partition into partial parallel classes whose number is at most
+$$
+R+R^{1-\gamma},\qquad
+R=\frac{\binom{n-1}{r-1}}{\binom{q-1}{r-1}}.
+\tag{6.2}
+$$
+Such a system exists at every sufficiently large admissible order. Every partition into partial parallel classes requires at least $R$ classes.
+
+*Proof.* In the $q$-uniform block hypergraph, counting the $r$-sets through a point and through a pair gives
+$$
+d(v)=R,\qquad
+d(u,v)=R\frac{q-1}{n-1}\quad(u\ne v),\qquad
+q|\mathcal S|=nR.
+\tag{6.3}
+$$
+In particular $R$ is an integer. Use the colouring input with $D=R$ and $\eta=1/(2(r-1))$. The binomial formula gives $R\le(n-1)^{r-1}$, hence $R^\eta\le\sqrt{n-1}$. For large $n$ we also have $q-1\le\sqrt{n-1}$. The codegree identity in (6.3) now gives $d(u,v)\le R^{1-\eta}$.
+
+Because $n\ge r\ge2$, every pair extends to an $r$-set and hence belongs to a block, so its codegree is at least one. Equation (6.3) gives $n-1\le R(q-1)$; since $R\ge1$, this implies $n\le qR$. Together with the block-count identity this gives, in particular, the polynomial bound $|\mathcal S|\le R^2$. As $R$ tends to infinity, that bound implies (6.1) for the exponent $\gamma_0$ actually supplied by the colouring input. Apply that input first, then put $\gamma=\min\{\gamma_0,1/2\}$ to obtain (6.2). Blocks in one colour class are vertex-disjoint. The $R$ blocks through a fixed point need distinct colours, proving the lower bound. Finally combine this statement with the established existence theorem for Steiner systems. $\square$
+
+The polynomial error in (6.2) counts excess classes. It gives no bound on the number of uncovered vertices in every individual class, and it does not assert a resolution into spanning classes. The two formal endpoints separate colouring every existing system from existence at admissible orders.
+
+### 6.3. Rounds for Nash–Williams decompositions
+
+We start from Delcourt and Postle’s large-order Nash–Williams theorem [7], whose formal proof is documented in [8,9]. Once a decomposition is obtained, its triangles remain to be organized into rounds. Colouring is the additional step; the decomposition threshold is unchanged.
+
+Triangle divisibility means that every degree is even and $3$ divides the number of edges.
+
+#### Theorem 6.3
+
+There are $0<\gamma<1$ and $n_0$ such that every triangle-divisible graph $G$ on $n\ge n_0$ vertices with
+$$
+3n\le4\delta(G)
+\tag{6.4}
+$$
+has a triangle decomposition whose number of rounds is at most
+$$
+D+D^{1-\gamma},\qquad D=\Delta(G)/2,
+\tag{6.5}
+$$
+with vertex-disjoint triangles in each round. Every such schedule needs at least $D$ rounds.
+
+*Proof.* The proved Nash–Williams input supplies a triangle decomposition $T$ at the exact threshold (6.4). Regard its triangles as a $3$-uniform hypergraph. At a vertex $v$ its degree is $d_G(v)/2$, and a pair has codegree at most one because an edge of $G$ belongs to just one triangle. Its maximum degree is therefore $D$.
+
+There is no need for $G$ to be nearly regular: the colouring input asks only for an upper degree bound. Counting vertex–triangle incidences gives $3|T|\le nD$, while (6.4) gives $D\ge3n/8$. In particular $|T|\le3D^2$. With $\eta=1/2$, the codegree and edge-count hypotheses of Section 6.1 hold for sufficiently large $n$. Colour the triangle hypergraph, and reduce the output exponent to $\gamma=\min\{\gamma_0,1/2\}$ as before. Its colour classes give the required rounds. At a maximum-degree vertex, the $D$ incident triangles must occur in different rounds, proving the lower bound. $\square$
+
+Some colour labels may be unused; only the asserted upper bound on rounds is needed. The rounds are families of vertex-disjoint triangles, rather than necessarily spanning triangle factors. The constants and thresholds in both applications are existential and are not claimed to be optimized.
+
+## 7. Proof reuse and formal verification
+
+The proofs use Lean 4 [12] and Mathlib [13], with toolchain `4.35.0-rc3`. The current tree has 317 Lean sources: 299 library modules, the root, ten check modules and seven comparison files. The frozen 1.0 build covered the first 316; the unified comparison added the remaining source. That build began without compiled project files and reused caches of pinned dependencies. The 360 recorded axiom queries reported only `propext`, `Classical.choice` and `Quot.sound`, or no axioms. They are queries, not a count of distinct theorems.
+
+The four `Palomar/*Challenge.lean` files contain 36 `sorry` proof placeholders by design (40 textual occurrences when comments are included). They state claims for comparison; Solution modules supply the proofs. No library, check or Solution module contains `sorry`, and the proofs do not import the Challenge placeholders. Thus the successful package build is not a claim that every source file in the repository is free of `sorry`.
+
+Palomar [21] is a registry of formalized mathematical results. Its comparison checks a statement file against the supplied proof; a preflight is a preliminary verification run. The full preflight of 27 October 2026 passed for eighteen selected declarations, including independent kernel checks. The last preserved submission receipt, from that date, records `verifying`, not final registration. This revision reports those records; it does not assert a later registry decision. The companion gives the checker identities, source revisions and evidence paths.
+
+The root transitively imports every local library module. The assembly uses the quantitative colouring proof from the Pippenger–Spencer repository [16], based on Ehard–Glock–Joos, and the Nash–Williams proof documented in [8,9]. Their hypotheses are checked in the final applications of Section 6. The author’s merged Lean Pool contributions [17], on the finite nibble and concentration inequalities, are related work; Lean Pool is not an imported dependency of this library.
+
+## 8. Code and data availability
+
+The source, provenance records and verification reports are available at <https://github.com/jtraverso/refined-absorption-lean>. The original release is tagged `preprint-v1.0` at commit `ab62cca3d797a939466c76f7ed302b20e8a422be`; the unified comparison is at `867d1e3d5e48ef20a8f1ae68237834eb06211cbc`. The formal source freeze is `5428ee9b772e67dd7ec6da443199b36a003b72d4`. The companion distinguishes these snapshots and provides the archive hash and reconstruction commands. This editorial revision is tagged `preprint-v1.0.1`; the DOI on the first page identifies its four documents. Version 1.0 remains available under DOI 10.5281/zenodo.23685654. The proof sources and their recorded verification are unchanged.
+
+## Acknowledgements
+
+The author is deeply grateful to his wife María Paz and to his children Lucas, Juan Cristóbal, Francisca, Raimundo and Benjamín for their love, patience and support.
+
+## Use of artificial intelligence and computational tools
+
+Claude, by Anthropic, and ChatGPT/Codex, by OpenAI, were used to explore and check arguments and to prepare the manuscript. Aristotle, by Harmonic, contributed to exploring approaches, searching for counterexamples, developing proofs, and formalizing and reviewing them in Lean. Its role was not limited to translating finished proofs.
+
+Certo [14] and Jacobian [15] were used to explore finite instances, check identities and assess candidate constructions. These computations informed the development of the arguments; finite checks were not treated as proofs of universal statements.
+
+The author remains responsible for the arguments, citations, code and presentation. No AI system is listed as an author.
+
+## References
+
+[1] M. Delcourt and L. Postle, *Refined Absorption: A New Proof of the Existence Conjecture*, arXiv:2402.17855v1 (2024). <https://doi.org/10.48550/arXiv.2402.17855>.
+
+[2] L. Postle, *Refined Absorption: A New Proof of the Existence Conjecture and Its Applications to Extremal and Probabilistic Design Theory*, Proceedings of the International Congress of Mathematicians 2026, Volume 6, 212–231. <https://doi.org/10.1137/25M1805977>. Statement baseline: arXiv:2510.19978v1 (2025), <https://doi.org/10.48550/arXiv.2510.19978>.
+
+[3] M. Delcourt and L. Postle, *Finding an Almost Perfect Matching in a Hypergraph Avoiding Forbidden Submatchings*, arXiv:2204.08981 (2022). <https://doi.org/10.48550/arXiv.2204.08981>.
+
+[4] M. Delcourt, C. Henderson, T. Lesgourgues and L. Postle, *Erdős meets Nash-Williams*, arXiv:2507.23624v1 (2025), Appendix B. <https://doi.org/10.48550/arXiv.2507.23624>.
+
+[5] N. Pippenger and J. Spencer, *Asymptotic behavior of the chromatic index for hypergraphs*, Journal of Combinatorial Theory, Series A 51 (1989), 24–42. <https://doi.org/10.1016/0097-3165(89)90074-5>.
+
+[6] S. Ehard, S. Glock and F. Joos, *Pseudorandom hypergraph matchings*, Combinatorics, Probability and Computing 29(6) (2020), 868–885. <https://doi.org/10.1017/S0963548320000280>.
+
+[7] M. Delcourt and L. Postle, *A Proof of Nash-Williams' Conjecture*, arXiv:2606.11178v1 (2026). <https://doi.org/10.48550/arXiv.2606.11178>.
+
+[8] J. P. Traverso Gianini, *Triangle decompositions I: Formalizing the Nash–Williams theorem in Lean*, preprint 1.0 (2026). <https://doi.org/10.5281/zenodo.23428173>.
+
+[9] J. P. Traverso Gianini, *Triangle decompositions II: Robust absorption for typed triangles*, preprint 1.0 (2026). <https://doi.org/10.5281/zenodo.23502224>.
+
+[10] C. C. Lindner and A. Rosa, *Steiner triple systems having a prescribed number of triples in common*, Canadian Journal of Mathematics 27(5) (1975), 1166–1175. <https://doi.org/10.4153/CJM-1975-122-4>.
+
+[11] C. C. Lindner and A. Rosa, *Steiner triple systems having a prescribed number of triples in common (corrigendum)*, Canadian Journal of Mathematics 30(4) (1978), 896. <https://doi.org/10.4153/CJM-1978-077-9>.
+
+[12] L. de Moura and S. Ullrich, *The Lean 4 Theorem Prover and Programming Language*, Automated Deduction — CADE 28 (2021), 625–635. <https://doi.org/10.1007/978-3-030-79876-5_37>.
+
+[13] The mathlib Community, *The Lean Mathematical Library*, Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (2020), 367–381. <https://doi.org/10.1145/3372885.3373824>.
+
+[14] J. P. Traverso Gianini, *Certo: computational tools with verifiable certificates*. Software repository (2026), <https://github.com/jtraverso/certo-math>. Accessed 27 October 2026; the exploratory version was not recorded.
+
+[15] Morluto and contributors, *Jacobian: composable mathematical tools*. Software repository, <https://github.com/morluto/jacobian>. Accessed 27 October 2026; the exploratory version was not recorded.
+
+[16] J. P. Traverso Gianini, *The Pippenger–Spencer theorem in Lean 4*. Software repository, <https://github.com/jtraverso/pippenger-spencer>. Commit `b19273396d369332fb489fe07e61e27c9e7f9233` (2026).
+
+[17] J. P. Traverso Gianini, *Contributions to Lean Pool* (2026). <https://github.com/jtraverso/lean-pool>. Related contributions: <https://github.com/LeanPool/lean-pool/pull/471>, <https://github.com/LeanPool/lean-pool/pull/431>. Both merged; checked 27 October 2026.
+
+[18] P. Keevash, *The existence of designs*, arXiv:1401.3665 (2014), version 4 (2024). <https://doi.org/10.48550/arXiv.1401.3665>.
+
+[19] S. Glock, D. Kühn, A. Lo and D. Osthus, *The Existence of Designs via Iterative Absorption: Hypergraph F-Designs for Arbitrary F*, Memoirs of the American Mathematical Society 284, no. 1406 (2023). <https://doi.org/10.1090/memo/1406>.
+
+[20] M. Molloy and B. Reed, *Near-optimal list colorings*, Random Structures & Algorithms 17(3–4) (2000), 376–402. <https://doi.org/10.1002/1098-2418(200010/12)17:3/4%3C376::AID-RSA10%3E3.0.CO;2-0>.
+
+[21] Palomar Registry, *About Palomar* (2026). <https://palomar-registry.org/about>.
+
+[22] NanoDa contributors, *nanoda_lib: external type checker for Lean 4*. <https://github.com/ammkrn/nanoda_lib>.
+
+[23] Lean contributors, *con-ron*. <https://github.com/leanprover/con-ron>.

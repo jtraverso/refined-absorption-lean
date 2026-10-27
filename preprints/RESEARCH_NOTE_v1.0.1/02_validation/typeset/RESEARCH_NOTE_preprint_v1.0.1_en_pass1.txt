@@ -1,0 +1,13 @@
+note: Running TeX ...
+note: Rerunning TeX because "RESEARCH_NOTE_preprint_v1.0.1_en.aux" changed ...
+note: Running xdvipdfmx ...
+note: Writing `<REPO>\preprints\RESEARCH_NOTE_v1.0.1\01_manuscript\RESEARCH_NOTE_preprint_v1.0.1_en.aux` (6.0537109375 KiB)
+note: Writing `<REPO>\preprints\RESEARCH_NOTE_v1.0.1\01_manuscript\RESEARCH_NOTE_preprint_v1.0.1_en.log` (25.1220703125 KiB)
+note: Writing `<REPO>\preprints\RESEARCH_NOTE_v1.0.1\01_manuscript\RESEARCH_NOTE_preprint_v1.0.1_en.pdf` (112.3837890625 KiB)
+warning: RESEARCH_NOTE_preprint_v1.0.1_en.tex:219: Underfull \hbox (badness 4569) in paragraph at lines 218--219
+warning: RESEARCH_NOTE_preprint_v1.0.1_en.tex:358: Underfull \hbox (badness 2213) in paragraph at lines 357--358
+warning: RESEARCH_NOTE_preprint_v1.0.1_en.tex:358: Underfull \hbox (badness 1622) in paragraph at lines 357--358
+warning: RESEARCH_NOTE_preprint_v1.0.1_en.tex:219: Underfull \hbox (badness 4569) in paragraph at lines 218--219
+warning: RESEARCH_NOTE_preprint_v1.0.1_en.tex:358: Underfull \hbox (badness 2213) in paragraph at lines 357--358
+warning: RESEARCH_NOTE_preprint_v1.0.1_en.tex:358: Underfull \hbox (badness 1622) in paragraph at lines 357--358
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

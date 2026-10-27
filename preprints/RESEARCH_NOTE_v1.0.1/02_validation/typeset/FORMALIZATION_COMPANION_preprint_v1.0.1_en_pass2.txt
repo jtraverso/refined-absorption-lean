@@ -1,0 +1,8 @@
+note: Running TeX ...
+note: Running xdvipdfmx ...
+note: Writing `<REPO>\preprints\RESEARCH_NOTE_v1.0.1\05_formalization\FORMALIZATION_COMPANION_preprint_v1.0.1_en.aux` (3.9228515625 KiB)
+note: Writing `<REPO>\preprints\RESEARCH_NOTE_v1.0.1\05_formalization\FORMALIZATION_COMPANION_preprint_v1.0.1_en.pdf` (74.6640625 KiB)
+note: Writing `<REPO>\preprints\RESEARCH_NOTE_v1.0.1\05_formalization\FORMALIZATION_COMPANION_preprint_v1.0.1_en.log` (25.08203125 KiB)
+warning: FORMALIZATION_COMPANION_preprint_v1.0.1_en.tex:178: Underfull \hbox (badness 2680) in paragraph at lines 177--178
+warning: FORMALIZATION_COMPANION_preprint_v1.0.1_en.tex:265: Underfull \hbox (badness 10000) in paragraph at lines 264--265
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

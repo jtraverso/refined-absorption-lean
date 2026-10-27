@@ -1,4 +1,4 @@
-# Refined absorption in Lean
+# Formalizing Delcourt–Postle’s refined absorption in Lean
 
 Formalization directed by Juan Pablo Traverso Gianini, with assistance from
 Harmonic's Aristotle and OpenAI Codex. The mathematical sources are:
@@ -13,12 +13,17 @@ selected consequences. It does not reproduce the two source papers, and no
 historical priority is claimed for every formalized corollary. The original
 results remain attributed to their authors.
 
-Read the [research note and formal companion in English or Spanish](preprints/RESEARCH_NOTE/README.md).
-Preprint 1.0 has an internal audit **PASS** and is published on Zenodo with DOI
-[10.5281/zenodo.23685654](https://doi.org/10.5281/zenodo.23685654).
-Public-release receipts and Palomar verification are recorded separately.
-The [publication index](PUBLICATION_INDEX.md) separates documents, source DOIs
-and actual formal evidence.
+Read the [research note and formal companion in English or Spanish](preprints/RESEARCH_NOTE_v1.0.1/README.md).
+Preprint **1.0.1** is the editorial update to 1.0, with DOI
+[10.5281/zenodo.23715622](https://doi.org/10.5281/zenodo.23715622).
+It incorporates the three review rounds, clarifies attribution and coverage,
+and improves notation, proof exposition and the Spanish text. The Lean sources,
+dependency pins and formal freeze are unchanged.
+
+The original [preprint 1.0](preprints/RESEARCH_NOTE/README.md) and its
+[DOI](https://doi.org/10.5281/zenodo.23685654) remain available.
+The [publication index](PUBLICATION_INDEX.md) distinguishes document versions,
+source DOIs, formal evidence and historical Palomar receipts.
 
 ## Formal scope
 
@@ -43,6 +48,17 @@ cited Appendix B proof is available; the distinction concerns its conclusion.
 The witness covers all old vertices, so it is unaffected by conventions about
 unused old labels. General high-girth applications are outside the established
 scope. These selections do not certify every statement of either source text.
+
+| Coverage | Status in this release |
+| --- | --- |
+| Selected absorption, refiner, dense/compatible decomposition and existence endpoints | Proved; the companion identifies their exact declarations and hypotheses. |
+| Completion, intersections, partial parallel classes and Nash–Williams rounds | Derived consequences; no claim of historical priority or an improved threshold. |
+| Quantitative colouring and Nash–Williams inputs | Proved external sources at pinned revisions, imported by the final applications; not mathematical axioms. |
+| Foundational axioms | Endpoint queries contain only `propext`, `Classical.choice`, `Quot.sound`, or none. |
+| Global embedding conclusion of the survey | Refuted under the definitions specified in note §4.2; the piecewise replacement is a separate theorem. |
+| General high girth, general partite extensions and probabilistic design thresholds | Outside the current certified scope; complete coverage is future work. |
+| Omni-absorber degree bound | `C max{Δ(X), n^(1−1/r) log n}`; the order-dependent term cannot be dropped without an additional hypothesis. |
+| Palomar Challenges | Intentional statement placeholders, separate from all proof imports. |
 
 The additive `Faithful2024.theorem_6_2_ambient` interface makes the entire old
 ambient vertex set independent, including isolated labels. It retains the old
@@ -120,7 +136,9 @@ intended submissions. See the [joint comparison record](publication/palomar/UNIF
 The joint Challenge is additive. The original 316-source formal freeze is
 unchanged; the current project has 317 sources including that new comparison
 file. Local compilation, internal review, official preflight and registry review
-are distinct gates. No registration is claimed before a registry receipt exists.
+are distinct gates. The updated note DOI in the current metadata does not
+rewrite or renew the historical preflight and submission, which remain bound
+to their original commit. No registration is claimed before a registry receipt exists.
 
 Source code is licensed under Apache 2.0; manuscripts are licensed under
 CC BY 4.0. The author is responsible for the formalization and exposition.

@@ -1,0 +1,27 @@
+{
+  "checked_utc": "2026-10-27T23:53:21.435604+00:00",
+  "status": "PASS",
+  "lean_sources_unchanged": 317,
+  "baseline_files_unchanged": 1080,
+  "allowed_metadata_files_changed": [
+    ".gitignore",
+    "CITATION.cff",
+    "PUBLICATION_INDEX.md",
+    "Palomar/Article2024/formalization.yaml",
+    "Palomar/ResearchNote/formalization.yaml",
+    "Palomar/Survey2025/formalization.yaml",
+    "Palomar/Unified/formalization.yaml",
+    "README.md",
+    "publication/AUDIT.md"
+  ],
+  "formal_freeze_check": {
+    "status": "PASS_RECORDED_FREEZE_INTEGRITY",
+    "source_commit": "5428ee9b772e67dd7ec6da443199b36a003b72d4",
+    "local_lean_sources": 316,
+    "axiom_queries": 360,
+    "original_sources": 300,
+    "lean_executed": false,
+    "scope": "Recorded evidence, archived source bytes and current source correspondence; not independent proof replay."
+  },
+  "new_lean_run": false
+}

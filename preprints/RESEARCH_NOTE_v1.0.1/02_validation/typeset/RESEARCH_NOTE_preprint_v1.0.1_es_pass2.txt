@@ -1,0 +1,8 @@
+note: Running TeX ...
+note: Running xdvipdfmx ...
+note: Writing `<REPO>\preprints\RESEARCH_NOTE_v1.0.1\01_manuscript\RESEARCH_NOTE_preprint_v1.0.1_es.pdf` (115.267578125 KiB)
+note: Writing `<REPO>\preprints\RESEARCH_NOTE_v1.0.1\01_manuscript\RESEARCH_NOTE_preprint_v1.0.1_es.aux` (6.4287109375 KiB)
+note: Writing `<REPO>\preprints\RESEARCH_NOTE_v1.0.1\01_manuscript\RESEARCH_NOTE_preprint_v1.0.1_es.log` (25.2705078125 KiB)
+warning: RESEARCH_NOTE_preprint_v1.0.1_es.tex:215: Underfull \hbox (badness 1281) in paragraph at lines 214--215
+warning: RESEARCH_NOTE_preprint_v1.0.1_es.tex:219: Underfull \hbox (badness 2096) in paragraph at lines 218--219
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

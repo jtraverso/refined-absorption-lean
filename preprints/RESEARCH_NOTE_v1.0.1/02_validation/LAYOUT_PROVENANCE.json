@@ -1,0 +1,11 @@
+{
+  "source_repository": "https://github.com/jtraverso/nash-williams-triangle-decompositions-release",
+  "source_commit": "02091ea3acb0c0ea74a89875313ab1d26a4f9124",
+  "source_path": "scripts/series_template.tex",
+  "source_sha256": "e9deeb8ccbfddf9a26be47898932465a4976c873d7f734eb787f198a5068e38f",
+  "target": "preprints/RESEARCH_NOTE_v1.0.1/03_reproducibility/series_template.tex",
+  "target_sha256": "2011d077bbe3be140e5c77539dee838dbae62acb9baf842a920aa2697581eb62",
+  "role": "Layout authority only. Manuscript Markdown remains semantic authority.",
+  "adaptation": "Copied the Nash-Williams template exactly, then increased subsection Needspace from 4 to 11 baselines to prevent a parent heading being stranded before a child heading. Fonts, margins, title/author block and bibliography style are unchanged. The body converter keeps each named theorem statement together using the built-in samepage environment. After actual DOI insertion, a single opening line of a paragraph was stranded at the foot of the English first page. Set clubpenalty, the post-heading @clubpenalty and widowpenalty to 10000; regenerated and inspected all 35 pages. No semantic source body changed.",
+  "editorial_release_adaptations": "Preserved series class, fonts, geometry and author block. Builder adds spacing before compact tables, command blocks and commit identifiers to keep introductory text with its value. Final visual QA is recorded separately."
+}

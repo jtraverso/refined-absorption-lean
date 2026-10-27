@@ -1,6 +1,15 @@
 # Publications and evidence
 
-The new publication is a research note with a separate formalization and reproducibility companion. Both are available in English and Spanish. **Preprint 1.0: internal audit PASS. Published openly on [Zenodo](https://zenodo.org/records/23685654), DOI [10.5281/zenodo.23685654](https://doi.org/10.5281/zenodo.23685654).** The four deposited PDF checksums match the final local files; see the [publication receipt](publication/zenodo/PUBLISHED_RECORD.json).
+## Current documents: preprint 1.0.1
+
+[Formalizing Delcourt–Postle’s refined absorption in Lean](preprints/RESEARCH_NOTE_v1.0.1/README.md) is the editorial update, with its separate companion in English and Spanish. DOI: [10.5281/zenodo.23715622](https://doi.org/10.5281/zenodo.23715622). [GitHub release](https://github.com/jtraverso/refined-absorption-lean/releases/tag/preprint-v1.0.1). The [release audit](preprints/RESEARCH_NOTE_v1.0.1/02_validation/RELEASE_AUDIT.md) records the checks; the [change log](CHANGELOG.md) describes the revision.
+
+The 317 Lean files, Lake configuration, dependency pins, proof freeze and existing Palomar receipts are unchanged. Current YAML metadata cites the new document DOI; this does not renew the official preflight or submit a new registry entry. General high-girth applications and complete coverage of the two source texts remain outside this release.
+
+## Preserved publication and verification history
+
+
+The original publication is a research note with a separate formalization and reproducibility companion. Both are available in English and Spanish. **Preprint 1.0: internal audit PASS. Published openly on [Zenodo](https://zenodo.org/records/23685654), DOI [10.5281/zenodo.23685654](https://doi.org/10.5281/zenodo.23685654).** The four deposited PDF checksums match the final local files; see the [publication receipt](publication/zenodo/PUBLISHED_RECORD.json).
 
 Start with the [document index](preprints/RESEARCH_NOTE/README.md), the [internal review summary](preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md) or the [formal freeze receipt](publication/formal-freeze/FREEZE.json).
 

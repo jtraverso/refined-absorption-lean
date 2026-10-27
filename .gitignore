@@ -8,3 +8,11 @@ migration/local-environment.json
 *.ir
 .private/
 preprints/RESEARCH_NOTE/02_validation/_render/
+
+# Local review rounds and reproducible document renders
+preprints/RESEARCH_NOTE_v1.0.1_review/
+preprints/RESEARCH_NOTE_v1.0.1_round2/
+preprints/RESEARCH_NOTE_v1.0.1_round3/
+preprints/RESEARCH_NOTE_v1.0.1_round3b/
+preprints/RESEARCH_NOTE_v1.0.1/02_validation/_render/
+preprints/RESEARCH_NOTE_v1.0.1/**/__pycache__/

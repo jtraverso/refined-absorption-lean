@@ -1,0 +1,43 @@
+% Adapted from the author's public Erdos Paper IV v1.23 series_template.tex.
+% Layout provenance is recorded in 02_validation; the Markdown is semantic authority.
+\documentclass[@@LANG@@,11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\usepackage{amsmath,amssymb}
+\providecommand{\mathscr}{\mathcal}
+\usepackage[@@BABEL@@]{babel}
+\usepackage{microtype,parskip}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{xcolor,xurl}
+\usepackage{hyperref,bookmark}
+\usepackage{etoolbox,needspace}
+\setcounter{secnumdepth}{-\maxdimen}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}\small}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{11\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+\urlstyle{same}
+\hypersetup{pdftitle={@@TITLE@@},pdfauthor={Juan Pablo Traverso Gianini},
+pdflang={@@PDFLANG@@},colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\title{@@TITLE@@}
+\author{Juan Pablo Traverso Gianini\\
+\small @@AFFILIATION@@\\
+\small \href{mailto:@@EMAIL@@}{@@EMAIL@@}\\
+\small ORCID: @@ORCID@@}
+\date{}
+\begin{document}
+\raggedbottom
+\clubpenalty=10000
+\widowpenalty=10000
+\makeatletter
+\@clubpenalty=10000
+\makeatother
+\maketitle
+@@BODY@@
+\end{document}

@@ -1,13 +1,14 @@
 cff-version: 1.2.0
 message: "Please cite the original mathematical sources for their results, and the accompanying research note for this formalization and exposition."
 type: article
-title: "Formalizing refined absorption: proof interfaces and consequences"
+title: "Formalizing Delcourt–Postle’s refined absorption in Lean"
 authors:
   - family-names: Traverso Gianini
     given-names: Juan Pablo
     orcid: "https://orcid.org/0009-0003-6068-4096"
-version: "1.0"
-doi: "10.5281/zenodo.23685654"
+version: "1.0.1"
+doi: "10.5281/zenodo.23715622"
 license: CC-BY-4.0
 abstract: "A research note on proof interfaces and consequences of the Lean formalization of refined absorption, with a separate formalization and reproducibility companion."
 repository-code: "https://github.com/jtraverso/refined-absorption-lean"
+date-released: "2026-10-27"
