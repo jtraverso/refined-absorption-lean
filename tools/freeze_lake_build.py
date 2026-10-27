@@ -17,15 +17,21 @@ EVIDENCE = ROOT / "publication/assembly"
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
 state = json.loads((EVIDENCE / "lake-state.json").read_text())
 assert state["status"] == "PASS" and state["final_exit_code"] == 0
+interfaces = json.loads((EVIDENCE / "palomar-interface-lake.json").read_text())
+assert interfaces["status"] == "PASS" and interfaces["final_exit_code"] == 0
+assert len(interfaces["modules"]) == 6
 start = json.loads((EVIDENCE / "clean-build-start.json").read_text())
 assert start["project_build_directory_initially_absent"]
 sources = sorted([ROOT / "RefinedAbsorption.lean"] + [p for top in ("RefinedAbsorption", "checks", "Palomar") for p in (ROOT / top).rglob("*.lean")])
 before = {p.relative_to(ROOT).as_posix(): sha(p) for p in sources}
+configuration = {p: sha(ROOT / p) for p in ("lean-toolchain", "lakefile.toml", "lake-manifest.json")}
+assert interfaces["configuration_sha256"] == configuration["lakefile.toml"]
+git_inputs = before | configuration
 snapshot = subprocess.check_output(["git", "archive", "--format=tar", "HEAD", "RefinedAbsorption.lean", "RefinedAbsorption", "checks", "Palomar", "lean-toolchain", "lakefile.toml", "lake-manifest.json"], cwd=ROOT)
 with tarfile.open(fileobj=io.BytesIO(snapshot)) as archive:
     committed = {item.name: hashlib.sha256(archive.extractfile(item).read()).hexdigest()
-                 for item in archive if item.isfile() and item.name in before}
-assert committed == before, "Commit every current Lean source before freezing; Git and compiled source bytes must agree."
+                 for item in archive if item.isfile() and item.name in git_inputs}
+assert committed == git_inputs, "Commit every current Lean source and configuration before freezing; Git and compiled inputs must agree."
 command = ["lake", "--quiet", "--packages=.lake/local-packages.json", "--rehash", "--no-build", "build"]
 log = EVIDENCE / "lake-freshness.log"
 with log.open("w", encoding="utf-8", newline="\n") as out:
@@ -85,7 +91,8 @@ result = {"status": "PASS", "checked_utc": datetime.now(timezone.utc).isoformat(
           "continuation_scheduler_modules": state["required"], "continuation_run": state["run"], "current_modules": len(sources),
           "modules_added_during_assembly": sorted(set(r["module"] for r in records) - set(r["module"] for r in state["compiled"])),
           "freshness_command": command, "freshness_exit_code": code, "freshness_log_sha256": sha(log),
-          "configuration_sha256": {p: sha(ROOT / p) for p in ("lean-toolchain", "lakefile.toml", "lake-manifest.json")},
+          "configuration_sha256": configuration,
+          "palomar_interface_build_sha256": sha(EVIDENCE / "palomar-interface-lake.json"),
           "sources": records, "axiom_checks": queries, "axiom_query_count": sum(q["queries"] for q in queries),
           "permitted_axioms": ["propext", "Classical.choice", "Quot.sound"]}
 (EVIDENCE / "VALIDATION.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8", newline="\n")

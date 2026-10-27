@@ -1,7 +1,7 @@
 name = "refined_absorption"
 version = "0.1.0"
 requiresModuleSystem = true
-defaultTargets = ["RefinedAbsorption", "checks"]
+defaultTargets = ["RefinedAbsorption", "checks", "Palomar"]
 
 [[require]]
 name = "mathlib"
@@ -21,4 +21,9 @@ rev = "2603197abdbf0a600ec663f6f046f70fbd209d4a"
 [[lean_lib]]
 name = "checks"
 globs = ["checks.+"]
+moreLeanArgs = ["-j1", "-M4096", "-DmaxHeartbeats=1600000", "-DmaxRecDepth=8192"]
+
+[[lean_lib]]
+name = "Palomar"
+globs = ["Palomar.+"]
 moreLeanArgs = ["-j1", "-M4096", "-DmaxHeartbeats=1600000", "-DmaxRecDepth=8192"]

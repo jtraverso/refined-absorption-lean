@@ -8,9 +8,9 @@ import ast
 import hashlib
 import json
 import re
+import tarfile
 
 ROOT = Path(__file__).resolve().parents[1]
-ORIGINAL = Path(r"C:\nw\aristotle-refined-extension-return-review-20261026\source")
 # Reuse the existing lexical comment stripper without executing its CLI.
 tree = ast.parse((ROOT / "tools/audit_migration.py").read_text(encoding="utf-8"))
 function = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "strip")
@@ -26,11 +26,14 @@ def declarations(text):
             for i, m in enumerate(matches)]
 
 baseline = json.loads((ROOT / "provenance/source-baseline.json").read_text(encoding="utf-8"))
+with tarfile.open(ROOT / "provenance/original-lean-sources.tar.gz", "r:gz") as archive:
+    original = {name: archive.extractfile(name).read() for name in baseline}
+assert all(hashlib.sha256(original[name]).hexdigest() == digest for name, digest in baseline.items())
 changed = []
 checked = 0
 for old in baseline:
     new = old.replace("RequestProject/", "RefinedAbsorption/", 1) if old.startswith("RequestProject/") else old
-    before = declarations((ORIGINAL / old).read_text(encoding="utf-8"))
+    before = declarations(original[old].decode("utf-8").replace("\r\n", "\n"))
     after = declarations((ROOT / new).read_text(encoding="utf-8"))
     assert [(k, n) for k, n, _ in before] == [(k, n) for k, n, _ in after], old
     for (kind, name, a), (_, _, b) in zip(before, after):

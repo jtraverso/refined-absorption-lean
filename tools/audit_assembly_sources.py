@@ -6,19 +6,22 @@ It does not replace the separate original-to-rc3 migration review.
 """
 from pathlib import Path
 import hashlib
+import io
 import json
 import re
 import subprocess
+import tarfile
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "8164fe5e9debd978308768e42d718f9150d40434"
 git = lambda *args: subprocess.check_output(["git", *args], cwd=ROOT)
-files = git("ls-tree", "-r", "--name-only", BASE).decode().splitlines()
-files = [p for p in files if p.endswith(".lean") and p.startswith(("RequestProject/", "checks/"))]
+with tarfile.open(fileobj=io.BytesIO(git("archive", "--format=tar", BASE, "RequestProject", "checks"))) as archive:
+    originals = {item.name: archive.extractfile(item).read() for item in archive
+                 if item.isfile() and item.name.endswith(".lean")}
 records = []
-for old in files:
+for old, original in sorted(originals.items()):
     target = old.replace("RequestProject/", "RefinedAbsorption/", 1) if old.startswith("RequestProject/") else old
-    before = git("show", BASE + ":" + old).decode("utf-8").replace("\r\n", "\n")
+    before = original.decode("utf-8").replace("\r\n", "\n")
     expected = before.replace("RequestProject.", "RefinedAbsorption.")
     current = (ROOT / target).read_text(encoding="utf-8")
     records.append({"original_path": old, "current_path": target,
@@ -40,10 +43,22 @@ def visit(n):
 visit("RefinedAbsorption")
 uncovered = sorted(set(sources) - seen)
 assert not uncovered, uncovered
+upstream = json.loads((ROOT / "provenance/assembly-sources.json").read_text())
+for record in upstream["imported_source_cut"]:
+    path = ROOT / record["installed"]
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == record["installed_sha256"]
+    restored = re.sub(r"^.*import.*$", lambda m: m[0].replace(
+        "RefinedAbsorption.Upstream.PippengerSpencer.", "PseudorandomLib.PippengerSpencer.").replace(
+        "RequestProject.Pseudorandom.", "PseudorandomLib."), path.read_text(encoding="utf-8"), flags=re.M)
+    original_hashes = {hashlib.sha256(text.encode()).hexdigest()
+                       for text in (restored, restored.replace("\n", "\r\n"))}
+    assert record["source_sha256"] in original_hashes, path
 result = {"status": "PASS", "assembly_baseline_commit": BASE,
           "scope": "Exact text modulo newline normalization and RequestProject. -> RefinedAbsorption. throughout pre-existing sources; public-root local import coverage.",
           "preserved_sources": len(records), "records": records,
-          "public_root": "RefinedAbsorption", "root_coverage": len(seen), "uncovered_local_modules": uncovered}
+          "public_root": "RefinedAbsorption", "root_coverage": len(seen), "uncovered_local_modules": uncovered,
+          "upstream_cut_sources_verified": len(upstream["imported_source_cut"]),
+          "upstream_cut_verification": "Current installed hashes and original-source hashes after reversing import-only rewrites and the documented CRLF-to-LF normalization."}
 output = ROOT / "publication/assembly/source-relocation-and-root.json"
 output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8", newline="\n")
 print(json.dumps({k: v for k, v in result.items() if k != "records"}))

@@ -144,5 +144,6 @@
     }
   ],
   "mathematical_code_change": "None: only import module paths changed in the three source-cut files.",
+  "text_normalization": "The source checkout uses CRLF; the installed source cut uses LF. The audit reverses import paths and verifies the recorded original byte hashes with their original line endings.",
   "refined_root_relocation": "RequestProject -> RefinedAbsorption; mathematical namespaces unchanged."
 }

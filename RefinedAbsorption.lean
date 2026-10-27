@@ -1,6 +1,5 @@
 module
 
-/-! Canonical public root: all library leaf modules are re-exported. -/
 public import RefinedAbsorption.Applications
 public import RefinedAbsorption.Assembly
 public import RefinedAbsorption.Extensions.Count
@@ -14,3 +13,5 @@ public import RefinedAbsorption.NibbleDesigns
 public import RefinedAbsorption.Pending.Theorem28
 public import RefinedAbsorption.Pending.Theorem62
 public import RefinedAbsorption.SurveyCorollaries
+
+/-! Canonical public root: all library leaf modules are re-exported. -/

@@ -45,4 +45,6 @@ Disjoint mates and intersection problems for Steiner triple systems are classica
 
 ## Bibliographic release checks still required
 
+Lean and Mathlib are credited through L. de Moura and S. Ullrich, *The Lean 4 Theorem Prover and Programming Language*, CADE 28 (2021), pp. 625–635, DOI 10.1007/978-3-030-79876-5_37 (Springer primary record checked), and The mathlib Community, *The Lean Mathematical Library*, CPP 2020, pp. 367–381, DOI 10.1145/3372885.3373824 (the community's official reference index checked). The ACM landing page returned HTTP 403; that access failure is not described as a successful publisher-page check. These references identify the software foundations; they do not certify this project's build.
+
 Before release, check the final bibliography against these records, include the reserved research-note DOI, identify the exact formal freeze, and verify that both language editions use the same references and source-version qualifications. Check all links and the actual metadata schema at the time of publication. This dossier alone is not a release PASS.

@@ -5,10 +5,11 @@ import difflib
 import hashlib
 import json
 import re
+import tarfile
 
 ROOT=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser()
-parser.add_argument("--original",type=Path,default=Path(r"C:\nw\aristotle-refined-extension-return-review-20261026\source"))
+parser.add_argument("--original",type=Path,help="Optional extracted originals; the included immutable archive is the default.")
 parser.add_argument("--output",type=Path,default=Path("migration/source-audit.json"))
 args=parser.parse_args()
 
@@ -48,19 +49,23 @@ def signatures(text):
     return result
 
 baseline=json.loads((ROOT/"provenance/source-baseline.json").read_text(encoding="utf-8"))
+if args.original:
+    original={name:(args.original/name).read_bytes() for name in baseline}
+else:
+    with tarfile.open(ROOT/"provenance/original-lean-sources.tar.gz","r:gz") as archive:
+        original={name:archive.extractfile(name).read() for name in baseline}
 changes=[];signature_diffs=[];deleted=[];flags=[]
 output=ROOT/args.output
 output.parent.mkdir(parents=True,exist_ok=True)
 diffdir=output.parent/"source-diffs";diffdir.mkdir(exist_ok=True)
 relocations=[]
 for rel,digest in baseline.items():
-    old=args.original/rel
     relocated=rel.replace("RequestProject/", "RefinedAbsorption/", 1) if rel.startswith("RequestProject/") else rel
     if relocated!=rel:relocations.append(dict(original=rel,current=relocated))
     new=ROOT/relocated
-    assert hashlib.sha256(old.read_bytes()).hexdigest()==digest,rel
+    assert hashlib.sha256(original[rel]).hexdigest()==digest,rel
     if not new.exists():deleted.append(rel);continue
-    before=old.read_text(encoding="utf-8");after=new.read_text(encoding="utf-8")
+    before=original[rel].decode("utf-8").replace("\r\n","\n");after=new.read_text(encoding="utf-8")
     current=hashlib.sha256(new.read_bytes()).hexdigest()
     if current!=digest:
         changes.append(dict(file=rel,current_file=relocated,before=digest,after=current))

@@ -2,12 +2,18 @@
 from copy import deepcopy
 from pathlib import Path
 import json
+import re
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 AUTHOR = "Juan Pablo Traverso Gianini"
 validation = json.loads((ROOT / "publication/assembly/VALIDATION.json").read_text())
 assert validation["status"] == "PASS"
+used_axioms = sorted({axiom.strip()
+    for check in validation["axiom_checks"]
+    for group in re.findall(r"depends on axioms:\s*\[(.*?)\]", (ROOT / check["log"]).read_text(encoding="utf-8"), re.S)
+    for axiom in group.split(",") if axiom.strip()})
+assert set(used_axioms) <= set(validation["permitted_axioms"])
 reservation = json.loads((ROOT / "publication/zenodo/note-reservation.json").read_text())
 DOI = reservation["reserved_doi"]
 assert DOI == "10.5281/zenodo." + str(reservation["id"])
@@ -34,7 +40,7 @@ base = {"version": "v0.4", "project": {"authors": [AUTHOR], "license": "Apache-2
              "tool_setup": "Migrated the retained development, assembled pinned proved inputs, exposed ambient independence in an additive 6.2 interface, reviewed source fidelity and consequences, prepared the manuscripts and reproducibility evidence, and performed the internal audit."}],
             "notes": "Human authorship and responsibility remain with the author. Exact formal source revisions and build records are supplied in the repository."},
         "review": {"status": "self-assessed", "notes": "Internal source-fidelity and mathematical review by Codex under the author's direction; see publication/MATHEMATICAL_REVIEW_NOTES.md and publication/AUDIT.md. No independent human or separate-agent peer review is claimed."},
-        "status": {"sorry_count": 0, "sorry_in_definitions": 0, "axioms": [],
+        "status": {"sorry_count": 0, "sorry_in_definitions": 0, "axioms": used_axioms,
                    "note": "The proof development has no project axiom or proof hole. The standalone Challenge files deliberately use by sorry; their Solutions import the actual proofs. Endpoint queries use only propext, Classical.choice and Quot.sound."}}
 profiles = {
     "Article2024": {
@@ -55,9 +61,31 @@ profiles = {
                     {"title": "Pseudorandom hypergraph matchings", "authors": ["Stefan Ehard", "Stefan Glock", "Felix Joos"], "id": "doi:10.1017/S0963548320000280", "type": "paper", "relationship": "adapts", "note": "The polynomial colouring input is derived via Theorem 1.2 in the pinned Pippenger–Spencer development."},
                     {"title": "Asymptotic behavior of the chromatic index for hypergraphs", "authors": ["Nicholas Pippenger", "Joel Spencer"], "id": "doi:10.1016/0097-3165(89)90074-5", "type": "paper", "relationship": "background"},
                     {"title": "A Proof of Nash-Williams' Conjecture", "authors": ["Michelle Delcourt", "Luke Postle"], "id": "doi:10.48550/arXiv.2606.11178", "type": "paper", "relationship": "adapts"},
+                    {"title": "Triangle decompositions I: Formalizing the Nash–Williams theorem in Lean", "authors": [AUTHOR], "id": "doi:10.5281/zenodo.23428173", "type": "paper", "relationship": "background", "note": "Documents the proved decomposition endpoint reused by the scheduling assembly."},
+                    {"title": "Triangle decompositions II: Robust absorption for typed triangles", "authors": [AUTHOR], "id": "doi:10.5281/zenodo.23502224", "type": "paper", "relationship": "background", "note": "Documents the proved replacement inputs used by that decomposition endpoint."},
                     {"title": "Steiner triple systems having a prescribed number of triples in common", "authors": ["C. C. Lindner", "A. Rosa"], "id": "doi:10.4153/CJM-1975-122-4", "type": "paper", "relationship": "background", "note": "Classical intersection literature, read together with its 1978 corrigendum."},
                     {"title": "Steiner triple systems having a prescribed number of triples in common (corrigendum)", "authors": ["C. C. Lindner", "A. Rosa"], "id": "doi:10.4153/CJM-1978-077-9", "type": "paper", "relationship": "background", "location": "Canadian Journal of Mathematics 30 (1978), p. 896"}],
         "fidelity": "Completion sparsity concerns the maximum (r−1)-degree of the covered r-edges; the forbidden partial system need not be sparse. The additional crossing guarantee in completion is restricted to forbidden blocks whose r-edges avoid the prescribed covered edges. The spectrum chooses both systems and supplies an initial interval k ≤ c n^r, not a complete spectrum. Disjoint mates have no common blocks; classical orthogonality is not asserted. Polynomial error bounds count partial parallel classes or schedule rounds, and do not assert perfect classes or a deficit bound for every round. The external polynomial colouring theorem assumes a maximum-degree bound, a polynomial codegree bound and an exponential edge-count cap; all are verified before application. The closed endpoints have no external theorem hypotheses. The original conditional consumers remain unchanged."},
+}
+locations = {
+    "RefinedAbsorption.Faithful2024.theorem_1_7": "Delcourt–Postle, arXiv:2402.17855v1, Theorem 1.7 (refined omni-absorber).",
+    "RefinedAbsorption.Faithful2024.theorem_1_11": "Delcourt–Postle, arXiv:2402.17855v1, Theorem 1.11 (refiner, including the family refinement-degree bound).",
+    "RefinedAbsorption.Original2024.theorem_6_1": "Delcourt–Postle, arXiv:2402.17855v1, Theorem 6.1 (dense divisible decomposition).",
+    "RefinedAbsorption.Pending.theorem_2_8": "Delcourt–Postle, arXiv:2402.17855v1, Theorem 2.8 (labelled multi-hypergraph reserve matching).",
+    "RefinedAbsorption.Faithful2024.theorem_6_2_ambient": "Delcourt–Postle, arXiv:2402.17855v1, Theorem 6.2; additive interface explicitly retaining independence of all old ambient vertices.",
+    "RefinedAbsorption.Pending.theorem_6_3": "Delcourt–Postle, arXiv:2402.17855v1, Theorem 6.3 (compatible decomposition against a prescribed packing).",
+    "RefinedAbsorption.Final.theorem_1_10": "Postle survey, arXiv:2510.19978v1 and ICM 2026 edition, Theorem 1.10 (refined efficient omni-absorber).",
+    "RefinedAbsorption.existenceConjecture_proved": "Postle survey, Conjecture 1.1, proved existence statement for every fixed index λ ≥ 1; simple block family.",
+    "RefinedAbsorption.Final.existenceConjecture_steiner": "Steiner special case λ = 1 of the survey's Conjecture 1.1.",
+    "RefinedAbsorption.FaithfulSurvey2025.not_generalEmbeddingLemmaLiteral": "Counterexample to the global-injection reading of survey Definition 3.7 and Lemma 3.8, both checked in the arXiv and ICM editions. The selected theorem proves its negation.",
+    "RefinedAbsorption.FaithfulSurvey2025.generalEmbedding_piecewise": "Proved piecewise replacement for survey Lemma 3.8, with new-edge distinctness; not the printed global-injection conclusion.",
+    "RefinedAbsorption.Extensions.steiner_completion_avoiding": "Research note, Section 5, completion avoiding an arbitrary partial Steiner system, derived from article Theorem 6.3.",
+    "RefinedAbsorption.Extensions.steiner_intersection_prescribed": "Research note, Section 5, prescribed sparse intersection with a fixed Steiner system.",
+    "RefinedAbsorption.Extensions.partialSteiner_intersection_embedding": "Research note, Section 5, exact-intersection embedding at every sufficiently large admissible order.",
+    "RefinedAbsorption.Extensions.steiner_intersection_spectrum_poly": "Research note, Section 5, initial intersection interval k ≤ c n^r, choosing both systems.",
+    "RefinedAbsorption.Assembly.steiner_quantitatively_almost_resolvable": "Research note, Section 6, polynomial excess in the number of partial parallel classes for every sufficiently large Steiner system.",
+    "RefinedAbsorption.Assembly.exists_quantitatively_almost_resolvable_steiner": "Research note, Section 6, existence at all sufficiently large admissible orders, with the same partial-class conclusion.",
+    "RefinedAbsorption.Assembly.nash_williams_scheduled_decomposition": "Research note, Section 6, polynomial-round schedule at the exact Nash–Williams minimum-degree threshold.",
 }
 for name, profile in profiles.items():
     metadata = deepcopy(base)
@@ -65,7 +93,7 @@ for name, profile in profiles.items():
     metadata["sources"] = deepcopy(profile["sources"])
     metadata["fidelity"] = {"divergences": profile["fidelity"]}
     config = json.loads((ROOT / "Palomar" / (name + ".comparator.json")).read_text())
-    metadata["alignment"] = {"statements": [{"source": "See the source-qualified endpoint table in the formal companion.", "lean": theorem, "module": config["challenge_module"], "status": "proved"} for theorem in config["theorem_names"]]}
+    metadata["alignment"] = {"statements": [{"source": locations[theorem], "lean": theorem, "module": config["challenge_module"], "status": "proved"} for theorem in config["theorem_names"]]}
     if name == "ResearchNote":
         metadata["related_formalizations"] = [
             {"id": "https://github.com/jtraverso/pippenger-spencer/tree/b19273396d369332fb489fe07e61e27c9e7f9233", "relationship": "builds-on", "note": "Pinned three-file polynomial-colouring proof cut, sharing nineteen source-identical matching modules with the Nash–Williams dependency."},

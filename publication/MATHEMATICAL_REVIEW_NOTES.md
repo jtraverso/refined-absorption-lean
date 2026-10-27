@@ -52,6 +52,8 @@ For a triangle decomposition of G, the triangle hypergraph has degree d_G(v)/2, 
 
 The additive polynomial error concerns the number of partial parallel classes or rounds. It gives neither perfect parallel classes nor an individual bound on the uncovered vertices in every round. The main note should state an upper bound on the number of rounds and explain the lower bound separately, without assuming every colour label is used. Thresholds and exponents are existential and are not claimed to be optimized.
 
+The Steiner endpoints write the binomial quotient in `Nat` before casting it to the reals. The regularity counting identity proves the required divisibility, so this is exactly the usual point degree R, not an additional floor approximation. The companion should explain that representation detail. For finite exact-intersection embedding, the endpoint chooses an injection together with the two systems; do not strengthen it to a statement about every previously prescribed injection.
+
 ## Attribution and audit boundary
 
 Attribute the source theorems to their original authors, including the existence theorem and Nash–Williams theorem. The polynomial colouring endpoint is a consequence of Ehard–Glock–Joos in the pinned Pippenger–Spencer development; do not attribute its exact quantitative contract directly to the 1989 paper. Classical triple-system intersection results and their corrigendum precede the note. The note claims a verified derivation and useful proof interfaces, without priority claims for every corollary.

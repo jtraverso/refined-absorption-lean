@@ -46,7 +46,7 @@ if args.resume:
         name = record["module"]
         assert name in sources and sha(sources[name]) == record["source_sha256"], name
         trace = ROOT / ".lake/build/lib/lean" / (name.replace(".", "/") + ".trace")
-        assert trace.is_file() and not json.loads(trace.read_text())["synthetic"], name
+        assert trace.is_file() and not json.loads(trace.read_text(encoding="utf-8"))["synthetic"], name
         done.add(name); pending.remove(name); state["compiled"].append(record)
 
 def chain_from(name):

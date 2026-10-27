@@ -1,92 +1,115 @@
 # Refined absorption in Lean
 
-Lean formalization directed by Juan Pablo Traverso Gianini, with AI assistance from
-Harmonic's Aristotle and OpenAI Codex. This development studies the following sources:
+Formalization directed by Juan Pablo Traverso Gianini, with assistance from
+Harmonic's Aristotle and OpenAI Codex. The mathematical sources are:
 
-| Source | Authors | Formalization scope |
+| Source | Authors | Statement basis |
 | --- | --- | --- |
-| [Refined Absorption: A New Proof of the Existence Conjecture](https://arxiv.org/abs/2402.17855) | Michelle Delcourt and Luke Postle | Refined absorbers and refiners, minimum-degree existence, and the statements 2.8, 6.2 and 6.3 |
-| [Refined Absorption: A New Proof of the Existence Conjecture and its Applications to Extremal and Probabilistic Design Theory](https://arxiv.org/abs/2510.19978) | Luke Postle | The refined absorption framework and its interfaces, with documented statement-fidelity qualifications |
+| *Refined Absorption: A New Proof of the Existence Conjecture* | Michelle Delcourt and Luke Postle | [arXiv:2402.17855v1](https://doi.org/10.48550/arXiv.2402.17855) |
+| *Refined Absorption: A New Proof of the Existence Conjecture and Its Applications to Extremal and Probabilistic Design Theory* | Luke Postle | [ICM 2026 publication](https://doi.org/10.1137/25M1805977); formal statement baseline [arXiv:2510.19978v1](https://doi.org/10.48550/arXiv.2510.19978) |
 
-The library also contains completion, embedding, counting, packing, colouring and
-prescribed-intersection consequences. These are extensions of the formal library;
-their presence does not establish mathematical priority over the literature.
+The accompanying research note explains proof interfaces, source fidelity and
+selected consequences. It does not reproduce the two source papers, and no
+historical priority is claimed for every formalized corollary. The original
+results remain attributed to their authors.
 
-## Migration status
+## Formal scope
 
-The complete returned development has been migrated from Lean 4.28.0 to the version
-used by the related Palomar registrations:
+- Refined omni-absorbers and refiners, dense decomposition, labelled reserve
+  matchings and compatible decompositions: source article 1.7, 1.11, 6.1, 2.8,
+  6.2 and 6.3 have separate endpoints.
+- The existence endpoint covers all fixed `q > r ≥ 2` and `λ ≥ 1`, producing a
+  finite set of blocks without repetitions at every sufficiently large
+  admissible order.
+- Completion avoiding an arbitrary partial Steiner system, prescribed sparse
+  intersections, finite exact-intersection embedding and an initial
+  intersection spectrum of order `n^r` are derived in the library.
+- The closed quantitative endpoints partition Steiner blocks into partial
+  parallel classes with polynomial excess in their number, and schedule a
+  triangle decomposition at the exact Nash–Williams threshold in rounds of
+  vertex-disjoint triangles. Their two external contracts are supplied by
+  pinned proved endpoints. The original conditional consumers remain available.
 
-- Lean `4.35.0-rc3`;
-- Mathlib `c55e6e786f49471c72fbddbec5415808896aec1e`;
-- 300 original Lean sources, including the returned check scripts.
+The survey's literal global-injection embedding conclusion has a formal
+counterexample. The proved piecewise variant is recorded separately. The survey's
+cited Appendix B proof is available; the distinction concerns its conclusion.
+The witness covers all old vertices, so it is unaffected by conventions about
+unused old labels. General high-girth applications are outside the established
+scope. These selections do not certify every statement of either source text.
 
-On 27 October 2026 all 301 current sources compiled locally: the 300 retained
-originals and one shared Mathlib import module. The eight original check modules
-ran 354 axiom queries, all reporting only Lean's foundational axioms. The source
-audit records 56 adjusted original files, no deletions, no textual changes to
-declaration headers, and no active `sorry`, `admit` or project axiom declarations.
-These are source-preservation checks, not a cross-version kernel equivalence test.
+The additive `Faithful2024.theorem_6_2_ambient` interface makes the entire old
+ambient vertex set independent, including isolated labels. It retains the old
+support-based endpoint and permits edges containing both old and new vertices.
+The name `steiner_orthogonal_mate` means bounded cross-intersections and no common
+blocks; it does not assert classical Steiner orthogonality.
 
-The immutable input is Aristotle task `8717482d-2162-428e-9db4-f6de76bc61fe` in project
-`88ab8568-7432-483b-897c-4163327799b2`. Original source hashes are recorded in
-`provenance/source-baseline.json`; returned summaries are historical evidence, not
-independent build certificates. Local migration output is kept under `migration/`.
+## Build and evidence
 
-The evidence is frozen in `migration/VALIDATION.json`, `migration/rc3-checks/` and
-`migration/VERIFICATION.txt`. A clean standard Lake build and independent registry
-verification remain separate gates. There is no Palomar registration or published
-research note for this development yet.
-
-## Build
-
-The portable project configuration pins the dependency revision:
+The project pins Lean `4.35.0-rc3`, Mathlib
+`c55e6e786f49471c72fbddbec5415808896aec1e`, and its Nash–Williams dependency.
+With the pinned toolchain installed:
 
 ```sh
 lake exe cache get
 lake build
 ```
 
-The local migration additionally uses `tools/build_local.py` to compile every source
-against an existing verified dependency cache without modifying that cache. This is
-separate evidence from a standard clean Lake build. Its machine-local configuration
-is ignored by Git; it is not a public dependency specification.
+The clean project Lake campaign completed on 27 October 2026: 300 local library
+modules, ten axiom-check modules and six Palomar interface modules. The default
+targets are `RefinedAbsorption`, `checks` and `Palomar`. The 360 endpoint axiom
+queries report only `propext`, `Classical.choice` and `Quot.sound`, or no axioms.
+The project output directory was initially absent; pinned dependency caches
+were reused. Bounded Lake calls and their resumptions, followed by the actual
+default build, are recorded under `publication/assembly/`.
 
-The default Lake targets include both `RequestProject` and `checks`, so the portable
-configuration also selects the eight check modules. This does not assert that a
-single aggregate source module imports or re-exports every declaration.
+The formal freeze binds committed source bytes, dependency revisions, genuine
+Lake traces and artifact hashes. It is separate from the earlier direct-Lean
+migration record in `migration/VALIDATION.json`, the later document release audit
+and Palomar's official verification. A local build is not a registry receipt.
 
-## Statement fidelity and external interfaces
+The aggregate module `RefinedAbsorption.lean` imports the full local proof
+library. The `checks` library runs endpoint axiom queries separately. Palomar
+Challenges are standalone statement files with intentional `by sorry`
+placeholders; Solutions import the actual proof modules and do not import the
+Challenges. A Challenge placeholder is not a proof-library theorem.
 
-- All previously returned declarations are retained. Migration repairs must preserve
-  their mathematical statements and record changes to proof scripts.
-- The survey's literal global embedding interpretation has a formal counterexample
-  in `RequestProject/FaithfulSurvey2025/Embedding.lean`. The proved placement variant
-  and its relationship to the printed definition must be explained explicitly in
-  any paper-level or Palomar description.
-- Quantitative almost-resolution and Nash–Williams scheduling currently expose
-  external theorem hypotheses. A future integrated endpoint must import pinned
-  proofs and discharge those hypotheses before being called unconditional.
-- `steiner_orthogonal_mate` asserts bounded cross-intersections and no common blocks;
-  it does not establish classical orthogonality of Steiner systems.
+Exact external revisions, the three-file Pippenger–Spencer source cut and the
+nineteen shared matching modules are recorded in
+`provenance/assembly-sources.json`. The mathematical namespaces are preserved;
+the local module root was relocated to avoid a clash with the dependency's
+`RequestProject` root. The polynomial colouring contract includes a maximum
+degree bound, a codegree bound and an exponential edge-count cap. It is derived
+via Ehard–Glock–Joos in that source development; it is not identified with the
+literal statement of the 1989 Pippenger–Spencer theorem.
 
-## Repository and publication plan
+## Preservation and provenance
 
-This is a separate development from the
+All 300 returned Lean sources are retained. The immutable original archive and
+its hashes are under `provenance/`. The migration's proof-script adjustments,
+the later import relocation and the additive assembly have separate records.
+The current preservation audit compares declaration headers and 821 normalized
+non-proof declaration spans. It is a textual preservation check, not a
+cross-version kernel equivalence proof.
+
+The included original-source archive is sufficient to rerun the preservation
+comparisons; no private Aristotle workspace is required. Historical summaries
+and ledgers are retained as provenance. Their old pending-status comments are
+not the current build or publication status.
+
+## Publication layout and attribution
+
+The research note uses the same manuscript, validation, reproducibility,
+integrity and formalization-companion directory layout as the author's
 [Nash–Williams Papers I–II release](https://github.com/jtraverso/nash-williams-triangle-decompositions-release).
-The latter remains the publication home of those triangle-decomposition papers.
-A cross-link can connect the projects after this migration is verified.
+That repository remains the publication home of those two papers.
 
-The intended later publication is a research note about formalization, statement
-fidelity, reusable proof interfaces and selected extensions. The papers above remain
-works of their original authors. Palomar records exact mathematical declarations at
-an immutable commit; a research note supplies context and is not itself a substitute
-for the Challenge/Solution comparison.
+Three scoped Palomar interfaces are prepared: `Article2024`, `Survey2025` and
+`ResearchNote`. Local compilation, internal review, official preflight and
+registry review are distinct gates. No registration is claimed here before a
+registry receipt exists.
 
-The recommended Palomar layout is one source repository with separate small
-interfaces for the original article, the survey's proved scope, and selected note
-extensions, if these need separate configurations. No entry should advertise that a
-literal statement is proved when the library instead proves an adapted variant.
-
-Publication and registration follow the completed migration and the review of the
-research note. Neither action is performed by this migration step.
+Source code is licensed under Apache 2.0; manuscripts are licensed under
+CC BY 4.0. The author is responsible for the formalization and exposition.
+Aristotle contributed mathematical development and formal proofs; Codex
+contributed migration, assembly, review, exposition and release preparation.
+The internal agent audit is not independent human peer review.
