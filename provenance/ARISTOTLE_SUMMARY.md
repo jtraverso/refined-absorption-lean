@@ -1,0 +1,17 @@
+# Summary of changes for run 8717482d-2162-428e-9db4-f6de76bc61fe
+En esta última ronda he añadido un bloque nuevo de resultados sobre **compañeros disjuntos e intersecciones de sistemas de Steiner**. Se apoya en el Teorema 6.3 del artículo original (existencia con grado mínimo evitando un packing dado), que ya estaba demostrado, y en los teoremas de existencia y completación de rondas anteriores. Todo está en `RequestProject/Extensions/Intersection.lean`. El proyecto completo compila con `lake build` y el archivo no tiene `sorry`. `checks/IntersectionAxioms.lean` (salida en `checks/IntersectionAxioms.out`) comprueba que cada teorema usa solo `propext`, `Classical.choice` y `Quot.sound`. Ningún teorema lleva hipótesis externas y no se modificó ningún archivo existente salvo `README.md`, donde añadí una sección nueva.
+
+Teoremas demostrados (para \(q > r \ge 1\) y \(n\) admisible y grande; "disperso" significa que el \(r\)-grafo cubierto por el sistema tiene \(\Delta_{r-1} \le \varepsilon n\)):
+- `steiner_completion_avoiding`: un sistema parcial disperso \(P\) se completa a un sistema de Steiner \(\mathcal S \supseteq P\) que comparte con cualquier sistema parcial \(F\) solo los bloques que \(P\) ya compartía (\(\mathcal S \cap F = P \cap F\)).
+- `steiner_orthogonal_mate`, `steiner_disjoint_mate`: todo sistema de Steiner de orden grande tiene un compañero disjunto. Además, un bloque de cada uno comparten como mucho \(r\) puntos.
+- `decomposition_disjoint_mate`: lo mismo para \(K_q^r\)-descomposiciones de grafos divisibles con \(\delta_{r-1} \ge (1-\varepsilon)n\).
+- `steiner_intersection_prescribed`: dado un sistema \(\mathcal S_1\) y cualquier \(P \subseteq \mathcal S_1\) disperso, existe \(\mathcal S_2\) con \(\mathcal S_1 \cap \mathcal S_2 = P\) exactamente.
+- `steiner_intersection_exact`: todo sistema parcial disperso es la intersección exacta de dos sistemas de Steiner.
+- `partialSteiner_intersection_embedding`: todo sistema parcial finito, sobre un conjunto finito cualquiera, es (tras una inyección) la intersección exacta de dos \((N,q,r)\)-sistemas de Steiner, para todo \(N\) admisible grande.
+- `steiner_intersection_spectrum`, `steiner_intersection_spectrum_poly`: **números de intersección**. Para todo \(k \le c\,n^r\) hay dos sistemas de Steiner con exactamente \(k\) bloques comunes. Es el orden de magnitud correcto, porque un sistema tiene \(\Theta(n^r)\) bloques.
+- `exists_two_fold_design_split`: existen diseños 2-fold que son la unión disjunta de dos sistemas de Steiner y en los que dos bloques distintos comparten como mucho \(r\) puntos.
+- `sts_disjoint_mate_and_spectrum`: el caso de los sistemas triples de Steiner. Es solo asintótico; no trata el espectro exacto para órdenes pequeños.
+
+Idea de la prueba: se quita de \(K_n^r\) el grafo \(H\) que cubre \(P\). Lo que queda sigue siendo divisible y de grado mínimo alto. Los bloques de \(F\) que caen dentro forman un packing, y el Teorema 6.3 da una descomposición cuyos cliques los cortan en \(\le r < q\) puntos, así que no repite ninguno. Para el espectro, un conteo voraz que ya estaba demostrado da un sistema parcial con exactamente \(k\) bloques dentro de \(\lfloor \varepsilon n \rfloor\) puntos.
+
+Los 11 teoremas están registrados como demostrados en la tabla de propiedades, y el archivo Lean, las comprobaciones y el `README.md` actualizado están publicados.

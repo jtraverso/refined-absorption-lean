@@ -1,0 +1,17 @@
+'RefinedAbsorption.Extensions.steiner_completion_avoiding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.steiner_orthogonal_mate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.steiner_disjoint_mate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.steiner_intersection_prescribed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RefinedAbsorption.Extensions.steiner_intersection_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.steiner_intersection_spectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.steiner_intersection_spectrum_poly' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RefinedAbsorption.Extensions.decomposition_disjoint_mate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.sts_disjoint_mate_and_spectrum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.exists_two_fold_design_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.partialSteiner_intersection_embedding' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
