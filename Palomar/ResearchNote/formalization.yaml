@@ -1,0 +1,202 @@
+version: v0.4
+project:
+  authors:
+  - Juan Pablo Traverso Gianini
+  license: Apache-2.0
+  responsible_maintainers:
+  - Juan Pablo Traverso Gianini
+  name: 'Formalizing refined absorption: completion, intersections and polynomial schedules'
+  description: 'Formal consequences of refined absorption: completion of a sparse partial
+    Steiner system while avoiding an arbitrary forbidden partial system, prescribed sparse
+    intersections, embedding a finite partial system as the exact intersection of two systems
+    at every sufficiently large admissible order, and an initial intersection spectrum of
+    order n^r. For fixed q > r ≥ 2, every sufficiently large Steiner system also admits a
+    partition into partial parallel classes using at most R + R^(1−γ) classes, where R is
+    its point degree. At the exact Nash–Williams minimum-degree threshold, triangle decompositions
+    admit schedules with at most Δ(G)/2 + (Δ(G)/2)^(1−γ) rounds of vertex-disjoint triangles.
+    The colouring and decomposition inputs are discharged by pinned proved theorems.'
+classification:
+  arxiv:
+  - math.CO
+  msc2020:
+  - 05B05
+  - 05B07
+  - 05C15
+  - 05C70
+automation:
+  methods:
+  - method: agent
+    models:
+    - Aristotle (Harmonic)
+    framework: Aristotle
+    tool_setup: Under the author's direction, explored constructions, developed and formalized
+      proofs, and checked extensions. Its contribution was not limited to translation of finished
+      proofs.
+  - method: agent
+    models:
+    - Codex (OpenAI)
+    framework: Codex
+    tool_setup: Migrated the retained development, assembled pinned proved inputs, exposed
+      ambient independence in an additive 6.2 interface, reviewed source fidelity and consequences,
+      prepared the manuscripts and reproducibility evidence, and performed the internal audit.
+  notes: Human authorship and responsibility remain with the author. Exact formal source revisions
+    and build records are supplied in the repository.
+review:
+  status: self-assessed
+  notes: Internal source-fidelity and mathematical review by Codex under the author's direction;
+    see publication/MATHEMATICAL_REVIEW_NOTES.md and publication/AUDIT.md. No independent
+    human or separate-agent peer review is claimed.
+status:
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - Classical.choice
+  - Quot.sound
+  - propext
+  note: The proof development has no project axiom or proof hole. The standalone Challenge
+    files deliberately use by sorry; their Solutions import the actual proofs. Endpoint queries
+    use only propext, Classical.choice and Quot.sound.
+sources:
+- title: 'Formalizing refined absorption: proof interfaces and consequences'
+  authors:
+  - Juan Pablo Traverso Gianini
+  id: doi:10.5281/zenodo.23685654
+  type: paper
+  relationship: formalizes
+  location: Research note, version 1.0 (2026)
+  note: Verified consequences and interface analysis; historical priority for every corollary
+    is not claimed.
+  license: CC-BY-4.0
+  author_endorsement: participated
+- title: 'Refined Absorption: A New Proof of the Existence Conjecture'
+  authors:
+  - Michelle Delcourt
+  - Luke Postle
+  id: doi:10.48550/arXiv.2402.17855
+  type: paper
+  relationship: adapts
+  location: arXiv:2402.17855v1 (2024)
+  author_endorsement: not-contacted
+- title: 'Refined Absorption: A New Proof of the Existence Conjecture and Its Applications
+    to Extremal and Probabilistic Design Theory'
+  authors:
+  - Luke Postle
+  id: doi:10.1137/25M1805977
+  type: paper
+  relationship: background
+  location: ICM 2026, Volume 6, pp. 212–231; statement baseline arXiv:2510.19978v1
+  note: The core absorption and existence endpoints are proved. The global embedding statement
+    is distinguished from its proved piecewise variant and a counterexample to the literal
+    global conclusion.
+  author_endorsement: not-contacted
+- title: Pseudorandom hypergraph matchings
+  authors:
+  - Stefan Ehard
+  - Stefan Glock
+  - Felix Joos
+  id: doi:10.1017/S0963548320000280
+  type: paper
+  relationship: adapts
+  note: The polynomial colouring input is derived via Theorem 1.2 in the pinned Pippenger–Spencer
+    development.
+- title: Asymptotic behavior of the chromatic index for hypergraphs
+  authors:
+  - Nicholas Pippenger
+  - Joel Spencer
+  id: doi:10.1016/0097-3165(89)90074-5
+  type: paper
+  relationship: background
+- title: A Proof of Nash-Williams' Conjecture
+  authors:
+  - Michelle Delcourt
+  - Luke Postle
+  id: doi:10.48550/arXiv.2606.11178
+  type: paper
+  relationship: adapts
+- title: 'Triangle decompositions I: Formalizing the Nash–Williams theorem in Lean'
+  authors:
+  - Juan Pablo Traverso Gianini
+  id: doi:10.5281/zenodo.23428173
+  type: paper
+  relationship: background
+  note: Documents the proved decomposition endpoint reused by the scheduling assembly.
+- title: 'Triangle decompositions II: Robust absorption for typed triangles'
+  authors:
+  - Juan Pablo Traverso Gianini
+  id: doi:10.5281/zenodo.23502224
+  type: paper
+  relationship: background
+  note: Documents the proved replacement inputs used by that decomposition endpoint.
+- title: Steiner triple systems having a prescribed number of triples in common
+  authors:
+  - C. C. Lindner
+  - A. Rosa
+  id: doi:10.4153/CJM-1975-122-4
+  type: paper
+  relationship: background
+  note: Classical intersection literature, read together with its 1978 corrigendum.
+- title: Steiner triple systems having a prescribed number of triples in common (corrigendum)
+  authors:
+  - C. C. Lindner
+  - A. Rosa
+  id: doi:10.4153/CJM-1978-077-9
+  type: paper
+  relationship: background
+  location: Canadian Journal of Mathematics 30 (1978), p. 896
+fidelity:
+  divergences: Completion sparsity concerns the maximum (r−1)-degree of the covered r-edges;
+    the forbidden partial system need not be sparse. The additional crossing guarantee in
+    completion is restricted to forbidden blocks whose r-edges avoid the prescribed covered
+    edges. The spectrum chooses both systems and supplies an initial interval k ≤ c n^r, not
+    a complete spectrum. Disjoint mates have no common blocks; classical orthogonality is
+    not asserted. Polynomial error bounds count partial parallel classes or schedule rounds,
+    and do not assert perfect classes or a deficit bound for every round. The external polynomial
+    colouring theorem assumes a maximum-degree bound, a polynomial codegree bound and an exponential
+    edge-count cap; all are verified before application. The closed endpoints have no external
+    theorem hypotheses. The original conditional consumers remain unchanged.
+alignment:
+  statements:
+  - source: Research note, Section 5, completion avoiding an arbitrary partial Steiner system,
+      derived from article Theorem 6.3.
+    lean: RefinedAbsorption.Extensions.steiner_completion_avoiding
+    module: Palomar.ResearchNoteChallenge
+    status: proved
+  - source: Research note, Section 5, prescribed sparse intersection with a fixed Steiner
+      system.
+    lean: RefinedAbsorption.Extensions.steiner_intersection_prescribed
+    module: Palomar.ResearchNoteChallenge
+    status: proved
+  - source: Research note, Section 5, exact-intersection embedding at every sufficiently large
+      admissible order.
+    lean: RefinedAbsorption.Extensions.partialSteiner_intersection_embedding
+    module: Palomar.ResearchNoteChallenge
+    status: proved
+  - source: Research note, Section 5, initial intersection interval k ≤ c n^r, choosing both
+      systems.
+    lean: RefinedAbsorption.Extensions.steiner_intersection_spectrum_poly
+    module: Palomar.ResearchNoteChallenge
+    status: proved
+  - source: Research note, Section 6, polynomial excess in the number of partial parallel
+      classes for every sufficiently large Steiner system.
+    lean: RefinedAbsorption.Assembly.steiner_quantitatively_almost_resolvable
+    module: Palomar.ResearchNoteChallenge
+    status: proved
+  - source: Research note, Section 6, existence at all sufficiently large admissible orders,
+      with the same partial-class conclusion.
+    lean: RefinedAbsorption.Assembly.exists_quantitatively_almost_resolvable_steiner
+    module: Palomar.ResearchNoteChallenge
+    status: proved
+  - source: Research note, Section 6, polynomial-round schedule at the exact Nash–Williams
+      minimum-degree threshold.
+    lean: RefinedAbsorption.Assembly.nash_williams_scheduled_decomposition
+    module: Palomar.ResearchNoteChallenge
+    status: proved
+related_formalizations:
+- id: https://github.com/jtraverso/pippenger-spencer/tree/b19273396d369332fb489fe07e61e27c9e7f9233
+  relationship: builds-on
+  note: Pinned three-file polynomial-colouring proof cut, sharing nineteen source-identical
+    matching modules with the Nash–Williams dependency.
+- id: https://github.com/jtraverso/nash-williams-lean/tree/2603197abdbf0a600ec663f6f046f70fbd209d4a
+  relationship: builds-on
+  note: The proved large-order decomposition endpoint via Papers I–II; source graph theorem
+    remains attributed to Delcourt–Postle.

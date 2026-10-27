@@ -6,7 +6,9 @@ date: '27 October 2026'
 
 **Companion to** *Formalizing refined absorption: proof interfaces and consequences*, research note, preprint 1.0.
 
-**Editorial draft — 27 October 2026.** The formal freeze is complete; DOI reservation and the public document release remain pending.
+**Preprint 1.0 — 27 October 2026.**
+
+**Research note DOI:** [10.5281/zenodo.23685654](https://doi.org/10.5281/zenodo.23685654).
 
 © 2026 Juan Pablo Traverso Gianini. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 

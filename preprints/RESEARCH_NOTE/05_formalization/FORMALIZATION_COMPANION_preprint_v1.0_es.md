@@ -6,7 +6,9 @@ date: '27 de octubre de 2026'
 
 **Complemento de** *Formalización de la absorción refinada: interfaces de prueba y consecuencias*, research note, prepublicación 1.0.
 
-**Borrador editorial — 27 de octubre de 2026.** El freeze formal está completo; quedan pendientes la reserva del DOI y la publicación de los documentos.
+**Prepublicación 1.0 — 27 de octubre de 2026.**
+
+**DOI de la research note:** [10.5281/zenodo.23685654](https://doi.org/10.5281/zenodo.23685654).
 
 © 2026 Juan Pablo Traverso Gianini. Licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 

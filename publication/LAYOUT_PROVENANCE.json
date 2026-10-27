@@ -4,7 +4,7 @@
   "source_path": "scripts/series_template.tex",
   "source_sha256": "e9deeb8ccbfddf9a26be47898932465a4976c873d7f734eb787f198a5068e38f",
   "target": "scripts/series_template.tex",
-  "target_sha256": "d376b27679a07cc1e551c5b46e239a055eab33e923b0aeecf63db0fc656a48a3",
+  "target_sha256": "e61d5cd8fcd4ed0f0928a8dc256fbfcafa42d47ba482672e3e0b1e22b7729ef4",
   "role": "Layout authority only. Manuscript Markdown remains semantic authority.",
-  "adaptation": "Copied the Nash-Williams template exactly, then increased subsection Needspace from 4 to 11 baselines to prevent a parent heading being stranded before a child heading. Fonts, margins, title/author block and bibliography style are unchanged. The body converter keeps each named theorem statement together using the built-in samepage environment."
+  "adaptation": "Copied the Nash-Williams template exactly, then increased subsection Needspace from 4 to 11 baselines to prevent a parent heading being stranded before a child heading. Fonts, margins, title/author block and bibliography style are unchanged. The body converter keeps each named theorem statement together using the built-in samepage environment. After actual DOI insertion, a single opening line of a paragraph was stranded at the foot of the English first page. Set clubpenalty, the post-heading @clubpenalty and widowpenalty to 10000; regenerated and inspected all 35 pages. No semantic source body changed."
 }

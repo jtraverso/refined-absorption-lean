@@ -1,0 +1,135 @@
+version: v0.4
+project:
+  authors:
+  - Juan Pablo Traverso Gianini
+  license: Apache-2.0
+  responsible_maintainers:
+  - Juan Pablo Traverso Gianini
+  name: 'Refined absorption: design existence and the piecewise embedding interface'
+  description: Formalization of the refined efficient omni-absorber framework and existence
+    of simple designs for every fixed q > r ≥ 2 and index λ ≥ 1 at all sufficiently large
+    admissible orders. The development separately defines global injectivity, injectivity
+    on individual pieces and distinctness of new edges in supergraph embeddings. It proves
+    the piecewise embedding variant used by the formal constructions and a counterexample
+    to the literal global embedding conclusion in the survey. The distinction is part of the
+    formal statement, rather than an additional hypothesis left implicit.
+classification:
+  arxiv:
+  - math.CO
+  msc2020:
+  - 05B05
+  - 05B07
+  - 05C15
+  - 05C70
+automation:
+  methods:
+  - method: agent
+    models:
+    - Aristotle (Harmonic)
+    framework: Aristotle
+    tool_setup: Under the author's direction, explored constructions, developed and formalized
+      proofs, and checked extensions. Its contribution was not limited to translation of finished
+      proofs.
+  - method: agent
+    models:
+    - Codex (OpenAI)
+    framework: Codex
+    tool_setup: Migrated the retained development, assembled pinned proved inputs, exposed
+      ambient independence in an additive 6.2 interface, reviewed source fidelity and consequences,
+      prepared the manuscripts and reproducibility evidence, and performed the internal audit.
+  notes: Human authorship and responsibility remain with the author. Exact formal source revisions
+    and build records are supplied in the repository.
+review:
+  status: self-assessed
+  notes: Internal source-fidelity and mathematical review by Codex under the author's direction;
+    see publication/MATHEMATICAL_REVIEW_NOTES.md and publication/AUDIT.md. No independent
+    human or separate-agent peer review is claimed.
+status:
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - Classical.choice
+  - Quot.sound
+  - propext
+  note: The proof development has no project axiom or proof hole. The standalone Challenge
+    files deliberately use by sorry; their Solutions import the actual proofs. Endpoint queries
+    use only propext, Classical.choice and Quot.sound.
+sources:
+- title: 'Refined Absorption: A New Proof of the Existence Conjecture and Its Applications
+    to Extremal and Probabilistic Design Theory'
+  authors:
+  - Luke Postle
+  id: doi:10.1137/25M1805977
+  type: paper
+  relationship: adapts
+  location: ICM 2026, Volume 6, pp. 212–231; statement baseline arXiv:2510.19978v1
+  note: The core absorption and existence endpoints are proved. The global embedding statement
+    is distinguished from its proved piecewise variant and a counterexample to the literal
+    global conclusion.
+  author_endorsement: not-contacted
+- title: 'Refined Absorption: A New Proof of the Existence Conjecture'
+  authors:
+  - Michelle Delcourt
+  - Luke Postle
+  id: doi:10.48550/arXiv.2402.17855
+  type: paper
+  relationship: formalizes
+  location: arXiv:2402.17855v1 (2024)
+  author_endorsement: not-contacted
+- title: 'Formalizing refined absorption: proof interfaces and consequences'
+  authors:
+  - Juan Pablo Traverso Gianini
+  id: doi:10.5281/zenodo.23685654
+  type: paper
+  relationship: background
+  location: Research note, version 1.0 (2026)
+  note: Verified consequences and interface analysis; historical priority for every corollary
+    is not claimed.
+  license: CC-BY-4.0
+  author_endorsement: participated
+- title: Erdős meets Nash-Williams
+  authors:
+  - Michelle Delcourt
+  - Cicely (Cece) Henderson
+  - Thomas Lesgourgues
+  - Luke Postle
+  id: doi:10.48550/arXiv.2507.23624
+  type: paper
+  relationship: background
+  location: arXiv:2507.23624v1, Appendix B
+  note: The survey's cited proof reference was checked; the formal counterexample covers all
+    old vertices, so it is unaffected by conventions about unused old vertices.
+fidelity:
+  divergences: The statement baseline is arXiv:2510.19978v1; the DOI identifies its published
+    ICM 2026 edition. Definitions 3.6–3.7 and Lemma 3.8 were also checked in that edition.
+    The literal global embedding conclusion is refuted, not proved. The proved replacement
+    permits separate injective maps on pieces with distinct images of new edges. The existence
+    endpoint produces a finite set of blocks for every fixed λ ≥ 1, without repeated blocks.
+    General high-girth and other applications announced in the survey are outside this compared
+    scope. Thresholds are existential.
+alignment:
+  statements:
+  - source: Postle survey, arXiv:2510.19978v1 and ICM 2026 edition, Theorem 1.10 (refined
+      efficient omni-absorber).
+    lean: RefinedAbsorption.Final.theorem_1_10
+    module: Palomar.Survey2025Challenge
+    status: proved
+  - source: Postle survey, Conjecture 1.1, proved existence statement for every fixed index
+      λ ≥ 1; simple block family.
+    lean: RefinedAbsorption.existenceConjecture_proved
+    module: Palomar.Survey2025Challenge
+    status: proved
+  - source: Steiner special case λ = 1 of the survey's Conjecture 1.1.
+    lean: RefinedAbsorption.Final.existenceConjecture_steiner
+    module: Palomar.Survey2025Challenge
+    status: proved
+  - source: Counterexample to the global-injection reading of survey Definition 3.7 and Lemma
+      3.8, both checked in the arXiv and ICM editions. The selected theorem proves its negation.
+    lean: RefinedAbsorption.FaithfulSurvey2025.not_generalEmbeddingLemmaLiteral
+    module: Palomar.Survey2025Challenge
+    status: proved
+  - source: Proved piecewise replacement for survey Lemma 3.8, with new-edge distinctness;
+      not the printed global-injection conclusion.
+    lean: RefinedAbsorption.FaithfulSurvey2025.generalEmbedding_piecewise
+    module: Palomar.Survey2025Challenge
+    status: proved

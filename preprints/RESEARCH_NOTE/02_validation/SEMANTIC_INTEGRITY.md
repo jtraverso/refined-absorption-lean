@@ -14,4 +14,6 @@ Bilingual checks preserve 320 mathematical expressions in each note and 19 in ea
 
 Final PDF compiled from delivered TeX: yes, actual three-pass compiler records. Rendered QA postdates final PDF: yes. Hashes/manifests must follow this review and are recorded in the integrity directory. Unresolved mathematical/editorial content queries: none.
 
-Internal semantic audit: **PASS**. Overall verdict: `EDITORIAL_DRAFT_WITH_OPEN_GATES` until a real DOI and refreshed final release artifacts exist.
+The actual reserved DOI `10.5281/zenodo.23685654` replaces the draft header in all four sources. `publication/zenodo/DOI_INSERTION.json` binds the before/after source hashes and verifies that every body after the abstract heading is unchanged. Club/widow pagination controls are layout-only changes. Final TeX/PDF regeneration, all-page visual inspection and bilingual checks followed those edits.
+
+Internal semantic audit: **PASS**. Editorial verdict: `EDITORIALLY_READY`. Public publication and Palomar registration are evidenced separately.

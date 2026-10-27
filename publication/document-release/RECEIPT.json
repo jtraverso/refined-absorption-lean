@@ -1,0 +1,12 @@
+{
+  "status": "PASS_DOCUMENT_RELEASE_INTEGRITY",
+  "archive": "publication/document-release/research-note-preprint-v1.0.zip",
+  "sha256": "cbbcdb77a8ff83abec55f6f8c045ec80fa98777ebd4763bdfb86596e202fc8bc",
+  "files": 57,
+  "manifest": "preprints/RESEARCH_NOTE/04_integrity/DOCUMENT_MANIFEST.json",
+  "manifest_sha256": "6c795b0a99bd6c878b92839ead50642b6956e7674091d6e7d3c92cfc46b5c70b",
+  "doi": "10.5281/zenodo.23685654",
+  "scope": "Preprint 1.0: note and formal companion EN/ES with actual reserved DOI; final documents and internal audit records. Relative repository links require the complete checkout. Excludes self-hashes and reproducible local render images. Not a Palomar receipt.",
+  "editorial_verdict": "EDITORIALLY_READY",
+  "created_after_final_qa": true
+}

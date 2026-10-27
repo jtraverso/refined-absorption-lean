@@ -7,15 +7,15 @@
     },
     {
       "phase": "note_and_companion_en_es",
-      "status": "PASS_CURRENT_DRAFT"
+      "status": "PASS"
     },
     {
       "phase": "internal_audit_pass",
-      "status": "PASS_CURRENT_DRAFT"
+      "status": "PASS"
     },
     {
       "phase": "zenodo_doi_reservation",
-      "status": "PENDING"
+      "status": "PASS"
     },
     {
       "phase": "public_github_release",
@@ -37,7 +37,7 @@
     "survey_published_edition": "ICM 2026, Volume 6, pages 212-231"
   },
   "external_pending": {
-    "zenodo": "Known Zenodo Chrome tab checked again after full local document QA: browser automation still blocked by another extension UI. Existing close-panel/sign-in handoff unanswered. No reservation or DOI created.",
+    "zenodo": "Reserved DOI 10.5281/zenodo.23685654 in draft23685654. Metadata entered; final PDF upload and actual public deposit publication remain pending.",
     "github": "Authenticated gh is available outside the network sandbox. No public repository has been created.",
     "palomar": "Three scoped interfaces prepared. Syntax is checked locally; Comparator, official preflight, submission and registration remain pending."
   },
@@ -52,14 +52,14 @@
     "scope": "Immutable formal-source and local-build-evidence freeze, before manuscript drafting. Not a Palomar certificate or a document release archive."
   },
   "internal_audit": {
-    "status": "PASS_CURRENT_DRAFT",
+    "status": "PASS",
     "documents": 4,
     "rendered_pages_reviewed": 35,
     "review_summary": "preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md",
     "mechanical_result": "preprints/RESEARCH_NOTE/02_validation/AUDIT_RESULT.json",
     "visual_result": "preprints/RESEARCH_NOTE/02_validation/VISUAL_REVIEW.json",
-    "overall_editorial_verdict": "EDITORIAL_DRAFT_WITH_OPEN_GATES",
-    "reason": "No actual Zenodo DOI reservation yet; DOI insertion requires downstream regeneration and audit."
+    "overall_editorial_verdict": "EDITORIALLY_READY",
+    "reason": "Actual DOI reserved and inserted; all four final PDFs regenerated and 35 pages inspected after last correction; mathematical bodies unchanged."
   },
   "document_review_bundle": {
     "status": "PASS_CURRENT_DRAFT_DOCUMENT_INTEGRITY",
@@ -71,5 +71,29 @@
     "scope": "DOI-pending local document review bundle, not a public release or Palomar receipt. Excludes manifest/checksum self-hashes and ignored reproducible render images. Relative links require the complete repository.",
     "editorial_verdict": "EDITORIAL_DRAFT_WITH_OPEN_GATES",
     "created_after_rendered_review": true
+  },
+  "zenodo_reservation": {
+    "status": "DOI_RESERVED_NOT_PUBLISHED",
+    "id": 23685654,
+    "reserved_doi": "10.5281/zenodo.23685654",
+    "draft_url": "https://zenodo.org/uploads/23685654",
+    "title": "Formalizing refined absorption: proof interfaces and consequences",
+    "account_display_name": "Juan Pablo Traverso",
+    "reservation_method": "Zenodo web UI: saved new draft, selected No I need one, pressed Get a DOI now; read DOI in saved draft state.",
+    "reserved_on": "2026-10-27",
+    "registration_status": "DOI is reserved; registration occurs when the deposit is published.",
+    "files_uploaded": 0
+  },
+  "document_release": {
+    "status": "PASS_DOCUMENT_RELEASE_INTEGRITY",
+    "archive": "publication/document-release/research-note-preprint-v1.0.zip",
+    "sha256": "cbbcdb77a8ff83abec55f6f8c045ec80fa98777ebd4763bdfb86596e202fc8bc",
+    "files": 57,
+    "manifest": "preprints/RESEARCH_NOTE/04_integrity/DOCUMENT_MANIFEST.json",
+    "manifest_sha256": "6c795b0a99bd6c878b92839ead50642b6956e7674091d6e7d3c92cfc46b5c70b",
+    "doi": "10.5281/zenodo.23685654",
+    "scope": "Preprint 1.0: note and formal companion EN/ES with actual reserved DOI; final documents and internal audit records. Relative repository links require the complete checkout. Excludes self-hashes and reproducible local render images. Not a Palomar receipt.",
+    "editorial_verdict": "EDITORIALLY_READY",
+    "created_after_final_qa": true
   }
 }

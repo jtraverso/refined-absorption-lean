@@ -2,7 +2,7 @@
 
 Reviewer: Codex under the author's direction; no independent human review is claimed.
 
-Stage: text review completed; typesetting and full rendered-page acceptance are recorded separately. Overall release verdict remains `EDITORIAL_DRAFT_WITH_OPEN_GATES` until the required artifact and publication gates are evidenced.
+Stage: final preprint 1.0 text and rendering reviews completed after actual DOI reservation and insertion. Editorial verdict: `EDITORIALLY_READY`. Public deposit and registry outcomes are separate.
 
 ## Structure and voice
 
@@ -42,4 +42,4 @@ The initial code-span checker wrongly treated text after a fenced command block 
 
 Final TeX/PDF compilation and full-page rendered inspection now pass for all four current documents; hashes are in `AUDIT_RESULT.json` and `VISUAL_REVIEW.json`. The first visual pass identified an orphan section heading and a separated final theorem clause. Needspace and samepage layout controls corrected both without changing Markdown. All four PDFs were regenerated, rendered and inspected after that correction.
 
-Open publication gate: actual Zenodo DOI reservation. Its insertion requires fresh downstream artifacts and checks. Palomar's official checks and consent to its concrete review remain separate later stages.
+DOI `10.5281/zenodo.23685654` was reserved and inserted after the draft review. All four mathematical bodies remain byte-identical after the abstract heading; only the metadata headers changed. A resulting paragraph-orphan finding was corrected with club/widow penalties, including the post-heading club penalty. All four PDFs were regenerated and all 35 pages plus contact sheets were inspected after the final correction. Palomar's official checks and consent to its concrete review remain separate later stages.

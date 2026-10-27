@@ -1,6 +1,6 @@
 # Bibliography and version review
 
-Internal result: **PASS for the current draft**.
+Internal result: **PASS for preprint 1.0**.
 
 Both main documents and both companions contain the same thirteen numbered works, author attributions and DOI sequence. The companion records the distinction between a work identifier and the version against which statements were formalized.
 
@@ -10,4 +10,4 @@ The reserve matching citation follows the 2022 matching preprint. The survey's r
 
 The classical Lindner–Rosa result and corrigendum are both cited. Lean and Mathlib bibliographic details were checked against primary Springer and official Mathlib records. The ACM publisher endpoint returned an access error; no successful retrieval from that endpoint is claimed.
 
-The detailed source dossier is [publication/BIBLIOGRAPHIC_DOSSIER.md](../../../publication/BIBLIOGRAPHIC_DOSSIER.md). No DOI has been invented for this note: its current headers explicitly say reservation/publication pending.
+The detailed source dossier is [publication/BIBLIOGRAPHIC_DOSSIER.md](../../../publication/BIBLIOGRAPHIC_DOSSIER.md). The actual note DOI `10.5281/zenodo.23685654` was read from its saved Zenodo draft after reservation and is in all four final headers. Reservation and later public registration are distinguished in their receipts.

@@ -2,7 +2,7 @@
 
 Juan Pablo Traverso Gianini · Preprint 1.0 · 27 October 2026
 
-**Editorial draft.** Internal formal, text and rendered-document audits pass for these bytes. Zenodo DOI reservation and public publication remain pending.
+**Preprint 1.0. DOI:** [10.5281/zenodo.23685654](https://doi.org/10.5281/zenodo.23685654), reserved before publication. Internal formal, text, bilingual and rendered-document audits pass for these bytes. Publication and registry receipts are recorded separately.
 
 | Document | English | Español |
 | --- | --- | --- |

@@ -33,6 +33,11 @@ pdflang={@@PDFLANG@@},colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blu
 \date{}
 \begin{document}
 \raggedbottom
+\clubpenalty=10000
+\widowpenalty=10000
+\makeatletter
+\@clubpenalty=10000
+\makeatother
 \maketitle
 @@BODY@@
 \end{document}

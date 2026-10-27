@@ -1,6 +1,6 @@
 # Internal review of preprint 1.0
 
-**Internal audit: PASS for the current editorial draft.** Public-release verdict: `EDITORIAL_DRAFT_WITH_OPEN_GATES`, because the note's Zenodo DOI has not been reserved and the public release and Palomar stages have not occurred.
+**Internal audit: PASS for preprint 1.0. Editorial verdict: `EDITORIALLY_READY`.** Zenodo DOI `10.5281/zenodo.23685654` was actually reserved before publication, inserted in all four semantic sources, and followed by regenerated TeX/PDF, bilingual checks and inspection of all 35 final pages. Public publication and Palomar outcomes require their separate receipts.
 
 The audit is Codex's self-assessment under the author's direction. It is not independent human peer review or a Palomar certificate.
 
@@ -17,4 +17,4 @@ The audit is Codex's self-assessment under the author's direction. It is not ind
 
 Two first-pass pagination observations were resolved in the template/converter and checked on regenerated PDFs. No mathematical statement was altered to obtain a layout or audit PASS.
 
-Publication remains conditional on a real DOI reservation, refreshed documents and integrity package, public GitHub/Zenodo receipts, and Palomar's separate official checks and review. The internal PASS above does not waive any of those gates.
+The DOI reservation and refreshed final documents are evidenced. The final integrity package follows these reports. Public GitHub/Zenodo receipts and Palomar's separate official checks and review remain distinct from this internal PASS.

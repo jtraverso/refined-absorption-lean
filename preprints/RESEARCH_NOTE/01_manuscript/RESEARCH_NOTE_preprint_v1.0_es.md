@@ -6,7 +6,7 @@ date: '27 de octubre de 2026'
 
 **Research note — prepublicación 1.0, 27 de octubre de 2026.**
 
-**Borrador editorial.** La fuente formal está congelada; quedan pendientes la reserva del DOI y la difusión pública.
+**DOI:** [10.5281/zenodo.23685654](https://doi.org/10.5281/zenodo.23685654).
 
 © 2026 Juan Pablo Traverso Gianini. Licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 

@@ -1,6 +1,6 @@
 # Change log
 
-## 1.0 — current editorial draft, 27 October 2026
+## 1.0 — preprint, 27 October 2026
 
 - Wrote the research note after the completed formal freeze, with separate English and Spanish manuscripts and full companions.
 - Organized the exposition around three proof interfaces, two source-fidelity distinctions, exact-intersection consequences and two quantitative applications.
@@ -10,4 +10,6 @@
 - Corrected two first-pass pagination findings by layout controls, regenerated all PDFs and inspected all 35 final pages.
 - Recorded internal semantic, human-exposition, scope, bilingual, bibliography, artifact and visual reviews.
 
-The formal archive is immutable. This document draft has no reserved note DOI yet and makes no public-release or Palomar-registration claim.
+DOI `10.5281/zenodo.23685654` was reserved before publication and inserted in all four documents. The mathematical bodies remained unchanged. The last pagination correction prevents isolated opening/closing paragraph lines; all four PDFs were regenerated and all 35 pages reviewed again. The final integrity package follows that review.
+
+The formal archive is immutable. Public release and Palomar registration have separate receipts; neither is inferred from the internal audit.

@@ -609,14 +609,14 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 34.
 LaTeX Info: Redefining \pageref on input line 34.
 LaTeX Info: Redefining \nameref on input line 34.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
 
  (umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
 
 
 (umsb.fd
@@ -630,11 +630,11 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 
 ] [2] [3] [4] [5] [6] [7] [8]
 LaTeX Font Info:    Font shape `TU/lmmono10-regular.otf(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 284.
+(Font)              scaled to size 10.95pt on input line 289.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmmono10-regular.otf' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [9]
 [10] (RESEARCH_NOTE_preprint_v1.0_en.aux) )
-Output written on RESEARCH_NOTE_preprint_v1.0_en.xdv (10 pages, 293584 bytes).
+Output written on RESEARCH_NOTE_preprint_v1.0_en.xdv (10 pages, 293060 bytes).

@@ -1,11 +1,11 @@
 {
   "status": "PASS_RENDERED_PAGE_REVIEW",
   "reviewer": "Codex internal self-assessment",
-  "review_method": "Visual inspection of all current rendered full pages at 150 dpi and all four contact sheets, after last pagination correction.",
+  "review_method": "After final DOI insertion and paragraph-pagination correction, inspected all 35 current full-resolution rendered pages at 150 dpi plus all four final contact sheets.",
   "reviewed": [
     {
       "doc": 0,
-      "sha256": "e9ec208e0cf9bb50137bf1147090baa614ab61d18b13256bcfe51494c2ff7f4c",
+      "sha256": "9c331b8966a5c002352531bb93a9e78a6c0c228e838a674a168afcf477d62d14",
       "pages": [
         1,
         2,
@@ -18,11 +18,11 @@
         9,
         10
       ],
-      "notes": "Title/metadata, framework and reserve/counting formulas inspected full resolution; no collisions, missing glyphs or overflow. Completion/intersection statements and corrected section transition inspected; quantitative formulas and full Nash statement fit. Final proof and all bibliography entries inspected; title/body/formulas/references clear and within margins."
+      "notes": "Full current final pages inspected after DOI insertion and orphan-line correction. DOI/title, all equations/statements/proofs, transitions and references fit; no remaining finding."
     },
     {
       "doc": 1,
-      "sha256": "1d8f5ba449874bf34653ae12b253c4e800c1c80ceaa7b41c2a0f566749ae8e3e",
+      "sha256": "ba6e848f0aa222659f44c830a72808bb6d63da5e3440e027fb06c7778a4e9152",
       "pages": [
         1,
         2,
@@ -36,11 +36,11 @@
         10,
         11
       ],
-      "notes": "All full-resolution pages inspected: titles, accents, equations, full statements, proof transitions, scope and references fit. Corrected Theorem 5.1 entirely on page 6. No overflow/collision/missing glyphs."
+      "notes": "Full current final Spanish note inspected after DOI and layout correction. All statements/proof transitions/formulas/accents and references fit; no remaining finding."
     },
     {
       "doc": 2,
-      "sha256": "c54da445c6a063c7c2da0dc8090257b37d09a75098fb052e2c318e571fab76ce",
+      "sha256": "1c7b98bcbc2d0bb15bf0e8f5c1e8750ac5c9d62ddb7191f4d8eb0a6f278f4bb3",
       "pages": [
         1,
         2,
@@ -50,11 +50,11 @@
         6,
         7
       ],
-      "notes": "All full-resolution pages inspected, including all 18 canonical endpoint table rows, pins, archive/validation hashes, build/axiom table and references. No clipped content, collision, missing glyph or margin overflow."
+      "notes": "Current full English companion inspected: 18 declaration rows, exact pins/hashes, build table, reproducibility and bibliography fit after final DOI/layout changes."
     },
     {
       "doc": 3,
-      "sha256": "2d7f78b769888646527dc5062d72929a58c7c1f138236c05cd1ea33558d3a73d",
+      "sha256": "7157fe256212278639c11e6097b16057cdb66bae7a904d56d382779431408727",
       "pages": [
         1,
         2,
@@ -64,7 +64,7 @@
         6,
         7
       ],
-      "notes": "All full-resolution pages inspected, including all 18 canonical endpoint table rows, pins, archive/validation hashes, build/axiom table and references. No clipped content, collision, missing glyph or margin overflow."
+      "notes": "Current full Spanish companion inspected after final DOI/layout changes: all endpoint rows, identifiers/hashes, scope, build table, commands and references legible and within margins. No remaining finding."
     }
   ],
   "reference": {
@@ -86,6 +86,7 @@
     "theorem_page_comparison": "Actual Theorem A on reference page 6 inspected; named statements, proof paragraphs and surrounding text use consistent typography.",
     "figures": "not applicable: no figures in these documents"
   },
-  "limitations": "No independent human visual review. DOI insertion or later PDF regeneration invalidates this acceptance.",
-  "completed_utc": "2026-10-27 07:58:22 UTC"
+  "limitations": "Internal agent self-assessment, not independent human review. Any future PDF regeneration invalidates this hash-bound acceptance.",
+  "completed_utc": "2026-10-27T08:30:00.211827+00:00",
+  "edition": "Preprint 1.0 with actually reserved DOI 10.5281/zenodo.23685654"
 }

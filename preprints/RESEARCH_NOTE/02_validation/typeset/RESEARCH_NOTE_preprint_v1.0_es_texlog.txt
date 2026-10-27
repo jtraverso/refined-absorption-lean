@@ -610,14 +610,14 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 34.
 LaTeX Info: Redefining \pageref on input line 34.
 LaTeX Info: Redefining \nameref on input line 34.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
 
  (umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
 
 
 (umsb.fd
@@ -633,19 +633,19 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 
 LaTeX Font Warning: Font shape `TU/lmroman10-regular.otf(0)/m/sc' undefined
 (Font)              using `TU/lmroman10-regular.otf(0)/m/n' instead on input li
-ne 195.
+ne 200.
 
 
 Package spanish Warning: Replacing `TU/lmroman10-regular.otf(0)/m/sc' by 
-(spanish)                faked small caps on input line 195.
+(spanish)                faked small caps on input line 200.
 
 
 Package spanish Warning: Replacing `TU/lmroman10-regular.otf(0)/m/sc' by 
-(spanish)                faked small caps on input line 198.
+(spanish)                faked small caps on input line 203.
 
 [7] [8] [9]
 LaTeX Font Info:    Font shape `TU/lmmono10-regular.otf(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 284.
+(Font)              scaled to size 10.95pt on input line 289.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmmono10-regular.otf' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
@@ -658,4 +658,4 @@ LaTeX Info: Redefining \% on input line 21.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  )
-Output written on RESEARCH_NOTE_preprint_v1.0_es.xdv (11 pages, 325388 bytes).
+Output written on RESEARCH_NOTE_preprint_v1.0_es.xdv (11 pages, 324744 bytes).

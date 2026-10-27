@@ -10,12 +10,13 @@ Audit owner: Codex acting under Juan Pablo Traverso Gianini's direction. Self-as
 | Selected endpoint coverage | PASS | All eighteen selected names occur in actual frozen axiom outputs |
 | Mathematical alignment and readable proof bridges | PASS, internal scope | `../preprints/RESEARCH_NOTE/02_validation/MATHEMATICAL_ALIGNMENT.md` |
 | Editorial text review | PASS, internal scope | `../preprints/RESEARCH_NOTE/02_validation/EDITORIAL_REVIEW.md` |
-| Final TeX/PDF and rendered-page QA | PASS for current draft | Four final TeX/PDF pairs; 35 full rendered pages inspected after correction; `VISUAL_REVIEW.json` and `AUDIT_RESULT.json` |
-| Final document integrity package | PASS for current draft | `document-draft/RECEIPT.json` binds the 57-file review bundle; public release must be regenerated after DOI insertion |
-| Zenodo DOI reservation and publication | PENDING | Chrome extension/login handoff unresolved; no DOI invented |
+| Final TeX/PDF and rendered-page QA | PASS | Actual DOI inserted; four final TeX/PDF pairs; all 35 current pages inspected after the last layout correction |
+| Final document integrity package | PASS | `document-release/RECEIPT.json` binds the final 57-file package, sealed after final QA |
+| Zenodo DOI reservation | PASS | Actual saved draft 23685654: `10.5281/zenodo.23685654`, `zenodo/note-reservation.json` |
+| Zenodo public deposit publication | PENDING | Metadata entered; four final PDF uploads and publication receipt are next |
 | Public GitHub release | PENDING | To follow the required local gates and prior DOI reservation |
 | Official Palomar preflight, review and registration | PENDING | Separate exact-commit service workflow |
 
-Current editorial verdict: `EDITORIAL_DRAFT_WITH_OPEN_GATES`.
+Current editorial verdict: `EDITORIALLY_READY`.
 
-Internal mathematical, editorial and rendered-document audit: **PASS for the current DOI-pending draft**. No overall public-release PASS or registry registration is claimed. DOI insertion invalidates downstream PDF, visual and integrity records and requires their regeneration. The frozen Lean/configuration bytes remain unchanged during manuscript preparation.
+Internal mathematical, editorial, bilingual, rendered-document and integrity audit: **PASS for preprint 1.0**. After actual DOI insertion, all four PDFs were regenerated and every page inspected again. Public-release outcomes and Palomar registration require their separate receipts. The frozen Lean/configuration bytes remain unchanged.

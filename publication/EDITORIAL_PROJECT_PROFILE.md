@@ -2,7 +2,7 @@
 
 Project: Refined absorption formalization and research note.
 Paper title: Formalizing refined absorption: proof interfaces and consequences.
-Manuscript version: 1.0 editorial draft, authored after the completed clean formal freeze; English and Spanish note and companion exist.
+Manuscript version: preprint 1.0, authored after the completed formal freeze; actual DOI 10.5281/zenodo.23685654 reserved and inserted. English and Spanish note and companion pass the final internal editorial audit.
 Target journal: No journal selected; public research note with a Zenodo DOI.
 Audience: Combinatorialists familiar with designs and absorption; Lean experience is not assumed.
 Editorial owner: Juan Pablo Traverso Gianini.

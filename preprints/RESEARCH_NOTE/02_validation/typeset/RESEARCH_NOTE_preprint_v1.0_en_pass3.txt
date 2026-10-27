@@ -1,5 +1,5 @@
 note: Running TeX ...
 note: Running xdvipdfmx ...
-note: Writing `<REPO>\preprints\RESEARCH_NOTE\01_manuscript\RESEARCH_NOTE_preprint_v1.0_en.aux` (4.9697265625 KiB)
-note: Writing `<REPO>\preprints\RESEARCH_NOTE\01_manuscript\RESEARCH_NOTE_preprint_v1.0_en.pdf` (94.8984375 KiB)
 note: Writing `<REPO>\preprints\RESEARCH_NOTE\01_manuscript\RESEARCH_NOTE_preprint_v1.0_en.log` (24.234375 KiB)
+note: Writing `<REPO>\preprints\RESEARCH_NOTE\01_manuscript\RESEARCH_NOTE_preprint_v1.0_en.aux` (4.9697265625 KiB)
+note: Writing `<REPO>\preprints\RESEARCH_NOTE\01_manuscript\RESEARCH_NOTE_preprint_v1.0_en.pdf` (94.95703125 KiB)

@@ -1,6 +1,6 @@
 # Publications and evidence
 
-The new publication is a research note with a separate formalization and reproducibility companion. Both are available in English and Spanish. **Current status: DOI-pending editorial draft; internal audit PASS.**
+The new publication is a research note with a separate formalization and reproducibility companion. Both are available in English and Spanish. **Preprint 1.0: internal audit PASS. DOI [10.5281/zenodo.23685654](https://doi.org/10.5281/zenodo.23685654), reserved before publication.**
 
 Start with the [document index](preprints/RESEARCH_NOTE/README.md), the [internal review summary](preprints/RESEARCH_NOTE/02_validation/REVIEW_SUMMARY.md) or the [formal freeze receipt](publication/formal-freeze/FREEZE.json).
 
@@ -13,4 +13,4 @@ The two mathematical source works are:
 
 The note's quantitative application reuses the proof documented in the author's Nash–Williams [Paper I](https://doi.org/10.5281/zenodo.23428173) and [Paper II](https://doi.org/10.5281/zenodo.23502224). Those papers remain in their existing publication repository.
 
-Three scoped Palomar entries are prepared: `Article2024` (six endpoints), `Survey2025` (five endpoints) and `ResearchNote` (seven endpoints). The new note's actual DOI must be inserted after reservation. Official preflight, submission, review and registration have not occurred. Current local proof evidence is not presented as any of those receipts.
+Three scoped Palomar entries are prepared: `Article2024` (six endpoints), `Survey2025` (five endpoints) and `ResearchNote` (seven endpoints). The note's reserved DOI is 10.5281/zenodo.23685654 and is included in all three metadata files. Official preflight, submission, review and registration have not occurred. Current local proof evidence is not presented as any of those receipts.

@@ -1,0 +1,129 @@
+version: v0.4
+project:
+  authors:
+  - Juan Pablo Traverso Gianini
+  license: Apache-2.0
+  responsible_maintainers:
+  - Juan Pablo Traverso Gianini
+  name: 'Refined absorption: refiners, reserve matchings and compatible decompositions'
+  description: Formalization of the refined omni-absorber and refiner theorems of Delcourt–Postle,
+    the reserve-matching theorem for labelled multi-hypergraphs, and the dense decomposition
+    theorem with compatibility against a prescribed packing. The compatible absorber endpoint
+    explicitly keeps the entire old vertex set independent, including isolated labels. The
+    original support-based endpoint is retained. The construction follows the refined absorption
+    framework and gives an explicit deduction of compatible absorbers from dense decomposition
+    results. Constants and order thresholds are existential.
+classification:
+  arxiv:
+  - math.CO
+  msc2020:
+  - 05B05
+  - 05B07
+  - 05C15
+  - 05C70
+automation:
+  methods:
+  - method: agent
+    models:
+    - Aristotle (Harmonic)
+    framework: Aristotle
+    tool_setup: Under the author's direction, explored constructions, developed and formalized
+      proofs, and checked extensions. Its contribution was not limited to translation of finished
+      proofs.
+  - method: agent
+    models:
+    - Codex (OpenAI)
+    framework: Codex
+    tool_setup: Migrated the retained development, assembled pinned proved inputs, exposed
+      ambient independence in an additive 6.2 interface, reviewed source fidelity and consequences,
+      prepared the manuscripts and reproducibility evidence, and performed the internal audit.
+  notes: Human authorship and responsibility remain with the author. Exact formal source revisions
+    and build records are supplied in the repository.
+review:
+  status: self-assessed
+  notes: Internal source-fidelity and mathematical review by Codex under the author's direction;
+    see publication/MATHEMATICAL_REVIEW_NOTES.md and publication/AUDIT.md. No independent
+    human or separate-agent peer review is claimed.
+status:
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - Classical.choice
+  - Quot.sound
+  - propext
+  note: The proof development has no project axiom or proof hole. The standalone Challenge
+    files deliberately use by sorry; their Solutions import the actual proofs. Endpoint queries
+    use only propext, Classical.choice and Quot.sound.
+sources:
+- title: 'Refined Absorption: A New Proof of the Existence Conjecture'
+  authors:
+  - Michelle Delcourt
+  - Luke Postle
+  id: doi:10.48550/arXiv.2402.17855
+  type: paper
+  relationship: formalizes
+  location: arXiv:2402.17855v1 (2024)
+  author_endorsement: not-contacted
+- title: 'Refined Absorption: A New Proof of the Existence Conjecture and Its Applications
+    to Extremal and Probabilistic Design Theory'
+  authors:
+  - Luke Postle
+  id: doi:10.1137/25M1805977
+  type: paper
+  relationship: background
+  location: ICM 2026, Volume 6, pp. 212–231; statement baseline arXiv:2510.19978v1
+  note: The core absorption and existence endpoints are proved. The global embedding statement
+    is distinguished from its proved piecewise variant and a counterexample to the literal
+    global conclusion.
+  author_endorsement: not-contacted
+- title: 'Formalizing refined absorption: proof interfaces and consequences'
+  authors:
+  - Juan Pablo Traverso Gianini
+  id: doi:10.5281/zenodo.23685654
+  type: paper
+  relationship: background
+  location: Research note, version 1.0 (2026)
+  note: Verified consequences and interface analysis; historical priority for every corollary
+    is not claimed.
+  license: CC-BY-4.0
+  author_endorsement: participated
+fidelity:
+  divergences: The 2024 article's theorem numbers are used. Hypergraphs in the 1.7 and 1.11
+    interfaces carry explicit vertex sets, including isolated vertices. Refined families retain
+    bounded edge usage, bounded member size and the separate refinement-degree bound. The
+    2.8 endpoint allows labelled parallel copies and does not add disjointness of the named
+    sets A and B. The added 6.2 endpoint retains all previous conclusions and additionally
+    makes the whole old ambient set independent; it does not require the absorber to avoid
+    old vertices altogether. Theorems quantify over ordinary finite objects in universe 0.
+    This is a selection of principal statements, not a claim that every statement of the article
+    is compared.
+alignment:
+  statements:
+  - source: Delcourt–Postle, arXiv:2402.17855v1, Theorem 1.7 (refined omni-absorber).
+    lean: RefinedAbsorption.Faithful2024.theorem_1_7
+    module: Palomar.Article2024Challenge
+    status: proved
+  - source: Delcourt–Postle, arXiv:2402.17855v1, Theorem 1.11 (refiner, including the family
+      refinement-degree bound).
+    lean: RefinedAbsorption.Faithful2024.theorem_1_11
+    module: Palomar.Article2024Challenge
+    status: proved
+  - source: Delcourt–Postle, arXiv:2402.17855v1, Theorem 6.1 (dense divisible decomposition).
+    lean: RefinedAbsorption.Original2024.theorem_6_1
+    module: Palomar.Article2024Challenge
+    status: proved
+  - source: Delcourt–Postle, arXiv:2402.17855v1, Theorem 2.8 (labelled multi-hypergraph reserve
+      matching).
+    lean: RefinedAbsorption.Pending.theorem_2_8
+    module: Palomar.Article2024Challenge
+    status: proved
+  - source: Delcourt–Postle, arXiv:2402.17855v1, Theorem 6.2; additive interface explicitly
+      retaining independence of all old ambient vertices.
+    lean: RefinedAbsorption.Faithful2024.theorem_6_2_ambient
+    module: Palomar.Article2024Challenge
+    status: proved
+  - source: Delcourt–Postle, arXiv:2402.17855v1, Theorem 6.3 (compatible decomposition against
+      a prescribed packing).
+    lean: RefinedAbsorption.Pending.theorem_6_3
+    module: Palomar.Article2024Challenge
+    status: proved
