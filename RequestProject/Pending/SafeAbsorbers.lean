@@ -133,7 +133,10 @@ theorem exists_rootLightGadget {q r : ℕ} (c B : ℕ)
   let ψ : Fin k ↪ Fin n := ⟨fun i => (Tv.equivFin.symm i).1, fun i j h =>
     Tv.equivFin.symm.injective (Subtype.val_injective h)⟩
   have hψ : ∀ i, ψ i ∈ Tv := fun i => (Tv.equivFin.symm i).2
-  have hrange : ∀ x ∈ Tv, ∃ i, ψ i = x := fun x hx => ⟨Tv.equivFin ⟨x, hx⟩, by simp [ψ]⟩
+  have hrange : ∀ x ∈ Tv, ∃ i, ψ i = x := fun x hx =>
+    ⟨Tv.equivFin ⟨x, hx⟩, by
+      change ((Tv.equivFin.symm (Tv.equivFin ⟨x, hx⟩)) : Fin n) = x
+      simp⟩
   have hpre : ∀ e ∈ W, (e.preimage ψ ψ.injective.injOn).map ψ = e := by
     intro e he
     ext x

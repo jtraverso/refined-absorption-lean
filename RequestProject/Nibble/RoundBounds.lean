@@ -1,5 +1,6 @@
 module
 public import RequestProject.Nibble.Waste
+public import Mathlib.Analysis.Complex.ExponentialBounds
 
 /-!
 # Numerical estimates for one nibble round

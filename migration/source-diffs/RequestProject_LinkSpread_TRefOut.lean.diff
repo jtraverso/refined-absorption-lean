@@ -1,0 +1,14 @@
+--- original/RequestProject/LinkSpread/TRefOut.lean
++++ rc3/RequestProject/LinkSpread/TRefOut.lean
+@@ -133,9 +133,9 @@
+   set ends : Finset (Fin n) → E₁ ⊕ E₂ → Finset (Fin n) :=
+     fun T => Sum.elim (ends₁ T) (ends₂ T) with hendsdef
+   have hsplit : X.image tg = (X.image tg).filter p ∪ (X.image tg).filter (fun T => ¬ p T) :=
+-    (filter_union_filter_neg_eq _ _).symm
++    (filter_union_filter_not_eq _ _).symm
+   have hdisj : Disjoint ((X.image tg).filter p) ((X.image tg).filter (fun T => ¬ p T)) :=
+-    disjoint_filter_filter_neg _ _ _
++    disjoint_filter_filter_not _ _ _
+   refine ⟨E₁ ⊕ E₂, inferInstance, g, ends,
+     fun T => if p T then (R₁ T).image Sum.inl else (R₂ T).image Sum.inr,
+     fun T => if p T then (𝒲₁ T).image (image Sum.inl) else (𝒲₂ T).image (image Sum.inr),

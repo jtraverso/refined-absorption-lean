@@ -59,6 +59,7 @@ theorem map_enumEmb {W : Type} [DecidableEq W] {q : ℕ} (Q : Finset W) (h : Q.c
   · rintro ⟨s, rfl⟩; exact (Q.equivFin.symm _).2
   · intro hx
     refine ⟨Fin.cast h (Q.equivFin ⟨x, hx⟩), ?_⟩
+    change ((Q.equivFin.symm (Fin.cast h.symm (Fin.cast h (Q.equivFin ⟨x, hx⟩)))) : W) = x
     simp
 
 /-- The indexed presentation of a multi-absorber. -/

@@ -1,0 +1,14 @@
+--- original/checks/ExtensionsAxioms.lean
++++ rc3/checks/ExtensionsAxioms.lean
+@@ -1,6 +1,8 @@
+-import RequestProject.Extensions.Count
+-import RequestProject.Extensions.Subsystem
+-import RequestProject.Extensions.AlmostResolvable
++module
++
++public import RequestProject.Extensions.Count
++public import RequestProject.Extensions.Subsystem
++public import RequestProject.Extensions.AlmostResolvable
+ 
+ open RefinedAbsorption.Extensions
+ 

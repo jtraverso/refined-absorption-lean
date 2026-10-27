@@ -1,0 +1,17 @@
+--- original/RequestProject/LinkSpread/Chain.lean
++++ rc3/RequestProject/LinkSpread/Chain.lean
+@@ -71,12 +71,12 @@
+ theorem mdeg_liftEnds_eq_sum (X : Finset E) (S : Finset (Fin n)) :
+     mdeg (liftEnds tg bd) X S =
+       ∑ T ∈ X.image tg, mdeg (fun c => T ∪ bd c) (fibre tg X T) S := by
+-  unfold mdeg
++  unfold mdeg liftEnds fibre
+   rw [card_eq_sum_card_fiberwise (f := tg) (t := X.image tg)
+     (by intro x hx; exact mem_image_of_mem _ (mem_filter.1 hx).1)]
+   refine sum_congr rfl fun T _ => congrArg card ?_
+   ext x
+-  simp only [mem_filter, fibre, liftEnds]
++  simp only [mem_filter]
+   constructor
+   · rintro ⟨⟨hx, hS⟩, rfl⟩; exact ⟨⟨hx, rfl⟩, hS⟩
+   · rintro ⟨⟨hx, rfl⟩, hS⟩; exact ⟨⟨hx, hS⟩, rfl⟩

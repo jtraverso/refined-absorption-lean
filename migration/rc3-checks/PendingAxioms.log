@@ -1,0 +1,3 @@
+COMMAND ["C:\\Users\\jtraverso\\.elan\\toolchains\\leanprover--lean4---v4.35.0-rc3\\bin\\lean.exe", "--root=C:\\nw\\refined-absorption-lean", "-j1", "-M4096", "-DmaxHeartbeats=1600000", "-DmaxRecDepth=8192", "-o", "C:\\nw\\refined-absorption-lean\\.lake\\build\\lib\\lean\\checks\\PendingAxioms.olean", "-i", "C:\\nw\\refined-absorption-lean\\.lake\\build\\lib\\lean\\checks\\PendingAxioms.ilean", "C:\\nw\\refined-absorption-lean\\checks\\PendingAxioms.lean"]
+'RefinedAbsorption.nibbleForDesigns' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.generalEmbeddingLemma' depends on axioms: [propext, Classical.choice, Quot.sound]

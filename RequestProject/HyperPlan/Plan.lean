@@ -222,9 +222,9 @@ lemma plan_stResR (hok : PlanOKR q r L sp X) {t : ℕ} (ht : t < sp.length)
     · simp [pwR, hSe]
     · intro e' he'' hne
       simp only [pwR]
-      rw [if_neg]
-      intro hS'
-      exact hne (hlone e' (by rw [← outs_inpR (K := K) q r t]; exact he'') hS')
+      by_cases hS' : S ⊆ e'
+      · exact False.elim (hne (hlone e' (by rw [← outs_inpR (K := K) q r t]; exact he'') hS'))
+      · simp [hS']
     · intro h; exact absurd he h
   rwa [hcl] at h1
 

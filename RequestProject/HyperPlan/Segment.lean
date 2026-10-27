@@ -44,7 +44,7 @@ lemma prunR_append_add (l₁ l₂ : List (SpecR n K)) (P : Finset (Finset (Fin n
     ∀ t, prunR (l₁ ++ l₂) P (l₁.length + t) = prunR l₂ (prunR l₁ P l₁.length) t := by
   intro t
   induction t with
-  | zero => simpa using prunR_append_le l₁ l₂ P l₁.length le_rfl
+  | zero => simpa [prunR] using prunR_append_le l₁ l₂ P l₁.length le_rfl
   | succ t ih =>
     rw [← Nat.add_assoc, prunR_succ, prunR_succ]
     simp only [rtR, ih, List.getD_append_right _ _ _ _ (by omega : l₁.length ≤ l₁.length + t),

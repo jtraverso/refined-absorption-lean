@@ -14,21 +14,29 @@ their presence does not establish mathematical priority over the literature.
 
 ## Migration status
 
-The complete returned development is being migrated from Lean 4.28.0 to the version
+The complete returned development has been migrated from Lean 4.28.0 to the version
 used by the related Palomar registrations:
 
 - Lean `4.35.0-rc3`;
 - Mathlib `c55e6e786f49471c72fbddbec5415808896aec1e`;
 - 300 original Lean sources, including the returned check scripts.
 
+On 27 October 2026 all 301 current sources compiled locally: the 300 retained
+originals and one shared Mathlib import module. The eight original check modules
+ran 354 axiom queries, all reporting only Lean's foundational axioms. The source
+audit records 56 adjusted original files, no deletions, no textual changes to
+declaration headers, and no active `sorry`, `admit` or project axiom declarations.
+These are source-preservation checks, not a cross-version kernel equivalence test.
+
 The immutable input is Aristotle task `8717482d-2162-428e-9db4-f6de76bc61fe` in project
 `88ab8568-7432-483b-897c-4163327799b2`. Original source hashes are recorded in
 `provenance/source-baseline.json`; returned summaries are historical evidence, not
 independent build certificates. Local migration output is kept under `migration/`.
 
-The current build must finish before this repository is described as migrated or
-ready for submission. There is no Palomar registration or published research note
-for this development yet.
+The evidence is frozen in `migration/VALIDATION.json`, `migration/rc3-checks/` and
+`migration/VERIFICATION.txt`. A clean standard Lake build and independent registry
+verification remain separate gates. There is no Palomar registration or published
+research note for this development yet.
 
 ## Build
 
@@ -43,6 +51,10 @@ The local migration additionally uses `tools/build_local.py` to compile every so
 against an existing verified dependency cache without modifying that cache. This is
 separate evidence from a standard clean Lake build. Its machine-local configuration
 is ignored by Git; it is not a public dependency specification.
+
+The default Lake targets include both `RequestProject` and `checks`, so the portable
+configuration also selects the eight check modules. This does not assert that a
+single aggregate source module imports or re-exports every declaration.
 
 ## Statement fidelity and external interfaces
 

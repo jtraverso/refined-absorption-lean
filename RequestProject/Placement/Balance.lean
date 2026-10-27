@@ -1,5 +1,5 @@
 module
-public import Mathlib
+public import RequestProject.MathlibImports
 
 /-!
 # Greedy balancing of choices

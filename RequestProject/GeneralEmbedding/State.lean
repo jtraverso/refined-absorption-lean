@@ -176,6 +176,7 @@ theorem accDeg_insert_le {𝒮 : Finset (Finset ι)} {H : Finset ι} (hH : H ∉
       obtain ⟨he1, he2⟩ := mem_filter.1 he
       refine mem_union_right _ (mem_map.2 ⟨e, mem_filter.2 ⟨he1, he2, ?_, hA2⟩, rfl⟩)
       unfold pimg at hA1
+      change A ⊆ embedEdge (Function.update φ H f H) e at hA1
       simpa [Function.update_self] using hA1
   calc _ ≤ _ := card_le_card hsub
     _ ≤ _ := card_union_le _ _

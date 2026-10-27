@@ -181,7 +181,7 @@ theorem outerInv_step {r k : ℕ} (I : Finset ι) (Rs : ι → Finset (Fin n))
     rw [filter_union]
     refine (card_union_le _ _).trans (Nat.add_le_add (hGd B hB) ?_)
     have := deg_used_le I Rs Ts G s hsI Φ hinv hw hlam1 hDeg B hB
-    simpa [K, placeK, M, placeM, lam] using this
+    simpa [deg, used, K, placeK, M, placeM, lam] using this
   have hroot : ∀ J ⊆ Rs i, J.card ≤ r - 1 → load Rs Φ s J ∅ ≤ D * n ^ (r - 1 - J.card) := by
     intro J _ hJ
     refine le_trans (card_le_card ?_) (hrootI J hJ)

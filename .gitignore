@@ -1,6 +1,7 @@
 .lake/
 tools/__pycache__/
 migration/build/
+migration/build.lock
 migration/local-environment.json
 *.olean
 *.ilean

@@ -243,12 +243,15 @@ theorem placedMultiplicityReduction {q r : ℕ} (hr : 2 ≤ r) (hrq : r < q) (C 
     have hSne : S.Nonempty := by rw [← card_pos, hS']; omega
     have step1 : ((𝒲.image fun W => W.biUnion img).filter fun W' => S ⊆ vertexSet W').card ≤
         (𝒲.filter fun W => S ⊆ vertexSet (W.biUnion img)).card := by
-      refine le_trans (card_le_card (t := (𝒲.filter fun W => S ⊆ vertexSet (W.biUnion img)).image
-        fun W => W.biUnion img) ?_) card_image_le
-      intro W' hW'
-      obtain ⟨hW'm, hSW'⟩ := mem_filter.1 hW'
-      obtain ⟨W, hW, rfl⟩ := mem_image.1 hW'm
-      exact mem_image.2 ⟨W, mem_filter.2 ⟨hW, hSW'⟩, rfl⟩
+      calc
+        _ ≤ ((𝒲.filter fun W => S ⊆ vertexSet (W.biUnion img)).image
+            fun W => W.biUnion img).card := by
+          apply card_le_card
+          intro W' hW'
+          obtain ⟨hW'm, hSW'⟩ := mem_filter.1 hW'
+          obtain ⟨W, hW, rfl⟩ := mem_image.1 hW'm
+          exact mem_image.2 ⟨W, mem_filter.2 ⟨hW, hSW'⟩, rfl⟩
+        _ ≤ _ := card_image_le
     have step2 : (𝒲.filter fun W => S ⊆ vertexSet (W.biUnion img)).card ≤
         (P.filter fun p => S ⊆ pvOf V₀ Mem Φ I p).card := by
       rw [← card_map ⟨Sum.inl, Sum.inl_injective⟩]

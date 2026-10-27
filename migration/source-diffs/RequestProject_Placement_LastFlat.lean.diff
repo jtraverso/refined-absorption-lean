@@ -1,0 +1,11 @@
+--- original/RequestProject/Placement/LastFlat.lean
++++ rc3/RequestProject/Placement/LastFlat.lean
+@@ -75,7 +75,7 @@
+   unfold lfX at h
+   rw [dif_pos hi, dif_pos hj] at h
+   have := (lnk ends Z X T).equivFin.symm.injective (Subtype.ext h)
+-  simpa using this
++  exact congrArg Fin.val this
+ 
+ theorem image_lfX (e₀ : E) (T : Finset (Fin n)) :
+     (range (lfM ends Z X T)).image (lfX ends Z X e₀ T) = lnk ends Z X T := by

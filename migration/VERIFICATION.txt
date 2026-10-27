@@ -1,0 +1,63 @@
+Refined absorption migration verification
+Completed locally: 27 October 2026, America/Santiago
+
+RESULT: full source compilation PASS (301/301).
+
+Lean: 4.35.0-rc3, commit 470d5ce1400764999581fd26d5d72b00d990b0f4.
+Mathlib: c55e6e786f49471c72fbddbec5415808896aec1e.
+The nine dependency checkouts matched their pinned manifest revisions.
+Dependencies were reused from the existing local cache; new proof artifacts were
+written only inside this new project.
+
+Scope: 293 RequestProject modules and eight original check modules. These include
+all 300 Lean sources returned by Aristotle and the new MathlibImports module.
+All eight check modules executed in the final migration run. Their 354 axiom
+queries report only propext, Classical.choice and Quot.sound (or no axioms).
+The closed endpoints for the original article's 2.8, 6.2 and 6.3 typecheck against
+their retained contracts in checks/PendingEndpoints.lean. The eleven intersection
+endpoints are included in checks/IntersectionAxioms.lean.
+
+Preservation: 56 original files adjusted; no original Lean source deleted;
+no textual declaration-header differences; no active sorry, admit, axiom,
+native_decide, implemented_by, unsafe or extern declarations in project sources.
+The comparison is textual and does not establish cross-version kernel equivalence.
+The original source archive, hashes, configuration and historical ledgers remain
+under provenance/. Proof-script differences are under migration/source-diffs/.
+
+Commands completed:
+  python tools/build_local.py --jobs 3
+  python tools/audit_migration.py
+  python tools/record_validation.py
+  lake --packages=.lake/local-packages.json env lean --version
+  git diff --check
+
+The local runner invoked Lean on every source, respecting its internal import
+dependencies, with -j1 -M4096 -DmaxHeartbeats=1600000 -DmaxRecDepth=8192.
+Module-local options in the original sources remain in force.
+The frozen JSON records the exact source and resulting olean hashes, and the
+fresh check logs are copied under migration/rc3-checks/.
+
+One cache-metadata discrepancy is retained explicitly in VALIDATION.json:
+Nibble.RoundBounds compiled its current source bytes successfully after adding
+Mathlib.Analysis.Complex.ExponentialBounds, but an early runner retry retained
+the previous import list for that cache fingerprint. The added import uses the
+same pinned Mathlib; the source hash and successful compilation record agree.
+The validation checks this exact external-import-only discrepancy without
+rewriting the historical cache. The runner now refreshes imports before queuing
+each module. All reused modules passed the strict current fingerprint comparison.
+
+Limits:
+1. This was complete direct Lean compilation using pinned existing dependencies,
+   not a clean standard Lake build. The earlier --no-build Lake probe in
+   lake-basic.log stopped because native build artifacts needed rebuilding;
+   it is not a successful build certificate. The portable Lake configuration
+   selects all 301 sources, but a clean build/CI and Palomar's independent
+   comparison and kernel replay have not been performed for this repository.
+2. The quantitative Pippenger-Spencer and Nash-Williams consumers still have
+   their original explicit external theorem hypotheses. Migration does not
+   discharge them or complete cross-library assembly.
+3. The survey's global embedding interpretation has a formal counterexample;
+   the retained piecewise variant must not be advertised as that literal claim.
+4. No mathematical priority is established for the extension consequences.
+   The orthogonal_mate name does not assert classical Steiner orthogonality.
+5. No public repository, note publication or registry submission was created.

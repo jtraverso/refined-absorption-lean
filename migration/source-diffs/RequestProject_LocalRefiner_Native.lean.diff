@@ -1,0 +1,8 @@
+--- original/RequestProject/LocalRefiner/Native.lean
++++ rc3/RequestProject/LocalRefiner/Native.lean
+@@ -1,4 +1,5 @@
+ module
++public import Mathlib.Analysis.Complex.ExponentialBounds
+ public import RequestProject.LocalRefiner.Loads
+ public import RequestProject.Placement.Assembly
+ 

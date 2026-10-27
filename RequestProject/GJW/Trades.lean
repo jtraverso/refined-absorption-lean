@@ -1,5 +1,5 @@
 module
-public import Mathlib
+public import RequestProject.MathlibImports
 
 /-!
 # Integer-weighted `r`-graphs, null designs and trades

@@ -1,0 +1,92 @@
+COMMAND ["C:\\Users\\jtraverso\\.elan\\toolchains\\leanprover--lean4---v4.35.0-rc3\\bin\\lean.exe", "--root=C:\\nw\\refined-absorption-lean", "-j1", "-M4096", "-DmaxHeartbeats=1600000", "-DmaxRecDepth=8192", "-o", "C:\\nw\\refined-absorption-lean\\.lake\\build\\lib\\lean\\checks\\QuantitativeAxioms.olean", "-i", "C:\\nw\\refined-absorption-lean\\.lake\\build\\lib\\lean\\checks\\QuantitativeAxioms.ilean", "C:\\nw\\refined-absorption-lean\\checks\\QuantitativeAxioms.lean"]
+PippengerSpencerPolynomial : Prop
+@[expose] def RefinedAbsorption.External.PippengerSpencerPolynomial : Prop :=
+∀ (k : ℕ),
+  2 ≤ k →
+    ∀ (δ : ℝ),
+      0 < δ →
+        δ < 1 →
+          ∃ γ,
+            0 < γ ∧
+              ∃ D₀,
+                ∀ (V : Type) [Fintype V] [inst : DecidableEq V] (H : Finset (Finset V)) (D : ℝ),
+                  D₀ ≤ D →
+                    PippengerSpencer.IsUniform H k →
+                      (∀ (v : V), ↑(PippengerSpencer.degree H v) ≤ D) →
+                        (∀ (u v : V), u ≠ v → ↑(PippengerSpencer.codegree H u v) ≤ D ^ (1 - δ)) →
+                          ↑H.card ≤ Real.exp (D ^ γ) →
+                            ∃ m c, ↑m ≤ D + D ^ (1 - γ) ∧ PippengerSpencer.IsProperEdgeColouring H m c
+NashWilliamsExternal : Prop
+@[expose] def RefinedAbsorption.External.NashWilliamsExternal : Prop :=
+∃ N,
+  ∀ (V : Type) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],
+    N ≤ Fintype.card V →
+      NashWilliams.IsTriangleDivisible G →
+        3 * Fintype.card V ≤ 4 * G.minDegree → NashWilliams.HasTriangleDecomposition G
+@steiner_quantitatively_almost_resolvable : ∀ {q r : ℕ},
+  PippengerSpencerPolynomial →
+    2 ≤ r →
+      r < q →
+        ∃ γ,
+          0 < γ ∧
+            γ < 1 ∧
+              ∃ n₀,
+                ∀ n ≥ n₀,
+                  ∀ (𝒮 : Finset (Finset (Fin n))),
+                    RefinedAbsorption.IsSteinerSystem q r 𝒮 →
+                      ∃ m c,
+                        ↑((n - 1).choose (r - 1)) / ↑((q - 1).choose (r - 1)) ≤ ↑m ∧
+                          ↑m ≤
+                              ↑((n - 1).choose (r - 1)) / ↑((q - 1).choose (r - 1)) +
+                                (↑((n - 1).choose (r - 1)) / ↑((q - 1).choose (r - 1))) ^ (1 - γ) ∧
+                            ∀ B ∈ 𝒮, ∀ B' ∈ 𝒮, B ≠ B' → c B = c B' → Disjoint B B'
+'RefinedAbsorption.Extensions.steiner_quantitatively_almost_resolvable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@exists_quantitatively_almost_resolvable_steiner : ∀ {q r : ℕ},
+  PippengerSpencerPolynomial →
+    2 ≤ r →
+      r < q →
+        ∃ γ,
+          0 < γ ∧
+            γ < 1 ∧
+              ∃ n₀,
+                ∀ n ≥ n₀,
+                  RefinedAbsorption.DesignDivisibility n q r 1 →
+                    ∃ 𝒮,
+                      RefinedAbsorption.IsSteinerSystem q r 𝒮 ∧
+                        ∃ m c,
+                          ↑((n - 1).choose (r - 1)) / ↑((q - 1).choose (r - 1)) ≤ ↑m ∧
+                            ↑m ≤
+                                ↑((n - 1).choose (r - 1)) / ↑((q - 1).choose (r - 1)) +
+                                  (↑((n - 1).choose (r - 1)) / ↑((q - 1).choose (r - 1))) ^ (1 - γ) ∧
+                              ∀ B ∈ 𝒮, ∀ B' ∈ 𝒮, B ≠ B' → c B = c B' → Disjoint B B'
+'RefinedAbsorption.Extensions.exists_quantitatively_almost_resolvable_steiner' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+nash_williams_scheduled_decomposition : PippengerSpencerPolynomial →
+  NashWilliamsExternal →
+    ∃ γ,
+      0 < γ ∧
+        γ < 1 ∧
+          ∃ n₀,
+            ∀ (V : Type) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],
+              n₀ ≤ Fintype.card V →
+                NashWilliams.IsTriangleDivisible G →
+                  3 * Fintype.card V ≤ 4 * G.minDegree →
+                    ∃ T,
+                      NashWilliams.IsTriangleDecomposition G T ∧
+                        ∃ m c,
+                          PippengerSpencer.IsProperEdgeColouring T m c ∧
+                            ↑G.maxDegree / 2 ≤ ↑m ∧ ↑m ≤ ↑G.maxDegree / 2 + (↑G.maxDegree / 2) ^ (1 - γ)
+'RefinedAbsorption.External.nash_williams_scheduled_decomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RefinedAbsorption.External.two_mul_degree_of_isTriangleDecomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RefinedAbsorption.External.codegree_le_one_of_isTriangleDecomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RefinedAbsorption.Extensions.degree_eq_deg_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.codegree_eq_deg_pair' depends on axioms: [propext, Classical.choice, Quot.sound]

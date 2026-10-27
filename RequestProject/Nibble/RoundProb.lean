@@ -1,4 +1,5 @@
 module
+public import Mathlib.Algebra.Order.Chebyshev
 public import RequestProject.Nibble.Hyper
 
 /-!

@@ -1,5 +1,5 @@
 module
-public import Mathlib
+public import RequestProject.MathlibImports
 
 /-!
 # Explicit external interfaces for the quantitative extensions

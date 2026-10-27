@@ -75,7 +75,10 @@ theorem exists_rootedTemplate {q r : ℕ} (hr : 1 ≤ r) (hrq : r < q) (c : ℕ)
   let ψ : Fin k ↪ V := ⟨fun i => (T.equivFin.symm i).1, fun i j h =>
     T.equivFin.symm.injective (Subtype.val_injective h)⟩
   have hψT : ∀ i, ψ i ∈ T := fun i => (T.equivFin.symm i).2
-  have hrange : ∀ x ∈ T, ∃ i, ψ i = x := fun x hx => ⟨T.equivFin ⟨x, hx⟩, by simp [ψ]⟩
+  have hrange : ∀ x ∈ T, ∃ i, ψ i = x := fun x hx =>
+    ⟨T.equivFin ⟨x, hx⟩, by
+      change ((T.equivFin.symm (T.equivFin ⟨x, hx⟩)) : V) = x
+      simp⟩
   have hpre : ∀ e ∈ L, (e.preimage ψ ψ.injective.injOn).map ψ = e := by
     intro e he
     ext x

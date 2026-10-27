@@ -68,7 +68,7 @@ theorem gmap_biUnion {U W ι : Type*} [DecidableEq U] [DecidableEq W] [Decidable
 
 theorem gmap_singleton {U W : Type*} [DecidableEq U] [DecidableEq W] (f : U ↪ W) (e : Finset U) :
     gmap f {e} = {e.map f} := by
-  simp [gmap]; rfl
+  simp [gmap]
 
 theorem exists_Iset_map {q r : ℕ} {V : Type} [DecidableEq V] {f : Fin q ↪ V} {e : Finset V}
     (he : e ⊆ univ.map f) (hc : e.card = r) : ∃ I ∈ Iset q r, I.map f = e := by

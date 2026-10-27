@@ -107,9 +107,9 @@ lemma plan_stRes (hok : PlanOK sp X) {t : ℕ} (ht : t < sp.length) (Ls : Finset
       · simp [pwP, hu]
       · intro e' he'' hne
         simp only [pwP]
-        rw [if_neg]
-        intro hu'
-        exact hne (hlon e' (by rw [← outs_inp (K := K) q t]; exact he'') hu')
+        by_cases hu' : u ∈ e'
+        · exact False.elim (hne (hlon e' (by rw [← outs_inp (K := K) q t]; exact he'') hu'))
+        · simp [hu']
       · intro h; exact absurd he h
     rw [hcls, castHom_eq_zero_iff hd] at hc
     simp [hc]

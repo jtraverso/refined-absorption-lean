@@ -1,0 +1,9 @@
+--- original/RequestProject/General/Coloring.lean
++++ rc3/RequestProject/General/Coloring.lean
+@@ -1,5 +1,5 @@
+ module
+-public import Mathlib
++public import RequestProject.MathlibImports
+ 
+ /-!
+ # Colouring the new copies so that no piece contains two copies of the same colour

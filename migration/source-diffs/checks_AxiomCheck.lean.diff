@@ -1,0 +1,16 @@
+--- original/checks/AxiomCheck.lean
++++ rc3/checks/AxiomCheck.lean
+@@ -1,7 +1,9 @@
+-import RequestProject.Main
+-import RequestProject.Final
+-import RequestProject.Applications
+-import RequestProject.SurveyCorollaries
++module
++
++public import RequestProject.Main
++public import RequestProject.Final
++public import RequestProject.Applications
++public import RequestProject.SurveyCorollaries
+ open RefinedAbsorption
+ #print axioms nibbleLeftoverDegree_of_egjWeightedMatching
+ #print axioms nibbleWithReserves_of_egjWeightedMatching

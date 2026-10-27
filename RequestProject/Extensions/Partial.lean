@@ -148,7 +148,6 @@ theorem sum_goodExt_le {q r k : ℕ} (U : Finset V) :
     have hy2 : y.2 ∉ y.1 := (mem_filter.1 hy.2).2.1
     have e1 : x.1 = y.1 := by
       have := congrArg (fun s => s.erase x.2) h1
-      simp only at this
       rw [erase_insert hx2, h2, erase_insert hy2] at this
       exact this
     exact Sigma.ext e1 (heq_of_eq h2)

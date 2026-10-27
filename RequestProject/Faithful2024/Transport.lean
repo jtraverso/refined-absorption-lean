@@ -244,8 +244,8 @@ theorem isRefiner_map {q r : ℕ} {X R : HGraph α} {𝓗 : Finset (Finset (Fins
     exact map_subset_map.2 hs
   · intro H hH
     obtain ⟨H', hH', rfl⟩ := mem_map.1 hH
-    simp only [mf2_apply, HGraph.map_edges, filter_map]
-    rw [card_map]
+    change ((H'.map (mf f)).filter (fun e => e ∈ X.edges.map (mf f))).card ≤ 1
+    rw [filter_map, card_map]
     refine le_trans (le_of_eq ?_) (h.oneX H' hH')
     congr 1
     apply filter_congr
@@ -307,7 +307,8 @@ theorem refDegree_map (r : ℕ) (R : HGraph α) (𝓗 : Finset (Finset (Finset �
   rw [HGraph.map_verts, powersetCard_map, sup_map]
   congr 1
   funext S
-  simp only [Function.comp, mf_apply]
+  change ((𝓗.map (mf2 f)).filter (fun H => S.map f ⊆ vertexSet H)).card =
+    (𝓗.filter (fun H => S ⊆ vertexSet H)).card
   rw [filter_map, card_map]
   congr 1
   apply filter_congr
@@ -332,7 +333,9 @@ theorem univ_map_finEmb (s : Finset α) : (univ : Finset (Fin s.card)).map (finE
   constructor
   · rintro ⟨i, rfl⟩; exact (s.equivFin.symm i).2
   · intro ha
-    exact ⟨s.equivFin ⟨a, ha⟩, by simp [finEmb]⟩
+    exact ⟨s.equivFin ⟨a, ha⟩, by
+      change ((s.equivFin.symm (s.equivFin ⟨a, ha⟩)) : α) = a
+      simp⟩
 
 /-- The hypergraph on `Fin |s|` whose image under `finEmb s` is `G` (when `V(G) = s`). -/
 noncomputable def pullback (s : Finset α) (G : HGraph α) : HGraph (Fin s.card) :=

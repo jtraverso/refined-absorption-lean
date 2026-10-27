@@ -1,0 +1,14 @@
+--- original/checks/PendingEndpoints.lean
++++ rc3/checks/PendingEndpoints.lean
+@@ -1,6 +1,8 @@
+-import RequestProject.Pending.Theorem28
+-import RequestProject.Pending.Theorem63Final
+-import RequestProject.Pending.Theorem62
++module
++
++public import RequestProject.Pending.Theorem28
++public import RequestProject.Pending.Theorem63Final
++public import RequestProject.Pending.Theorem62
+ 
+ /-! Endpoint check for the three formerly pending results of arXiv:2402.17855v1. -/
+ 

@@ -1,0 +1,24 @@
+COMMAND ["C:\\Users\\jtraverso\\.elan\\toolchains\\leanprover--lean4---v4.35.0-rc3\\bin\\lean.exe", "--root=C:\\nw\\refined-absorption-lean", "-j1", "-M4096", "-DmaxHeartbeats=1600000", "-DmaxRecDepth=8192", "-o", "C:\\nw\\refined-absorption-lean\\.lake\\build\\lib\\lean\\checks\\FaithfulAxioms.olean", "-i", "C:\\nw\\refined-absorption-lean\\.lake\\build\\lib\\lean\\checks\\FaithfulAxioms.ilean", "C:\\nw\\refined-absorption-lean\\checks\\FaithfulAxioms.lean"]
+'RefinedAbsorption.Faithful2024.theorem_1_7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Faithful2024.theorem_1_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Faithful2024.theorem_3_8_conclusion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Faithful2024.theorem_3_8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Faithful2024.theorem_3_7_for_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Faithful2024.theorem_3_7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Faithful2024.theorem_3_8_conclusion_via_3_7' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RefinedAbsorption.Faithful2024.lemma_6_4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.FaithfulSurvey2025.isGlobalEmbedding_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.FaithfulSurvey2025.IsGlobalEmbedding.injective_piece' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RefinedAbsorption.FaithfulSurvey2025.IsGlobalEmbedding.newEdgesDistinct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RefinedAbsorption.FaithfulSurvey2025.not_generalEmbeddingLemmaLiteral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RefinedAbsorption.FaithfulSurvey2025.generalEmbedding_piecewise' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

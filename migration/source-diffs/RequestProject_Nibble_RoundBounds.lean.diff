@@ -1,0 +1,9 @@
+--- original/RequestProject/Nibble/RoundBounds.lean
++++ rc3/RequestProject/Nibble/RoundBounds.lean
+@@ -1,5 +1,6 @@
+ module
+ public import RequestProject.Nibble.Waste
++public import Mathlib.Analysis.Complex.ExponentialBounds
+ 
+ /-!
+ # Numerical estimates for one nibble round

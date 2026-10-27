@@ -1,5 +1,5 @@
 module
-public import Mathlib
+public import RequestProject.MathlibImports
 
 /-!
 # Uniformly random permutations of a set of new vertices

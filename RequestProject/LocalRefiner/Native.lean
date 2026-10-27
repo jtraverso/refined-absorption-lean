@@ -1,4 +1,5 @@
 module
+public import Mathlib.Analysis.Complex.ExponentialBounds
 public import RequestProject.LocalRefiner.Loads
 public import RequestProject.Placement.Assembly
 

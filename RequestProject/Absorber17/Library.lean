@@ -87,7 +87,9 @@ theorem exists_template {q r : ℕ} (hr : 1 ≤ r) (hrq : r < q) {k : ℕ}
   have he : (Fin.castLEEmb hN).trans (splitEmb (k := k) (show N ≤ M by omega)) =
       Function.Embedding.inl := by
     ext i
-    simp [splitEmb, i.2]
+    change (if h : i.1 < k then Sum.inl (⟨i.1, h⟩ : Fin k)
+      else Sum.inr (⟨i.1 - k, by omega⟩ : Fin M)) = Sum.inl i
+    rw [dif_pos i.2]
   rw [he] at hφ
   exact ⟨M, _, _, _, hφ⟩
 
@@ -177,7 +179,10 @@ theorem absorberLibrary {q r : ℕ} (hr : 1 ≤ r) (hrq : r < q) (c : ℕ) :
   let ψ : Fin k ↪ V := ⟨fun i => (T.equivFin.symm i).1, fun i j h =>
     T.equivFin.symm.injective (Subtype.val_injective h)⟩
   have hψT : ∀ i, ψ i ∈ T := fun i => (T.equivFin.symm i).2
-  have hrange : ∀ x ∈ T, ∃ i, ψ i = x := fun x hx => ⟨T.equivFin ⟨x, hx⟩, by simp [ψ]⟩
+  have hrange : ∀ x ∈ T, ∃ i, ψ i = x := fun x hx =>
+    ⟨T.equivFin ⟨x, hx⟩, by
+      change ((T.equivFin.symm (T.equivFin ⟨x, hx⟩)) : V) = x
+      simp⟩
   have hpre : ∀ e ∈ L, (e.preimage ψ ψ.injective.injOn).map ψ = e := by
     intro e he
     ext x

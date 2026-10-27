@@ -1,0 +1,9 @@
+--- original/RequestProject/Placement/Balance.lean
++++ rc3/RequestProject/Placement/Balance.lean
+@@ -1,5 +1,5 @@
+ module
+-public import Mathlib
++public import RequestProject.MathlibImports
+ 
+ /-!
+ # Greedy balancing of choices

@@ -1,0 +1,9 @@
+--- original/RequestProject/GJW/Trades.lean
++++ rc3/RequestProject/GJW/Trades.lean
+@@ -1,5 +1,5 @@
+ module
+-public import Mathlib
++public import RequestProject.MathlibImports
+ 
+ /-!
+ # Integer-weighted `r`-graphs, null designs and trades

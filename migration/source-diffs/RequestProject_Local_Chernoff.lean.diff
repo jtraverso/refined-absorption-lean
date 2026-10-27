@@ -1,0 +1,20 @@
+--- original/RequestProject/Local/Chernoff.lean
++++ rc3/RequestProject/Local/Chernoff.lean
+@@ -1,5 +1,7 @@
+ module
+-public import Mathlib
++public import RequestProject.MathlibImports
++public import Mathlib.Analysis.Convex.SpecificFunctions.Basic
++public import Mathlib.Algebra.BigOperators.Field
+ 
+ /-!
+ # A Chernoff bound on finite product spaces (counting form)
+@@ -80,7 +82,7 @@
+   have hbound : ∏ i, ∑ ω, Real.exp (X i ω / b) ≤
+       ∏ i, ((Fintype.card Ω : ℝ) *
+         Real.exp ((Real.exp 1 - 1) * ((∑ ω, X i ω) / Fintype.card Ω) / b)) :=
+-    prod_le_prod (fun i _ => sum_nonneg fun ω _ => (Real.exp_pos _).le)
++    prod_le_prod₀ (fun i _ => sum_nonneg fun ω _ => (Real.exp_pos _).le)
+       fun i _ => sum_exp_le (X i) hb (hX0 i) (hXb i)
+   have hprod2 : ∏ i, ((Fintype.card Ω : ℝ) *
+         Real.exp ((Real.exp 1 - 1) * ((∑ ω, X i ω) / Fintype.card Ω) / b)) =

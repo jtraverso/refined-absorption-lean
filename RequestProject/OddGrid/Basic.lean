@@ -137,7 +137,7 @@ lemma lcls_walkL (p : V) (tl : List V) (h : (p :: tl).IsChain (· ≠ ·)) (w : 
       (if v = p then w else 0) + (-1) ^ (tl.length + 1) *
         (if v = (p :: tl).getLast (List.cons_ne_nil _ _) then w else 0) := by
   induction tl generalizing p w with
-  | nil => simp only [walkL, lcls, List.getLast_singleton]; split_ifs <;> simp
+  | nil => simp only [walkL, lcls, List.getLast_singleton]; split_ifs with hv <;> simp [hv]
   | cons q rest ih =>
     have hpq : p ≠ q := (List.isChain_cons_cons.1 h).1
     have h' := (List.isChain_cons_cons.1 h).2

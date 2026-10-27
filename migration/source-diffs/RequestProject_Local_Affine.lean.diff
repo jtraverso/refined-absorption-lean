@@ -1,0 +1,29 @@
+--- original/RequestProject/Local/Affine.lean
++++ rc3/RequestProject/Local/Affine.lean
+@@ -1,5 +1,7 @@
+ module
+ public import RequestProject.Local.Chernoff
++public import Mathlib.Algebra.Field.ZMod
++public import Mathlib.Algebra.GroupWithZero.Units.Fintype
+ 
+ /-!
+ # Random affine relabellings and the spreading of set systems
+@@ -100,7 +102,8 @@
+ 
+ theorem card_aff_eq_le (z w : ZMod p) :
+     (univ.filter fun g : AffG p => (g.1 : ZMod p) * z + g.2 = w).card ≤ p - 1 := by
+-  rw [← ZMod.card_units p, ← card_univ]
++  have hc : Fintype.card (ZMod p)ˣ = p - 1 := by rw [Fintype.card_units, ZMod.card]
++  rw [← hc, ← card_univ]
+   refine card_le_card_of_injOn Prod.fst (fun _ _ => mem_coe.2 (mem_univ _)) ?_
+   intro g hg h hh e
+   simp only [coe_filter, mem_univ, true_and, Set.mem_setOf_eq] at hg hh
+@@ -225,7 +228,7 @@
+   simp only [card_filter]; exact sum_comm
+ 
+ theorem card_affG : Fintype.card (AffG p) = (p - 1) * p := by
+-  rw [Fintype.card_prod, ZMod.card_units, ZMod.card]
++  rw [Fintype.card_prod, Fintype.card_units, ZMod.card]
+ 
+ /-- The moved load of the pair `(x, y)` in the system `v` after the map `g`. -/
+ noncomputable def movedLoad (emb : ZMod p ↪ V) (A : ∀ v, κ v → Finset V) (x y : V) (v : ι)

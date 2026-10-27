@@ -2,6 +2,7 @@ module
 public import RequestProject.FlatDown.Basic
 public import RequestProject.RefinerOne.Chain
 public import RequestProject.MultiRefiner.FakeEdge
+public import Mathlib.Algebra.BigOperators.ModEq
 
 /-!
 # Refiners for multigraphs with few distinct edges
@@ -288,8 +289,10 @@ theorem filter_sel_Ico_true (L : Finset (E ⊕ MLab V)) (e : Finset V) {k : ℕ}
     (hk : k = (M - (L.filter fun c => mEnds ends c = e).card % M) % M) :
     ((resIdx ends X M e).filter fun i => selBit ends X M L e i = true) =
       Ico (cls ends X e).card ((cls ends X e).card + k) := by
-  ext i
-  simp only [resIdx, clen, mem_filter, mem_Ico, selBit]
+  apply Finset.ext
+  intro i
+  rw [Finset.mem_filter]
+  simp only [resIdx, clen, mem_Ico, selBit]
   constructor
   · rintro ⟨⟨h1, h2⟩, h3⟩
     simp only [show ¬ i < (cls ends X e).card by omega, if_false, decide_eq_true_eq] at h3
@@ -307,8 +310,10 @@ theorem filter_sel_Ico_false (L : Finset (E ⊕ MLab V)) (e : Finset V) {k : ℕ
     (hk : k = (M - (L.filter fun c => mEnds ends c = e).card % M) % M) :
     ((resIdx ends X M e).filter fun i => selBit ends X M L e i = false) =
       Ico ((cls ends X e).card + k) ((cls ends X e).card + M) := by
-  ext i
-  simp only [resIdx, clen, mem_filter, mem_Ico, selBit]
+  apply Finset.ext
+  intro i
+  rw [Finset.mem_filter]
+  simp only [resIdx, clen, mem_Ico, selBit]
   constructor
   · rintro ⟨⟨h1, h2⟩, h3⟩
     simp only [show ¬ i < (cls ends X e).card by omega, if_false, decide_eq_false_iff_not,

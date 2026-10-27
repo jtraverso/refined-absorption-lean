@@ -85,9 +85,8 @@ theorem mdeg_mapEnds_eq_sum {ψ : V → V'} {ends : E → Finset V} {G : Finset 
       intro S' hS' hsub
       obtain ⟨-, himg, -⟩ := mem_pullbacks.1 hS'
       exact hS (himg ▸ image_subset_image hsub)
-  unfold mdeg
+  unfold mdeg mapEnds
   rw [card_filter]
-  simp only [RefineDown.mapEnds] at key ⊢
   rw [sum_congr rfl key]
   simp only [card_filter]
   exact sum_comm

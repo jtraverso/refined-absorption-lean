@@ -1,0 +1,10 @@
+--- original/RequestProject/GeneralEmbedding/Counting.lean
++++ rc3/RequestProject/GeneralEmbedding/Counting.lean
+@@ -1,6 +1,6 @@
+ module
+ public import RequestProject.GeneralEmbedding.Defs
+-public import Mathlib
++public import RequestProject.MathlibImports
+ 
+ /-!
+ # Counting lemmas for the General Embedding Lemma

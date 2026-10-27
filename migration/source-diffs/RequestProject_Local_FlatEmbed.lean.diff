@@ -1,0 +1,20 @@
+--- original/RequestProject/Local/FlatEmbed.lean
++++ rc3/RequestProject/Local/FlatEmbed.lean
+@@ -2,6 +2,7 @@
+ public import RequestProject.Local.Affine
+ public import RequestProject.Local.LocalAssembly
+ public import RequestProject.Sharp.Sparsify
++public import Mathlib.NumberTheory.Bertrand
+ 
+ /-!
+ # Random embedding of flat local refiners (Lemma 4.1, link level `1`, `r = 3`)
+@@ -254,7 +255,7 @@
+       (s.filter fun a => Φ (f a)).card + (t.filter fun b => Φ (g b)).card := by
+   classical
+   simp only [card_filter, Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr]
+-  rw [sum_coe_sort s (fun a => if Φ (f a) then 1 else 0),
+-    sum_coe_sort t (fun b => if Φ (g b) then 1 else 0)]
++  exact congrArg₂ Nat.add (sum_coe_sort s (fun a => if Φ (f a) then 1 else 0))
++    (sum_coe_sort t (fun b => if Φ (g b) then 1 else 0))
+ 
+ end RefinedAbsorption.Local

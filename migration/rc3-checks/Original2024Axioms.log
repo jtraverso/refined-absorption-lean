@@ -1,0 +1,19 @@
+COMMAND ["C:\\Users\\jtraverso\\.elan\\toolchains\\leanprover--lean4---v4.35.0-rc3\\bin\\lean.exe", "--root=C:\\nw\\refined-absorption-lean", "-j1", "-M4096", "-DmaxHeartbeats=1600000", "-DmaxRecDepth=8192", "-o", "C:\\nw\\refined-absorption-lean\\.lake\\build\\lib\\lean\\checks\\Original2024Axioms.olean", "-i", "C:\\nw\\refined-absorption-lean\\.lake\\build\\lib\\lean\\checks\\Original2024Axioms.ilean", "C:\\nw\\refined-absorption-lean\\checks\\Original2024Axioms.lean"]
+'RefinedAbsorption.Original2024.theorem_1_4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Original2024.theorem_3_8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Original2024.theorem_3_8_flat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Original2024.multiRefinerFlat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Original2024.MultiRefinerFlatConclusion.exists_inside' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RefinedAbsorption.Original2024.theorem_1_11' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Original2024.theorem_1_11_strong' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Original2024.theorem_1_7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Original2024.theorem_1_7_strong' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Original2024.theorem_6_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Original2024.theorem_1_1_steiner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Original2024.theorem_1_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Original2024.decomposition_complete_minus_sparse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RefinedAbsorption.Original2024.theorem_3_7_local' depends on axioms: [propext, Classical.choice, Quot.sound]

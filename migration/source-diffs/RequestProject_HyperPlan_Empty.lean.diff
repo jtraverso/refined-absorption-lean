@@ -1,0 +1,18 @@
+--- original/RequestProject/HyperPlan/Empty.lean
++++ rc3/RequestProject/HyperPlan/Empty.lean
+@@ -117,7 +117,6 @@
+         · refine ⟨e.erase u, hf, p', hp', ?_⟩
+           have : insert u p'.1 = insert u g := hpe
+           have h1 := congrArg (·.erase u) this
+-          simp only at h1
+           rw [erase_insert (hok.uro p' hp'), erase_insert hug] at h1
+           exact h1
+         · exfalso
+@@ -267,7 +266,6 @@
+   rw [← linkF_image_insert, card_image_of_injOn]
+   intro f hf g hg hfg
+   have h1 := congrArg (·.erase u) hfg
+-  simp only at h1
+   rwa [erase_insert (mem_linkF.1 hf).1, erase_insert (mem_linkF.1 hg).1] at h1
+ 
+ /-- **The sets containing `u` at the end of the lifted segment** correspond to the final family of

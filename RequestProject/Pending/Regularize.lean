@@ -1,5 +1,6 @@
 module
 public import RequestProject.Nibble.Hyper
+public import Mathlib.Algebra.Field.ZMod
 
 /-!
 # Regularising a hypergraph by layers and fibre progressions
@@ -58,7 +59,11 @@ theorem mem_liftFib [NeZero M] {x : β} {s x₀ : ZMod M} {v : β × Fin k × ZM
   · rintro ⟨j, -, rfl⟩; exact ⟨rfl, rfl⟩
   · rintro ⟨h1, h2⟩
     exact ⟨v.2.1, mem_univ _, by
-      obtain ⟨a, b, c⟩ := v; simp only at h1 h2; simp [h1, h2]⟩
+      obtain ⟨a, b, c⟩ := v
+      change a = x at h1
+      change c = x₀ + ((b : ℕ) : ZMod M) * s at h2
+      change (x, b, x₀ + ((b : ℕ) : ZMod M) * s) = (a, b, c)
+      rw [h1, h2]⟩
 
 theorem card_liftReal (F : Finset β) (l : Fin k × ZMod M) : (liftReal F l).card = F.card := by
   unfold liftReal; rw [card_map]

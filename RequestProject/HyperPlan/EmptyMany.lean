@@ -216,7 +216,6 @@ theorem liftSegU_inv (hL : LiftHypU U tw l' T P) :
           subst huv
           have hgp' : g = p.1 := by
             have h1 := congrArg (·.erase u) hgp
-            simp only at h1
             rwa [erase_insert hug, erase_insert (fun h => disjoint_left.1 hpU h huU)] at h1
           rw [prunR_succ, hgp']
           exact mem_biUnion.2 ⟨_, hf, List.mem_toFinset.2 (List.mem_map_of_mem hp)⟩

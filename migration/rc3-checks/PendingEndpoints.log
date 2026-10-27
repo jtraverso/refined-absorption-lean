@@ -1,0 +1,59 @@
+COMMAND ["C:\\Users\\jtraverso\\.elan\\toolchains\\leanprover--lean4---v4.35.0-rc3\\bin\\lean.exe", "--root=C:\\nw\\refined-absorption-lean", "-j1", "-M4096", "-DmaxHeartbeats=1600000", "-DmaxRecDepth=8192", "-o", "C:\\nw\\refined-absorption-lean\\.lake\\build\\lib\\lean\\checks\\PendingEndpoints.olean", "-i", "C:\\nw\\refined-absorption-lean\\.lake\\build\\lib\\lean\\checks\\PendingEndpoints.ilean", "C:\\nw\\refined-absorption-lean\\checks\\PendingEndpoints.lean"]
+RefinedAbsorption.Pending.theorem_2_8 : RefinedAbsorption.Faithful2024.Theorem_2_8
+RefinedAbsorption.Pending.theorem_6_3 : RefinedAbsorption.Faithful2024.Theorem_6_3
+RefinedAbsorption.Pending.theorem_6_2 : RefinedAbsorption.Faithful2024.Theorem_6_2
+@[expose] def RefinedAbsorption.Faithful2024.Theorem_2_8 : Prop :=
+∀ (r : ℕ),
+  2 ≤ r →
+    ∀ (β : ℝ),
+      0 < β →
+        β < 1 →
+          ∃ Dβ α,
+            0 < α ∧
+              α < 1 ∧
+                ∀ (D : ℝ),
+                  ↑Dβ ≤ D →
+                    ∀ (V E : Type) [inst : DecidableEq V] [inst_1 : DecidableEq E] (ends : E → Finset V)
+                      (V₁ V₂ A B : Finset V) (G₁ G₂ : Finset E),
+                      (∀ e ∈ G₁ ∪ G₂, (ends e).card = r) →
+                        (∀ (u v : V),
+                            u ≠ v → ↑(RefinedAbsorption.Faithful2024.codeg2 ends (G₁ ∪ G₂) u v) ≤ D ^ (1 - β)) →
+                          Disjoint G₁ G₂ →
+                            RefinedAbsorption.Faithful2024.IsBipartiteHyp ends V₂ G₂ A B →
+                              (∀ b ∈ B, ↑(RefinedAbsorption.Faithful2024.vdeg ends G₂ b) ≤ D) →
+                                (∀ a ∈ A, D ^ (1 - α) ≤ ↑(RefinedAbsorption.Faithful2024.vdeg ends G₂ a)) →
+                                  (∀ e ∈ G₁, ends e ⊆ V₁) →
+                                    V₁ ∩ V₂ = A →
+                                      (∀ v ∈ V₁, ↑(RefinedAbsorption.Faithful2024.vdeg ends G₁ v) ≤ D) →
+                                        (∀ a ∈ A,
+                                            D * (1 - D ^ (-β)) ≤ ↑(RefinedAbsorption.Faithful2024.vdeg ends G₁ a)) →
+                                          ∃ M, RefinedAbsorption.Faithful2024.IsAPerfectMatching ends (G₁ ∪ G₂) M A
+@[expose] def RefinedAbsorption.Faithful2024.Theorem_6_3 : Prop :=
+∀ (q r : ℕ),
+  1 ≤ r →
+    r < q →
+      ∃ n₀ ε,
+        0 < ε ∧
+          ∀ n ≥ n₀,
+            ∀ (G : Finset (Finset (Fin n))),
+              RefinedAbsorption.IsRGraph r G →
+                RefinedAbsorption.IsDivisible q r G →
+                  RefinedAbsorption.MinDegGE r G ((1 - ε) * ↑n) →
+                    ∀ (Q₁ : Finset (Finset (Fin n))),
+                      RefinedAbsorption.IsPacking q r G Q₁ →
+                        ∃ Q₂, RefinedAbsorption.IsDecomposition q r G Q₂ ∧ ∀ P₁ ∈ Q₁, ∀ P₂ ∈ Q₂, (P₁ ∩ P₂).card ≤ r
+@[expose] def RefinedAbsorption.Faithful2024.Theorem_6_2 : Prop :=
+∀ (q r : ℕ),
+  1 ≤ r →
+    r < q →
+      ∀ (m : ℕ) (L : Finset (Finset (Fin m))),
+        RefinedAbsorption.IsRGraph r L →
+          RefinedAbsorption.IsDivisible q r L →
+            ∃ h A Q₁ Q₂,
+              RefinedAbsorption.IsAbsorber q r (RefinedAbsorption.gmap Function.Embedding.inl L) A ∧
+                RefinedAbsorption.IsDecomposition q r A Q₁ ∧
+                  RefinedAbsorption.IsDecomposition q r (A ∪ RefinedAbsorption.gmap Function.Embedding.inl L) Q₂ ∧
+                    ∀ P₁ ∈ Q₁, ∀ P₂ ∈ Q₂, (P₁ ∩ P₂).card ≤ r
+'RefinedAbsorption.Pending.theorem_2_8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Pending.theorem_6_3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Pending.theorem_6_2' depends on axioms: [propext, Classical.choice, Quot.sound]

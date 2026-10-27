@@ -14,8 +14,16 @@ import os
 import re
 import subprocess
 import time
+import msvcrt
 
 ROOT = Path(__file__).resolve().parents[1]
+lockpath=ROOT/"migration/build.lock"
+lock=lockpath.open("a+b")
+lock.seek(0)
+if not lock.read(1):
+    lock.write(b"0");lock.flush()
+lock.seek(0)
+msvcrt.locking(lock.fileno(),msvcrt.LK_NBLCK,1)
 parser=argparse.ArgumentParser()
 parser.add_argument("--jobs",type=int,default=2)
 args=parser.parse_args()
@@ -54,11 +62,11 @@ def save():
     statepath.write_text(json.dumps(state,indent=2)+"\n",encoding="utf-8")
     verifiedpath.write_text(json.dumps(verified,indent=2)+"\n",encoding="utf-8")
 
-def fingerprint(n):
-    return hashlib.sha256(json.dumps(dict(source=sha(sources[n]),
+def fingerprint(n,source_hash):
+    return hashlib.sha256(json.dumps(dict(source=source_hash,
        imports={c:done.get(c,"PINNED_"+setup["mathlib_commit"]) for c in deps[n]}),sort_keys=True).encode()).hexdigest()
 
-def compile_one(n,digest):
+def compile_one(n,digest,source_hash):
     p=sources[n]
     obj=lib/p.relative_to(ROOT).with_suffix(".olean")
     obj.parent.mkdir(parents=True,exist_ok=True)
@@ -66,6 +74,8 @@ def compile_one(n,digest):
     cmd=[lean,"--root="+str(ROOT),"-j1","-M4096","-DmaxHeartbeats=1600000",
          "-DmaxRecDepth=8192","-o",str(obj),"-i",str(obj.with_suffix(".ilean")),str(p)]
     start=time.monotonic()
+    if sha(p)!=source_hash:
+        return dict(module=n,source_changed=True)
     with log.open("w",encoding="utf-8") as out:
         out.write("COMMAND "+json.dumps(cmd)+"\n");out.flush()
         try:
@@ -73,12 +83,30 @@ def compile_one(n,digest):
         except subprocess.TimeoutExpired:
             out.write("\nTIMEOUT after 1800 seconds\n");code=124
     return dict(module=n,exit_code=code,seconds=round(time.monotonic()-start,2),
-                fingerprint=digest,log=str(log.relative_to(ROOT)),source_sha256=sha(p))
+                fingerprint=digest,log=str(log.relative_to(ROOT)),source_sha256=source_hash,
+                source_changed=sha(p)!=source_hash)
 
 save()
 with ThreadPoolExecutor(max_workers=args.jobs) as pool:
     while pending or running:
+        # A repaired failed module can be retried while independent jobs continue.
+        for n,event in list(state["failed"].items()):
+            if sha(sources[n])!=event["source_sha256"]:
+                deps[n]=re.findall(r"^\s*(?:public\s+)?(?:meta\s+)?import\s+([\w.]+)",
+                    sources[n].read_text(encoding="utf-8"),re.M)
+                del state["failed"][n]
+                pending.add(n)
+        again=True
+        while again:
+            again=False
+            for n in list(state["blocked"]):
+                if not any(c in state["failed"] or c in state["blocked"] for c in deps[n]):
+                    state["blocked"].remove(n)
+                    pending.add(n)
+                    again=True
         for n in sorted(list(pending)):
+            deps[n]=re.findall(r"^\s*(?:public\s+)?(?:meta\s+)?import\s+([\w.]+)",
+                sources[n].read_text(encoding="utf-8"),re.M)
             if any(c in state["failed"] or c in state["blocked"] for c in deps[n]):
                 pending.remove(n);state["blocked"].append(n)
                 continue
@@ -86,13 +114,14 @@ with ThreadPoolExecutor(max_workers=args.jobs) as pool:
                 break
             if any(c in sources and c not in done for c in deps[n]):
                 continue
-            digest=fingerprint(n)
+            source_hash=sha(sources[n])
+            digest=fingerprint(n,source_hash)
             obj=lib/sources[n].relative_to(ROOT).with_suffix(".olean")
             pending.remove(n)
             if verified.get(n)==digest and obj.exists():
                 done[n]=digest;state["reused"].append(n)
                 continue
-            future=pool.submit(compile_one,n,digest)
+            future=pool.submit(compile_one,n,digest,source_hash)
             running[future]=n
         save()
         if not running:
@@ -103,7 +132,9 @@ with ThreadPoolExecutor(max_workers=args.jobs) as pool:
         for future in completed:
             n=running.pop(future)
             event=future.result()
-            if event["exit_code"]:
+            if event["source_changed"]:
+                pending.add(n)
+            elif event["exit_code"]:
                 state["failed"][n]=event
             else:
                 done[n]=event["fingerprint"];verified[n]=event["fingerprint"]

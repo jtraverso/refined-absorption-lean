@@ -1,5 +1,5 @@
 module
-public import Mathlib
+public import RequestProject.MathlibImports
 
 /-!
 # Basic definitions: `r`-graphs, `K_q^r`-divisibility, packings and decompositions

@@ -1,0 +1,17 @@
+COMMAND ["C:\\Users\\jtraverso\\.elan\\toolchains\\leanprover--lean4---v4.35.0-rc3\\bin\\lean.exe", "--root=C:\\nw\\refined-absorption-lean", "-j1", "-M4096", "-DmaxHeartbeats=1600000", "-DmaxRecDepth=8192", "-o", "C:\\nw\\refined-absorption-lean\\.lake\\build\\lib\\lean\\checks\\ExtensionsAxioms.olean", "-i", "C:\\nw\\refined-absorption-lean\\.lake\\build\\lib\\lean\\checks\\ExtensionsAxioms.ilean", "C:\\nw\\refined-absorption-lean\\checks\\ExtensionsAxioms.lean"]
+'RefinedAbsorption.Extensions.partialSteiner_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.partialSteiner_embedding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.partialSteiner_embeds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.log_card_steinerSystems_theta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.steiner_extends_subsystem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.steiner_with_subsystem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.optimal_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.optimal_packing_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.optimal_covering' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.packing_leftover_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.covering_excess_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.steiner_almost_resolvable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefinedAbsorption.Extensions.exists_almost_resolvable_steiner' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RefinedAbsorption.Extensions.resolution_classes_lower' depends on axioms: [propext, Classical.choice, Quot.sound]

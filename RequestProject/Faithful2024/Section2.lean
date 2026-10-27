@@ -1,5 +1,5 @@
 module
-public import Mathlib
+public import RequestProject.MathlibImports
 
 /-!
 # Section 2.2 of arXiv:2402.17855v1: Definitions 2.6, 2.7 and Theorem 2.8 (Nibble with Reserves)

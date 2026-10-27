@@ -162,7 +162,7 @@ theorem outerInvA_step {r k : ℕ} (Z : Finset (Fin n)) (I : Finset ι) (Rs : ι
     rw [filter_union]
     refine (card_union_le _ _).trans (Nat.add_le_add (hGd B hB) ?_)
     have := deg_used_leA Z I Rs Ts G s hsI Φ hinv hw hlam1 hDeg B hB
-    simpa [K, placeK, M, placeM, lam] using this
+    simpa [deg, used, K, placeK, M, placeM, lam] using this
   have hroot : ∀ J ⊆ Rs i, J.card ≤ r - 1 → load Rs Φ s J ∅ ≤ D * a ^ (r - 1 - J.card) := by
     intro J _ hJ
     refine le_trans (card_le_card ?_) (hRoot J hJ)

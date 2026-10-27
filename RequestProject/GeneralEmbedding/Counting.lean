@@ -1,6 +1,6 @@
 module
 public import RequestProject.GeneralEmbedding.Defs
-public import Mathlib
+public import RequestProject.MathlibImports
 
 /-!
 # Counting lemmas for the General Embedding Lemma

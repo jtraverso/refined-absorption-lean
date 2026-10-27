@@ -1,0 +1,9 @@
+--- original/RequestProject/Extensions/PolynomialExternal.lean
++++ rc3/RequestProject/Extensions/PolynomialExternal.lean
+@@ -1,5 +1,5 @@
+ module
+-public import Mathlib
++public import RequestProject.MathlibImports
+ 
+ /-!
+ # Explicit external interfaces for the quantitative extensions
