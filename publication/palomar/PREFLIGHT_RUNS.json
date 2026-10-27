@@ -74,5 +74,34 @@
     }
   ],
   "scope": "Historical separate preflights, cancelled after the author requested one joint entry. None is claimed to have passed.",
-  "canonical_comparator_config_path": "Palomar/Unified.comparator.json"
+  "canonical_comparator_config_path": "Palomar/Unified.comparator.json",
+  "canonical_run": {
+    "entry": "Unified",
+    "source_commit": "867d1e3d5e48ef20a8f1ae68237834eb06211cbc",
+    "run_id": 40478830948,
+    "url": "https://github.com/jtraverso/refined-absorption-lean/actions/runs/40478830948",
+    "comparator_config_path": "Palomar/Unified.comparator.json",
+    "formalization_metadata_path": "Palomar/Unified/formalization.yaml",
+    "observed_status": "in_progress",
+    "profile_conclusion": "success",
+    "verify_job_id": 122103758256,
+    "verify_conclusion": null,
+    "observation_scope": "Dispatch and source SHA confirmed through GitHub. No full mechanical PASS or Palomar registration claimed.",
+    "observed_conclusion": null,
+    "observed_utc": "2026-10-27T09:52:16.379933+00:00",
+    "observed_jobs": [
+      {
+        "databaseId": 122103698921,
+        "name": "preflight / profile",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "databaseId": 122103758256,
+        "name": "preflight / verify",
+        "status": "in_progress",
+        "conclusion": ""
+      }
+    ]
+  }
 }

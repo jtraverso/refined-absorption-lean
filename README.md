@@ -14,7 +14,7 @@ historical priority is claimed for every formalized corollary. The original
 results remain attributed to their authors.
 
 Read the [research note and formal companion in English or Spanish](preprints/RESEARCH_NOTE/README.md).
-Preprint 1.0 has an internal audit **PASS** and reserved DOI
+Preprint 1.0 has an internal audit **PASS** and is published on Zenodo with DOI
 [10.5281/zenodo.23685654](https://doi.org/10.5281/zenodo.23685654).
 Public-release receipts and Palomar verification are recorded separately.
 The [publication index](PUBLICATION_INDEX.md) separates documents, source DOIs

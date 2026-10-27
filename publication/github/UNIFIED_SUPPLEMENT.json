@@ -1,0 +1,32 @@
+{
+  "status": "PASS_ADDITIVE_RELEASE_SUPPLEMENT_INTEGRITY",
+  "url": "https://github.com/jtraverso/refined-absorption-lean/releases/tag/preprint-v1.0",
+  "tag": "preprint-v1.0",
+  "original_document_release_commit": "ab62cca3d797a939466c76f7ed302b20e8a422be",
+  "comparison_source_commit": "867d1e3d5e48ef20a8f1ae68237834eb06211cbc",
+  "original_assets_verified_unchanged": 10,
+  "total_assets": 13,
+  "added_assets": [
+    {
+      "path": "publication/palomar/palomar-unified-interface-v1.0-867d1e3d5e48.tar.gz",
+      "sha256": "ed69ac97d64cdf3dbc1a6aa1bf12d65ca9d893c0d3aa2e27f3688fa5a5e6671d",
+      "bytes": 54109,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/palomar-unified-interface-v1.0-867d1e3d5e48.tar.gz"
+    },
+    {
+      "path": "publication/palomar/palomar-unified-interface-v1.0-867d1e3d5e48.tar.gz.sha256",
+      "sha256": "e66c90b26f142bfe5bad5d310b5d4d5fbddc410a97289150e8b1ab680652da65",
+      "bytes": 117,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/palomar-unified-interface-v1.0-867d1e3d5e48.tar.gz.sha256"
+    },
+    {
+      "path": "publication/palomar/UNIFIED_INTERFACE_FREEZE.json",
+      "sha256": "85e2e928e569bc48ea81522a6bdb6688c4764dd7f9ff6fcc939453030e1befdd",
+      "bytes": 2726,
+      "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/UNIFIED_INTERFACE_FREEZE.json"
+    }
+  ],
+  "notes_sha256": "1893349367aa93c168098814c3d86d552d3023a7ce22c73c340e7fd5046dc832",
+  "checked_utc": "2026-10-27T09:52:16.379933+00:00",
+  "scope": "GitHub API asset digests compared with local bytes. No original asset replaced; supplement added to same release. Not a Palomar certificate."
+}

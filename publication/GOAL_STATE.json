@@ -22,8 +22,12 @@
       "status": "PASS"
     },
     {
+      "phase": "zenodo_publication",
+      "status": "PASS"
+    },
+    {
       "phase": "palomar_submission_and_registration",
-      "status": "OFFICIAL_PREFLIGHTS_RUNNING"
+      "status": "JOINT_OFFICIAL_PREFLIGHT_RUNNING"
     }
   ],
   "authorization": "User explicitly authorized publication and registration after the technical and editorial gates pass.",
@@ -37,9 +41,9 @@
     "survey_published_edition": "ICM 2026, Volume 6, pages 212-231"
   },
   "external_pending": {
-    "zenodo": "Draft23685654 with DOIreserved and metadata saved. Four audited PDF uploads need the Chrome extension file-URL permission; explicit user choice requested asynchronously. Nothing published on Zenodo yet.",
-    "github": "Public repository and preprint-v1.0 release published; all 10 asset digests match local files. Source commit ab62cca3d797a939466c76f7ed302b20e8a422be.",
-    "palomar": "Author requested one entry. Joint Challenge and default Lake build PASS; all 316 frozen sources/configuration unchanged; 317 current sources. Separate preflights cancelled. Joint official preflight follows the new source commit."
+    "zenodo": "Published public record23685654, DOI10.5281/zenodo.23685654; four final PDFs and checksums verified. No upload pending.",
+    "github": "Published preprint-v1.0 release with13verifiedassets: original10unchanged plus3joint comparison supplement assets. Zenodo publication linked in release notes.",
+    "palomar": "Single joint official full preflight40478830948 at source867d1e3d5e48ef20a8f1ae68237834eb06211cbc in progress. Profile succeeded; Comparator/provenance job running. No intake, private review or registration yet."
   },
   "formal_freeze": {
     "status": "PASS",
@@ -216,5 +220,89 @@
     "finished_utc": "2026-10-27T08:54:50.558481+00:00",
     "trace_sha256": "760fb522e14d6a2f40ee85b405b3bba1e1047a70870bc2baae292b876498ae2b",
     "current_local_sources": 317
+  },
+  "zenodo_publication": {
+    "status": "PASS_PUBLISHED_PUBLIC_RECORD_AND_FOUR_FILE_CHECKSUMS",
+    "id": 23685654,
+    "doi": "10.5281/zenodo.23685654",
+    "concept_doi": "10.5281/zenodo.23685653",
+    "url": "https://zenodo.org/records/23685654",
+    "title": "Formalizing refined absorption: proof interfaces and consequences",
+    "version": "1.0",
+    "published_date_observed": "2026-10-27",
+    "access": "open",
+    "license": "CC-BY-4.0",
+    "creator": "Juan Pablo Traverso Gianini",
+    "orcid": "0009-0003-6068-4096",
+    "source_dois": [
+      "10.48550/arXiv.2402.17855",
+      "10.1137/25M1805977"
+    ],
+    "files": [
+      {
+        "path": "preprints/RESEARCH_NOTE/01_manuscript/RESEARCH_NOTE_preprint_v1.0_en.pdf",
+        "bytes": 97236,
+        "sha256": "9c331b8966a5c002352531bb93a9e78a6c0c228e838a674a168afcf477d62d14",
+        "zenodo_filename": "RESEARCH_NOTE_preprint_v1.0_en.pdf",
+        "zenodo_md5": "6f1917c7818cf69730504af6c7cf39da"
+      },
+      {
+        "path": "preprints/RESEARCH_NOTE/01_manuscript/RESEARCH_NOTE_preprint_v1.0_es.pdf",
+        "bytes": 99550,
+        "sha256": "ba6e848f0aa222659f44c830a72808bb6d63da5e3440e027fb06c7778a4e9152",
+        "zenodo_filename": "RESEARCH_NOTE_preprint_v1.0_es.pdf",
+        "zenodo_md5": "2b7b4abdbed35b6b53c4f8c90d70df65"
+      },
+      {
+        "path": "preprints/RESEARCH_NOTE/05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_en.pdf",
+        "bytes": 64842,
+        "sha256": "1c7b98bcbc2d0bb15bf0e8f5c1e8750ac5c9d62ddb7191f4d8eb0a6f278f4bb3",
+        "zenodo_filename": "FORMALIZATION_COMPANION_preprint_v1.0_en.pdf",
+        "zenodo_md5": "d21044bc6e0dd75d9b3d609e38a5e811"
+      },
+      {
+        "path": "preprints/RESEARCH_NOTE/05_formalization/FORMALIZATION_COMPANION_preprint_v1.0_es.pdf",
+        "bytes": 65733,
+        "sha256": "7157fe256212278639c11e6097b16057cdb66bae7a904d56d382779431408727",
+        "zenodo_filename": "FORMALIZATION_COMPANION_preprint_v1.0_es.pdf",
+        "zenodo_md5": "db69477fca4e727345002382b8194a73"
+      }
+    ],
+    "checked_utc": "2026-10-27T09:50:34.703742+00:00",
+    "method": "Saved draft; uploaded four final PDFs through the supported browser file chooser; compared Zenodo MD5 values with local files; confirmed publication; observed public record Published/Open/version/DOI and all four download links and checksums. No independent DOI resolver or DataCite replay claimed.",
+    "document_release_files_checked_unchanged": 55,
+    "scope": "Public Zenodo deposit receipt, not Palomar verification or registration. The original DOI reservation receipt remains historical and unchanged."
+  },
+  "github_supplement": {
+    "status": "PASS_ADDITIVE_RELEASE_SUPPLEMENT_INTEGRITY",
+    "url": "https://github.com/jtraverso/refined-absorption-lean/releases/tag/preprint-v1.0",
+    "tag": "preprint-v1.0",
+    "original_document_release_commit": "ab62cca3d797a939466c76f7ed302b20e8a422be",
+    "comparison_source_commit": "867d1e3d5e48ef20a8f1ae68237834eb06211cbc",
+    "original_assets_verified_unchanged": 10,
+    "total_assets": 13,
+    "added_assets": [
+      {
+        "path": "publication/palomar/palomar-unified-interface-v1.0-867d1e3d5e48.tar.gz",
+        "sha256": "ed69ac97d64cdf3dbc1a6aa1bf12d65ca9d893c0d3aa2e27f3688fa5a5e6671d",
+        "bytes": 54109,
+        "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/palomar-unified-interface-v1.0-867d1e3d5e48.tar.gz"
+      },
+      {
+        "path": "publication/palomar/palomar-unified-interface-v1.0-867d1e3d5e48.tar.gz.sha256",
+        "sha256": "e66c90b26f142bfe5bad5d310b5d4d5fbddc410a97289150e8b1ab680652da65",
+        "bytes": 117,
+        "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/palomar-unified-interface-v1.0-867d1e3d5e48.tar.gz.sha256"
+      },
+      {
+        "path": "publication/palomar/UNIFIED_INTERFACE_FREEZE.json",
+        "sha256": "85e2e928e569bc48ea81522a6bdb6688c4764dd7f9ff6fcc939453030e1befdd",
+        "bytes": 2726,
+        "url": "https://github.com/jtraverso/refined-absorption-lean/releases/download/preprint-v1.0/UNIFIED_INTERFACE_FREEZE.json"
+      }
+    ],
+    "notes_sha256": "1893349367aa93c168098814c3d86d552d3023a7ce22c73c340e7fd5046dc832",
+    "checked_utc": "2026-10-27T09:52:16.379933+00:00",
+    "scope": "GitHub API asset digests compared with local bytes. No original asset replaced; supplement added to same release. Not a Palomar certificate."
   }
 }
