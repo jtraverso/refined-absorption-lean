@@ -1,0 +1,64 @@
+{
+  "status": "PASS_ADDITIVE_COMPARISON_FREEZE",
+  "source_commit": "867d1e3d5e48ef20a8f1ae68237834eb06211cbc",
+  "original_formal_source_commit": "5428ee9b772e67dd7ec6da443199b36a003b72d4",
+  "original_formal_archive_sha256": "e9bb21b17a110a392a7751afefb9a2e9d6bf218c7e6dac788006234f3af09c05",
+  "archive": "publication/palomar/palomar-unified-interface-v1.0-867d1e3d5e48.tar.gz",
+  "sha256": "ed69ac97d64cdf3dbc1a6aa1bf12d65ca9d893c0d3aa2e27f3688fa5a5e6671d",
+  "configuration": "Palomar/Unified.comparator.json",
+  "challenge_module": "Palomar.UnifiedChallenge",
+  "solution_module": "RefinedAbsorption",
+  "selected_theorems": 18,
+  "retained_frozen_sources": 316,
+  "current_local_sources": 317,
+  "local_default_lake_exit_code": 0,
+  "files": [
+    {
+      "path": "Palomar/UnifiedChallenge.lean",
+      "sha256": "2c6797941585ae2f01c2ff392ea485b0b759281573b6973ea7b50c2b7128b2e6",
+      "bytes": 44465
+    },
+    {
+      "path": "Palomar/Unified.comparator.json",
+      "sha256": "333ad6ff768140e1dbd489c6e409cbcd15f6801c84be4e10161c30db12546ba6",
+      "bytes": 1364
+    },
+    {
+      "path": "Palomar/Unified/formalization.yaml",
+      "sha256": "5bbe6bf955d8e6c2039805368350bd8c2a3b0ec2b5c88ecaf99e40c9016c8f0c",
+      "bytes": 13906
+    },
+    {
+      "path": "tools/build_unified_interface.py",
+      "sha256": "a28b25b30fbeb1c2cf188e90e324530c0cffe7e66a8edd8e1a55e3c8e2c9f57d",
+      "bytes": 3951
+    },
+    {
+      "path": "publication/palomar/UNIFIED_COMPARISON.md",
+      "sha256": "e6c169f3a0158f4fdcd175db896594ca5319296e55e06c0d3ae4efc0f57b2f77",
+      "bytes": 3141
+    },
+    {
+      "path": "publication/palomar/unified-build/challenge.log",
+      "sha256": "45d0e6d87407ea0887fae575aaa03ee28a78bdcd9e94c6b3347b739bd8e4a03d",
+      "bytes": 1443
+    },
+    {
+      "path": "publication/palomar/unified-build/default.log",
+      "sha256": "9b026686423021dbe6a3e0aedcdd428aaac6c5a63077be7059eea87aa856ad1f",
+      "bytes": 604730
+    },
+    {
+      "path": "publication/palomar/unified-build/RESULT.json",
+      "sha256": "3085a0466ec97c3b537fb52d900912a7510733e4d850de494d6b3c8334a200ba",
+      "bytes": 1544
+    },
+    {
+      "path": "publication/palomar/unified-build/UnifiedChallenge.trace.json",
+      "sha256": "760fb522e14d6a2f40ee85b405b3bba1e1047a70870bc2baae292b876498ae2b",
+      "bytes": 9471
+    }
+  ],
+  "sealed_utc": "2026-10-27T09:01:52.764020+00:00",
+  "scope": "Supplemental comparison interface and actual local Lake evidence. Original frozen proof source/configuration and all 55 document-release files are unchanged. Extract alongside the original formal archive using the same prefix, or use this exact full repository commit. Not an official Comparator or Palomar certificate."
+}
