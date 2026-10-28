@@ -6,6 +6,8 @@
 
 The 317 Lean files, Lake configuration, dependency pins, proof freeze and existing Palomar receipts are unchanged. Current YAML metadata cites the new document DOI; this does not renew the official preflight or submit a new registry entry. General high-girth applications and complete coverage of the two source texts remain outside this release.
 
+Published from commit `fd36d7d22f35946bdd38c3e092a053cecbf04b49`. The [GitHub receipt](publication/github/v1.0.1/RELEASE.json) verifies all eight release assets; the [Zenodo receipt](publication/zenodo/v1.0.1/PUBLISHED_RECORD.json) verifies the four deposited PDFs. These additive receipts preserve the earlier release evidence.
+
 ## Preserved publication and verification history
 
 
