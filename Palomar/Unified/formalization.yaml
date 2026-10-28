@@ -32,18 +32,39 @@ automation:
     models:
     - Aristotle (Harmonic)
     framework: Aristotle
-    tool_setup: Under the author's direction, explored constructions, developed and formalized
-      proofs, and checked extensions. Its contribution was not limited to translation of finished
-      proofs.
+    tool_setup: Under the author's direction, explored approaches, searched for counterexamples,
+      developed proofs, formalized them in Lean and reviewed them, and checked extensions. Its
+      contribution was not limited to translation of finished proofs.
   - method: agent
     models:
-    - Codex (OpenAI)
+    - ChatGPT/Codex (OpenAI)
     framework: Codex
-    tool_setup: Migrated the retained development, assembled pinned proved inputs, exposed
-      ambient independence in an additive 6.2 interface, reviewed source fidelity and consequences,
-      prepared the manuscripts and reproducibility evidence, and performed the internal audit.
-  notes: Human authorship and responsibility remain with the author. Exact formal source revisions
-    and build records are supplied in the repository.
+    tool_setup: Explored and checked mathematical arguments; migrated the retained development,
+      assembled pinned proved inputs, exposed ambient independence in an additive 6.2 interface,
+      reviewed source fidelity and consequences, prepared the manuscripts and reproducibility
+      evidence, and performed the internal audit.
+  - method: agent
+    models:
+    - Claude (Anthropic)
+    framework: Claude Code
+    tool_setup: Explored and checked mathematical arguments and helped prepare the manuscript; for
+      the registry entry, wrote the faithful Theorem 1.10 endpoint (Palomar/Theorem110.lean,
+      derived from the faithful Theorem 1.7 with the complete r-graph as host), the
+      Palomar.UnifiedSolution root and the corresponding Challenge, comparator and metadata
+      changes, checked with a local build and #print axioms (Lean v4.35.0-rc3).
+  - method: other
+    models:
+    - Certo
+    - Jacobian
+    framework: Computational exploration tools
+    tool_setup: Used to explore finite instances, check identities and assess candidate
+      constructions; finite checks informed the arguments and were not treated as proofs of
+      universal statements.
+  notes: Human authorship and responsibility remain with the author; no AI system is listed as an
+    author. The fuller account of these contributions is the AI-use statement of the pinned
+    research note, version 1.0.1 (doi:10.5281/zenodo.23715622;
+    preprints/RESEARCH_NOTE_v1.0.1/01_manuscript in this repository). Exact formal source
+    revisions and build records are supplied in the repository.
 review:
   status: self-assessed
   notes: Internal source-fidelity and mathematical review by Codex under the author's direction;

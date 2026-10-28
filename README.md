@@ -147,5 +147,10 @@ to their original commit. No registration is claimed before a registry receipt e
 Source code is licensed under Apache 2.0; manuscripts are licensed under
 CC BY 4.0. The author is responsible for the formalization and exposition.
 Aristotle contributed mathematical development and formal proofs; Codex
-contributed migration, assembly, review, exposition and release preparation.
+contributed migration, assembly, review, exposition and release preparation;
+Claude and ChatGPT/Codex were used to explore and check arguments and to prepare
+the manuscript, and Claude (Claude Code) wrote the faithful Theorem 1.10 endpoint
+of the registry entry. Certo and Jacobian were used for finite computational
+exploration. The full statement is the AI-use section of the research note
+v1.0.1; `Palomar/Unified/formalization.yaml` records it in `automation.methods`.
 The internal agent audit is not independent human peer review.
