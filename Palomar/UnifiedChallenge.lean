@@ -375,18 +375,6 @@ def DesignDivisibility (n q r l : ℕ) : Prop :=
   ∀ i < r, (q - i).choose (r - i) ∣ l * (n - i).choose (r - i)
 end RefinedAbsorption
 namespace RefinedAbsorption
-/-- **Theorem 1.10 (Refined efficient omni-absorber, Delcourt–Postle).**  For `q > r ≥ 1`
-there is `C ≥ 1` such that: if `X ⊆ K_n^r` has `Δ_{r-1}(X) ≤ D ≤ n / C`, then there is a
-`C`-refined `K_q^r`-omni-absorber `A` for `X` with
-`Δ_{r-1}(A) ≤ C · max(D, n^{1-1/r} log n)`.  (Theorem 1.8 is the same statement without
-refinedness.)  Not proved here; `RequestProject/OmniFromRefiner.lean` derives it from refined
-refiners with attached absorbers (`refinedEfficientOmniAbsorber_of_refinerWithAbsorbers`). -/
-def RefinedEfficientOmniAbsorber : Prop :=
-  ∀ q r : ℕ, 1 ≤ r → r < q → ∃ C : ℕ, 1 ≤ C ∧ ∀ n : ℕ, ∀ X : Finset (Finset (Fin n)),
-    ∀ D : ℝ, IsRGraph r X → MaxDegLE r X D → D ≤ n / C →
-      ∃ A F : Finset (Finset (Fin n)), ∃ QA : Finset (Finset (Fin n)) → Finset (Finset (Fin n)),
-        IsOmniAbsorber q r X A F QA ∧ IsCRefined C X A F ∧
-          MaxDegLE r A (C * max D ((n : ℝ) ^ (1 - 1 / (r : ℝ)) * Real.log n))
 /-- **Conjecture 1.1 (Existence Conjecture)**, proved by Keevash (Theorem 1.2), and again by
 Glock–Kühn–Lo–Osthus and by Delcourt–Postle via refined absorption.  For `q > r ≥ 2` and
 `λ ≥ 1`, if `n` is large enough and `binom(q-i, r-i) ∣ λ binom(n-i, r-i)` for all
@@ -404,9 +392,23 @@ def SteinerExistenceConjecture : Prop :=
     ∃ 𝒮 : Finset (Finset (Fin n)), IsSteinerSystem q r 𝒮
 end RefinedAbsorption
 namespace RefinedAbsorption.Final
-open RefinedAbsorption
-/-- **Theorem 1.10 (Refined efficient omni-absorber, Delcourt–Postle).** -/
-theorem theorem_1_10 : RefinedEfficientOmniAbsorber := by sorry
+open Finset RefinedAbsorption
+/-- **Theorem 1.10 (Refined efficient omni-absorber, Delcourt–Postle)**, with the omni-absorber
+and refinedness of Definitions 1.5 and 1.6 of arXiv:2402.17855: for `q > r ≥ 1` there is `C ≥ 1` such that if `X` is an `r`-graph on `Fin n` with
+`Δ(X) ≤ D ≤ n / C`, then there is a `C`-refined `K_q^r`-omni-absorber `A` for `X` (decomposition
+family `𝓗` of copies of `K_q^r` in `X ∪ A`, each with at most one edge of `X`) with
+`Δ(A) ≤ C · max(D, n^{1-1/r} log n)`. -/
+def RefinedEfficientOmniAbsorberFaithful : Prop :=
+  ∀ q r : ℕ, 1 ≤ r → r < q → ∃ C : ℕ, 1 ≤ C ∧
+    ∀ (n : ℕ) (X : Faithful2024.HGraph (Fin n)) (D : ℝ),
+      X.verts = univ → X.IsUniform r → (X.maxDeg r : ℝ) ≤ D → D ≤ n / C →
+      ∃ (A : Faithful2024.HGraph (Fin n)) (𝓗 : Finset (Finset (Fin n)))
+        (QA : Finset (Finset (Fin n)) → Finset (Finset (Fin n))),
+        Faithful2024.IsOmniAbsorber q r X A 𝓗 QA ∧ Faithful2024.IsCRefinedOmni r C X A 𝓗 ∧
+          (A.maxDeg r : ℝ) ≤ C * max D ((n : ℝ) ^ (1 - 1 / (r : ℝ)) * Real.log n)
+
+/-- **Theorem 1.10 (Refined efficient omni-absorber)**, faithful form. -/
+theorem theorem_1_10_faithful : RefinedEfficientOmniAbsorberFaithful := by sorry
 /-- **The Existence Conjecture for Steiner systems** (`λ = 1`), via the refined absorption proof
 of Section 2 of the survey: Theorem 1.10 together with Corollary 2.4. -/
 theorem existenceConjecture_steiner : SteinerExistenceConjecture := by sorry

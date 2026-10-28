@@ -1,6 +1,6 @@
 {
   "challenge_module": "Palomar.UnifiedChallenge",
-  "solution_module": "RefinedAbsorption",
+  "solution_module": "Palomar.UnifiedSolution",
   "theorem_names": [
     "RefinedAbsorption.Faithful2024.theorem_1_7",
     "RefinedAbsorption.Faithful2024.theorem_1_11",
@@ -8,7 +8,7 @@
     "RefinedAbsorption.Pending.theorem_2_8",
     "RefinedAbsorption.Faithful2024.theorem_6_2_ambient",
     "RefinedAbsorption.Pending.theorem_6_3",
-    "RefinedAbsorption.Final.theorem_1_10",
+    "RefinedAbsorption.Final.theorem_1_10_faithful",
     "RefinedAbsorption.existenceConjecture_proved",
     "RefinedAbsorption.Final.existenceConjecture_steiner",
     "RefinedAbsorption.FaithfulSurvey2025.not_generalEmbeddingLemmaLiteral",

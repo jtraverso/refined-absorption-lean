@@ -218,8 +218,10 @@ alignment:
     module: Palomar.UnifiedChallenge
     status: proved
   - source: Postle survey, arXiv:2510.19978v1 and ICM 2026 edition, Theorem 1.10 (refined
-      efficient omni-absorber).
-    lean: RefinedAbsorption.Final.theorem_1_10
+      efficient omni-absorber), with the omni-absorber and refinedness of Definitions 1.5–1.6 of
+      arXiv:2402.17855 (decomposition family of copies of K_q^r in X ∪ A, each with at most one
+      edge of X).
+    lean: RefinedAbsorption.Final.theorem_1_10_faithful
     module: Palomar.UnifiedChallenge
     status: proved
   - source: Postle survey, Conjecture 1.1, proved existence statement for every fixed index

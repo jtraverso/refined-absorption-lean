@@ -127,15 +127,19 @@ integrity and formalization-companion directory layout as the author's
 That repository remains the publication home of those two papers.
 
 The canonical Palomar submission is **one entry**: `Palomar/Unified.comparator.json`
-selects all eighteen principal declarations and uses the existing
-`RefinedAbsorption` aggregate root as its Solution. The article, survey and
+selects all eighteen principal declarations and uses `Palomar.UnifiedSolution` (the existing
+`RefinedAbsorption` aggregate root together with `Palomar/Theorem110.lean`) as its Solution.
+Theorem 1.10 is selected in its faithful form (`RefinedAbsorption.Final.theorem_1_10_faithful`):
+the omni-absorber and refinedness are those of Definitions 1.5 and 1.6 of arXiv:2402.17855, so
+every member of the decomposition family is a copy of `K_q^r` in `X ∪ A` with at most one edge of
+`X`; it is derived from the faithful Theorem 1.7 with the complete `r`-graph as host. The article, survey and
 research note retain separate source attribution and DOI metadata. The three
 narrower profiles remain available as historical views; they are not three
 intended submissions. See the [joint comparison record](publication/palomar/UNIFIED_COMPARISON.md).
 
 The joint Challenge is additive. The original 316-source formal freeze is
-unchanged; the current project has 317 sources including that new comparison
-file. Local compilation, internal review, official preflight and registry review
+unchanged; the current project has 319 sources, adding the comparison file and the Theorem 1.10
+adapter (`Palomar/Theorem110.lean`, `Palomar/UnifiedSolution.lean`). Local compilation, internal review, official preflight and registry review
 are distinct gates. The updated note DOI in the current metadata does not
 rewrite or renew the historical preflight and submission, which remain bound
 to their original commit. No registration is claimed before a registry receipt exists.
